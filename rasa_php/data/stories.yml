@@ -1,0 +1,38 @@
+version: "3.1"
+
+stories:
+
+
+
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+
+- story: hoi ve cac truong dai hoc khac
+  steps:
+  - intent: cac_truong_dai_hoc_khac
+  - action: utter_cac_truong_dai_hoc_khac
+
+- story: hoi ve cac khoa ctump
+  steps:
+  - intent: tim_hieu_khoa_ctump
+  - action: action_order_office
+  - intent: xac_nhan_chon_khoa
+  - action: action_confirm_order
+
+- story: hoi ve cac khoa cu the
+  steps:
+  - intent: tim_hieu_khoa_cu_the
+  - action: action_extract_office_entity
+  
+
+
+  

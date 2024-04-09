@@ -1,0 +1,153 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent: cac_truong_dai_hoc_khac
+  examples: |  
+    - tôi muốn tìm hiểu về đại học cần thơ
+    - thông tin chi tiết về ctu
+    - liệt kê thông tin về cần thơ university
+    - Trường ÐH Kỹ thuật - Công nghệ Cần Thơ
+    - Trường đại học Kiên Giang KGU
+    - Trường đại học Đồng Tháp dthu
+    - Trường đại học Trà Vinh tvu
+    - Trường đại học Tiền Giang tgu
+    - Trường đại học Sư phạm Kỹ thuật Vĩnh Long vlute
+    - Trường đại học Xây Dựng miền Tây mtu
+    - Trường đại học An Giang agu
+    - Trường đại học Nam Cần thơ nctu dnc
+    - Trường đại học Tây Đô tdu
+    - Trường đại học Cửu Long mku
+    - Trường đại học Võ Trường Toản vttu
+    - Trường đại học Kinh tế Kỹ thuật Long An UNETI
+    - Trường đại học Tân Tạo ttu
+    - Trường đại học FPT
+
+- intent: tim_hieu_khoa_ctump
+  examples: |  
+    - tôi muốn tìm hiểu về đại học [y dược cần thơ ctump](ctump)
+    - cho tôi biết về đại học [y được cần thơ](ctump)
+    - thông tin chi tiết trường [y dược](ctump)
+    - liệt kê thông tin chi tiết
+    - trường có các khoa nào
+   
+
+- intent: xac_nhan_chon_khoa
+  examples: |  
+    - [điều dưỡng](văn phòng khoa)
+    - [y tế công cộng](văn phòng khoa)
+    - [răng hàm mặt](văn phòng khoa)
+    - [khoa học cơ bản](văn phòng khoa)
+    - [y học cổ truyền](văn phòng khoa)
+    - [kỹ thuật y học](văn phòng khoa)
+    - [dược](văn phòng khoa)
+    - [y](văn phòng khoa)
+
+- intent: tim_hieu_khoa_cu_the
+  examples: |  
+    - tôi muốn tìm hiểu thông tin về khoa [điều dưỡng](văn phòng khoa)
+    - Tôi muốn hiểu rõ thêm về khoa [y tế công cộng](văn phòng khoa)
+    - Tôi cần thông tin chi tiết về khoa [răng hàm mặt](văn phòng khoa)
+    - tôi quan tâm đến thông tin về khoa [khoa học cơ bản](văn phòng khoa)
+    - tôi muốn tìm hiểu thêm về lĩnh vực của khoa [y học cổ truyền](văn phòng khoa)
+    - Hãy chia sẻ thêm về khoa [y](văn phòng khoa)
+    - Bạn có thể cung cấp thêm thông tin về khoa [kỹ thuật y học](văn phòng khoa)
+    - Cho tôi thông tin chi tiết về khoa [dược](văn phòng khoa)
+    - Tôi muốn hiểu thêm về khoa 
+    - Cho tôi biết thêm về khoa 
+    - Tôi muốn khám phá thông tin về khoa 
+    - Tôi quan tâm đến khoa Bạn có thể chia sẻ thông tin được không?
