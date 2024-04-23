@@ -41,6 +41,7 @@ responses:
 
   utter_thong_tin_ctump:
   - text: "là một trường đại học chuyên ngành Khoa học sức khỏe tại Việt Nam, là trường đại học Công lập trực thuộc Bộ Y Tế duy nhất tại Đồng bằng sông Cửu Long"
+  
   # utter_cac_truong_dai_hoc_khac:
   # - text: "Xin lỗi tôi chỉ cung cấp thông tin về Đại học Y Dược Cần Thơ (ctump)"
 
