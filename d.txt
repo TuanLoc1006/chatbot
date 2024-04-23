@@ -1,0 +1,187 @@
+<?php
+include "db_con.php";
+
+// Kiểm tra xem có tham số intent_id được truyền qua URL không
+if (isset($_GET['intent_id'])) {
+    $intent_id = $_GET['intent_id'];
+
+    // Truy vấn cơ sở dữ liệu để lấy thông tin chi tiết về ý định
+    $sql_intent_details = "SELECT * FROM `intents` WHERE `intent_id` = $intent_id";
+    $result = $conn->query($sql_intent_details);
+
+    if ($result && $result->num_rows > 0) {
+        $row = $result->fetch_assoc();
+        ?>
+        <!DOCTYPE html>
+        <html lang="en">
+
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Intent Details</title>
+            <style>
+                body {
+                    font-family: Arial, sans-serif;
+                    margin: 20px;
+                }
+
+                .intent-details {
+                    border: 1px solid #ccc;
+                    padding: 20px;
+                    border-radius: 5px;
+                    background-color: #f9f9f9;
+                }
+
+                .intent-details h2 {
+                    margin-top: 0;
+                }
+
+                .question-list,
+                .answer-list {
+                    margin-top: 10px;
+                }
+
+                .item {
+                    margin-bottom: 5px;
+                }
+
+                .btn {
+                    margin-left: 10px;
+                }
+            </style>
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+                integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        </head>
+
+        <body>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="intent-details">
+                        <h2>Intent Details</h2>
+                        <p><strong>Intent Name:</strong> <?php echo $row['intent_name']; ?></p>
+                        <div class="question-list">
+                            <strong>Examples:</strong>
+                            <?php
+                            $sql_ex_intents = "SELECT `id`, `intent_id`, `example_question`, `status_file` FROM `example_intent` WHERE `intent_id`='$intent_id' ";
+                            $result_example_intent = $conn->query($sql_ex_intents);
+                            while ($row = $result_example_intent->fetch_assoc()) {
+                                echo '<div class="item">' . $row['example_question'] . ' <button class="btn-edit" data-id="' . $row['id'] . '">Sửa</button> <button class="btn-delete" data-id="' . $row['id'] . '">Xóa</button></div>';
+                            }
+                            ?>
+                        </div>
+                        <div class="answer-list">
+                            <strong>Answers:</strong>
+                            <?php
+                            $sql_chat_answer = "SELECT `id`, `intent_id`, `chat_answer`, `status_file` FROM `answer_intent` WHERE `intent_id`='$intent_id'";
+                            $result_chat_answer = $conn->query($sql_chat_answer);
+                            while ($row = $result_chat_answer->fetch_assoc()) {
+                                echo '<div class="item">' . $row['chat_answer'] . ' <button class="btn-edit" data-id="' . $row['id'] . '">Sửa</button> <button class="btn-delete" data-id="' . $row['id'] . '">Xóa</button></div>';
+                            }
+                            ?>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <h3>Thêm intent mới</h3>
+                    <form method="post" action="save_data.php">
+                        <div class="form-group">
+                            <label for="intentName">Tên Intent (chủ đề cuộc trò chuyện)</label>
+                            <input type="text" class="form-control" id="intentName" name="intentName" placeholder="Nhập chủ đề"
+                                required>
+                        </div>
+                        <div class="form-group">
+                            <label for="description">Câu hỏi liên quan đến chủ đề này</label>
+                            <input type="text" class="form-control" id="question" name="question" placeholder="Nhập câu hỏi"
+                                required>
+                        </div>
+                        <div class="form-group">
+                            <label for="answer">Câu trả lời cho chủ đề trên</label>
+                            <input type="text" class="form-control" id="answer" name="answer" placeholder="Nhập câu trả lời">
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Gửi</button>
+                        <a class="btn btn-secondary" href="ghi_file.php">ghi file</a>
+                        <form method="post" action="train_rasa.php">
+                            <input type="submit" name="train_rasa" class="btn btn-warning" value="Train Rasa">
+                        </form>
+                        <form method="post" action="stop_rasa.php">
+                            <input type="submit" name="train_rasa" class="btn btn-danger" value="Stop Rasa">
+                        </form>
+                    </form>
+                </div>
+            </div>
+
+            <script>
+                document.addEventListener("DOMContentLoaded", function () {
+                    const editButtons = document.querySelectorAll(".btn-edit");
+                    const deleteButtons = document.querySelectorAll(".btn-delete");
+
+                    // Xử lý sự kiện khi nhấp vào nút Sửa
+                    editButtons.forEach(function (button) {
+                        button.addEventListener("click", function () {
+                            const id = this.getAttribute("data-id");
+                            // Chuyển hướng đến trang sửa với id của ví dụ hoặc câu trả lời cụ thể
+                            window.location.href = "edit_example.php?id=" + id; // Điều chỉnh URL tùy theo nhu cầu của bạn
+                        });
+                    });
+
+                    // Xử lý sự kiện khi nhấp vào nút Xóa
+                    deleteButtons.forEach(function (button) {
+                        button.addEventListener("click", function () {
+                            const id = this.getAttribute("data-id");
+                            // Hiển thị hộp thoại xác nhận trước khi xóa
+                            const isConfirmed = confirm("Bạn có chắc chắn muốn xóa example?");
+                            if (isConfirmed) {
+                                $.ajax({
+                                    type: "POST",
+                                    url: "delete_example.php", // Điều chỉnh đường dẫn tùy theo tên trang xử lý xóa của bạn
+                                    data: { id: id }, // Truyền id của ví dụ hoặc câu trả lời cần xóa
+                                    success: function (response) {
+                                        console.log(response);
+                                        window.location.reload();
+                                    }
+                                });
+                            }
+                        });
+                    });
+                });
+            </script>
+
+        </body>
+
+        </html>
+        <?php
+    } else {
+        echo "Không tìm thấy thông tin chi tiết về ý định.";
+    }
+} else {
+    echo "Tham số intent_id không được truyền.";
+}
+?>
+
+
+<!-- <script>
+                document.addEventListener("DOMContentLoaded", function () {
+                    const editButtons = document.querySelectorAll(".btn-edit");
+                    const deleteButtons = document.querySelectorAll(".btn-delete");
+
+                    // Xử lý sự kiện khi nhấp vào nút Sửa
+                    editButtons.forEach(function (button) {
+                        button.addEventListener("click", function () {
+                            const id = this.getAttribute("data-id");
+                            // Chuyển hướng đến trang sửa với id của ví dụ hoặc câu trả lời cụ thể
+                            window.location.href = "edit_example.php?id=" + id; // Điều chỉnh URL tùy theo nhu cầu của bạn
+                        });
+                    });
+
+                    // Xử lý sự kiện khi nhấp vào nút Xóa
+                    deleteButtons.forEach(function (button) {
+                        button.addEventListener("click", function () {
+                            const id = this.getAttribute("data-id");
+                            // Gửi yêu cầu xóa đối với ví dụ hoặc câu trả lời cụ thể bằng Ajax hoặc gửi yêu cầu đến trang xử lý xóa
+                            // Sau khi xóa thành công, có thể làm mới trang hoặc cập nhật dữ liệu mà không cần tải lại trang
+                        });
+                    });
+                });
+            </script> -->

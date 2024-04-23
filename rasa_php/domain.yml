@@ -1,6 +1,7 @@
 version: "3.1"
 
 intents:
+  - ctu
   - greet
   - goodbye
   - affirm
@@ -8,10 +9,12 @@ intents:
   - mood_great
   - mood_unhappy
   - bot_challenge
-  - cac_truong_dai_hoc_khac
-  - tim_hieu_khoa_ctump
-  - xac_nhan_chon_khoa
-  - tim_hieu_khoa_cu_the
+
+  - thong_tin_ctump
+  # - cac_truong_dai_hoc_khac
+  # - tim_hieu_khoa_ctump
+  # - xac_nhan_chon_khoa
+  # - tim_hieu_khoa_cu_the
 
 
 entities:
@@ -19,6 +22,7 @@ entities:
   - ctump
 
 responses: 
+
   utter_greet:
   - text: "Hey! How are you?"
 
@@ -29,14 +33,16 @@ responses:
   utter_did_that_help:
   - text: "Did that help you?"
 
-
   utter_goodbye:
   - text: "Bye"
-  utter_cac_truong_dai_hoc_khac:
-  - text: "Xin lỗi tôi chỉ cung cấp thông tin về Đại học Y Dược Cần Thơ (ctump)"
+
   utter_iamabot:
   - text: "I am a bot, powered by Rasa."
-  
+
+  utter_thong_tin_ctump:
+  - text: "là một trường đại học chuyên ngành Khoa học sức khỏe tại Việt Nam, là trường đại học Công lập trực thuộc Bộ Y Tế duy nhất tại Đồng bằng sông Cửu Long"
+  # utter_cac_truong_dai_hoc_khac:
+  # - text: "Xin lỗi tôi chỉ cung cấp thông tin về Đại học Y Dược Cần Thơ (ctump)"
 
 actions:
   - action_extract_office_entity
