@@ -6,7 +6,7 @@ if (isset($_GET['intent_id'])) {
     $intent_id = $_GET['intent_id'];
 
     // Truy vấn cơ sở dữ liệu để lấy thông tin chi tiết về ý định
-    $sql_intent_details = "SELECT * FROM `intents` WHERE `intent_id` = $intent_id";
+    $sql_intent_details = "SELECT `intent_id`, `intent_name`, `status_file` FROM `intents` WHERE `intent_id` = $intent_id";
     $result = $conn->query($sql_intent_details);
 
     if ($result && $result->num_rows > 0) {
@@ -27,6 +27,8 @@ if (isset($_GET['intent_id'])) {
         </head>
 
         <body>
+            <h3><a href="./admin/views/home.php">Trang admin</a></h3>
+            <h3><a href="./index.php">Trang user</a></h3>
             <div class="container">
                 <div class="row">
                     <div class="col-md-6">
@@ -39,21 +41,24 @@ if (isset($_GET['intent_id'])) {
                             $sql_ex_intents = "SELECT `id`, `intent_id`, `example_question`, `status_file` FROM `example_intent` WHERE `intent_id`='$intent_id' ";
                             $result_example_intent = $conn->query($sql_ex_intents);
                             while ($row = $result_example_intent->fetch_assoc()) {
-                                echo '<div class="item"><textarea rows="2" cols="70" class="example-question" data-id="' . $row['id'] . '">' . $row['example_question'] . '</textarea> <button class="btn-edit-example btn-primary btn" data-id="' . $row['id'] . '">Lưu thay đổi</button> <button class="btn-delete-example btn btn-danger" data-id="' . $row['id'] . '">Xóa</button></div>';
+                                $display = ($row['status_file'] == 1) ? 'style="display: none;"' : ''; // Kiểm tra giá trị của status_file
+                                echo '<div class="item"><textarea rows="2" cols="70" class="example-question" data-id="' . $row['id'] . '">' . $row['example_question'] . '</textarea> <button class="btn-edit-example btn-primary btn" data-id="' . $row['id'] . '" ' . $display . '>Lưu thay đổi</button> <button class="btn-delete-example btn btn-danger" data-id="' . $row['id'] . '" ' . $display . '>Xóa</button></div>';
                             }
                             ?>
                         </div>
 
-                        <div class="answer-lis  t">
+                        <div class="answer-list">
                             <h2>Mãu câu trả lời:</h2>
                             <?php
                             $sql_chat_answer = "SELECT `id`, `intent_id`, `chat_answer`, `status_file` FROM `answer_intent` WHERE `intent_id`='$intent_id'";
                             $result_chat_answer = $conn->query($sql_chat_answer);
                             while ($row = $result_chat_answer->fetch_assoc()) {
-                                echo '<div class="item"><textarea rows="2" cols="70" class="chat-answer" data-id="' . $row['id'] . '">' . $row['chat_answer'] . '</textarea> <button class="btn-edit-answer btn-primary btn" data-id="' . $row['id'] . '">Lưu thay đổi</button> <button class="btn-delete-answer btn btn-danger" data-id="' . $row['id'] . '">Xóa</button></div>';
+                                $display = ($row['status_file'] == 1) ? 'style="display: none;"' : ''; // Kiểm tra giá trị của status_file
+                                echo '<div class="item"><textarea rows="2" cols="70" class="chat-answer" data-id="' . $row['id'] . '">' . $row['chat_answer'] . '</textarea> <button class="btn-edit-answer btn-primary btn" data-id="' . $row['id'] . '" ' . $display . '>Lưu thay đổi</button> <button class="btn-delete-answer btn btn-danger" data-id="' . $row['id'] . '" ' . $display . '>Xóa</button></div>';
                             }
                             ?>
                         </div>
+
 
                     </div>
                     <div class="col-md-6">
@@ -80,8 +85,8 @@ if (isset($_GET['intent_id'])) {
                             </div>
                             <div class="form-group">
                                 <label for="description">Câu hỏi liên quan đến chủ đề này</label>
-                                <textarea class="form-control" id="question" name="question" placeholder="Nhập câu hỏi" rows="3"
-                                    required></textarea>
+                                <textarea class="form-control" id="question" name="question" placeholder="Nhập câu hỏi"
+                                    rows="3"></textarea>
                             </div>
                             <div class="form-group">
                                 <label for="answer">Câu trả lời cho chủ đề trên</label>
@@ -95,8 +100,8 @@ if (isset($_GET['intent_id'])) {
                     </div>
                 </div>
             </div>
+            <!-- Lắng nghe sự kiện submit của biểu mẫu -->
             <script>
-                // Lắng nghe sự kiện submit của biểu mẫu
                 document.getElementById('btn-submit').addEventListener('submit', function (event) {
                     // Ngăn chặn hành động mặc định của biểu mẫu
                     event.preventDefault();
@@ -105,8 +110,6 @@ if (isset($_GET['intent_id'])) {
                     location.reload();
                 });
             </script>
-
-
             <!-- nut xoa cau hoi -->
             <script>
                 document.addEventListener("DOMContentLoaded", function () {

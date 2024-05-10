@@ -12,26 +12,19 @@ stories:
   - intent: deny
   - action: utter_goodbye
 
+# end
 
-- story: thong tin ctump
+- story: phòng truyền thông path
   steps:
-  - intent: thong_tin_ctump
-  - action: utter_thong_tin_ctump
+  - intent: phòng truyền thông
+  - action: utter_phòng truyền thông
 
+- story: địa chỉ ctump path
+  steps:
+  - intent: địa chỉ ctump
+  - action: utter_địa chỉ ctump
 
-# - story: hoi ve cac truong dai hoc khac
-#   steps:
-#   - intent: cac_truong_dai_hoc_khac
-#   - action: utter_cac_truong_dai_hoc_khac
-
-# - story: hoi ve cac khoa ctump
-#   steps:
-#   - intent: tim_hieu_khoa_ctump
-#   - action: action_order_office
-#   - intent: xac_nhan_chon_khoa
-#   - action: action_confirm_order
-
-# - story: hoi ve cac khoa cu the
-#   steps:
-#   - intent: tim_hieu_khoa_cu_the
-#   - action: action_extract_office_entity
+- story: hieu_truong_ctump path
+  steps:
+  - intent: hieu_truong_ctump
+  - action: utter_hieu_truong_ctump

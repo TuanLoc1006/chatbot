@@ -1,7 +1,7 @@
 <?php
 if(isset($_POST['train_rasa'])) {
     // Thực thi lệnh để huấn luyện Rasa từ thư mục chứa dự án Rasa
-    exec("cd .\\rasa_php\\ && rasa train", $output);
+    exec("cd ..\\..\\rasa_php\\ && rasa train", $output);
 
     // Hiển thị kết quả
     echo "Rasa is being trained...<br>";

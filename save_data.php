@@ -15,47 +15,26 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $intent_ID = $row['intent_id'];
         $intent_Name = $row['intent_name'];
 
-        //neu co intent_name roi thi them cau hoi vao example_intent
-        if ($intent_ID != "") {
-            //kiem tra example_question co trong example_intent chua
-            $sql_example_question = "SELECT  `example_question` FROM `example_intent` WHERE `example_question` = '$question'";
-            $result = $conn->query($sql_example_question);
-            if ($result->num_rows > 0) {
-                // echo "da co question nay<br>";
-                $sql_answer_intent = "SELECT  `chat_answer` FROM `answer_intent` WHERE `chat_answer` = '$answer'";
-                $result = $conn->query($sql_answer_intent);
-                if ($result->num_rows > 0) {
-                    // echo "da co answer nay<br>";
-                } else {
-                    $sql = "INSERT INTO `answer_intent`(`id`, `intent_id`, `chat_answer`, `status_file`) VALUES ('','$intent_ID','$answer', '0')";
-                    if ($conn->query($sql) === TRUE) {
-                        // echo "Thêm dữ liệu answer_intent thành công<br>";
-                    } else {
-                        // echo "Thêm dữ liệu answer_intent thất bại:<br>" . $conn->error;
-                    }
-                }
+        // Check if $question is empty
+        if (!empty($question)) {
+            // Insert $question into example_intent table
+            $sql = "INSERT INTO `example_intent`(`id`, `intent_id`, `example_question`, `status_file`) VALUES ('','$intent_ID','$question', '0')";
+            if ($conn->query($sql) === TRUE) {
+                // echo "Thêm dữ liệu example_intent thành công<br>";
             } else {
-
-                $sql = "INSERT INTO `example_intent`(`id`, `intent_id`, `example_question`, `status_file`) VALUES ('','$intent_ID','$question', '0')";
-                if ($conn->query($sql) === TRUE) {
-                    // echo "Thêm dữ liệu example_intent thành công<br>";
-                } else {
-                    // echo "Thêm dữ liệu example_intent thất bại:<br>" . $conn->error;
-                }
-                $sql_answer_intent = "SELECT  `chat_answer` FROM `answer_intent` WHERE `chat_answer` = '$answer'";
-                $result = $conn->query($sql_answer_intent);
-                if ($result->num_rows > 0) {
-                    // echo "da co answer nay<br>";
-                } else {
-                    $sql = "INSERT INTO `answer_intent`(`id`, `intent_id`, `chat_answer`, `status_file`) VALUES ('','$intent_ID','$answer', '0')";
-                    if ($conn->query($sql) === TRUE) {
-                        // echo "Thêm dữ liệu answer_intent thành công<br>";
-                    } else {
-                        // echo "Thêm dữ liệu answer_intent thất bại:<br>" . $conn->error;
-                    }
-                }
+                // echo "Thêm dữ liệu example_intent thất bại:<br>" . $conn->error;
             }
+        }
 
+        // Check if $answer is empty
+        if (!empty($answer)) {
+            // Insert $answer into answer_intent table
+            $sql = "INSERT INTO `answer_intent`(`id`, `intent_id`, `chat_answer`, `status_file`) VALUES ('','$intent_ID','$answer', '0')";
+            if ($conn->query($sql) === TRUE) {
+                // echo "Thêm dữ liệu answer_intent thành công<br>";
+            } else {
+                // echo "Thêm dữ liệu answer_intent thất bại:<br>" . $conn->error;
+            }
         }
     } else {// neu chua co intent_name thi them moi vao bang intents va bang example_intent
         $sql = "INSERT INTO `intents`(`intent_id`, `intent_name`) VALUES ('','$intentName')";
@@ -68,18 +47,26 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $intent_Name = $row['intent_name'];
 
                 if ($intent_ID != "") {
-                    $sql = "INSERT INTO `example_intent`(`id`, `intent_id`, `example_question`, `status_file`) VALUES ('','$intent_ID','$question', '0')";
-                    if ($conn->query($sql) === TRUE) {
-                        // echo "Thêm dữ liệu example_intent thành công<br>";
-                    } else {
-                        // echo "Thêm dữ liệu example_intent thất bại:<br>" . $conn->error;
+                    // Check if $question is empty
+                    if (!empty($question)) {
+                        // Insert $question into example_intent table
+                        $sql = "INSERT INTO `example_intent`(`id`, `intent_id`, `example_question`, `status_file`) VALUES ('','$intent_ID','$question', '0')";
+                        if ($conn->query($sql) === TRUE) {
+                            // echo "Thêm dữ liệu example_intent thành công<br>";
+                        } else {
+                            // echo "Thêm dữ liệu example_intent thất bại:<br>" . $conn->error;
+                        }
                     }
 
-                    $sql = "INSERT INTO `answer_intent`(`id`, `intent_id`, `chat_answer`, `status_file`) VALUES ('','$intent_ID','$answer', '0')";
-                    if ($conn->query($sql) === TRUE) {
-                        // echo "Thêm dữ liệu answer_intent thành công<br>";
-                    } else {
-                        // echo "Thêm dữ liệu answer_intent thất bại:<br>" . $conn->error;
+                    // Check if $answer is empty
+                    if (!empty($answer)) {
+                        // Insert $answer into answer_intent table
+                        $sql = "INSERT INTO `answer_intent`(`id`, `intent_id`, `chat_answer`, `status_file`) VALUES ('','$intent_ID','$answer', '0')";
+                        if ($conn->query($sql) === TRUE) {
+                            // echo "Thêm dữ liệu answer_intent thành công<br>";
+                        } else {
+                            // echo "Thêm dữ liệu answer_intent thất bại:<br>" . $conn->error;
+                        }
                     }
                 }
             }
@@ -87,11 +74,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // echo "Thêm dữ liệu intents thất bại:<br>" . $conn->error;
         }
     }
-
-    // header('Location: index.php?intent_id=');
     
     header("Location: intent_details.php?intent_id=$intent_id_detail");
 }
-
 
 ?>

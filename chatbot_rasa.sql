@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 22, 2024 at 02:53 PM
+-- Generation Time: May 10, 2024 at 04:08 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -39,8 +39,11 @@ CREATE TABLE `answer_intent` (
 --
 
 INSERT INTO `answer_intent` (`id`, `intent_id`, `chat_answer`, `status_file`) VALUES
-(135, 75, 'dhct', 0),
-(137, 77, 'sao ban vui the', 0);
+(268, 199, 'ths khoa', 1),
+(269, 199, 'khoa, bình', 1),
+(270, 200, 'đường nvc', 1),
+(271, 201, 'lộc', 1),
+(272, 200, 'nvc', 1);
 
 -- --------------------------------------------------------
 
@@ -60,8 +63,11 @@ CREATE TABLE `example_intent` (
 --
 
 INSERT INTO `example_intent` (`id`, `intent_id`, `example_question`, `status_file`) VALUES
-(164, 75, 'ctu viet tat la gi', 0),
-(165, 77, 'hom nay vui qua', 0);
+(313, 199, 'ai là trưởng phòng', 1),
+(314, 199, 'ai quản lý', 1),
+(315, 200, 'ctump ở đường nào', 1),
+(316, 201, 'ai là hiệu trưởng', 1),
+(317, 200, 'địa chỉ ctump', 1);
 
 -- --------------------------------------------------------
 
@@ -71,16 +77,18 @@ INSERT INTO `example_intent` (`id`, `intent_id`, `example_question`, `status_fil
 
 CREATE TABLE `intents` (
   `intent_id` int(11) NOT NULL,
-  `intent_name` varchar(255) NOT NULL
+  `intent_name` varchar(255) NOT NULL,
+  `status_file` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `intents`
 --
 
-INSERT INTO `intents` (`intent_id`, `intent_name`) VALUES
-(75, 'ctu'),
-(77, 'happy');
+INSERT INTO `intents` (`intent_id`, `intent_name`, `status_file`) VALUES
+(199, 'phòng truyền thông', 1),
+(200, 'địa chỉ ctump', 1),
+(201, 'hieu_truong_ctump', 1);
 
 --
 -- Indexes for dumped tables
@@ -114,19 +122,19 @@ ALTER TABLE `intents`
 -- AUTO_INCREMENT for table `answer_intent`
 --
 ALTER TABLE `answer_intent`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=138;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=273;
 
 --
 -- AUTO_INCREMENT for table `example_intent`
 --
 ALTER TABLE `example_intent`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=166;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=318;
 
 --
 -- AUTO_INCREMENT for table `intents`
 --
 ALTER TABLE `intents`
-  MODIFY `intent_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=78;
+  MODIFY `intent_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=202;
 
 --
 -- Constraints for dumped tables

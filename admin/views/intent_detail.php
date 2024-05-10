@@ -27,6 +27,9 @@ if (isset($_GET['intent_id'])) {
         </head>
 
         <body>
+
+            <h3><a href="./home.php">Trang admin</a></h3>
+            <h3><a href="../../index.php">Trang user</a></h3>
             <div class="container">
                 <div class="row">
                     <div class="col-md-6">
@@ -34,26 +37,34 @@ if (isset($_GET['intent_id'])) {
                         <!-- <p><strong>Intent Name:</strong> <?php echo $row['intent_name']; ?> </p> -->
 
                         <div class="question-list">
-                            <h2>Mẫu câu hỏi:</h2>
-                            <?php
-                            $sql_ex_intents = "SELECT `id`, `intent_id`, `example_question`, `status_file` FROM `example_intent` WHERE `intent_id`='$intent_id' ";
-                            $result_example_intent = $conn->query($sql_ex_intents);
-                            while ($row = $result_example_intent->fetch_assoc()) {
-                                echo '<div class="item"><textarea rows="2" cols="70" class="example-question" data-id="' . $row['id'] . '">' . $row['example_question'] . '</textarea> <button class="btn-edit-example btn-primary btn" data-id="' . $row['id'] . '">Lưu thay đổi</button> <button class="btn-delete-example btn btn-danger" data-id="' . $row['id'] . '">Xóa</button></div>';
-                            }
-                            ?>
-                        </div>
+    <h2>Mẫu câu hỏi:</h2>
+    <?php
+    $sql_ex_intents = "SELECT `id`, `intent_id`, `example_question`, `status_file` FROM `example_intent` WHERE `intent_id`='$intent_id' ";
+    $result_example_intent = $conn->query($sql_ex_intents);
+    while ($row = $result_example_intent->fetch_assoc()) {
+        // Xác định nội dung và màu sắc của dòng chữ dựa trên giá trị của status_file
+        $status_text = ($row['status_file'] == 0) ? 'Chưa ghi file' : 'Đã ghi file';
+        $status_color = ($row['status_file'] == 0) ? 'red' : 'green';
+        echo '<div class="item"><h6 style="color: ' . $status_color . ';">' . $status_text . '</h6><textarea rows="2" cols="70" class="example-question" data-id="' . $row['id'] . '">' . $row['example_question'] . '</textarea> <button class="btn-edit-example btn-primary btn" data-id="' . $row['id'] . '">Lưu thay đổi</button> <button class="btn-delete-example btn btn-danger" data-id="' . $row['id'] . '">Xóa</button></div>';
+    }
+    ?>
+</div>
 
-                        <div class="answer-lis  t">
-                            <h2>Mãu câu trả lời:</h2>
-                            <?php
-                            $sql_chat_answer = "SELECT `id`, `intent_id`, `chat_answer`, `status_file` FROM `answer_intent` WHERE `intent_id`='$intent_id'";
-                            $result_chat_answer = $conn->query($sql_chat_answer);
-                            while ($row = $result_chat_answer->fetch_assoc()) {
-                                echo '<div class="item"><textarea rows="2" cols="70" class="chat-answer" data-id="' . $row['id'] . '">' . $row['chat_answer'] . '</textarea> <button class="btn-edit-answer btn-primary btn" data-id="' . $row['id'] . '">Lưu thay đổi</button> <button class="btn-delete-answer btn btn-danger" data-id="' . $row['id'] . '">Xóa</button></div>';
-                            }
-                            ?>
-                        </div>
+<div class="answer-list">
+    <h2>Mãu câu trả lời:</h2>
+    <?php
+    $sql_chat_answer = "SELECT `id`, `intent_id`, `chat_answer`, `status_file` FROM `answer_intent` WHERE `intent_id`='$intent_id'";
+    $result_chat_answer = $conn->query($sql_chat_answer);
+    while ($row = $result_chat_answer->fetch_assoc()) {
+        // Xác định nội dung và màu sắc của dòng chữ dựa trên giá trị của status_file
+        $status_text = ($row['status_file'] == 0) ? 'Chưa ghi file' : 'Đã ghi file';
+        $status_color = ($row['status_file'] == 0) ? 'red' : 'green';
+        echo '<div class="item"><h6 style="color: ' . $status_color . ';">' . $status_text . '</h6><textarea rows="2" cols="70" class="chat-answer" data-id="' . $row['id'] . '">' . $row['chat_answer'] . '</textarea> <button class="btn-edit-answer btn-primary btn" data-id="' . $row['id'] . '">Lưu thay đổi</button> <button class="btn-delete-answer btn btn-danger" data-id="' . $row['id'] . '">Xóa</button></div>';
+    }
+    ?>
+</div>
+
+
 
                     </div>
                     <div class="col-md-6">
@@ -67,7 +78,7 @@ if (isset($_GET['intent_id'])) {
                             $intent_name = $row['intent_name'];
                         }
                         ?>
-                        <form method="post" action="../../save_data.php">
+                        <form method="post" action="./save_data.php">
                             <div class="form-group">
                                 <label for="intentName">Id</label>
                                 <input class="form-control" name="intent_id" type="text"
@@ -80,8 +91,8 @@ if (isset($_GET['intent_id'])) {
                             </div>
                             <div class="form-group">
                                 <label for="description">Câu hỏi liên quan đến chủ đề này</label>
-                                <textarea class="form-control" id="question" name="question" placeholder="Nhập câu hỏi" rows="3"
-                                    required></textarea>
+                                <textarea class="form-control" id="question" name="question" placeholder="Nhập câu hỏi"
+                                    rows="3"></textarea>
                             </div>
                             <div class="form-group">
                                 <label for="answer">Câu trả lời cho chủ đề trên</label>
@@ -119,7 +130,7 @@ if (isset($_GET['intent_id'])) {
                             if (isConfirmed) {
                                 $.ajax({
                                     type: "POST",
-                                    url: "delete_example.php",
+                                    url: "delete_example_admin.php",
                                     data: { id: id },
                                     success: function (response) {
                                         console.log(response);
@@ -131,7 +142,7 @@ if (isset($_GET['intent_id'])) {
                     });
                 });
             </script>
-            <!-- nut xoa cau tra loi -->
+            <!-- nut xoa cau tra loi admin-->
             <script>
                 document.addEventListener("DOMContentLoaded", function () {
                     const deleteAnswerButtons = document.querySelectorAll(".btn-delete-answer");
@@ -143,7 +154,7 @@ if (isset($_GET['intent_id'])) {
                             if (isConfirmed) {
                                 $.ajax({
                                     type: "POST",
-                                    url: "delete_answer.php",
+                                    url: "delete_answer_admin.php",
                                     data: { id: id },
                                     success: function (response) {
                                         console.log(response);
@@ -155,7 +166,7 @@ if (isset($_GET['intent_id'])) {
                     });
                 });
             </script>
-            <!-- sua cau hoi -->
+            <!-- sua cau hoi adnmin -->
             <script>
                 document.addEventListener("DOMContentLoaded", function () {
                     const editButtons = document.querySelectorAll(".btn-edit-example");
@@ -169,7 +180,7 @@ if (isset($_GET['intent_id'])) {
 
                             if (currentValue !== null) {
                                 $.ajax({
-                                    url: "edit_example.php",
+                                    url: "edit_example_admin.php",
                                     method: "POST",
                                     data: { id: id, value: currentValue },
                                     success: function (response) {
@@ -186,7 +197,7 @@ if (isset($_GET['intent_id'])) {
                     });
                 });
             </script>
-            <!-- sua cau tra loi -->
+            <!-- sua cau tra loi admin-->
             <script>
                 document.addEventListener("DOMContentLoaded", function () {
                     const editButtons = document.querySelectorAll(".btn-edit-answer");
@@ -200,7 +211,7 @@ if (isset($_GET['intent_id'])) {
 
                             if (currentValue !== null) {
                                 $.ajax({
-                                    url: "edit_answer.php",
+                                    url: "edit_answer_admin.php",
                                     method: "POST",
                                     data: { id: id, value: currentValue },
                                     success: function (response) {

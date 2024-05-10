@@ -1,7 +1,9 @@
 version: "3.1"
 
 intents:
-  - ctu
+  - hieu_truong_ctump
+  - địa chỉ ctump
+  - phòng truyền thông
   - greet
   - goodbye
   - affirm
@@ -10,19 +12,19 @@ intents:
   - mood_unhappy
   - bot_challenge
 
-  - thong_tin_ctump
-  # - cac_truong_dai_hoc_khac
-  # - tim_hieu_khoa_ctump
-  # - xac_nhan_chon_khoa
-  # - tim_hieu_khoa_cu_the
-
-
 entities:
   - văn phòng khoa
   - ctump
 
 responses: 
-
+  utter_hieu_truong_ctump:
+  - text: "lộc"
+  utter_địa chỉ ctump:
+  - text: "đường nvc"
+  - text: "nvc"
+  utter_phòng truyền thông:
+  - text: "ths khoa"
+  - text: "khoa, bình"
   utter_greet:
   - text: "Hey! How are you?"
 
@@ -33,23 +35,19 @@ responses:
   utter_did_that_help:
   - text: "Did that help you?"
 
+  utter_happy:
+  - text: "Great, carry on!"
+
   utter_goodbye:
   - text: "Bye"
 
   utter_iamabot:
   - text: "I am a bot, powered by Rasa."
-
-  utter_thong_tin_ctump:
-  - text: "là một trường đại học chuyên ngành Khoa học sức khỏe tại Việt Nam, là trường đại học Công lập trực thuộc Bộ Y Tế duy nhất tại Đồng bằng sông Cửu Long"
-  
-  # utter_cac_truong_dai_hoc_khac:
-  # - text: "Xin lỗi tôi chỉ cung cấp thông tin về Đại học Y Dược Cần Thơ (ctump)"
-
+ 
 actions:
   - action_extract_office_entity
   - action_order_office
   - action_confirm_order
-
 
 session_config:
   session_expiration_time: 60
