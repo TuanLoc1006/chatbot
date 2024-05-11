@@ -36,7 +36,7 @@ if ($result && $result->num_rows > 0) {
         <?php
     }
 } else {
-    echo "Không có ý định nào được tìm thấy.";
+    echo "Không có chủ đề nào được tìm thấy.";
 }
 
 
