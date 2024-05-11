@@ -7,7 +7,7 @@ from .handleDB import handleDB
 from .constants import Constant
 
 constant = Constant()
-# NGANH = constant.get_nganh_hoc()
+NGANH = constant.get_nganh_hoc()
 HOCPHI = constant.get_hoc_phi()
 CTDT = constant.getCTDT()
 
