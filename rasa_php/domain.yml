@@ -1,9 +1,12 @@
 version: "3.1"
 
+actions:
+  - action_nganh
+  - action_hoc_phi
+  - action_chuong_trinh_dao_tao
+  - acion_liet_ke_truong
+
 intents:
-  - hieu_truong_ctump
-  - địa chỉ ctump
-  - phòng truyền thông
   - greet
   - goodbye
   - affirm
@@ -11,43 +14,45 @@ intents:
   - mood_great
   - mood_unhappy
   - bot_challenge
+  ##################
+
+  - ask_nganh
+  - ask_hoc_phi
+  - ask_chuong_trinh_dao_tao
+  - ask_chuc_nang
+  - ask_cac_truong_dai_hoc_vietnam
 
 entities:
-  - văn phòng khoa
-  - ctump
+  - hocphi
+  - nganh
 
 responses: 
-  utter_hieu_truong_ctump:
-  - text: "lộc"
-  utter_địa chỉ ctump:
-  - text: "đường nvc"
-  - text: "nvc"
-  utter_phòng truyền thông:
-  - text: "ths khoa"
-  - text: "khoa, bình"
   utter_greet:
-  - text: "Hey! How are you?"
+    - text: "Chào! Chào mừng bạn đến với Bot Rasa."
+    - text: "Chào! bạn tôi có thể giúp gì cho bạn?"
+    - text: "Bạn cần gì?"
+    - text: "Rất vui khi bạn đã hỏi"
 
   utter_cheer_up:
   - text: "Here is something to cheer you up:"
     image: "https://i.imgur.com/nGF1K8f.jpg"
 
   utter_did_that_help:
-  - text: "Did that help you?"
-
-  utter_happy:
-  - text: "Great, carry on!"
+  - text: "Tôi có thể giúp được gì cho bạn?"
 
   utter_goodbye:
-  - text: "Bye"
+    - text: "Tạm biệt! Hy vọng sớm gặp lại bạn! Chỉ cần nhập 'hey' hoặc 'hi' bất cứ lúc nào để chuyển hướng đến Phần giới thiệu của Bot :))"
+    - text: "Bye bye"
+    - text: "hẹn gặp lại"
 
+  utter_cac_truong_dai_hoc_khac:
+  - text: "Xin lỗi tôi chỉ cung cấp thông tin về Đại học Y Dược Cần Thơ (ctump)"
+  
   utter_iamabot:
-  - text: "I am a bot, powered by Rasa."
- 
-actions:
-  - action_extract_office_entity
-  - action_order_office
-  - action_confirm_order
+  - text: "Tôi là hệ thống trả lời tự động của trường Đại học Y Dược Cần Thơ"
+
+  utter_cac_chuc_nang:
+  - text: "Tôi có thể giải đáp thắc mắc của bạn về học phí, chương trình đào tạo... và các thông tin về Đại học Y dược Cần Thơ."
 
 session_config:
   session_expiration_time: 60

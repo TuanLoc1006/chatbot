@@ -1,0 +1,20 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-hocphi",
+      "2": "I-hocphi",
+      "3": "L-hocphi",
+      "4": "U-hocphi",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-hocphi": 1,
+      "I-hocphi": 2,
+      "L-hocphi": 3,
+      "U-hocphi": 4,
+      "O": 0
+    },
+    "num_tags": 5
+  }
+]

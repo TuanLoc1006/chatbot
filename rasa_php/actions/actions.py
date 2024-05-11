@@ -1,50 +1,89 @@
 
 from typing import Any, Text, Dict, List
-
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 
+from .handleDB import handleDB
+from .constants import Constant
 
-class ExtractOfficeEntity(Action):
+constant = Constant()
+# NGANH = constant.get_nganh_hoc()
+HOCPHI = constant.get_hoc_phi()
+CTDT = constant.getCTDT()
 
-    def name(self) -> Text:
-        return "action_extract_office_entity"
+handledb = handleDB()
+get_connect = handledb.get_connect()
+get_nganh = handledb.get_nganh()
 
+# class action_nganh(Action):
+#     def name(self):
+#         return "action_nganh"
+#     def run(self, dispatcher: CollectingDispatcher,
+#                 tracker: Tracker,
+#                 domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+#             nganh = NGANH
+            
+#             user_input = tracker.latest_message['text']
+#             print(user_input)
+#             dispatcher.utter_message(text="Danh sách các ngành:")
+#             log_connect = get_connect
+#             print(log_connect)
+#             for item in nganh:
+#                 dispatcher.utter_message(text="- " + item.capitalize())
+                
+#             return []
+
+class action_nganh(Action):
+    def name(self):
+        return "action_nganh"
+    def run(self, dispatcher: CollectingDispatcher,
+                tracker: Tracker,
+                domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+            nganh = get_nganh
+            print(nganh)
+            
+            user_input = tracker.latest_message['text']
+            print(user_input)
+            dispatcher.utter_message(text="Danh sách các ngành có trong chương trình đào tạo của Đại học Y Dược Cần Thơ:")
+            log_connect = get_connect
+            print(log_connect)
+            for item in nganh:
+                dispatcher.utter_message(text="- " + item[0].capitalize())
+                
+            return []
+        
+class action_hocphi(Action):
+    def name(self):
+        return "action_hoc_phi"
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-
-        vanPhongKhoa = next(tracker.get_latest_entity_values('văn phòng khoa'), None)
-        if vanPhongKhoa:
-            dispatcher.utter_message(text=f"Đây là thông tin khoa {vanPhongKhoa} bạn đã yêu cầu")
-        else:
-            dispatcher.utter_message(text="Xin lỗi, tôi không tìm thấy thông tin khoa bạn yêu cầu")
-        return []
-
-class OrderOfficeAction(Action):
-    def name(self) -> Text:
-        return "action_order_office"
-     
-    def run(self, dispatcher: CollectingDispatcher,
-            tracker: Tracker,
-            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        dhyd =  next(tracker.get_latest_entity_values('ctump'), None)
-        if dhyd:
-            dispatcher.utter_message(text="Đại học y dược có các Khoa\n- Y\n- Khoa Răng Hàm Mặt\n- Khoa Dược\n- Khoa Điều dưỡng\n- Kỹ thuật y học\n- Khoa Y tế công cộng\n- Khoa Khoa học cơ bản\n- Khoa Y học cổ truyền\nBạn muốn tìm kiếm thông tin của khoa nào?")
-        else:
-            dispatcher.utter_message(text="Xin lỗi tôi chỉ cung cấp thông tin về Đại học Y Dược Cần Thơ (ctump)")   
+        hocphi = next(tracker.get_latest_entity_values('hocphi'), None)
+        user_input = tracker.latest_message['text']
+        print(user_input)
+        if hocphi:
+            hocphi = HOCPHI
+            dispatcher.utter_message(text="Danh sách mức học phí (1 năm):")
+            for keys, value in hocphi.items():
+                dispatcher.utter_message(text=f"{keys} : {value} VND")
+                
         return []
     
-class ConfirmOrderAction(Action):
-    def name(self) -> Text:
-        return "action_confirm_order"
+class action_chuongtrinhdaotao(Action):
+    def name(self):
+        return "action_chuong_trinh_dao_tao"
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        vanPhongKhoa = next(tracker.get_latest_entity_values('văn phòng khoa'), None)
-        if vanPhongKhoa:
-            dispatcher.utter_message(text=f"Đây là thông tin về khoa {vanPhongKhoa} bạn cần")
-        else:
-            dispatcher.utter_message(text="Xin lỗi, tôi không tìm thấy thông tin khoa bạn cần")
+        nganh_list = NGANH
+        user_input = tracker.latest_message['text']
+        print(user_input)
+        nganh_entity = next(tracker.get_latest_entity_values('nganh'), None)
+        ctdt = CTDT
+        if nganh_entity:
+            for key, value in ctdt.items():
+                if nganh_entity == key:
+                    dispatcher.utter_message(text=f"Tham khảo chương trình đào tạo của ngành {nganh_entity} tại đây '{value}'")
+        else : dispatcher.utter_message(text=f"Bạn cần biết chương trình đào tạo của ngành nào?")
         return []
     

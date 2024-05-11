@@ -1,30 +1,32 @@
 version: "3.1"
 
 stories:
+  - story: sad path 2
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: mood_unhappy
+      - action: utter_cheer_up
+      - action: utter_did_that_help
+      - intent: deny
+      - action: utter_goodbye
 
-- story: sad path 2
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: deny
-  - action: utter_goodbye
+  - story: hoi ve nganh dao tao
+    steps:
+      - intent: ask_nganh
+      - action: action_nganh
 
-# end
+  - story: hoi ve hoc phi
+    steps:
+      - intent: ask_hoc_phi
+      - action: action_hoc_phi
 
-- story: phòng truyền thông path
-  steps:
-  - intent: phòng truyền thông
-  - action: utter_phòng truyền thông
+  - story: hoi ve chuong trinh dao tao nganh y khoa
+    steps:
+      - intent: ask_chuong_trinh_dao_tao
+      - action: action_chuong_trinh_dao_tao
+  - story: hoi ve các chức năng của chat bot
+    steps:
+      - intent: ask_chuc_nang
+      - action: utter_cac_chuc_nang
 
-- story: địa chỉ ctump path
-  steps:
-  - intent: địa chỉ ctump
-  - action: utter_địa chỉ ctump
-
-- story: hieu_truong_ctump path
-  steps:
-  - intent: hieu_truong_ctump
-  - action: utter_hieu_truong_ctump
