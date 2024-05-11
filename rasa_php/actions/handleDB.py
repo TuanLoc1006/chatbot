@@ -17,6 +17,7 @@ def nganh():
     cursor.execute("SELECT ten_nganh FROM nganh")
     result = cursor.fetchall()
     return result
+
 class handleDB:
     def __init__(self):
         pass
