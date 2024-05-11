@@ -21,7 +21,7 @@ stories:
       - intent: ask_hoc_phi
       - action: action_hoc_phi
 
-  - story: hoi ve chuong trinh dao tao 
+  - story: hoi ve chuong trinh dao tao nganh y khoa
     steps:
       - intent: ask_chuong_trinh_dao_tao
       - action: action_chuong_trinh_dao_tao

@@ -45,8 +45,6 @@ class action_nganh(Action):
             user_input = tracker.latest_message['text']
             print(user_input)
             dispatcher.utter_message(text="Danh sách các ngành có trong chương trình đào tạo của Đại học Y Dược Cần Thơ:")
-            log_connect = get_connect
-            print(log_connect)
             for item in nganh:
                 dispatcher.utter_message(text="- " + item[0].capitalize())
                 
@@ -61,6 +59,7 @@ class action_hocphi(Action):
         hocphi = next(tracker.get_latest_entity_values('hocphi'), None)
         user_input = tracker.latest_message['text']
         print(user_input)
+        
         if hocphi:
             hocphi = HOCPHI
             dispatcher.utter_message(text="Danh sách mức học phí (1 năm):")
