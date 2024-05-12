@@ -323,7 +323,7 @@ nlu:
 - intent: ask_thong_tin_truong
   examples: |
     - trường được thành lập năm nào
-=======
+################################
   - intent: ask_chuc_nang
     examples: |
       - tôi có thể hỏi gì
@@ -374,4 +374,3 @@ nlu:
       - liệt kê các trường đại học ở Việt Nam
       - việt nam có các trường nào
     
->>>>>>> f006455af4e06c6d0ba85d3cb76a50399f6a9105

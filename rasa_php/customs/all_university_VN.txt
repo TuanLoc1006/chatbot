@@ -1687,16 +1687,14 @@ These are local universities, under the management of the government and the peo
 |TUETECH
 |-
 !234
-|Phu Xuan University
+
 |Trường Đại học Phú Xuân
 |PXU
-|-
-!235
-|Cuu Long University
+
+
 |Trường Đại học Cửu Long
 |CLU
-|-
-!236
+
 |Pacific Vietnam University
 |Trường Đại học Thái Bình Dương
 |PVNU
