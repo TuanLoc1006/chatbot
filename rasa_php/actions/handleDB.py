@@ -1,11 +1,23 @@
 import mysql.connector
 
+#DB Lộc (chạy thì mở ra)
+# def connectDB():
+#     mydb = mysql.connector.connect(
+#     host="localhost",
+#     user="root",
+#     password="",
+#     database="chatbot_rasa",
+#     port=3306,
+#     )
+#     return mydb
+
+#DB của Phương
 def connectDB():
     mydb = mysql.connector.connect(
     host="localhost",
     user="root",
-    password="",
-    database="chatbot_rasa",
+    password="12345",
+    database="rasa_data",
     port=3306,
     )
     return mydb

@@ -29,3 +29,8 @@ stories:
     steps:
       - intent: ask_chuc_nang
       - action: utter_cac_chuc_nang
+
+  - story: hoi ve thong tin cua truong
+    steps:
+      - intent: ask_thong_tin_truong
+      - action: utter_thong_tin_truong

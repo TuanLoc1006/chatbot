@@ -18,6 +18,7 @@ intents:
 
   - ask_nganh
   - ask_hoc_phi
+  - ask_thong_tin_truong
   - ask_chuong_trinh_dao_tao
   - ask_chuc_nang
   - ask_cac_truong_dai_hoc_vietnam
@@ -53,6 +54,9 @@ responses:
 
   utter_cac_chuc_nang:
   - text: "Tôi có thể giải đáp thắc mắc của bạn về học phí, chương trình đào tạo... và các thông tin về Đại học Y dược Cần Thơ."
+
+  utter_thong_tin_truong:
+  - text: "Trường Đại học Y Dược Cần Thơ là trường đại học Khoa học Sức khỏe hệ công lập trực thuộc Bộ Y tế duy nhất tại Đồng bằng sông Cửu Long, Việt Nam. Trường Đại học Y Dược Cần Thơ cũng là một trong những trường đào tạo Y – Dược tốt nhất Việt Nam nói chung và khu vực Đồng bằng Sông Cửu Long nói riêng. Có sứ mạng đào tạo bác sĩ, dược sĩ có trình độ đại học, sau đại học, nghiên cứu khoa học và chuyển giao công nghệ y dược, hỗ trợ phát triển hệ thống y tế nhằm đáp ứng nhu cầu chăm sóc sức khỏe cho nhân dân khu vực vùng Đồng bằng sông Cửu Long. Được xếp vào nhóm trường đại học trọng điểm quốc gia Việt Nam, trực thuộc Bộ Y tế."
 
 session_config:
   session_expiration_time: 60

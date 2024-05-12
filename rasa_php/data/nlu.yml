@@ -111,6 +111,26 @@ nlu:
     - Sự giúp đỡ của bạn là quý báu
     - xin gửi lời biết ơn tới bạn
 
+- intent: ask_thong_tin_truong
+  examples: |
+    - thông tin về trường đại học y dược cần thơ
+    - thông tin về trường này
+    - tôi muốn biết về trường đại học y dược cần thơ
+    - ctump
+    - trường đại học y dược cần thơ
+    - tôi muốn có thông tin về trường đại học y dược cần thơ
+    - cho tôi xin thông tin về trường đại học này
+    - cho tôi xem thông tin về ctump
+    - giới thiệu cho tôi về trường này
+    - tất tần tật về ctump
+    - tất cả thông tin về trường y dược cần thơ
+    - tôi muốn tìm hiểu về trường y dược cần thơ
+    - đại học y dược cần thơ
+    - trường đại học y dược cần thơ
+    - giới thiệu về trường đại học y dược cần thơ
+    - lịch sử của trường đại học y dược cần thơ
+    - tất cả thông tin về y dược cần thơ
+
 - intent: ask_nganh
   examples: |  
     - trường có các ngành nào
@@ -274,7 +294,6 @@ nlu:
     - ngành [y tế công cộng](nganh) học gì
     - sinh viên [y tế công cộng](nganh) được học gì
 
-<<<<<<< HEAD
 - intent: ask_chuc_nang
   examples: |
     - tôi có thể hỏi gì
@@ -324,53 +343,53 @@ nlu:
   examples: |
     - trường được thành lập năm nào
 ################################
-  - intent: ask_chuc_nang
-    examples: |
-      - tôi có thể hỏi gì
-      - các chức năng bạn có
-      - bạn có thể giúp gì cho tôi
-      - bạn làm được những gì
-      - chức năng của bạn là gì
-      - bạn có thể làm gì
-      - mày làm được gì
-      - mày giúp gì được cho tao
-      - mày giúp gì được cho t
-      - tôi làm được gì với bạn
-      - tao có thể hỏi những gì
-      - mày có thể trả lời những gì
-      - có điều gì bạn có thể giúp tôi với không
-      - tôi có thể nhờ bạn giúp với việc gì
-      - bạn có thể hỗ trợ với những vấn đề gì
-      - có gì đặc biệt mà bạn có thể làm được không
-      - tôi đang cần một ít sự giúp đỡ, bạn có thể đáp ứng được không
-      - bạn làm được gì trong trường hợp này
-      - có thể gửi yêu cầu cho bạn về việc gì?
-      - tôi cần một ít sự hỗ trợ, liệu bạn có thể đáp ứng được không
-      - nếu tôi cần một ít thông tin hoặc sự hỗ trợ, tôi có thể dựa vào bạn không
-      - bạn có thể hỗ trợ với những vấn đề nào trong lĩnh vực của bạn
-      - tôi cần một ít sự chỉ dẫn, bạn có thể giúp tôi không
-      - nếu tôi có một vài câu hỏi, liệu bạn có thể trả lời chúng không
-      - tôi muốn biết nếu bạn có thể giúp đỡ với một vấn đề cụ thể hay không
-      - có phải bạn có thể hỗ trợ với một loạt các vấn đề không
-      - tôi muốn xác nhận xem bạn có thể đáp ứng được yêu cầu của tôi không
-      - có gì đặc biệt về khả năng của bạn mà tôi có thể tận dụng không
-      - tôi cần một chút hướng dẫn, liệu bạn có thể cung cấp được không?
-      - nếu tôi muốn biết thêm thông tin về một chủ đề cụ thể, tôi có thể tìm kiếm sự giúp đỡ từ bạn được không
-      - tôi đang gặp khó khăn với một vấn đề, liệu bạn có thể hỗ trợ tôi không
-      - nếu tôi muốn tìm hiểu thêm về một lĩnh vực cụ thể, bạn có thể cung cấp thông tin cho tôi không
-      - tôi cần một số gợi ý về việc làm tiếp theo, bạn có thể giúp tôi không
-      - nếu tôi có một dự án cần hoàn thành, liệu bạn có thể hỗ trợ tôi với nó không
-      - tôi muốn tìm hiểu cách làm một việc cụ thể, bạn có thể chỉ dẫn cho tôi được không
-      - nếu tôi cần một ít sự khuyến nghị, liệu bạn có thể đáp ứng được không
-      - tôi đang tìm kiếm sự giúp đỡ, liệu bạn có thể hỗ trợ tôi với nó không
-      - nếu tôi muốn biết cách giải quyết một vấn đề, bạn có thể cung cấp hướng dẫn cho tôi không
-      - tôi muốn nâng cao kiến thức của mình về một chủ đề, bạn có thể giúp tôi không
-      - nếu tôi cần một chút sự hỗ trợ kỹ thuật, liệu bạn có thể cung cấp được không
-      - tôi đang cần một số thông tin, liệu bạn có thể cung cấp cho tôi không
-      - nếu tôi muốn biết cách làm một việc nào đó, bạn có thể hướng dẫn cho tôi không
-  - intent: ask_cac_truong_dai_hoc_vietnam
-    examples: |
-      - các trường đại học ở việt nam
-      - liệt kê các trường đại học ở Việt Nam
-      - việt nam có các trường nào
+- intent: ask_chuc_nang
+  examples: |
+    - tôi có thể hỏi gì
+    - các chức năng bạn có
+    - bạn có thể giúp gì cho tôi
+    - bạn làm được những gì
+    - chức năng của bạn là gì
+    - bạn có thể làm gì
+    - mày làm được gì
+    - mày giúp gì được cho tao
+    - mày giúp gì được cho t
+    - tôi làm được gì với bạn
+    - tao có thể hỏi những gì
+    - mày có thể trả lời những gì
+    - có điều gì bạn có thể giúp tôi với không
+    - tôi có thể nhờ bạn giúp với việc gì
+    - bạn có thể hỗ trợ với những vấn đề gì
+    - có gì đặc biệt mà bạn có thể làm được không
+    - tôi đang cần một ít sự giúp đỡ, bạn có thể đáp ứng được không
+    - bạn làm được gì trong trường hợp này
+    - có thể gửi yêu cầu cho bạn về việc gì?
+    - tôi cần một ít sự hỗ trợ, liệu bạn có thể đáp ứng được không
+    - nếu tôi cần một ít thông tin hoặc sự hỗ trợ, tôi có thể dựa vào bạn không
+    - bạn có thể hỗ trợ với những vấn đề nào trong lĩnh vực của bạn
+    - tôi cần một ít sự chỉ dẫn, bạn có thể giúp tôi không
+    - nếu tôi có một vài câu hỏi, liệu bạn có thể trả lời chúng không
+    - tôi muốn biết nếu bạn có thể giúp đỡ với một vấn đề cụ thể hay không
+    - có phải bạn có thể hỗ trợ với một loạt các vấn đề không
+    - tôi muốn xác nhận xem bạn có thể đáp ứng được yêu cầu của tôi không
+    - có gì đặc biệt về khả năng của bạn mà tôi có thể tận dụng không
+    - tôi cần một chút hướng dẫn, liệu bạn có thể cung cấp được không?
+    - nếu tôi muốn biết thêm thông tin về một chủ đề cụ thể, tôi có thể tìm kiếm sự giúp đỡ từ bạn được không
+    - tôi đang gặp khó khăn với một vấn đề, liệu bạn có thể hỗ trợ tôi không
+    - nếu tôi muốn tìm hiểu thêm về một lĩnh vực cụ thể, bạn có thể cung cấp thông tin cho tôi không
+    - tôi cần một số gợi ý về việc làm tiếp theo, bạn có thể giúp tôi không
+    - nếu tôi có một dự án cần hoàn thành, liệu bạn có thể hỗ trợ tôi với nó không
+    - tôi muốn tìm hiểu cách làm một việc cụ thể, bạn có thể chỉ dẫn cho tôi được không
+    - nếu tôi cần một ít sự khuyến nghị, liệu bạn có thể đáp ứng được không
+    - tôi đang tìm kiếm sự giúp đỡ, liệu bạn có thể hỗ trợ tôi với nó không
+    - nếu tôi muốn biết cách giải quyết một vấn đề, bạn có thể cung cấp hướng dẫn cho tôi không
+    - tôi muốn nâng cao kiến thức của mình về một chủ đề, bạn có thể giúp tôi không
+    - nếu tôi cần một chút sự hỗ trợ kỹ thuật, liệu bạn có thể cung cấp được không
+    - tôi đang cần một số thông tin, liệu bạn có thể cung cấp cho tôi không
+    - nếu tôi muốn biết cách làm một việc nào đó, bạn có thể hướng dẫn cho tôi không
+- intent: ask_cac_truong_dai_hoc_vietnam
+  examples: |
+    - các trường đại học ở việt nam
+    - liệt kê các trường đại học ở Việt Nam
+    - việt nam có các trường nào
     
