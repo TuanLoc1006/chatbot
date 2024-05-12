@@ -339,9 +339,6 @@ nlu:
     - tôi đang cần một số thông tin, liệu bạn có thể cung cấp cho tôi không
     - nếu tôi muốn biết cách làm một việc nào đó, bạn có thể hướng dẫn cho tôi không
 
-- intent: ask_thong_tin_truong
-  examples: |
-    - trường được thành lập năm nào
 ################################
 - intent: ask_chuc_nang
   examples: |
