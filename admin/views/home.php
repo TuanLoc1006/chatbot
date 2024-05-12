@@ -24,17 +24,17 @@
     <div class="container">
         <h1 class="nav-user">Trang admin</h1>
         <div class="row">
-            <div class="col-md-6">
-                <h2>Các intent chưa ghi vào file train rasa</h2>
+            <div class="col-md-8">
+                <h2>Các chủ đề chưa ghi vào file train rasa</h2>
                 <?php
                 include "list_intents_not_in_file.php";
                 ?>
-                <h2>Các intent đã ghi vào file rasa</h2>
+                <h2>Các chủ đề đã ghi vào file rasa</h2>
                 <?php
                 include "list_intents_in_file.php";
                 ?>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-4">
                 <a class="btn btn-secondary" href="../control_rasa/write_to_file.php">ghi file</a>
 
                 <form method="post" action="../control_rasa/train_rasa.php">
