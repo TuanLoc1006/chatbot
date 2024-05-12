@@ -19,15 +19,15 @@ def webhooks():
         rasa_response_json = rasa_response.json()
         
         if rasa_response_json:  # Kiểm tra nếu danh sách rasa_response_json không rỗng
-            bot_response = rasa_response_json[0]['text']  # Truy cập phần tử đầu tiên của danh sách
-            print('Bot Response:', bot_response)
-            return bot_response
+            bot_responses = [message['text'] for message in rasa_response_json]  # Lấy nội dung tin nhắn từ mỗi phần tử của danh sách
+            print('Bot Response:', bot_responses)
+            return jsonify(bot_responses)  # Trả về danh sách các phản hồi của bot dưới dạng JSON
         else:
-            return "Xin lỗi, tôi không hiểu"
+            return "Xin lỗi, tôi không hiểu !!!"
     
     except requests.exceptions.RequestException as e:
         print("An error occurred:", e)
-        return "An error occurred while processing your request."
+        return "Đã xảy ra lỗi trong khi xử lý yêu cầu của bạn"
 
 if __name__ == "__main__":
     print("Starting Flask server...")
