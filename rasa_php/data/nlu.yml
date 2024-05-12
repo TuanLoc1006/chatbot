@@ -1,326 +1,324 @@
 version: "3.1"
 
 nlu:
-  - intent: greet
-    examples: |
-        - chào em
-        - hello em
-        - hi em
-        - em ơi, cho anh hỏi
-        - bot ơi
-        - cho mình hỏi chút
-        - hi
-        - hello
-        - chào
-        - xin chào
+- intent: greet
+  examples: |
+    - chào em
+    - hello em
+    - hi em
+    - em ơi, cho anh hỏi
+    - bot ơi
+    - cho mình hỏi chút
+    - hi
+    - hello
+    - chào
+    - xin chào
 
+- intent: goodbye
+  examples: |
+    - good bye
+    - bye bye
+    - tạm biệt em
+    - tạm biệt bot nhá
+    - cút
+    - hẹn gặp lại
 
-  - intent: goodbye
-    examples: |
-      - good bye
-      - bye bye
-      - tạm biệt em
-      - tạm biệt bot nhá
-      - cút
-      - hẹn gặp lại
+- intent: affirm
+  examples: |
+    - dĩ nhiên
+    - đồng ý
+    - chắc chắn
+    - tôi đồng ý 
+    - không vấn đề
 
-  - intent: affirm
-    examples: |
-      - dĩ nhiên
-      - đồng ý
-      - chắc chắn
-      - tôi đồng ý 
-      - không vấn đề
+- intent: deny
+  examples: |
+    - không
+    - không bao giờ
+    - Tôi không nghĩ vậy
+    - không thích điều đó
+    - không đời nào
+    - không hẳn
 
-  - intent: deny
-    examples: |
-      - không
-      - không bao giờ
-      - Tôi không nghĩ vậy
-      - không thích điều đó
-      - không đời nào
-      - không hẳn
+- intent: mood_great
+  examples: |
+    - hoàn hảo
+    - Tuyệt
+    - tuyệt vời
+    - cảm giác như một vị vua
+    - tuyệt vời
+    - Tôi đang cảm thấy rất tốt
+    - Tôi tuyệt vời
+    - Tôi tuyệt vời
+    - Tôi sẽ cứu thế giới
+    - siêu hấp dẫn
+    - cực kỳ tốt
+    - quá hoàn hảo
+    - tốt quá
+    - rất hoàn hảo
 
-  - intent: mood_great
-    examples: |
-      - hoàn hảo
-      - Tuyệt
-      - tuyệt vời
-      - cảm giác như một vị vua
-      - tuyệt vời
-      - Tôi đang cảm thấy rất tốt
-      - Tôi tuyệt vời
-      - Tôi tuyệt vời
-      - Tôi sẽ cứu thế giới
-      - siêu hấp dẫn
-      - cực kỳ tốt
-      - quá hoàn hảo
-      - tốt quá
-      - rất hoàn hảo
+- intent: mood_unhappy
+  examples: |
+    - ngày của tôi thật kinh khủng
+    - tôi buồn
+    - tôi cảm thấy không được khỏe lắm
+    - tôi thất vọng
+    - siêu buồn
+    - tôi rất buồn
+    - buồn
+    - rất buồn
+    - không vui
+    - không tốt
+    - không tốt lắm
+    - buồn vô cùng
+    - buồn quá
 
-  - intent: mood_unhappy
-    examples: |
-      - ngày của tôi thật kinh khủng
-      - tôi buồn
-      - tôi cảm thấy không được khỏe lắm
-      - tôi thất vọng
-      - siêu buồn
-      - tôi rất buồn
-      - buồn
-      - rất buồn
-      - không vui
-      - không tốt
-      - không tốt lắm
-      - buồn vô cùng
-      - buồn quá
+- intent: bot_challenge
+  examples: |
+    - bạn có phải robot không?
+    - Bạn có phải là con người?
+    - tôi đang nói chuyện với robot phải không?
+    - Tôi đang nói chuyện với con người à?
+    - mày là ai
+    - m do ai tạo ra
+    - m có phải là robot không
+    - mày là gì
+    - mày là ai
 
-  - intent: bot_challenge
-    examples: |
-      - bạn có phải robot không?
-      - Bạn có phải là con người?
-      - tôi đang nói chuyện với robot phải không?
-      - Tôi đang nói chuyện với con người à?
-      - mày là ai
-      - m do ai tạo ra
-      - m có phải là robot không
-      - mày là gì
-      - mày là ai
+- intent: thank
+  examples: |
+    - cảm ơn
+    - cảm ơn nhìu nhé
+    - thanks
+    - thank you
+    - củm ơn
+    - mơn
+    - ok cảm ơn
+    - cảm ơn bạn
+    - cảm ơn đã giúp mình
+    - đa tạ
+    - mơn bạn
+    - thank u
+    - ok thanks
+    - cảm ơn bạn rất nhiều
+    - xin cảm ơn bạn
+    - cảm ơn bạn đã giúp đỡ
+    - Rất cảm kích sự giúp đỡ của bạn
+    - xin chân thành cảm ơn
+    - cảm ơn bạn vì sự hỗ trợ
+    - Rất động viên với sự giúp đỡ của bạn
+    - cảm ơn bạn đã luôn ở bên cạnh
+    - Sự giúp đỡ của bạn là quý báu
+    - xin gửi lời biết ơn tới bạn
 
-  - intent: thank
-    examples: |
-      - cảm ơn
-      - cảm ơn nhìu nhé
-      - thanks
-      - thank you
-      - củm ơn
-      - mơn
-      - ok cảm ơn
-      - cảm ơn bạn
-      - cảm ơn đã giúp mình
-      - đa tạ
-      - mơn bạn
-      - thank u
-      - ok thanks
-      - cảm ơn bạn rất nhiều
-      - xin cảm ơn bạn
-      - cảm ơn bạn đã giúp đỡ
-      - Rất cảm kích sự giúp đỡ của bạn
-      - xin chân thành cảm ơn
-      - cảm ơn bạn vì sự hỗ trợ
-      - Rất động viên với sự giúp đỡ của bạn
-      - cảm ơn bạn đã luôn ở bên cạnh
-      - Sự giúp đỡ của bạn là quý báu
-      - xin gửi lời biết ơn tới bạn
-
-  - intent: ask_nganh
-    examples: |  
-      - trường có các ngành nào
-      - trường có mấy ngành
-      - số ngành trường có
-      - số ngành trường đào tạo
-      - trường có các ngành nào
-      - trường có bao nhiêu ngành
-      - trường đại học y dược cần thơ có bao nhiêu ngành
-      - trường đạo học này đào tạo các ngành nào
-      - trường này có mấy ngành
-      - trường này có ngành nào
-      - trường có các ngành nào
-      - trường đào tạo các ngành nào
-      - các ngành có trong chương trình đào tạo
-      - số ngành trường có
-      - trường đào tạo bao nhiêu ngành
-      - trường đại học y dược cần thơ có bao nhiêu ngành
-      - ctump có mấy ngành
-      - ctump đào tạo mấy ngành
-      - liệt kê các ngành
-      - liệt kê các ngành trường đào tạo
-      - liệt kê một số ngành học
-      - cho tôi biết trường có bao nhiêu ngành
-      - liệt kê cho tôi các ngành học
+- intent: ask_nganh
+  examples: |  
+    - trường có các ngành nào
+    - trường có mấy ngành
+    - số ngành trường có
+    - số ngành trường đào tạo
+    - trường có các ngành nào
+    - trường có bao nhiêu ngành
+    - trường đại học y dược cần thơ có bao nhiêu ngành
+    - trường đạo học này đào tạo các ngành nào
+    - trường này có mấy ngành
+    - trường này có ngành nào
+    - trường có các ngành nào
+    - trường đào tạo các ngành nào
+    - các ngành có trong chương trình đào tạo
+    - số ngành trường có
+    - trường đào tạo bao nhiêu ngành
+    - trường đại học y dược cần thơ có bao nhiêu ngành
+    - ctump có mấy ngành
+    - ctump đào tạo mấy ngành
+    - liệt kê các ngành
+    - liệt kê các ngành trường đào tạo
+    - liệt kê một số ngành học
+    - cho tôi biết trường có bao nhiêu ngành
+    - liệt kê cho tôi các ngành học
   
-  - intent: ask_hoc_phi
-    examples: |
-      - [học phí](hocphi) bao nhiêu
-      - [học phí](hocphi) của trường đại học y dược là bao nhiêu
-      - [học phí](hocphi) của trường là bao nhiêu
-      - trường này học khoảng bao nhiêu tiền
-      - học trường này tốn bao nhiêu tiền
-      - học trường này có đắt không
-      - [học phí](hocphi) có đắt không
-      - [học phí](hocphi) trường đại học y dược
-      - [học phí](hocphi) đại học y dược
-      - các ngành học bao nhiêu tiền
-      - [học phí](hocphi) là bao nhiêu
-      - giá [học phí](hocphi)
+- intent: ask_hoc_phi
+  examples: |
+    - [học phí](hocphi) bao nhiêu
+    - [học phí](hocphi) của trường đại học y dược là bao nhiêu
+    - [học phí](hocphi) của trường là bao nhiêu
+    - trường này học khoảng bao nhiêu tiền
+    - học trường này tốn bao nhiêu tiền
+    - học trường này có đắt không
+    - [học phí](hocphi) có đắt không
+    - [học phí](hocphi) trường đại học y dược
+    - [học phí](hocphi) đại học y dược
+    - các ngành học bao nhiêu tiền
+    - [học phí](hocphi) là bao nhiêu
+    - giá [học phí](hocphi)
 
-  - intent: ask_chuong_trinh_dao_tao
-    examples:  |
-      - chương trình đào tạo ngành [y khoa](nganh)
-      - chương trình học của ngành [y khoa](nganh)
-      - ngành [y khoa](nganh) được học gì
-      - [y khoa](nganh) được học những gì
-      - [y khoa](nganh) sẽ học gì
-      - sinh viên sẽ được học gì khi học ngành [y khoa](nganh)
-      - sinh viên được đào tạo về gì khi học [y khoa](nganh)
-      - học [y khoa](nganh) được học gì 
-      - các môn của ngành [y khoa](nganh) sẽ học
-      - ngành [y khoa](nganh) học gì
-      - sinh viên [y khoa](nganh) được học gì
+- intent: ask_chuong_trinh_dao_tao
+  examples:  |
+    - chương trình đào tạo ngành [y khoa](nganh)
+    - chương trình học của ngành [y khoa](nganh)
+    - ngành [y khoa](nganh) được học gì
+    - [y khoa](nganh) được học những gì
+    - [y khoa](nganh) sẽ học gì
+    - sinh viên sẽ được học gì khi học ngành [y khoa](nganh)
+    - sinh viên được đào tạo về gì khi học [y khoa](nganh)
+    - học [y khoa](nganh) được học gì 
+    - các môn của ngành [y khoa](nganh) sẽ học
+    - ngành [y khoa](nganh) học gì
+    - sinh viên [y khoa](nganh) được học gì
 
-      - chương trình đào tạo của ngành [răng hàm mặt](nganh)
-      - chương trình học của ngành [răng hàm mặt](nganh)
-      - ngành [răng hàm mặt](nganh) được học gì
-      - [răng hàm mặt](nganh) được học những gì
-      - [răng hàm mặt](nganh) sẽ học gì
-      - sinh viên sẽ được học gì khi học ngành [răng hàm mặt](nganh)
-      - sinh viên được đào tạo về gì khi học [răng hàm mặt](nganh)
-      - học [răng hàm mặt](nganh) được học gì
-      - các môn của ngành [răng hàm mặt](nganh) sẽ học
-      - ngành [răng hàm mặt](nganh) học gì
-      - sinh viên [răng hàm mặt](nganh) được học gì
+    - chương trình đào tạo của ngành [răng hàm mặt](nganh)
+    - chương trình học của ngành [răng hàm mặt](nganh)
+    - ngành [răng hàm mặt](nganh) được học gì
+    - [răng hàm mặt](nganh) được học những gì
+    - [răng hàm mặt](nganh) sẽ học gì
+    - sinh viên sẽ được học gì khi học ngành [răng hàm mặt](nganh)
+    - sinh viên được đào tạo về gì khi học [răng hàm mặt](nganh)
+    - học [răng hàm mặt](nganh) được học gì
+    - các môn của ngành [răng hàm mặt](nganh) sẽ học
+    - ngành [răng hàm mặt](nganh) học gì
+    - sinh viên [răng hàm mặt](nganh) được học gì
 
-      - chương trình đào tạo của ngành [dược học](nganh)
-      - chương trình học của ngành [dược học](nganh)
-      - ngành [dược học](nganh) được học gì
-      - [dược học](nganh) được học những gì
-      - [dược học](nganh) sẽ học gì
-      - sinh viên sẽ được học gì khi học ngành [dược học](nganh)
-      - sinh viên được đào tạo về gì khi học [dược học](nganh)
-      - học [dược học](nganh) được học gì
-      - các môn của ngành [dược học](nganh) sẽ học
-      - ngành [dược học](nganh) học gì
-      - sinh viên [dược học](nganh) được học gì
+    - chương trình đào tạo của ngành [dược học](nganh)
+    - chương trình học của ngành [dược học](nganh)
+    - ngành [dược học](nganh) được học gì
+    - [dược học](nganh) được học những gì
+    - [dược học](nganh) sẽ học gì
+    - sinh viên sẽ được học gì khi học ngành [dược học](nganh)
+    - sinh viên được đào tạo về gì khi học [dược học](nganh)
+    - học [dược học](nganh) được học gì
+    - các môn của ngành [dược học](nganh) sẽ học
+    - ngành [dược học](nganh) học gì
+    - sinh viên [dược học](nganh) được học gì
 
-      - chương trình đào tạo của ngành [y học cổ truyền](nganh)
-      - chương trình học của ngành [y học cổ truyền](nganh)
-      - ngành [y học cổ truyền](nganh) được học gì
-      - [y học cổ truyền](nganh) được học những gì
-      - [y học cổ truyền](nganh) sẽ học gì
-      - sinh viên sẽ được học gì khi học ngành [y học cổ truyền](nganh)
-      - sinh viên được đào tạo về gì khi học [y học cổ truyền](nganh)
-      - học [y học cổ truyền](nganh) được học gì
-      - các môn của ngành [y học cổ truyền](nganh) sẽ học
-      - ngành [y học cổ truyền](nganh) học gì
-      - sinh viên [y học cổ truyền](nganh) được học gì
+    - chương trình đào tạo của ngành [y học cổ truyền](nganh)
+    - chương trình học của ngành [y học cổ truyền](nganh)
+    - ngành [y học cổ truyền](nganh) được học gì
+    - [y học cổ truyền](nganh) được học những gì
+    - [y học cổ truyền](nganh) sẽ học gì
+    - sinh viên sẽ được học gì khi học ngành [y học cổ truyền](nganh)
+    - sinh viên được đào tạo về gì khi học [y học cổ truyền](nganh)
+    - học [y học cổ truyền](nganh) được học gì
+    - các môn của ngành [y học cổ truyền](nganh) sẽ học
+    - ngành [y học cổ truyền](nganh) học gì
+    - sinh viên [y học cổ truyền](nganh) được học gì
 
-      - chương trình đào tạo của ngành [y học dự phòng](nganh)
-      - chương trình học của ngành [y học dự phòng](nganh)
-      - ngành [y học dự phòng](nganh) được học gì
-      - [y học dự phòng](nganh) được học những gì
-      - [y học dự phòng](nganh) sẽ học gì
-      - sinh viên sẽ được học gì khi học ngành [y học dự phòng](nganh)
-      - sinh viên được đào tạo về gì khi học [y học dự phòng](nganh)
-      - học [y học dự phòng](nganh) được học gì
-      - các môn của ngành [y học dự phòng](nganh) sẽ học
-      - ngành [y học dự phòng](nganh) học gì
-      - sinh viên [y học dự phòng](nganh) được học gì
+    - chương trình đào tạo của ngành [y học dự phòng](nganh)
+    - chương trình học của ngành [y học dự phòng](nganh)
+    - ngành [y học dự phòng](nganh) được học gì
+    - [y học dự phòng](nganh) được học những gì
+    - [y học dự phòng](nganh) sẽ học gì
+    - sinh viên sẽ được học gì khi học ngành [y học dự phòng](nganh)
+    - sinh viên được đào tạo về gì khi học [y học dự phòng](nganh)
+    - học [y học dự phòng](nganh) được học gì
+    - các môn của ngành [y học dự phòng](nganh) sẽ học
+    - ngành [y học dự phòng](nganh) học gì
+    - sinh viên [y học dự phòng](nganh) được học gì
 
-      - chương trình đào tạo của ngành [điều dưỡng](nganh)
-      - chương trình học của ngành [điều dưỡng](nganh)
-      - ngành [điều dưỡng](nganh) được học gì
-      - [điều dưỡng](nganh) được học những gì
-      - [điều dưỡng](nganh) sẽ học gì
-      - sinh viên sẽ được học gì khi học ngành [điều dưỡng](nganh)
-      - sinh viên được đào tạo về gì khi học [điều dưỡng](nganh)
-      - học [điều dưỡng](nganh) được học gì
-      - các môn của ngành [điều dưỡng](nganh) sẽ học
-      - ngành [điều dưỡng](nganh) học gì
-      - sinh viên [điều dưỡng](nganh) được học gì
+    - chương trình đào tạo của ngành [điều dưỡng](nganh)
+    - chương trình học của ngành [điều dưỡng](nganh)
+    - ngành [điều dưỡng](nganh) được học gì
+    - [điều dưỡng](nganh) được học những gì
+    - [điều dưỡng](nganh) sẽ học gì
+    - sinh viên sẽ được học gì khi học ngành [điều dưỡng](nganh)
+    - sinh viên được đào tạo về gì khi học [điều dưỡng](nganh)
+    - học [điều dưỡng](nganh) được học gì
+    - các môn của ngành [điều dưỡng](nganh) sẽ học
+    - ngành [điều dưỡng](nganh) học gì
+    - sinh viên [điều dưỡng](nganh) được học gì
 
-      - chương trình đào tạo của ngành [kỹ thuật xét nghiệm y học](nganh)
-      - chương trình học của ngành [kỹ thuật xét nghiệm y học](nganh)
-      - ngành [kỹ thuật xét nghiệm y học](nganh) được học gì
-      - [kỹ thuật xét nghiệm y học](nganh) được học những gì
-      - [kỹ thuật xét nghiệm y học](nganh) sẽ học gì
-      - sinh viên sẽ được học gì khi học ngành [kỹ thuật xét nghiệm y học](nganh)
-      - sinh viên được đào tạo về gì khi học [kỹ thuật xét nghiệm y học](nganh)
-      - học [kỹ thuật xét nghiệm y học](nganh) được học gì
-      - các môn của ngành [kỹ thuật xét nghiệm y học](nganh) sẽ học
-      - ngành [kỹ thuật xét nghiệm y học](nganh) học gì
-      - sinh viên [kỹ thuật xét nghiệm y học](nganh) được học gì
+    - chương trình đào tạo của ngành [kỹ thuật xét nghiệm y học](nganh)
+    - chương trình học của ngành [kỹ thuật xét nghiệm y học](nganh)
+    - ngành [kỹ thuật xét nghiệm y học](nganh) được học gì
+    - [kỹ thuật xét nghiệm y học](nganh) được học những gì
+    - [kỹ thuật xét nghiệm y học](nganh) sẽ học gì
+    - sinh viên sẽ được học gì khi học ngành [kỹ thuật xét nghiệm y học](nganh)
+    - sinh viên được đào tạo về gì khi học [kỹ thuật xét nghiệm y học](nganh)
+    - học [kỹ thuật xét nghiệm y học](nganh) được học gì
+    - các môn của ngành [kỹ thuật xét nghiệm y học](nganh) sẽ học
+    - ngành [kỹ thuật xét nghiệm y học](nganh) học gì
+    - sinh viên [kỹ thuật xét nghiệm y học](nganh) được học gì
 
-      - chương trình đào tạo ngành [hộ sinh)(nganh)
-      - chương trình học của ngành [hộ sinh)(nganh)
-      - ngành [hộ sinh)(nganh) được học gì
-      - [hộ sinh)(nganh) được học những gì
-      - [hộ sinh)(nganh) sẽ học gì
-      - sinh viên sẽ được học gì khi học ngành [hộ sinh)(nganh)
-      - sinh viên được đào tạo về gì khi học [hộ sinh)(nganh)
-      - học [hộ sinh)(nganh) được học gì 
-      - các môn của ngành [hộ sinh)(nganh) sẽ học
-      - ngành [hộ sinh)(nganh) học gì
-      - sinh viên [hộ sinh)(nganh) được học gì
+    - chương trình đào tạo ngành [hộ sinh)(nganh)
+    - chương trình học của ngành [hộ sinh)(nganh)
+    - ngành [hộ sinh)(nganh) được học gì
+    - [hộ sinh)(nganh) được học những gì
+    - [hộ sinh)(nganh) sẽ học gì
+    - sinh viên sẽ được học gì khi học ngành [hộ sinh)(nganh)
+    - sinh viên được đào tạo về gì khi học [hộ sinh)(nganh)
+    - học [hộ sinh)(nganh) được học gì 
+    - các môn của ngành [hộ sinh)(nganh) sẽ học
+    - ngành [hộ sinh)(nganh) học gì
+    - sinh viên [hộ sinh)(nganh) được học gì
 
-      - chương trình đào tạo ngành [kỹ thuật hình ảnh y học](nganh)
-      - chương trình học của ngành [kỹ thuật hình ảnh y học](nganh)
-      - ngành [kỹ thuật hình ảnh y học](nganh) được học gì
-      - [kỹ thuật hình ảnh y học](nganh) được học những gì
-      - [kỹ thuật hình ảnh y học](nganh) sẽ học gì
-      - sinh viên sẽ được học gì khi học ngành [kỹ thuật hình ảnh y học](nganh)
-      - sinh viên được đào tạo về gì khi học [kỹ thuật hình ảnh y học](nganh)
-      - học [kỹ thuật hình ảnh y học](nganh) được học gì 
-      - các môn của ngành [kỹ thuật hình ảnh y học](nganh) sẽ học
-      - ngành [kỹ thuật hình ảnh y học](nganh) học gì
-      - sinh viên [kỹ thuật hình ảnh y học](nganh) được học gì
+    - chương trình đào tạo ngành [kỹ thuật hình ảnh y học](nganh)
+    - chương trình học của ngành [kỹ thuật hình ảnh y học](nganh)
+    - ngành [kỹ thuật hình ảnh y học](nganh) được học gì
+    - [kỹ thuật hình ảnh y học](nganh) được học những gì
+    - [kỹ thuật hình ảnh y học](nganh) sẽ học gì
+    - sinh viên sẽ được học gì khi học ngành [kỹ thuật hình ảnh y học](nganh)
+    - sinh viên được đào tạo về gì khi học [kỹ thuật hình ảnh y học](nganh)
+    - học [kỹ thuật hình ảnh y học](nganh) được học gì 
+    - các môn của ngành [kỹ thuật hình ảnh y học](nganh) sẽ học
+    - ngành [kỹ thuật hình ảnh y học](nganh) học gì
+    - sinh viên [kỹ thuật hình ảnh y học](nganh) được học gì
 
-      - chương trình đào tạo ngành [y tế công cộng](nganh)
-      - chương trình học của ngành [y tế công cộng](nganh)
-      - ngành [y tế công cộng](nganh) được học gì
-      - [y tế công cộng](nganh) được học những gì
-      - [y tế công cộng](nganh) sẽ học gì
-      - sinh viên sẽ được học gì khi học ngành [y tế công cộng](nganh)
-      - sinh viên được đào tạo về gì khi học [y tế công cộng](nganh)
-      - học [y tế công cộng](nganh) được học gì 
-      - các môn của ngành [y tế công cộng](nganh) sẽ học
-      - ngành [y tế công cộng](nganh) học gì
-      - sinh viên [y tế công cộng](nganh) được học gì
+    - chương trình đào tạo ngành [y tế công cộng](nganh)
+    - chương trình học của ngành [y tế công cộng](nganh)
+    - ngành [y tế công cộng](nganh) được học gì
+    - [y tế công cộng](nganh) được học những gì
+    - [y tế công cộng](nganh) sẽ học gì
+    - sinh viên sẽ được học gì khi học ngành [y tế công cộng](nganh)
+    - sinh viên được đào tạo về gì khi học [y tế công cộng](nganh)
+    - học [y tế công cộng](nganh) được học gì 
+    - các môn của ngành [y tế công cộng](nganh) sẽ học
+    - ngành [y tế công cộng](nganh) học gì
+    - sinh viên [y tế công cộng](nganh) được học gì
 
-  - intent: ask_chuc_nang
-    examples: |
-      - tôi có thể hỏi gì
-      - các chức năng bạn có
-      - bạn có thể giúp gì cho tôi
-      - bạn làm được những gì
-      - chức năng của bạn là gì
-      - bạn có thể làm gì
-      - mày làm được gì
-      - mày giúp gì được cho tao
-      - mày giúp gì được cho t
-      - tôi làm được gì với bạn
-      - tao có thể hỏi những gì
-      - mày có thể trả lời những gì
-      - có điều gì bạn có thể giúp tôi với không
-      - tôi có thể nhờ bạn giúp với việc gì
-      - bạn có thể hỗ trợ với những vấn đề gì
-      - có gì đặc biệt mà bạn có thể làm được không
-      - tôi đang cần một ít sự giúp đỡ, bạn có thể đáp ứng được không
-      - bạn làm được gì trong trường hợp này
-      - có thể gửi yêu cầu cho bạn về việc gì?
-      - tôi cần một ít sự hỗ trợ, liệu bạn có thể đáp ứng được không
-      - nếu tôi cần một ít thông tin hoặc sự hỗ trợ, tôi có thể dựa vào bạn không
-      - bạn có thể hỗ trợ với những vấn đề nào trong lĩnh vực của bạn
-      - tôi cần một ít sự chỉ dẫn, bạn có thể giúp tôi không
-      - nếu tôi có một vài câu hỏi, liệu bạn có thể trả lời chúng không
-      - tôi muốn biết nếu bạn có thể giúp đỡ với một vấn đề cụ thể hay không
-      - có phải bạn có thể hỗ trợ với một loạt các vấn đề không
-      - tôi muốn xác nhận xem bạn có thể đáp ứng được yêu cầu của tôi không
-      - có gì đặc biệt về khả năng của bạn mà tôi có thể tận dụng không
-      - tôi cần một chút hướng dẫn, liệu bạn có thể cung cấp được không?
-      - nếu tôi muốn biết thêm thông tin về một chủ đề cụ thể, tôi có thể tìm kiếm sự giúp đỡ từ bạn được không
-      - tôi đang gặp khó khăn với một vấn đề, liệu bạn có thể hỗ trợ tôi không
-      - nếu tôi muốn tìm hiểu thêm về một lĩnh vực cụ thể, bạn có thể cung cấp thông tin cho tôi không
-      - tôi cần một số gợi ý về việc làm tiếp theo, bạn có thể giúp tôi không
-      - nếu tôi có một dự án cần hoàn thành, liệu bạn có thể hỗ trợ tôi với nó không
-      - tôi muốn tìm hiểu cách làm một việc cụ thể, bạn có thể chỉ dẫn cho tôi được không
-      - nếu tôi cần một ít sự khuyến nghị, liệu bạn có thể đáp ứng được không
-      - tôi đang tìm kiếm sự giúp đỡ, liệu bạn có thể hỗ trợ tôi với nó không
-      - nếu tôi muốn biết cách giải quyết một vấn đề, bạn có thể cung cấp hướng dẫn cho tôi không
-      - tôi muốn nâng cao kiến thức của mình về một chủ đề, bạn có thể giúp tôi không
-      - nếu tôi cần một chút sự hỗ trợ kỹ thuật, liệu bạn có thể cung cấp được không
-      - tôi đang cần một số thông tin, liệu bạn có thể cung cấp cho tôi không
-      - nếu tôi muốn biết cách làm một việc nào đó, bạn có thể hướng dẫn cho tôi không
-  - intent: ask_cac_truong_dai_hoc_vietnam
-    examples: |
-      - các trường đại học ở việt nam
-      - liệt kê các trường đại học ở Việt Nam
-      - việt nam có các trường nào
+- intent: ask_chuc_nang
+  examples: |
+    - tôi có thể hỏi gì
+    - các chức năng bạn có
+    - bạn có thể giúp gì cho tôi
+    - bạn làm được những gì
+    - chức năng của bạn là gì
+    - bạn có thể làm gì
+    - mày làm được gì
+    - mày giúp gì được cho tao
+    - mày giúp gì được cho t
+    - tôi làm được gì với bạn
+    - tao có thể hỏi những gì
+    - mày có thể trả lời những gì
+    - có điều gì bạn có thể giúp tôi với không
+    - tôi có thể nhờ bạn giúp với việc gì
+    - bạn có thể hỗ trợ với những vấn đề gì
+    - có gì đặc biệt mà bạn có thể làm được không
+    - tôi đang cần một ít sự giúp đỡ, bạn có thể đáp ứng được không
+    - bạn làm được gì trong trường hợp này
+    - có thể gửi yêu cầu cho bạn về việc gì?
+    - tôi cần một ít sự hỗ trợ, liệu bạn có thể đáp ứng được không
+    - nếu tôi cần một ít thông tin hoặc sự hỗ trợ, tôi có thể dựa vào bạn không
+    - bạn có thể hỗ trợ với những vấn đề nào trong lĩnh vực của bạn
+    - tôi cần một ít sự chỉ dẫn, bạn có thể giúp tôi không
+    - nếu tôi có một vài câu hỏi, liệu bạn có thể trả lời chúng không
+    - tôi muốn biết nếu bạn có thể giúp đỡ với một vấn đề cụ thể hay không
+    - có phải bạn có thể hỗ trợ với một loạt các vấn đề không
+    - tôi muốn xác nhận xem bạn có thể đáp ứng được yêu cầu của tôi không
+    - có gì đặc biệt về khả năng của bạn mà tôi có thể tận dụng không
+    - tôi cần một chút hướng dẫn, liệu bạn có thể cung cấp được không?
+    - nếu tôi muốn biết thêm thông tin về một chủ đề cụ thể, tôi có thể tìm kiếm sự giúp đỡ từ bạn được không
+    - tôi đang gặp khó khăn với một vấn đề, liệu bạn có thể hỗ trợ tôi không
+    - nếu tôi muốn tìm hiểu thêm về một lĩnh vực cụ thể, bạn có thể cung cấp thông tin cho tôi không
+    - tôi cần một số gợi ý về việc làm tiếp theo, bạn có thể giúp tôi không
+    - nếu tôi có một dự án cần hoàn thành, liệu bạn có thể hỗ trợ tôi với nó không
+    - tôi muốn tìm hiểu cách làm một việc cụ thể, bạn có thể chỉ dẫn cho tôi được không
+    - nếu tôi cần một ít sự khuyến nghị, liệu bạn có thể đáp ứng được không
+    - tôi đang tìm kiếm sự giúp đỡ, liệu bạn có thể hỗ trợ tôi với nó không
+    - nếu tôi muốn biết cách giải quyết một vấn đề, bạn có thể cung cấp hướng dẫn cho tôi không
+    - tôi muốn nâng cao kiến thức của mình về một chủ đề, bạn có thể giúp tôi không
+    - nếu tôi cần một chút sự hỗ trợ kỹ thuật, liệu bạn có thể cung cấp được không
+    - tôi đang cần một số thông tin, liệu bạn có thể cung cấp cho tôi không
+    - nếu tôi muốn biết cách làm một việc nào đó, bạn có thể hướng dẫn cho tôi không
+
+- intent: ask_thong_tin_truong
+  examples: |
+    - trường được thành lập năm nào

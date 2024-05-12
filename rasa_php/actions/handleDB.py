@@ -11,10 +11,24 @@ def connectDB():
     return mydb
 
 def nganh():
-    handle_db = handleDB()
-    db_connection = handle_db.get_connect()
+    db_connection = handleDB().get_connect()
     cursor = db_connection.cursor()
     cursor.execute("SELECT ten_nganh FROM nganh")
+    result = cursor.fetchall()
+    return result
+
+def getHocPhi():
+    db_connection = handleDB().get_connect()
+    cursor = db_connection.cursor()
+    # cursor.execute("SELECT gia_tien FROM hoc_phi")
+    cursor.execute("SELECT a.ten_nganh, b.gia_tien FROM nganh AS a JOIN hoc_phi AS b ON a.ma_nganh = b.ma_nganh")
+    result = cursor.fetchall()
+    return result
+
+def getChuongTrinhDaoTao():
+    db_connection = handleDB().get_connect()
+    cursor = db_connection.cursor()
+    cursor.execute("SELECT a.ten_nganh, b.chuong_trinh_dao_tao FROM nganh AS a JOIN chuong_trinh_dao_tao AS b ON a.ma_nganh = b.ma_nganh")
     result = cursor.fetchall()
     return result
 
@@ -25,3 +39,7 @@ class handleDB:
         return connectDB()
     def get_nganh(self):
         return nganh()
+    def get_hoc_phi(self):
+        return getHocPhi()
+    def get_chuong_trinh_dao_tao(self):
+        return getChuongTrinhDaoTao()
