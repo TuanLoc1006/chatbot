@@ -1,336 +1,545 @@
-VNU - Đại học Quốc gia Hà Nội
-UET - Trường Đại học Công nghệ
-UEd - Trường Đại học Giáo dục
-UEB - Trường Đại học Kinh tế
-HUS - Trường Đại học Khoa học Tự nhiên
-HUSSH - Trường Đại học Khoa học Xã hội và Nhân văn
-ULIS - Trường Đại học Ngoại ngữ
-VNU-UMP - Trường Đại học Y Dược
-VJU - Trường Đại học Việt Nhật
-VNU-UL - Trường Đại học Luật
-HSB - Trường Quản trị và Kinh doanh
-VNU-IS - Trường Quốc tế
-SIS - Trường Khoa học liên ngành và Nghệ thuật
-AGU - Trường Đại học An Giang
-HCMUT - Trường Đại học Bách khoa
-UIT - Trường Đại học Công nghệ Thông tin
-HCMUS - Trường Đại học Khoa học Tự nhiên
-HCMUSSH - Trường Đại học Khoa học Xã hội và Nhân văn
-UEL - Trường Đại học Kinh tế – Luật
-HCMIU - Trường Đại học Quốc tế
-UHS - Khoa Y
-SPAS - Khoa Chính trị – Hành chính
-TNUICT - Trường Đại học Công nghệ Thông tin và Truyền thông
-TNUS - Trường Đại học Khoa học
-TNUEBA - Trường Đại học Kinh tế và Quản trị kinh doanh
-TNUT - Trường Đại học Kỹ thuật Công nghiệp
-TNUAF - Trường Đại học Nông Lâm
-TNUEd - Trường Đại học Sư phạm
-TNUMP - Trường Đại học Y Dược
-TNNN - Trường Ngoại ngữ
-TNEC - Trường Cao đẳng Kinh tế - Kỹ thuật
+VNU
+Đại học Quốc gia Hà Nội
+UET
+Trường Đại học Công nghệ
+UEd 
+Trường Đại học Giáo dục
+UEB 
+Trường Đại học Kinh tế
+HUS 
+Trường Đại học Khoa học Tự nhiên
+HUSSH 
+Trường Đại học Khoa học Xã hội và Nhân văn
+ULIS 
+Trường Đại học Ngoại ngữ
+VNU-UMP
+Trường Đại học Y Dược
+VJU 
+Trường Đại học Việt Nhật
+VNU-UL 
+Trường Đại học Luật
+HSB 
+Trường Quản trị và Kinh doanh
+VNU-IS  
+Trường Quốc tế
+SIS
+Trường Khoa học liên ngành và Nghệ thuật
+AGU
+Trường Đại học An Giang
+HCMUT
+Trường Đại học Bách khoa
+UIT
+Trường Đại học Công nghệ Thông tin
+HCMUS
+Trường Đại học Khoa học Tự nhiên
+HCMUSSH
+Trường Đại học Khoa học Xã hội và Nhân văn
+UEL
+Trường Đại học Kinh tế – Luật
+HCMIU
+Trường Đại học Quốc tế
+UHS
+Khoa Y
+SPAS
+Khoa Chính trị – Hành chính
+TNUICT
+Trường Đại học Công nghệ Thông tin và Truyền thông
+TNUS
+Trường Đại học Khoa học
+TNUEBA
+Trường Đại học Kinh tế và Quản trị kinh doanh
+TNUT
+Trường Đại học Kỹ thuật Công nghiệp
+TNUAF
+Trường Đại học Nông Lâm
+TNUEd
+Trường Đại học Sư phạm
+TNUMP
+Trường Đại học Y Dược
+TNNN
+Trường Ngoại ngữ
+TNEC
+Trường Cao đẳng Kinh tế
+Kỹ thuật
 Khoa Quốc tế
-PH-TNU-LC - Phân hiệu Đại học Thái Nguyên tại Lào Cai
-PH-TNU-HG - Phân hiệu Đại học Thái Nguyên tại Hà Giang
-HueUni - Đại học Huế
-HUSC - Trường Đại học Khoa học
-HCE - Trường Đại học Kinh tế
-HUL - Trường Đại học Luật
-HUA - Trường Đại học Nghệ thuật
-HUCFL - Trường Đại học Ngoại ngữ
-HUAF - Trường Đại học Nông Lâm
-HUCE - Trường Đại học Sư phạm
-YDH - Trường Đại học Y Dược Huế
-HUHT - Trường Du lịch
-HUET - Khoa Kỹ thuật và Công nghệ
-HUIS - Khoa Quốc tế
-FPE - Khoa Giáo dục thể chất
-HU-QTC - Phân hiệu Đại học Huế tại Quảng Trị
-UDN - Đại học Đà Nẵng (UDN)
-DUT - Trường Đại học Bách khoa
-DUE - Trường Đại học Kinh tế
-DUEd - Trường Đại học Sư phạm
-DNUFL - Trường Đại học Ngoại ngữ
-DNUTE - Trường Đại học Sư phạm Kỹ thuật
-VKU - Trường Đại học Công nghệ thông tin và Truyền thông Việt – Hàn
-Phân hiệu Đại học Đà Nẵng tại Kon Tum
-Khoa Y – Dược
+PH-TNU-LC
+Phân hiệu Đại học Thái Nguyên tại Lào Cai
+PH-TNU-HG
+Phân hiệu Đại học Thái Nguyên tại Hà Giang
+HueUni
+Đại học Huế
+HUSC
+Trường Đại học Khoa học
+HCE
+Trường Đại học Kinh tế
+HUL
+Trường Đại học Luật
+HUA
+Trường Đại học Nghệ thuật
+HUCFL
+Trường Đại học Ngoại ngữ
+HUAF
+Trường Đại học Nông Lâm
+HUCE
+Trường Đại học Sư phạm
+YDH
+Trường Đại học Y Dược Huế
+HUHT
+Trường Du lịch
+HUET
+Khoa Kỹ thuật và Công nghệ
+HUIS
+Khoa Quốc tế
+FPE
 Khoa Giáo dục thể chất
-Khoa Giáo dục Quốc phòng An ninh
+HU-QTC
+Phân hiệu Đại học Huế tại Quảng Trị
+UDN
+Đại học Đà Nẵng (UDN)
+DUT
+Trường Đại học Bách khoa
+DUE
+Trường Đại học Kinh tế
+DUEd
+Trường Đại học Sư phạm
+DNUFL
+Trường Đại học Ngoại ngữ
+DNUTE
+Trường Đại học Sư phạm Kỹ thuật
+VKU
+Trường Đại học Công nghệ thông tin và Truyền thông Việt – Hàn
+Phân hiệu Đại học Đà Nẵng tại Kon Tum
+
+HUST
 Đại học Bách khoa Hà Nội
-Viết tắt: HUST
-Lĩnh vực: Kỹ thuật và công nghệ
-- SoICT: Trường Công nghệ Thông tin và Truyền thông
-- SMS: Trường Vật liệu
-- SME: Trường Cơ khí
-- SCLS: Trường Hóa và Khoa học sự sống
-- SEEE: Trường Điện – Điện tử
+Lĩnh vực
+Kỹ thuật và công nghệ
+SoICT
 
+Trường Công nghệ Thông tin và Truyền thông
+SMS
+
+Trường Vật liệu
+SME
+
+Trường Cơ khí
+SCLS
+
+Trường Hóa và Khoa học sự sống
+SEEE
+
+Trường Điện – Điện tử
+
+UEH
 Đại học Kinh tế Thành phố Hồ Chí Minh
-Viết tắt: UEH
-Lĩnh vực: Kinh tế, kinh doanh, khoa học quản lý và phát triển bền vững
-- CoB: Trường Kinh doanh
-- CELG: Trường Kinh tế, Luật và Quản lý nhà nước
-- CTD: Trường Công nghệ và Thiết kế
-Học viện Quản lý giáo dục - NAEM
-Trường Đại học Hà Nội - HANU
-Trường Đại học Giao thông Vận tải - UTC
-Trường Đại học Kinh tế Quốc dân - NEU
-Trường Đại học Mỏ – Địa chất - HUMG
-Trường Đại học Mở Hà Nội - HOU
-Trường Đại học Mỹ thuật Công nghiệp - UAD
-Trường Đại học Ngoại thương - FTU
-Trường Đại học Sư phạm Hà Nội - HNUE
-Trường Đại học Sư phạm Hà Nội 2 - HPU2
-Trường Đại học Sư phạm Nghệ thuật Trung ương - NUAE
-Trường Đại học Sư phạm Thể dục Thể thao Hà Nội - HUPES
-Trường Đại học Thương mại - TMU
-Trường Đại học Xây dựng Hà Nội - HUCE
-Trường Đại học Luật Thành phố Hồ Chí Minh - ULaw
-Trường Đại học Mở Thành phố Hồ Chí Minh - HCMOU
-Trường Đại học Nông Lâm Thành phố Hồ Chí Minh - NLU
-Trường Đại học Sư phạm Kỹ thuật Thành phố Hồ Chí Minh - HCMUTE
-Trường Đại học Sư phạm Thành phố Hồ Chí Minh - HCMUE
-Trường Đại học Sư phạm Thể dục Thể thao Thành phố Hồ Chí Minh - HCMUPES
-Trường Đại học Vinh - VinhUni
-Trường Đại học Cần Thơ - CTU
-Trường Đại học Đà Lạt - DLU
-Trường Đại học Đồng Tháp - DTU
-Trường Đại học Kiên Giang - KGU
-Trường Đại học Nha Trang - NTU
-Trường Đại học Quy Nhơn - QNU
-Trường Đại học Sư phạm Kỹ thuật Hưng Yên - HYUTE
-Trường Đại học Tây Bắc - TBU
-Trường Đại học Tây Nguyên - TTN
-Học viện Múa Việt Nam - VNAD
-Trường Đại học Văn hóa Hà Nội - HUC
-Trường Đại học Mỹ thuật Việt Nam - VNUFA
-Trường Đại học Sân khấu – Điện ảnh Hà Nội - SKDA
-Nhạc viện Thành phố Hồ Chí Minh - HCMCONS (TP.HCM)
-Trường Đại học Sân khấu – Điện ảnh Thành phố Hồ Chí Minh - SKDAHCM (TP.HCM)
-Trường Đại học Mỹ thuật Thành phố Hồ Chí Minh - HCMUFA (TP.HCM)
-Trường Đại học Thể dục Thể thao Thành phố Hồ Chí Minh - USH (TP.HCM)
-Trường Đại học Văn hóa Thành phố Hồ Chí Minh - VHS (TP.HCM)
-Học viện Âm nhạc Huế - HAM (Thừa Thiên Huế)
-Trường Đại học Thể dục Thể thao Bắc Ninh - UPES1 (Bắc Ninh)
-Trường Đại học Thể dục Thể thao Đà Nẵng - DSU (Đà Nẵng)
-Trường Đại học Công nghiệp Hà Nội - HaUI (Hà Nội)
-Trường Đại học Công nghiệp Việt–Hung - VIU
-Trường Đại học Kinh tế – Kỹ thuật Công nghiệp - UNETI
-Trường Đại học Điện lực - EPU
-Trường Đại học Công nghệ Giao thông Vận tải - UTT (Hà Nội)
-Trường Đại học Giao thông vận tải Thành phố Hồ Chí Minh - UTH (TP.HCM)
-Học viện Hàng không Việt Nam - VAA
-Trường Đại học Hàng hải Việt Nam - VMU (Hải Phòng)
-Trường Đại học Lao động – Xã hội - ULSA (Hà Nội)
-Trường Đại học Sư phạm Kỹ thuật Nam Định - NUTE (Nam Định)
-Trường Đại học Sư phạm Kỹ thuật Vinh - VinhUTE (Nghệ An)
-Trường Đại học Sư phạm Kỹ thuật Vĩnh Long - VLUTE (Vĩnh Long)
-Học viện Nông nghiệp Việt Nam - VNUA (Hà Nội)
-Trường Đại học Lâm nghiệp - VNUF (Hà Nội)
-Trường Đại học Thủy lợi - TLU (Hà Nội)
-Trường Đại học Nông Lâm Bắc Giang - BGUAF (Bắc Giang)
-Học viện Tài chính - AOF (Hà Nội)
-Trường Đại học Tài chính – Marketing - UFM (TP.HCM)
-Trường Đại học Tài chính – Kế toán - UFA (Quảng Ngãi)
-Trường Đại học Tài chính – Quản trị kinh doanh - UFBA (Hưng Yên)
-VBU: Học viện Phật giáo Việt Nam, TP.HCM
+Lĩnh vực
+Kinh tế, kinh doanh, khoa học quản lý và phát triển bền vững
+- CoB
 
-VBAH: Học viện Phật giáo Việt Nam, Huế
+Trường Kinh doanh
+- CELG
 
-(Không có thông tin)
+Trường Kinh tế, Luật và Quản lý nhà nước
+- CTD
 
-HCMA: Học viện Chính trị Quốc gia Hồ Chí Minh, Hà Nội
+Trường Công nghệ và Thiết kế
+Học viện Quản lý giáo dục
+NAEM
+Trường Đại học Hà Nội
+HANU
+Trường Đại học Giao thông Vận tải
+UTC
 
-AJC: Học viện Báo chí và Tuyên truyền
+NEU
+Trường Đại học Kinh tế Quốc dân
+HUMG
+Trường Đại học Mỏ – Địa chất
+HOU
+Trường Đại học Mở Hà Nội 
+UAD
+Trường Đại học Mỹ thuật Công nghiệp
+FTU
+Trường Đại học Ngoại thương 
+ HNUE
+Trường Đại học Sư phạm Hà Nội
+HPU2
+Trường Đại học Sư phạm Hà Nội 2 
+NUAE
+Trường Đại học Sư phạm Nghệ thuật Trung ương 
+HUPES
+Trường Đại học Sư phạm Thể dục Thể thao Hà Nội 
+TMU
+Trường Đại học Thương mại
+HUCE
+Trường Đại học Xây dựng Hà Nội
+ULaw
+Trường Đại học Luật Thành phố Hồ Chí Minh  
+HCMOU
+Trường Đại học Mở Thành phố Hồ Chí Minh
+NLU
+Trường Đại học Nông Lâm Thành phố Hồ Chí Minh
+HCMUTE
+Trường Đại học Sư phạm Kỹ thuật Thành phố Hồ Chí Minh
+HCMUE
+Trường Đại học Sư phạm Thành phố Hồ Chí Minh
+HCMUPES
+Trường Đại học Sư phạm Thể dục Thể thao Thành phố Hồ Chí Minh
+VinhUni
+Trường Đại học Vinh
+CTU
+Trường Đại học Cần Thơ
+DLU
+Trường Đại học Đà Lạt
+DTU
+Trường Đại học Đồng Tháp
+KGU
+Trường Đại học Kiên Giang
+NTU
+Trường Đại học Nha Trang
+QNU
+Trường Đại học Quy Nhơn
+HYUTE
+Trường Đại học Sư phạm Kỹ thuật Hưng Yên
+TBU
+Trường Đại học Tây Bắc
+TTN
+Trường Đại học Tây Nguyên
+VNAD
+Học viện Múa Việt Nam
+HUC
+Trường Đại học Văn hóa Hà Nội
+VNUFA
+Trường Đại học Mỹ thuật Việt Nam
+SKDA
+Trường Đại học Sân khấu – Điện ảnh Hà Nội
+HCMCONS
+Nhạc viện Thành phố Hồ Chí Minh (TP.HCM)
+SKDAHCM
+Trường Đại học Sân khấu – Điện ảnh Thành phố Hồ Chí Minh (TP.HCM)
+HCMUFA
+Trường Đại học Mỹ thuật Thành phố Hồ Chí Minh (TP.HCM)
+USH
+Trường Đại học Thể dục Thể thao Thành phố Hồ Chí Minh (TP.HCM)
+VHS
+Trường Đại học Văn hóa Thành phố Hồ Chí Minh (TP.HCM)
+HAM
+Học viện Âm nhạc Huế (Thừa Thiên Huế)
+UPES1
+Trường Đại học Thể dục Thể thao Bắc Ninh (Bắc Ninh)
+DSU
+Trường Đại học Thể dục Thể thao Đà Nẵng (Đà Nẵng)
+HaUI
+Trường Đại học Công nghiệp Hà Nội (Hà Nội)
+VIU
+Trường Đại học Công nghiệp Việt–Hung
+UNETI
+Trường Đại học Kinh tế – Kỹ thuật Công nghiệp
+EPU
+Trường Đại học Điện lực
+UTT
+Trường Đại học Công nghệ Giao thông Vận tải (Hà Nội)
+UTH
+Trường Đại học Giao thông vận tải Thành phố Hồ Chí Minh (TP.HCM)
+VAA
+Học viện Hàng không Việt Nam
+VMU
+Trường Đại học Hàng hải Việt Nam (Hải Phòng)
+ULSA
+Trường Đại học Lao động – Xã hội (Hà Nội)
+NUTE
+Trường Đại học Sư phạm Kỹ thuật Nam Định (Nam Định)
+VinhUTE
+Trường Đại học Sư phạm Kỹ thuật Vinh (Nghệ An)
+VLUTE
+Trường Đại học Sư phạm Kỹ thuật Vĩnh Long (Vĩnh Long)
+VNUA
+Học viện Nông nghiệp Việt Nam (Hà Nội)
+VNUF
+Trường Đại học Lâm nghiệp (Hà Nội)
+TLU
+Trường Đại học Thủy lợi (Hà Nội)
+BGUAF
+Trường Đại học Nông Lâm Bắc Giang (Bắc Giang)
+AOF
+Học viện Tài chính (Hà Nội)
+UFM
+Trường Đại học Tài chính – Marketing (TP.HCM)
+UFA
+Trường Đại học Tài chính – Kế toán (Quảng Ngãi)
+UFBA
+Trường Đại học Tài chính – Quản trị kinh doanh (Hưng Yên)
+VBU
+Học viện Phật giáo Việt Nam, TP.HCM
+VBA
+HHọc viện Phật giáo Việt Nam, Huế
 
-HUNRE: Trường Đại học Tài nguyên và Môi trường Hà Nội
-
-HCMUNRE: Trường Đại học Tài nguyên và Môi trường Thành phố Hồ Chí Minh
-
-APD: Học viện Chính sách và Phát triển
-
-VISTI: Học viện Khoa học, Công nghệ và Đổi mới sáng tạo
-
-DAV: Học viện Ngoại giao
-
-NAPA: Học viện Hành chính Quốc gia (Việt Nam)
-
-PTIT: Học viện Công nghệ Bưu chính Viễn thông
-
-HLU: Trường Đại học Luật Hà Nội
-
-CIV: Học viện Công giáo Việt Nam, TP.HCM
-
-HBC: Trường Thánh kinh Thần học Hà Nội
-
-IBT: Viện Thánh kinh Thần học, TP.HCM
-
-BAV: Học viện Ngân hàng, Hà Nội
-
-HICT: Trường Đại học Công nghiệp Dệt may Hà Nội
-
-VCA: Học viện Tòa án
-
-TUU: Trường Đại học Công đoàn
-
-TDTU: Trường Đại học Tôn Đức Thắng, TP.HCM
-
-VYA: Học viện Thanh thiếu niên Việt Nam
-
-VWA: Học viện Phụ nữ Việt Nam
-
-VAEM: Học viện Dân tộc
-
-GUST: Học viện Khoa học và Công nghệ
-
-USTH: Trường Đại học Khoa học và Công nghệ Hà Nội
-
-GASS: Học viện Khoa học Xã hội
-
-HPU: Trường Đại học Kiểm sát Hà Nội
-Trường Đại học Sài Gòn (SGU)
-Trường Đại học Y khoa Phạm Ngọc Thạch (PNTU)
-Trường Đại học Hải Phòng (DHHP)
-Trường Đại học Kỹ thuật – Công nghệ Cần Thơ (CTUT)
-Trường Đại học Bạc Liêu (BLU)
-Trường Đại học Thủ Dầu Một (TDMU)
-Trường Đại học Đồng Nai (DNU)
-Trường Đại học Hà Tĩnh (HTU)
-Trường Đại học Hải Dương (UHD)
-Trường Đại học Khánh Hòa (UKH)
-Trường Đại học Kinh tế Nghệ An (NAUE)
-Trường Đại học Y khoa Vinh (VMU)
-Trường Đại học Hoa Lư (HLUV)
-Trường Đại học Hùng Vương (HVU)
-Trường Đại học Phú Yên (PYU)
-Trường Đại học Quảng Bình (QBU)
-Trường Đại học Quảng Nam (QNamUni)
-Quảng Ngãi: Trường Đại học Phạm Văn Đồng (PDU)
-Quảng Ninh: Trường Đại học Hạ Long (UHL)
-Thái Bình: Trường Đại học Thái Bình (TBU)
-Thanh Hóa: Trường Đại học Hồng Đức (HDU)
-Trường Đại học Văn hóa, Thể thao và Du lịch Thanh Hóa (TUCST)
-Tiền Giang: Trường Đại học Tiền Giang (TGU)
-Trà Vinh: Trường Đại học Trà Vinh (TVU)
-Tuyên Quang: Trường Đại học Tân Trào
-
-Trường đại học tư thục:
-Hà Nội: Trường Đại học CMC (CMCU)
-Trường Đại học Công nghệ và Quản lý hữu nghị (UTM)
-Trường Đại học Đại Nam (DNU)
-Trường Đại học Đông Đô (HDIU)
-Trường Đại học FPT (FPTU)
-Trường Đại học Hòa Bình (HBU)
-Trường Đại học Kinh doanh và Công nghệ Hà Nội (HUBT)
-Trường Đại học Nguyễn Trãi (NTU)
-Trường Đại học Phenikaa
-Trường Đại học Tài chính – Ngân hàng Hà Nội (FBU)
-
-Trường Đại học Thành Đô (TDU)
-Trường Đại học Thăng Long (TLU)
-Trường Đại học VinUni (VinUni)
-Trường Đại học Công nghệ Sài Gòn (STU)
-Trường Đại học Công nghệ Thành phố Hồ Chí Minh (HUTECH)
-Trường Đại học Gia Định (GDU)
-Trường Đại học Hoa Sen (HSU)
-Trường Đại học Hùng Vương Thành phố Hồ Chí Minh (HVUH)
-Trường Đại học Kinh tế – Tài chính Thành phố Hồ Chí Minh (UEF)
-Trường Đại học Ngoại ngữ – Tin học Thành phố Hồ Chí Minh (HUFLIT)
-Trường Đại học Nguyễn Tất Thành (NTTU)
-Trường Đại học Quản lý và Công nghệ Thành phố Hồ Chí Minh (UMT)
-Trường Đại học Quốc tế Hồng Bàng (HIU)
-Trường Đại học Quốc tế Sài Gòn (SIU)
-Trường Đại học Văn Hiến (VHU)
-Trường Đại học Văn Lang (VLU)
-Trường Đại học Bà Rịa – Vũng Tàu (BVU)
-Trường Đại học Công nghệ Đông Á (EAUT)
-Trường Đại học Kinh Bắc (UKB)
-Trường Đại học Quốc tế Bắc Hà (BHIU)
+CMCU
+Trường Đại học CMC (Hà Nội)
+UTM
+Trường Đại học Công nghệ và Quản lý hữu nghị (Hà Nội)
+DNU
+Trường Đại học Đại Nam (Hà Nội)
+HDIU
+Trường Đại học Đông Đô (Hà Nội)
+FPTU
+Trường Đại học FPT (Hà Nội)
+HBU
+Trường Đại học Hòa Bình (Hà Nội)
+HUBT
+Trường Đại học Kinh doanh và Công nghệ Hà Nội (Hà Nội)
+NTU
+Trường Đại học Nguyễn Trãi (Hà Nội)
+Phenikaa
+Trường Đại học Phenikaa (Hà Nội)
+FBU
+Trường Đại học Tài chính – Ngân hàng Hà Nội (Hà Nội)
+TDU
+Trường Đại học Thành Đô (Hà Nội)
+TLU
+Trường Đại học Thăng Long (Hà Nội)
+VinUni
+Trường Đại học VinUni (Hà Nội)
+STU
+Trường Đại học Công nghệ Sài Gòn (TP.HCM)
+HUTECH
+Trường Đại học Công nghệ Thành phố Hồ Chí Minh (TP.HCM)
+GDU
+Trường Đại học Gia Định (TP.HCM)
+HSU
+Trường Đại học Hoa Sen (TP.HCM)
+HVUH
+Trường Đại học Hùng Vương Thành phố Hồ Chí Minh (TP.HCM)
+UEF
+Trường Đại học Kinh tế – Tài chính Thành phố Hồ Chí Minh (TP.HCM)
+HUFLIT
+Trường Đại học Ngoại ngữ – Tin học Thành phố Hồ Chí Minh (TP.HCM)
+NTTU
+Trường Đại học Nguyễn Tất Thành (TP.HCM)
+UMT
+Trường Đại học Quản lý và Công nghệ Thành phố Hồ Chí Minh (TP.HCM)
+HIU
+Trường Đại học Quốc tế Hồng Bàng (TP.HCM)
+SIU
+Trường Đại học Quốc tế Sài Gòn (TP.HCM)
+VHU
+Trường Đại học Văn Hiến (TP.HCM)
+VLU
+Trường Đại học Văn Lang (TP.HCM)
+BVU
+Trường Đại học Bà Rịa – Vũng Tàu
+EAUT
+Trường Đại học Công nghệ Đông Á
+UKB
+Trường Đại học Kinh Bắc
+BHIU
+Trường Đại học Quốc tế Bắc Hà
+BDU
 Trường Đại học Bình Dương
+KTBĐU
 Trường Đại học Kinh tế – Kỹ thuật Bình Dương
+MDU
 Trường Đại học Quốc tế Miền Đông
+QTU
 Trường Đại học Quang Trung
+PTU
 Trường Đại học Phan Thiết
+NCTU
 Trường Đại học Nam Cần Thơ
+TĐU
 Trường Đại học Tây Đô
+DTU
 Trường Đại học Duy Tân
+DAU
 Trường Đại học Đông Á
+KĐN
 Trường Đại học Kiến trúc Đà Nẵng
+YDBMT
 Trường Đại học Y Dược Buôn Ma Thuột
+CNTN
 Trường Đại học Công nghệ Đồng Nai
+MDUT
 Trường Đại học Công nghệ Miền Đông
+LHU
 Trường Đại học Lạc Hồng
+HHTU
 Trường Đại học Hà Hoa Tiên
+TDU
 Trường Đại học Thành Đông
+VTTU
 Trường Đại học Võ Trường Toản
+CVATU
 Trường Đại học Chu Văn An
+TBDU
 Trường Đại học Thái Bình Dương
+YDLU
 Trường Đại học Yersin Đà Lạt
+KCLAU
 Trường Đại học Kinh tế Công nghiệp Long An
+TTU
 Trường Đại học Tân Tạo
+LTVU
 Trường Đại học Lương Thế Vinh
+VXUT
 Trường Đại học Công nghệ Vạn Xuân
+CNUV
 Trường Đại học Công nghiệp Vinh
+PCTU
 Trường Đại học Phan Châu Trinh
+KCTNU
 Trường Đại học Kinh tế – Công nghệ Thái Nguyên
+PXU
 Trường Đại học Phú Xuân
+CLU
 Trường Đại học Cửu Long
+TVU
 Trường Đại học Trưng Vương
-Trường Đại học Bình Dương (BĐU)
-Trường Đại học Kinh tế – Kỹ thuật Bình Dương (KTBĐU)
-Trường Đại học Quốc tế Miền Đông (MDU)
-Trường Đại học Quang Trung (QTU)
-Trường Đại học Phan Thiết (PTU)
-Trường Đại học Nam Cần Thơ (NCTU)
-Trường Đại học Tây Đô (TĐU)
-Trường Đại học Duy Tân (DTU)
-Trường Đại học Đông Á (DAU)
-Trường Đại học Kiến trúc Đà Nẵng (KĐN)
-Trường Đại học Y Dược Buôn Ma Thuột (YDBMT)
-Trường Đại học Công nghệ Đồng Nai (CNTN)
-Trường Đại học Công nghệ Miền Đông (MDUT)
-Trường Đại học Lạc Hồng (LHU)
-Trường Đại học Hà Hoa Tiên (HHTU)
-Trường Đại học Thành Đông (TDU)
-Trường Đại học Võ Trường Toản (VTTU)
-Trường Đại học Chu Văn An (CVATU)
-Trường Đại học Thái Bình Dương (TBDU)
-Trường Đại học Yersin Đà Lạt (YDLU)
-Trường Đại học Kinh tế Công nghiệp Long An (KCLAU)
-Trường Đại học Tân Tạo (TTU)
-Trường Đại học Lương Thế Vinh (LTVU)
-Trường Đại học Công nghệ Vạn Xuân (VXUT)
-Trường Đại học Công nghiệp Vinh (CNUV)
-Trường Đại học Phan Châu Trinh (PCTU)
-Trường Đại học Kinh tế – Công nghệ Thái Nguyên (KCTNU)
-Trường Đại học Phú Xuân (PXU)
-Trường Đại học Cửu Long (CLU)
-Trường Đại học Trưng Vương (TVU)
-Học viện Chính trị Quân đội Nhân dân Việt Nam: HVCTQDNDVN
-Học viện Hậu cần: MAL
-Học viện Khoa học Quân sự: HVKHQS
-Học viện Kỹ thuật Mật mã: HVKTMM
-Học viện Kỹ thuật Quân sự: HVKTQS
-Học viện Phòng không – Không quân: HV-PKKQ
-Học viện Quân y: HVQY
-Học viện Quốc phòng: HVQP
-Trường Đại học Sĩ quan Chính trị: ĐH SQT
-Trường Đại học Trần Quốc Tuấn / Trường Đại học Sĩ quan Lục quân 1: ĐH TQT / ĐH SQLQ1
-Trường Đại học Sĩ quan Thông tin - liên lạc: ĐH SQTTLL
-Trường Đại học Sĩ quan Pháo binh: ĐH SQPB
-Trường Đại học Sĩ quan Phòng hóa: ĐH SQPH
-Trường Đại học Sĩ quan Đặc công: ĐH SQDC
-Trường Đại học Văn hoá Nghệ thuật Quân đội: ĐH VHNTQĐ
-Trường Cao đẳng Công nghiệp Quốc phòng: CĐ CNQP
-Trường Cao đẳng Công nghệ và Kỹ thuật Ô tô: CĐ CNKTO
-Trường Cao đẳng Quân y 1: CĐ QY1
-Trường Đại học Sĩ quan Tăng – Thiết giáp: ĐH SQTTG
-Trường Đại học Nguyễn Huệ / Trường Đại học Sĩ quan Lục quân 2: ĐH NH / ĐH SQLQ2
-Học viện Lục quân: HV LQ
-Học viện Hải quân: HV HQ
-Trường Sĩ quan Không quân: ĐH SQKQ
-Trường Đại học Ngô Quyền / Trường Đại học Sĩ quan Công Binh: ĐH NQ / ĐH SQCB
-Trường Đại học Trần Đại Nghĩa / Trường Đại học Sĩ quan Kỹ thuật Quân sự Vin - hem - pích: ĐH TDN / ĐH SQKTQSVHP
-Trường Cao đẳng Quân y 2: CĐ QY2
-Trường Cao đẳng Kỹ thuật Hải quân: CĐ KTHQ
+Các học viện và trường quân đội:
+
+HVCTQDNDVN
+Học viện Chính trị Quân đội Nhân dân Việt Nam
+MAL
+Học viện Hậu cần
+HVKHQS
+Học viện Khoa học Quân sự
+HVKTMM
+Học viện Kỹ thuật Mật mã
+HVKTQS
+Học viện Kỹ thuật Quân sự
+HV-PKKQ
+Học viện Phòng không – Không quân
+HVQY
+Học viện Quân y
+HVQP
+Học viện Quốc phòng
+Trường đại học:
+
+ĐH SQT
+Trường Đại học Sĩ quan Chính trị
+Trường Đại học Trần Quốc Tuấn / Trường Đại học Sĩ quan Lục quân 1
+ĐH TQT / ĐH SQLQ1
+Trường Đại học Sĩ quan Thông tin - liên lạc
+ĐH SQTTLL
+Trường Đại học Sĩ quan Pháo binh
+ĐH SQPB
+Trường Đại học Sĩ quan Phòng hóa
+ĐH SQPH
+Trường Đại học Sĩ quan Đặc công
+ĐH SQDC
+Trường Đại học Văn hoá Nghệ thuật Quân đội
+ĐH VHNTQĐ
+Trường Cao đẳng Công nghiệp Quốc phòng
+CĐ CNQP
+Trường Cao đẳng Công nghệ và Kỹ thuật Ô tô
+CĐ CNKTO
+Trường Cao đẳng Quân y 1
+CĐ QY1
+Trường Đại học Sĩ quan Tăng – Thiết giáp
+ĐH SQTTG
+Trường Đại học Nguyễn Huệ / Trường Đại học Sĩ quan Lục quân 2
+ĐH NH / ĐH SQLQ2
+Học viện Lục quân
+HV LQ
+Học viện Hải quân
+HV HQ
+Trường Sĩ quan Không quân
+ĐH SQKQ
+Trường Đại học Ngô Quyền / Trường Đại học Sĩ quan Công Binh
+ĐH NQ / ĐH SQCB
+Trường Đại học Trần Đại Nghĩa / Trường Đại học Sĩ quan Kỹ thuật Quân sự Vin - hem - pích
+ĐH TDN / ĐH SQKTQSVHP
+Trường Cao đẳng Quân y 2
+CĐ QY2
+Trường Cao đẳng Kỹ thuật Hải quân
+CĐ KTHQ
+
+
+
+Học viện An ninh nhân dân (VPAA)
+Học viện Cảnh sát nhân dân (VPSS)
+Học viện Chính trị - Công an nhân dân Việt Nam (VPSS - PPA)
+Học viện Quốc tế (IA)
+Đại học Cảnh sát Phòng cháy chữa cháy (Police Fire Prevention and Fighting University)
+Trường Đại học Kỹ thuật – Hậu cần - Công an Nhân dân Việt Nam (VPPL - TL University)
+Đại học An ninh nhân dân (PPSU)
+Đại học Cảnh sát nhân dân (PPU)
+Đại học Thủ đô Hà Nội (HMU)
+Học viện Cán bộ Thành phố Hồ Chí Minh (HCMC Cadre Academy)
+Đại học Sài Gòn (SGU)
+Đại học Y khoa Phạm Ngọc Thạch (PMU)
+Đại học Hải Phòng (HU)
+Đại học Kỹ thuật – Công nghệ Cần Thơ (Can Tho University of Technology)
+Đại học Bạc Liêu (BLU)
+Đại học Thủ Dầu Một (TDMU)
+Đại học Đồng Nai (DNU)
+Đại học Hà Tĩnh (HTU)
+Đại học Hải Dương (HDU)
+Đại học Khánh Hoà (KHU)
+Đại học Kinh tế Nghệ An (UE-NA)
+Đại học Y khoa Vinh (VMU)
+Đại học Hoa Lư (HLU)
+Đại học Hùng Vương (HVU)
+Đại học Phú Yên (PYU)
+Đại học Quảng Bình (QBU)
+Đại học Quảng Nam (QNU)
+Đại học Phạm Văn Đồng (PVDU)
+Đại học Hạ Long (HLU)
+Đại học Thái Bình (TBHU)
+Đại học Hồng Đức (HDU)
+Đại học Văn hoá, Thể thao và Du lịch Thanh Hoá (UCTH)
+Đại học Tiền Giang (TGU)
+Đại học Trà Vinh (TVU)
+Đại học Tân Trào (TTU)
+Đại học CMC (CMCU)
+Đại học Công nghệ và Quản lý Hữu nghị (UTM)
+Đại học Đại Nam (DNU)
+Đại học Đông Đô (DDU)
+Đại học FPT (FPTU)
+Đại học Hoà Bình (HBU)
+Đại học Kinh doanh và Công nghệ Hà Nội (HUBT)
+Đại học Nguyễn Trãi (NTU)
+Đại học Phenikaa (PNKU)
+Đại học Tài chính Ngân hàng (FBU)
+Đại học Thành Đô (TDU)
+Đại học Thăng Long (TLU)
+Đại học VinUni (VinUni)
+Đại học Công nghệ Thành phố Hồ Chí Minh (HUTECH)
+Đại học Quốc tế Hồng Bàng (HIU)
+Đại học Hùng Vương Thành phố Hồ Chí Minh (HVUH)
+Đại học Kinh tế – Tài chính Thành phố Hồ Chí Minh (HEF)
+Đại học Ngoại ngữ – Tin học Thành phố Hồ Chí Minh (HUFLIT)
+Đại học Nguyễn Tất Thành (NTTU)
+Đại học Văn Lang (VLU)
+Đại học Văn Hiến (VHU)
+Đại học Quốc tế Sài Gòn (SIU)
+Đại học Công nghệ Sài Gòn (STU)
+Đại học Bà Rịa – Vũng Tàu (BR-VTU)
+Đại học Công nghệ Đông Á (DATU)
+Đại học Kinh Bắc (UKB)
+Đại học Quốc tế Bắc Hà (BIU)
+Đại học Bình Dương (BDU)
+Đại học Kinh tế – Kỹ thuật Bình Dương (BETU)
+Đại học Quốc tế Miền Đông (EIU)
+Đại học Quang Trung (QTU)
+Đại học Phan Thiết (PTU)
+Đại học Nam Cần Thơ (NCTU)
+Đại học Tây Đô (TDU)
+Đại học Duy Tân (DTU)
+Đại học Đông Á (DAU)
+Đại học Kiến trúc Đà Nẵng (DAU)
+Đại học Y khoa Buôn Ma Thuột (BMTU)
+Đại học Công nghệ Đồng Nai (DTU)
+Đại học Công nghệ Miền Đông (MITU)
+Đại học Lạc Hồng (LHU)
+Đại học Thành Đông (TDU)
+Đại học Võ Trường Toản (VTTU)
+Đại học Chu Văn An (CVAU)
+Đại học Thái Bình Dương (TBDU)
+Đại học Yersin Đà Lạt (YU)
+Đại học Kinh tế Công nghiệp Long An (EILAU)
+Đại học Tân Tạo (TTU)
+Đại học Lương Thế Vinh (LTVU)
+Đại học Công nghệ Vạn Xuân (VXUT)
+Đại học Công nghiệp Vinh (IUV)
+Đại học Phan Châu Trinh (PCTU)
+Đại học Kinh tế – Công nghệ Thái Nguyên (TUETECH)
+Đại học Phú Xuân (PXU)

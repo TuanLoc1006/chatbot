@@ -1225,17 +1225,7 @@ Academies in bold are on the national key university list.
 |Trường Cao đẳng Kỹ thuật Hải quân
 |}
 
-=== Police academies, universities ===
-These Universities and Institutes also operate similarly to the military academies above. However, the governing body of police academies is the [[Ministry of Public Security (Vietnam)|Ministry of Public Security]] instead of the Ministry of National Defense.
-{| class="wikitable"
-!No.
-!Location
-!English name
-!Vietnamese name
-|-
-!29
-| rowspan="5" |Hanoi
-|Vietnam People's Security Academy (T01/C500)
+
 |Học viện An ninh nhân dân
 |-
 !30
