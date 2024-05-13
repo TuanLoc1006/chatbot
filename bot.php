@@ -1,237 +1,259 @@
-<!-- Created By CodingNepal -->
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Chatbot in PHP | CodingNepal</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <title>Rasa app</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="../assets/css/box_chat.css">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
-        }
-
-        html,
         body {
-            display: grid;
-            height: 100%;
-            place-items: center;
+            font-family: Arial, Helvetica, sans-serif;
         }
 
-        ::selection {
-            color: #fff;
-            background: #007bff;
-        }
-
-        ::-webkit-scrollbar {
-            width: 3px;
-            border-radius: 25px;
-        }
-
-        ::-webkit-scrollbar-track {
-            background: #f1f1f1;
-        }
-
-        ::-webkit-scrollbar-thumb {
-            background: #ddd;
-        }
-
-        ::-webkit-scrollbar-thumb:hover {
-            background: #ccc;
-        }
-
-        .wrapper {
-            width: 370px;
-            background: #fff;
+        #myImg {
             border-radius: 5px;
-            border: 1px solid lightgrey;
-            border-top: 0px;
-        }
-
-        .wrapper .title {
-            background: #007bff;
-            color: #fff;
-            font-size: 20px;
-            font-weight: 500;
-            line-height: 60px;
-            text-align: center;
-            border-bottom: 1px solid #006fe6;
-            border-radius: 5px 5px 0 0;
-        }
-
-        .wrapper .form {
-            padding: 20px 15px;
-            min-height: 400px;
-            max-height: 400px;
-            overflow-y: auto;
-        }
-
-        .wrapper .form .inbox {
-            width: 100%;
-            display: flex;
-            align-items: baseline;
-        }
-
-        .wrapper .form .user-inbox {
-            justify-content: flex-end;
-            margin: 13px 0;
-        }
-
-        .wrapper .form .inbox .icon {
-            height: 40px;
-            width: 40px;
-            color: #fff;
-            text-align: center;
-            line-height: 40px;
-            border-radius: 50%;
-            font-size: 18px;
-            background: #007bff;
-        }
-
-        .wrapper .form .inbox .msg-header {
-            max-width: 53%;
-            margin-left: 10px;
-        }
-
-        .form .inbox .msg-header p {
-            color: #fff;
-            background: #007bff;
-            border-radius: 10px;
-            padding: 8px 10px;
-            font-size: 14px;
-            word-break: break-all;
-        }
-
-        .form .user-inbox .msg-header p {
-            color: #333;
-            background: #efefef;
-        }
-
-        .wrapper .typing-field {
-            display: flex;
-            height: 60px;
-            width: 100%;
-            align-items: center;
-            justify-content: space-evenly;
-            background: #efefef;
-            border-top: 1px solid #d9d9d9;
-            border-radius: 0 0 5px 5px;
-        }
-
-        .wrapper .typing-field .input-data {
-            height: 40px;
-            width: 335px;
-            position: relative;
-        }
-
-        .wrapper .typing-field .input-data input {
-            height: 100%;
-            width: 100%;
-            outline: none;
-            border: 1px solid transparent;
-            padding: 0 80px 0 15px;
-            border-radius: 3px;
-            font-size: 15px;
-            background: #fff;
-            transition: all 0.3s ease;
-        }
-
-        .typing-field .input-data input:focus {
-            border-color: rgba(0, 123, 255, 0.8);
-        }
-
-        .input-data input::placeholder {
-            color: #999999;
-            transition: all 0.3s ease;
-        }
-
-        .input-data input:focus::placeholder {
-            color: #bfbfbf;
-        }
-
-        .wrapper .typing-field .input-data button {
-            position: absolute;
-            right: 5px;
-            top: 50%;
-            height: 30px;
-            width: 65px;
-            color: #fff;
-            font-size: 16px;
             cursor: pointer;
-            outline: none;
-            opacity: 0;
-            pointer-events: none;
-            border-radius: 3px;
-            background: #007bff;
-            border: 1px solid #007bff;
-            transform: translateY(-50%);
-            transition: all 0.3s ease;
+            transition: 0.3s;
         }
 
-        .wrapper .typing-field .input-data input:valid~button {
-            opacity: 1;
-            pointer-events: auto;
+        #myImg:hover {
+            opacity: 0.7;
         }
 
-        .typing-field .input-data button:hover {
-            background: #006fef;
+        /* The Modal (background) */
+        .modal {
+            display: none;
+            /* Hidden by default */
+            position: fixed;
+            /* Stay in place */
+            z-index: 1;
+            /* Sit on top */
+            padding-top: 100px;
+            /* Location of the box */
+            left: 0;
+            top: 0;
+            width: 100%;
+            /* Full width */
+            height: 100%;
+            /* Full height */
+            overflow: auto;
+            /* Enable scroll if needed */
+            background-color: rgb(0, 0, 0);
+            /* Fallback color */
+            background-color: rgba(0, 0, 0, 0.9);
+            /* Black w/ opacity */
+        }
+
+        /* Modal Content (image) */
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+        }
+
+        /* Caption of Modal Image */
+        #caption {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+            text-align: center;
+            color: #ccc;
+            padding: 10px 0;
+            height: 150px;
+        }
+
+        /* Add Animation */
+        .modal-content,
+        #caption {
+            -webkit-animation-name: zoom;
+            -webkit-animation-duration: 0.6s;
+            animation-name: zoom;
+            animation-duration: 0.6s;
+        }
+
+        @-webkit-keyframes zoom {
+            from {
+                -webkit-transform: scale(0)
+            }
+
+            to {
+                -webkit-transform: scale(1)
+            }
+        }
+
+        @keyframes zoom {
+            from {
+                transform: scale(0)
+            }
+
+            to {
+                transform: scale(1)
+            }
+        }
+
+        /* The Close Button */
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        /* 100% Image Width on Smaller Screens */
+        @media only screen and (max-width: 700px) {
+            .modal-content {
+                width: 100%;
+            }
+        }
+
+        .chat-sign-button {
+            width: 50px;
+            height: 50px;
+            font-size: 24px;
+        }
+
+        #chat-widget-close-button {
+            margin-left: 60%;
+        }
+
+        #chat-widget-messages {
+            height: 300px;
+            /* Độ cao tối đa của khung chat */
+            overflow-y: auto;
+            /* Thêm thanh cuộn khi nội dung quá lớn */
         }
     </style>
 </head>
 
 <body>
-    <div class="wrapper">
-        <div class="title">Simple Online Chatbot</div>
-        <div class="form">
-            <div class="bot-inbox inbox">
-                <div class="icon">
-                    <i class="fas fa-user"></i>
-                </div>
-                <div class="msg-header">
-                    <p>Hello there, how can I help you?</p>
-                </div>
+
+    <div class="container">
+        <h1>Welcome to my chatbot</h1>
+        <img src="" alt="">
+        <button id="chat-widget-button" type="button"
+            class="btn btn-primary rounded-circle chat-sign-button position-fixed"
+            style="bottom: 20px; right: 20px;"></button>
+
+        <div id="chat-widget" class="card position-fixed shadow d-none"
+            style="bottom: 100px; right:20px ; width: 300px;">
+
+            <div class="card-header bg-primary text-white">
+                ChatBot
+                <button id="chat-widget-close-button" type="button" class=" btn btn-light">X</button>
             </div>
-        </div>
-        <div class="typing-field">
-            <div class="input-data">
-                <input id="data" type="text" placeholder="Type something here.." required>
-                <button id="send-btn">Send</button>
+
+            <div id="chat-widget-messages" class="card-body">
+                <!-- chat here -->
+            </div>
+            <div class="card-footer">
+                <input type="text" class="form-control" id="chat-widget-input" placeholder="Type your message...">
+            </div>
+            <div id="myModal" class="modal">
+                <span class="close" onclick="document.getElementById('myModal').style.display='none'">&times;</span>
+                <img class="modal-content" id="img01">
             </div>
         </div>
     </div>
 
     <script>
         $(document).ready(function () {
-            $("#send-btn").on("click", function () {
-                $value = $("#data").val();
-                $msg = '<div class="user-inbox inbox"><div class="msg-header"><p>' + $value + '</p></div></div>';
-                $(".form").append($msg);
-                $("#data").val('');
+            $("#chat-widget-button").on("click", function () {
+                $("#chat-widget").toggleClass("d-none");
+            });
 
-                // start ajax code
-                $.ajax({
-                    url: 'message.php',
-                    type: 'POST',
-                    data: 'text=' + $value,
-                    success: function (result) {
-                        $replay = '<div class="bot-inbox inbox"><div class="icon"><i class="fas fa-user"></i></div><div class="msg-header"><p>' + result + '</p></div></div>';
-                        $(".form").append($replay);
-                        // when chat goes down the scroll bar automatically comes to the bottom
-                        $(".form").scrollTop($(".form")[0].scrollHeight);
-                    }
-                });
+            $("#chat-widget-close-button").on("click", function () {
+                $("#chat-widget").addClass("d-none");
+            });
+
+            $("#chat-widget-input").keypress(function (event) {
+                if (event.which === 13) {
+                    let userMessage = $("#chat-widget-input").val();
+                    $("#chat-widget-input").val("");
+
+                    $("#chat-widget-messages").append("<div><strong>You:</strong> " + userMessage + "</div>");
+                    console.log(userMessage)
+                    $.ajax({
+                        type: "POST",
+                        url: "chat_handler.php", // Đường dẫn tới tệp PHP xử lý yêu cầu
+                        contentType: "application/json",
+                        data: JSON.stringify({ message: userMessage }),
+
+                        success: function (res) {
+                            // Kiểm tra nếu res là một đường dẫn hình ảnh
+                            if (/\.(png|jpg|jpeg|gif)$/i.test(res)) {
+                                var img = '<img class="myImg" style="width:100%;max-width:300px" src="' + res + '" alt="Image" />';
+                                $("#chat-widget-messages").append("<div ><strong class='text-danger'>Bot:</strong> " + img + "</div>");
+                                // click để hiển thị modal hình ảnh
+                                $("#chat-widget-messages .myImg").last().on("click", function () {
+                                    displayImageModal(this.src);
+                                });
+                            }
+                            // Kiểm tra nếu res là một liên kết
+                            else if (isValidURL(res)) {
+                                $("#chat-widget-messages").append("<div><strong>Bot:</strong> <a href='" + res + "' target='_blank'>" + res + "</a></div>");
+                            }
+                            else {
+                                $("#chat-widget-messages").append("<div><strong>Bot:</strong> " + res + "</div>")
+                            }
+                        },
+                        error: function (error) {
+                            console.log('loi ')
+                        }
+                    });
+                }
             });
         });
+
+        // Hàm kiểm tra xem một chuỗi có phải là một URL hợp lệ hay không
+        function isValidURL(str) {
+            var pattern = new RegExp('^(https?:\\/\\/)?' + // protocol
+                '((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|' + // domain name
+                '((\\d{1,3}\\.){3}\\d{1,3}))' + // OR ip (v4) address
+                '(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*' + // port and path
+                '(\\?[;&a-z\\d%_.~+=-]*)?' + // query string
+                '(\\#[-a-z\\d_]*)?$', 'i'); // fragment locator
+            return !!pattern.test(str);
+        }
+
+        function displayImageModal(imageUrl) {
+            var modal = document.getElementById("myModal");
+            var modalImg = document.getElementById("img01");
+            var captionText = document.getElementById("caption");
+
+            modal.style.display = "block";
+            modalImg.src = imageUrl;
+            modalImg.alt = "Image";
+            captionText.innerHTML = "Image Caption";
+        }
+
+        var span = document.getElementsByClassName("close")[0];
+
+        span.onclick = function () {
+            var modal = document.getElementById("myModal");
+            modal.style.display = "none";
+        };
     </script>
 
+    <script src="../assets/javascript/box_chat.js"></script>
 </body>
 
 </html>

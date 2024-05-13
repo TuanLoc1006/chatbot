@@ -24,7 +24,7 @@ def webhooks():
             return jsonify(bot_responses)  # Trả về danh sách các phản hồi của bot dưới dạng JSON
         else:
             return "Xin lỗi, tôi không hiểu !!!"
-    
+
     except requests.exceptions.RequestException as e:
         print("An error occurred:", e)
         return "Đã xảy ra lỗi trong khi xử lý yêu cầu của bạn"

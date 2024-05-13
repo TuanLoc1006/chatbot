@@ -81,8 +81,10 @@ class action_khong_the_tra_loi(Action):
             dispatcher.utter_message(text="Rất tiếc tôi không có thông tin về trường bạn yêu cầu.")
         elif(university_entity=='ctump' or university_entity=='y dược cần thơ' or university_entity=='đại học y dược cần thơ' or university_entity=='trường y dược cần thơ' or university_entity=='trường này'):
             dispatcher.utter_message(text="Bạn cần biết thông tin gì?")
-        else :
-            dispatcher.utter_message(text="Rất tiếc tôi không có thông tin về trường bạn yêu cầu.")
+        # else :
+        #     dispatcher.utter_message(text="Rất tiếc tôi không có thông tin về trường bạn yêu cầu.")
+
         return []
     
     ##################################################
+
