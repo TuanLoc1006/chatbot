@@ -5,12 +5,9 @@ from rasa_sdk.executor import CollectingDispatcher
 
 from .handleDB import handleDB
 from .constants import Constant
-# from customs.ghi_log_file_no_response import write_file
-# ghi_file = write_file.get_ghi_log_file()
- 
-from customs.ghi_log_file_no_response.write_file import get_ghi_log_file, write_file
 
-# ghi_file = get_ghi_log_file()
+from customs.ghi_log_file_no_response.write_file import write_file
+
 
 handledb = handleDB()
 get_connect = handledb.get_connect()
@@ -48,6 +45,16 @@ class action_hocphi(Action):
         print("action hoc phi: " + user_input)
 
 
+        if hocphi_entity:
+            hoc_phi_database = get_hoc_phi
+            dispatcher.utter_message(text="Mức học phí ước tính 1 năm của các ngành học là: ")
+            for value in hoc_phi_database:
+                dispatcher.utter_message(text=f"{value[0]} : {value[1]} VND")
+        else:
+            # Tạo một đối tượng write_file
+            file_writer = write_file()
+            # Truyền user_input và gọi hàm get_log_file()
+            file_writer.get_log_file(user_input)
 
         return []
     
