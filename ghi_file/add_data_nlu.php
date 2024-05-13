@@ -13,8 +13,8 @@ function add_data_to_file_nlu($intent, $examples, $filename) {
             $start_index = $i + 1;
             $end_index = $start_index;
             while ($end_index < count($lines) && substr($lines[$end_index], 0, 2) == "  ") {
-                if (trim($lines[$end_index]) == "- " . $examples) {
-                    echo "Nội dung intent đã tồn tại, không thêm example question mới.<br>";
+                if (trim($lines[$end_index]) == "    - " . $examples) {
+                    // echo "Nội dung intent đã tồn tại, không thêm example question mới.<br>";
                     return;
                 }
                 $end_index++;
