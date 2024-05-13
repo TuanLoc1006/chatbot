@@ -1,5 +1,6 @@
 <?php
-include "db_con.php";
+include '../includes/db_con.php';
+
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $intentName = $_POST['intentName'];
@@ -18,7 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     }
 
-    header('Location: index.php');
+    header('Location: ../index.php');
 }
 
 

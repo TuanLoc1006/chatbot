@@ -1,6 +1,5 @@
 <?php
-include "../../db_con.php";
-
+include "../../includes/db_con.php";
 include "../../ghi_file/delete_data_nlu.php";
 include "../../ghi_file/delete_data_domain.php";
 include "../../ghi_file/delete_data_stories.php";

@@ -1,6 +1,5 @@
 <?php
-include "../../db_con.php";
-
+include "../../includes/db_con.php";
 if (isset($_POST['delete_intent'])) {
     $intent_id = $_POST['intent_id'];
     

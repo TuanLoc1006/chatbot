@@ -1,5 +1,3 @@
-<!-- SELECT i.intent_name,e.example_question,a.chat_answer FROM `intents` i JOIN example_intent e on i.intent_id=e.intent_id JOIN answer_intent a on i.intent_id = a.intent_id  -->
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,7 +17,7 @@
 
 <body>
     <?php
-    include "db_con.php";
+    include "includes/db_con.php";
     ?>
     <h3><a href="./admin/views/home.php">Trang admin</a></h3>
     <h3><a href="./index.php">Trang user</a></h3>
@@ -29,12 +27,12 @@
                 <h1 class="nav-user">Trang Người Dùng</h1>
                 <h3>Các chủ đề trò chuyện có sẵn</h3>
                 <?php
-                include "all_intents.php";
+                include "client/all_intents.php";
                 ?>
             </div>
             <div class="col-md-6">
                 <h3>Thêm chủ đề mới </h3>
-                <form method="post" action="add_intent.php">
+                <form method="post" action="client/add_intent.php">
                     <div class="form-group">
                         <label for="intentName">Tên Intent (chủ đề cuộc trò chuyện)</label>
                         <input type="text" class="form-control" id="intentName" name="intentName"

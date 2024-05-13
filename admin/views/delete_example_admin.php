@@ -1,6 +1,5 @@
 <?php
-include "../../db_con.php";
-
+include "../../includes/db_con.php";
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (isset($_POST["id"])) {
         $id = $_POST["id"];
