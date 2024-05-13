@@ -93,7 +93,7 @@ Khoa Giáo dục thể chất
 HU-QTC
 Phân hiệu Đại học Huế tại Quảng Trị
 UDN
-Đại học Đà Nẵng (UDN)
+Đại học Đà Nẵng
 DUT
 Trường Đại học Bách khoa
 
@@ -196,9 +196,6 @@ SEEE
 Trường Điện – Điện tử
 UEH
 Đại học Kinh tế Thành phố Hồ Chí Minh
-Lĩnh vực
-Kinh tế, kinh doanh, khoa học quản lý và phát triển bền vững
-CoB
 Trường Kinh doanh
 CELG
 Trường Kinh tế, Luật và Quản lý nhà nước
@@ -453,7 +450,6 @@ CLU
 Trường Đại học Cửu Long
 TVU
 Trường Đại học Trưng Vương
-
 HVCTQDNDVN
 Học viện Chính trị Quân đội Nhân dân Việt Nam
 MAL

@@ -5,6 +5,7 @@ actions:
   - action_hoc_phi
   - action_chuong_trinh_dao_tao
   - acion_liet_ke_truong
+  - action_khong_biet
 
 intents:
   - greet
@@ -22,10 +23,12 @@ intents:
   - ask_chuong_trinh_dao_tao
   - ask_chuc_nang
   - ask_cac_truong_dai_hoc_vietnam
+  - ask_university
 
 entities:
   - hocphi
   - nganh
+  - university
 
 responses: 
   utter_greet:

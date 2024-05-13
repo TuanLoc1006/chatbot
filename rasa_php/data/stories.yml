@@ -34,3 +34,8 @@ stories:
   steps:
   - intent: ask_thong_tin_truong
   - action: utter_thong_tin_truong
+
+- story: hoi ve cac truong khac -> tl la ko biet
+  steps:
+  - intent: ask_university
+  - action: action_khong_biet
