@@ -1,11 +1,8 @@
 
-Đại học Quốc gia Hà Nội (VNU)
-Website: https://www.vnu.edu.vn/home/
-
 UET
 Trường Đại học Công nghệ
 
-UEd
+UED
 Trường Đại học Giáo dục
 
 UEB
@@ -303,25 +300,6 @@ Khoa Giáo dục Quốc phòng An ninh
 
 
 
-Đại học lĩnh vực[sửa | sửa mã nguồn]
-Hiện nay, một sốtrường đại học tại Việt Nam đã và đang xây dựng đề án tái cơ cấu, chuyển đổi sang mô hình đại học nhằm mở rộng quy mô đào tạo và hoạt động theo từng lĩnh vực nhất định. 
-Ngày 02 tháng 12 năm 2022, Thủ tướng Chính phủ phê duyệt Đề án chuyển Đại học Bách khoa Hà Nội thành Đại học thứ 6 và là Đại học lĩnh vực đầu tiên của Việt Nam[5], đến tháng 3/2023, cơ sở giáo dục này chính thức chuyển từ mô hình Trường Đại học" sang "Đại học Đa ngành" tập trung vào các lĩnh vực Kỹ thuật và Công nghệ, có con dấu và pháp nhân riêng, trực thuộc Bộ Giáo dục và Đào tạo[6][c]
-Năm 2021,Trường Đại học Kinh tế Thành phố Hồ Chí Minh công bố đề án "Hướng đến phát triển UEH thành Đại học đa ngành bền vững", đồng thời thay đổi cơ cấu và hệ thống nhận diện thương hiệu. Đến ngày 04 tháng 10 năm 2023, Đề án được Chính phủ và Bộ Giáo dục phê duyệt để chính thức chuyển đổi từ trường đại học" sang "đại học"[7]. Như vậy, Đại học Kinh tế Thành phố Hồ Chí Minh (tên khác: UEH University, Đại học UEH), trở thành Đại học thứ 7 của Việt Nam, hoạt động trong lĩnh vực Kinh tế, Kinh doanh, Khoa học Quản lý và Phát triển bền vững. 
-Một sốtrường còn lại, nhưTrường Đại học Kinh tế Quốc dân,[8]Trường Đại học Y Hà Nội, Đại học Vinh, Đại học Cần Thơ,... đã có đề án chuyển đổi và chờ được phê duyệt.
-
-
-
-STT
-
-Đại học
-
-Viết tắt
-
-Đơn vị trực thuộc
-
-
-38
-
 Đại học Bách khoa Hà Nội
 Viết tắt: HUST
 Lĩnh vực: Kỹ thuật và công nghệ
@@ -364,24 +342,6 @@ CTD
 Trường Công nghệ và Thiết kế
 
 
-—
-
-Phân hiệu Đại học Kinh tế TP.HCM tại Vĩnh Long
-Trường đại học và học viện trực thuộc cơ quan, tổ chức nhà nước[sửa | sửa mã nguồn]
-Theo khoản 2 Điều 4 Luật Giáo dục đại học: Trường đại học, học viện (sau đây gọi chung làtrường đại học) là cơ sở giáo dục đại học đào tạo, nghiên cứu nhiều ngành, được cơ cấu tổ chức theo quy định của Luật này". 
-Phần lớn các cơ sở đào tạo Đại học tại Việt Nam trực thuộc và được quản lý trực tiếp bởi Bộ Giáo dục và Đào tạo[9]. Một sốtrường đại học và học viện đào tạo theo các lĩnh vực khoa học nhất định sẽ được quản lý bởi các cơ quan, tổ chức nhà nước có chuyên môn tương ứng. Các cơ quan này chịu trách nhiệm xây dựng chương trình đào tạo theo lĩnh vực chuyên môn, cũng như thực hiện các quy trình kiểm định và đảm bảo chất lượng đào tạo. Bộ Giáo dục và Đào tạo chịu trách nhiệm tham vấn và hỗ trợ các cơ sở giáo dục này trong việc vận hành bộ máy, tổ chức cũng như quản lý các hoạt động về nghiệp vụ đào tạo và giáo dục. 
-
-Bộ Giáo dục và Đào tạo[sửa | sửa mã nguồn]
-
-
-STT
-
-Địa chỉ
-
-Têntrường
-
-Viết tắt
-
 
 40
 
@@ -398,13 +358,13 @@ Trường Đại học Hà Nội
 HANU
 
 
-42
+
 Trường Đại học Giao thông Vận tải
 
 UTC
 
 
-43
+
 Trường Đại học Kinh tế Quốc dân
 
 NEU
@@ -1562,19 +1522,9 @@ HVU
 TS. Hoàng Công Kiên
 
 
-169
 
-Phú Yên
 Trường Đại học Phú Yên
 
-PYU
-
-TS. Trần Lăng
-
-
-170
-
-Quảng Bình
 Trường Đại học Quảng Bình
 
 QBU
@@ -1606,110 +1556,51 @@ TS. Trần Đình Thám
 
 Quảng Ninh
 Trường Đại học Hạ Long
-
 UHL
 
-TS. Nguyễn Đức Tiệp
-
-
-174
-
-Thái Bình
 Trường Đại học Thái Bình
-
 TBU
 
-PGS.TS Phạm Quốc Thành
 
-
-175
-
-Thanh Hóa
 Trường Đại học Hồng Đức
-
 HDU
 
-PGS.TS Bùi Văn Dũng
-
-
-176
 Trường Đại học Văn hóa, Thể thao và Du lịch Thanh Hóa
-
 TUCST
 
-PGS.TS Lê Thanh Hà
 
-
-177
-
-Tiền Giang
 Trường Đại học Tiền Giang
-
 TGU
 
-PGS.TS Võ Ngọc Hà
-
-
-178
-
-Trà Vinh
 Trường Đại học Trà Vinh
-
 TVU
 
-TS. Nguyễn Minh Hoà
 
-
-179
-
-Tuyên Quang
 Trường Đại học Tân Trào
 
-—
-
-TS. Vũ Quỳnh Loan
-Trường đại học tư thục[sửa | sửa mã nguồn]Trường đại học tư thục là một doanh nghiệp kinh doanh dịch vụ giáo dục do một tổ chức hoặc cá nhân đứng tên sở hữu và có quyền bán lại cho cá nhân khác.[11] Hội đồng quản trị củatrường có quyền quyết định quy mô kinh doanh, chất lượng đào tạo, kế hoạch tuyển sinh, chương trình giảng dạy và nghiên cứu khoa học.
 
 
-
-STT
-
-Trụ sở chính
-
-Têntrường
-
-Viết tắt
-
-
-180
-
-Hà Nội
 Trường Đại học CMC
-
 CMCU
 
 
 181
 Trường Đại học Công nghệ và Quản lý hữu nghị
-
 UTM
 
 
 182
 Trường Đại học Đại Nam
-
 DNU
 
 
 183
 Trường Đại học Đông Đô
-
 HDIU
 
 
 184
 Trường Đại học FPT
-
 FPTU
 
 
@@ -2145,1646 +2036,230 @@ Trường Đại học Trần Quốc Tuấn /Trường Đại học Sĩ quan L�
 Trường Đại học Sĩ quan Thông tin - liên lạc
 
 
-13
+
 Trường Đại học Sĩ quan Pháo binh
 
 
-14
+
 Trường Đại học Sĩ quan Phòng hóa
 
 
-15
+
 Trường Đại học Sĩ quan Đặc công
 
+##############################################################################################
+Phuong
 
-16
 Trường Đại học Văn hoá Nghệ thuật Quân đội
-
-
-17
 Trường Cao đẳng Công nghiệp Quốc phòng
-
-
-18
 Trường Cao đẳng Công nghệ và Kỹ thuật Ô tô
-
-
-19
 Trường Cao đẳng Quân y 1
-
-
-20
-
-Vĩnh Phúc
 Trường Đại học Sĩ quan Tăng – Thiết giáp
-
-
-21
-
-Đồng Nai
 Trường Đại học Nguyễn Huệ /Trường Đại học Sĩ quan Lục quân 2
-
-
-22
-
-Lâm Đồng
-
 Học viện Lục quân
-
-
-23
-
-Khánh Hòa
-
 Học viện Hải quân
-
-
-24
 Trường Sĩ quan Không quân
-
-
-25
-
-Bình Dương
 Trường Đại học Ngô Quyền /Trường Đại học Sĩ quan Công Binh
-
-
-26
-
-TP.HCM
 Trường Đại học Trần Đại Nghĩa /Trường Đại học Sĩ quan Kỹ thuật Quân sự Vin - hem - pích
-
-
-27
 Trường Cao đẳng Quân y 2
-
-
-28
 Trường Cao đẳng Kỹ thuật Hải quân
-
-Công an[sửa | sửa mã nguồn]
-Cáctrường công an đào tạo sĩ quan công an. Cáctrường này cũng mang tính chất đào tạo đặc thù riêng để phù hợp với ngành Công an. Cáctrường công an do Bộ Công an, mà trực tiếp là Tổng cục Xây dựng Lực lượng Công an Nhân dân quản lý. Muốn được theo học tại cáctrường công an, thí sinh cũng phải đạt được những tiêu chuẩn về thể chất, chính trị và lý lịch. Hiện nay, một vàitrường đã đào tạo hệ dân sự.
-
-
-
-STT
-
-Địa chỉ
-
-Têntrường
-
-
-29
-
-Hà Nội
-
 Học viện An ninh nhân dân
-
-
-30
-
 Học viện Cảnh sát nhân dân
-
-
-31
-
 Học viện Chính trị - Công an Nhân dân
-
-
-32
-
 Học viện Quốc tế
-
-
-33
 Trường Đại học Phòng cháy chữa cháy
-
-
-34
-
-Bắc Ninh
 Trường Đại học Kỹ thuật – Hậu cần - Công an Nhân dân
-
-
-35
-
-TP.HCM
 Trường Đại học An ninh nhân dân
-
-
-36
-Trường Đại học Cảnh sát nhân dân
-Trường đại học nước ngoài[sửa | sửa mã nguồn]
-Cáctrường đại học trong danh sách này là cáctrường đại học vốn đầu tư nước ngoài hoặc cơ sở Việt Nam của các đại học có trụ sở ở nước ngoài. Khác với một sốtrường đại học quốc tế được thành lập dựa trên thoả thuận song phương giữa Chính phủ Việt Nam và Chính phủ nước sở tại (ví dụ:Trường Đại học Việt Đức,Trường Đại học Việt Nhật,...), cáctrường đại học trong danh sách này được quản lý độc lập bởi Chính phủ nước ngoài hoặc Tổ chức quốc tế. Chính phủ Việt Nam không can thiệp vào vấn đề hoạt động, đào tạo của cáctrường này, tuy nhiên có quyền yêu cầu Hiệu trưởng cáctrường báo cáo về tình hình hoạt động để đảm bảotrường hoạt động trong khuôn khổ pháp luật của Việt Nam hiện hành.
-
-
-
-STT
-
-Đại học
-
-Quốc gia
-
-Thể loại
-
-
-239
 Trường Đại học Quốc tế RMIT Việt Nam
-
-Úc
-
 Cơ sở độc lập của Đại học RMIT tại Việt Nam
-
-
-240
 Trường Đại học Fulbright Việt Nam
-
-Hoa Kỳ
 Trường Đại học phi lợi nhuận quản lý bởi Chính phủ Liên bang Hoa Kỳ
-
-
-241
-Trường Đại học Mỹ tại Việt Nam
-Trường Đại học với vốn đầu tư nước ngoài, cung cấp chương trình giáo dục Hoa Kỳ
-
-
-242
 Trường Đại học Anh Quốc – Việt Nam
-
-Vương quốc Anh
-Trường Đại học với vốn đầu tư nước ngoài, liên kết đào tạo với Đại học London, Đại học Stirling, Đại học Nghệ thuật Bournemouth và Đại học Staffordshire
-
-
-243
 Trường Đại học Y khoa Tokyo Việt Nam
-
-Nhật Bản
-Trường Đại học với vốn đầu tư nước ngoài, cung cấp chương trình chất lượng Nhật Bản
-Trường dự bị đại học[sửa | sửa mã nguồn]
-Dự bị đại học, dự bị đại học dân tộc là loại hìnhtrường chuyên biệt thuộc hệ thống cáctrường đại học, cao đẳng được thành lập dành riêng cho học sinh người dân tộc thiểu số ở cấp vùng cao, cấp vùng xa xôi hẻo lánh có đủ trình độ vào học tại cáctrường đại học, cao đẳng trong cả nước. Nó cũng làm nhiệm vụ đào tạo, tạo nguồn cán bộ quản lý, cán bộ khoa học người dân tộc thiểu số.
-Phó Thủ tướng Vũ Đức Đam đã ký Quyết định số 1127/QĐ–TTg ngày 26/9/2022 của Thủ tướng Chính phủ chuyển 4trường Dự bị Đại học và mộttrường Phổ thông vùng cao từ trực thuộc Bộ Giáo dục và Đào tạo về trực thuộc Ủy ban Dân tộc.[12]
-
-
-
-
-
-STT
-
-Têntrường
-
-Trụ sở
-
-
-1
 Trường Dự bị Đại học Thành phố Hồ Chí Minh
-
-TP. Hồ Chí Minh
-
-
-2
 Trường Dự bị Đại học Dân tộc Trung ương Nha Trang
-
-Khánh Hòa
-
-
-3
 Trường Dự bị Đại học Dân tộc Sầm Sơn
-
-Thanh Hóa
-
-
-4
 Trường Dự bị Đại học Dân tộc Trung ương
-
-Phú Thọ
-Trường cao đẳng[sửa | sửa mã nguồn]Trường Cao đẳng nghề hay Cao đẳng chuyên nghiệp được gọi chung làtrường Cao đẳng, do Bộ Lao động – Thương binh và Xã hội cùng với sự tham mưu trực tiếp là Tổng cục Giáo dục nghề nghiệp ra quyết định thành lập và quản lý nhà nước về chương trình, chất lượng đào tạo, cấp bằng. Bộ Giáo dục và Đào tạo đã cho phép sinh viên tốt nghiệptrường cao đẳng nghề được liên thông lên đại học chính quy. Hệ số lương khởi điểm của sinh viên tốt nghiệp cao đẳng nghề khi làm việc trong khối hành chính sự nghiệp, doanh nghiệp có vốn nhà nước (Công ty cổ phần) được xếp ngang bằng với bậc cao đẳng chuyên nghiệp hoặc cao hơn 1 bậc đối với một số chức danh chuyên môn nghiệp vụ.
-Trường cao đẳng sư phạm,Trường cao đẳng đào tạo ngành Giáo dục mầm non[sửa | sửa mã nguồn]
-Công lập[sửa | sửa mã nguồn]
-
-
-STT
-
-Têntrường
-
-Trụ sở
-
-
-1
 Trường Cao đẳng Sư phạm Bà Rịa – Vũng Tàu
-
-Bà Rịa – Vũng Tàu
-
-
-2
 Trường Cao đẳng Sư phạm Bắc Ninh
-
-Bắc Ninh
-
-
-3
 Trường Cao đẳng Sư phạm Cao Bằng
-
-Cao Bằng
-
-
-4
 Trường Cao đẳng Sư phạm Đắk Lắk
-
-Đắk Lắk
-
-
-5
 Trường Cao đẳng Sư phạm Điện Biên
-
-Điện Biên
-
-
-6
 Trường Cao đẳng Sư phạm Gia Lai
-
-Gia Lai
-
-
-7
 Trường Cao đẳng Sư phạm Hòa Bình
-
-Hòa Bình
-
-
-8
 Trường Cao đẳng Sư phạm Kiên Giang
-
-Kiên Giang
-
-
-9
 Trường Cao đẳng Sư phạm Lạng Sơn
-
-Lạng Sơn
-
-
-10
 Trường Cao đẳng Sư phạm Long An
-
-Long An
-
-
-11
 Trường Cao đẳng Sư phạm Nam Định
-
-Nam Định
-
-
-12
 Trường Cao đẳng Sư phạm Nghệ An
-
-Nghệ An
-
-
-13
 Trường Cao đẳng Sư phạm Quảng Trị
-
-Quảng Trị
-
-
-14
 Trường Cao đẳng Sư phạm Tây Ninh
-
-Tây Ninh
-
-
-15
 Trường Cao đẳng Sư phạm Thái Bình
-
-Thái Bình
-
-
-16
 Trường Cao đẳng Sư phạm Thừa Thiên Huế
-
-Thừa Thiên Huế
-
-
-17
 Trường Cao đẳng Sư phạm Trung ương
-
-Hà Nội
-
-
-18
 Trường Cao đẳng Sư phạm Trung ương Nha Trang
-
-Khánh Hòa
-
-
-19
 Trường Cao đẳng Sư phạm Trung ương Thành phố Hồ Chí Minh
-
-TP. Hồ Chí Minh
-
-
-20
 Trường Cao đẳng Thái Nguyên
-
-Thái Nguyên
-
-
-21
 Trường Cao đẳng Yên Bái
-
-Yên Bái
-
-
-22
 Trường Cao đẳng Bắc Kạn
-
-Bắc Kạn
-
-
-23
 Trường Cao đẳng Bến Tre
-
-Bến Tre
-
-
-24
 Trường Cao đẳng Bình Định
-
-Bình Định
-
-
-25
 Trường Cao đẳng Bình Phước
-
-Bình Phước
-
-
-26
 Trường Cao đẳng Cần Thơ
-
-Cần Thơ
-
-
-27
 Trường Cao đẳng Cộng đồng Cà Mau
-
-Cà Mau
-
-
-28
 Trường Cao đẳng Cộng đồng Hà Nội
-
-Hà Nội
-
-
-29
 Trường Cao đẳng Cộng đồng Hậu Giang
-
-Hậu Giang
-
-
-30
 Trường Cao đẳng Cộng đồng Hưng Yên
-
-Hưng Yên
-
-
-32
 Trường Cao đẳng Cộng đồng Lai Châu
-
-Lai Châu
-
-
-33
 Trường Cao đẳng Cộng đồng Sóc Trăng
-
-Sóc Trăng
-
-
-34
 Trường Cao đẳng Đà Lạt
-
-Lâm Đồng
-
-
-35
 Trường Cao đẳng Ngô Gia Tự Bắc Giang
-
-Bắc Giang
-
-
-36
 Trường Cao đẳng Sơn La
-
-Sơn La
-
-
-37
 Trường Cao đẳng Vĩnh Long
-
-Vĩnh Long
-
-
-38
 Trường Cao đẳng Vĩnh Phúc
-
-Vĩnh Phúc
-
-Ngoài công lập[sửa | sửa mã nguồn]
-
-
-STT
-
-Têntrường
-
-Trụ sở
-
-
-1
 Trường Cao đẳng Đại Việt Sài Gòn
-
-TP. Hồ Chí Minh
-Trường cao đẳng y tế[sửa | sửa mã nguồn]
-
-
-STT
-
-Têntrường
-
-Trụ sở
-
-Trang web
-
-
-1
 Trường Cao đẳng Y tế Điện Biên
-
-Điện Biên
-
-
-
-
-2
 Trường Cao đẳng Y tế Lạng Sơn
-
-Lạng Sơn
-
-
-
-
-3
 Trường Cao đẳng Y tế Phú Thọ
-
-Phú Thọ
-
-
-
-
-4
 Trường Cao đẳng Y tế Quảng Ninh
-
-Quảng Ninh
-
-
-
-
-5
 Trường Cao đẳng Y tế Sơn La
-
-Sơn La
-
-
-
-
-6
 Trường Cao đẳng Y tế Thái Nguyên
-
-Thái Nguyên
-
-
-
-
-7
 Trường Cao đẳng Y tế Bắc Ninh
-
-
-
-
-
-
-8
 Trường Cao đẳng Y tế Bạch Mai
-
-
-
-
-
-
-9
 Trường Cao đẳng Y tế Đắk Lắk
-
-Đắk Lắk
-
-https://www.dmc.edu.vn/
-
-
-10
 Trường Cao đẳng Y tế Đặng Văn Ngữ
-
-
-
-
-
-
-11
 Trường Cao đẳng Y tế Hà Đông
-
-
-
-
-
-
-12
 Trường Cao đẳng Y tế Hà Nam
-
-
-
-
-
-
-13
 Trường Cao đẳng Y tế Hà Nội
-
-
-
-
-
-
-14
 Trường Cao đẳng Y tế Hải Dương
-
-
-
-
-
-
-15
 Trường Cao đẳng Y tế Hải Phòng
-
-
-
-
-
-
-16
 Trường Cao đẳng Y tế Hưng Yên
-
-
-
-
-
-
-17
 Trường Cao đẳng Y tế Lâm Đồng
-
-Lâm Đồng
-
-https://www.cdytld.edu.vn/
-
-
-18
 Trường Cao đẳng Y tế Ninh Bình
-
-Ninh Bình
-
-http://cdyteninhbinh.edu.vn/ Lưu trữ 2023-10-14 tại Wayback Machine
-
-
-19
 Trường Cao đẳng Y tế Thái Bình
-
-Thái Bình
-
-http://caodangytb.edu.vn/
-
-
-20
 Trường Cao đẳng Y – Dược Hợp Lực
-
-Thanh Hóa
-
-https://cdyduochopluc.edu.vn/
-
-
-21
 Trường Cao đẳng Y tế Hà Tĩnh
-
-Hà Tĩnh
-
-
-
-
-22
 Trường Cao đẳng Y tế Quảng Trị
-
-Quảng Trị
-
-
-
-
-23
 Trường Cao đẳng Y tế Huế
-
-Thừa Thiên Huế
-
-http://cdythue.edu.vn/
-
-
-24
 Trường Cao đẳng Y tế Quảng Bình
-
-Quảng Bình
-
-https://ytequangbinh.edu.vn/
-
-
-25
 Trường Cao đẳng Y tế Thanh Hóa
-
-Thanh Hóa
-
-http://cyt.edu.vn/
-
-
-26
 Trường Cao đẳng Y tế Bình Định
-
-Bình Định
-
-
-
-
-27
 Trường Cao đẳng Y tế Đặng Thùy Trâm
-
-Quảng Ngãi
-
-https://dtt.edu.vn/ Lưu trữ 2023-01-30 tại Wayback Machine
-
-
-28
 Trường Cao đẳng Y tế Khánh Hòa
-
-Khánh Hòa
-
-
-
-
-29
 Trường Cao đẳng Y tế Phú Yên
-
-Phú Yên
-
-
-
-
-30
 Trường Cao đẳng Y tế Quảng Nam
-
-Quảng Nam
-
-https://cdytqn.edu.vn/
-
-
-31
 Trường Cao đẳng Y tế Bình Dương
-
-Bình Dương
-
-http://cdytbinhduong.edu.vn/
-
-
-32
 Trường Cao đẳng Y tế Đồng Nai
-
-Đồng Nai
-
-http://www.cyd.edu.vn/
-
-
-33
 Trường Cao đẳng Y tế Bạc Liêu
-
-Bạc Liêu
-
-http://cdytbaclieu.edu.vn/
-
-
-34
 Trường Cao đẳng Y tế Cà Mau
-
-Cà Mau
-
-
-
-
-35
 Trường Cao đẳng Y tế Cần Thơ
-
-Cần Thơ
-
-
-
-
-36
 Trường Cao đẳng Y tế Đồng Tháp
-
-Đồng Tháp
-
-https://cdytdt.edu.vn/
-
-
-37
 Trường Cao đẳng Y tế Kiên Giang
-
-Kiên Giang
-
-https://kgmc.edu.vn/
-
-
-38
 Trường Cao đẳng Y tế Tiền Giang
-
-Tiền Giang
-
-http://caodangytetg.edu.vn/
-
-
-39
 Trường Cao đẳng Y tế Trà Vinh
-
-Trà Vinh
-
-http://www.tvmc.edu.vn/
-Trường cao đẳng chuyên nghiệp[sửa | sửa mã nguồn]
-
-
-STT
-
-Têntrường
-
-Trụ sở
-
-Trang web
-
-
-1
 Trường Cao đẳng Cơ khí – Luyện kim
-
-Thái Nguyên
-
-
-
-
-2
 Trường Cao đẳng Công nghệ và Kinh tế Công nghiệp
-
-http://ietc.edu.vn/
-
-
-3
 Trường Cao đẳng Công nghiệp Thái Nguyên
-
-https://www.cdcntn.edu.vn/
-
-
-4
 Trường Cao đẳng Công nghiệp Thực phẩm
-
-Phú Thọ
-
-https://fic.edu.vn/
-
-
-5
 Trường Cao đẳng Công nghiệp và Xây dựng
-
-Quảng Ninh
-
-http://cic.edu.vn/
-
-
-6
 Trường Cao đẳng Công nghiệp Việt Đức
-
-Thái Nguyên
-
-
-
-
-7
 Trường Cao đẳng Kinh tế – Tài chính Thái Nguyên
-
-
-
-
-8
 Trường Cao đẳng Kinh tế Kỹ thuật Điện Biên
-
-Điện Biên
-
-
-
-
-9
 Trường Cao đẳng Kinh tế Kỹ thuật Phú Thọ
-
-Phú Thọ
-
-
-
-
-10
 Trường Cao đẳng Kỹ thuật Công nghiệp
-
-Bắc Giang
-
-
-
-
-11
 Trường Cao đẳng Nông Lâm Đông Bắc
-
-Quảng Ninh
-
-
-
-
-12
 Trường Cao đẳng Thương mại và Du lịch Thái Nguyên
-
-Thái Nguyên
-
-
-
-
-13
 Trường Cao đẳng Văn hóa Nghệ thuật và Du lịch Hạ Long
-
-Quảng Ninh
-
-
-
-
-14
 Trường Cao đẳng Văn hóa Nghệ thuật Tây Bắc
-
-Hòa Bình
-
-
-
-
-15
 Trường Cao đẳng Văn hóa Nghệ thuật Việt Bắc
-
-Thái Nguyên
-
-
-
-
-16
 Trường Cao đẳng Cộng đồng Hà Tây
-
-Hà Nội
-
-
-
-
-17
 Trường Cao đẳng Cộng đồng Hải Phòng
-
-Hải Phòng
-
-
-
-
-18
 Trường Cao đẳng Công nghệ và Kinh tế Hà Nội
-
-Hà Nội
-
-
-
-
-19
 Trường Cao đẳng Công nghệ Viettronics
-
-Hải Phòng
-
-
-
-
-20
 Trường Cao đẳng Công nghiệp Hưng Yên
-
-Hưng Yên
-
-
-
-
-21
 Trường Cao đẳng Công nghiệp Nam Định
-
-Nam Định
-
-
-
-
-22
 Trường Cao đẳng Công nghiệp và Thương mại
-
-Vĩnh Phúc
-
-
-
-
-23
 Trường Cao đẳng Điện tử – Điện lạnh Hà Nội
-
-Hà Nội
-
-
-
-
-24
 Trường Cao đẳng Du lịch Hà Nội
-
-
-
-
-25
 Trường Cao đẳng Dược Trung ương Hải Dương
-
-Hải Dương
-
-
-
-
-26
 Trường Cao đẳng Hàng hải I
-
-Hải Phòng
-
-
-
-
-27
 Trường Cao đẳng Kinh tế – Kỹ thuật Thương mại
-
-Hà Nội
-
-
-
-
-28
 Trường Cao đẳng Kinh tế – Kỹ thuật Trung ương
-
-https://netc-vca.edu.vn/
-
-
-29
 Trường Cao đẳng Kinh tế – Kỹ thuật Vĩnh Phúc
-
-Vĩnh Phúc
-
-http://vtec.edu.vn/
-
-
-30
 Trường Cao đẳng Kinh tế Công nghiệp Hà Nội
-
-Hà Nội
-
-https://hiec.edu.vn/
-
-
-31
 Trường Cao đẳng Kinh tế và Công nghệ thực phẩm
-
-Hải Phòng
-
-https://www.cdktcntp.edu.vn/
-
-
-32
 Trường Cao đẳng Kinh tế, Kỹ thuật và Thủy sản
-
-Bắc Ninh
-
-http://www.ftec.edu.vn/
-
-
-33
 Trường Cao đẳng Múa Việt Nam
-
-Hà Nội
-
-https://cdmuavn.edu.vn/
-
-
-34
 Trường Cao đẳng Nghệ thuật Hà Nội
-
-
-
-
-35
 Trường Cao đẳng Nông nghiệp và Phát triển nông thôn Bắc Bộ
-
-http://vcard.edu.vn/
-
-
-36
 Trường Cao đẳng Phát thanh - Truyền hình I
-
-Hà Nam
-
-https://edu.vov.vn/
-
-
-37
 Trường Cao đẳng Thống kê
-
-Bắc Ninh
-
-http://cos.edu.vn/
-
-
-38
 Trường Cao đẳng Thông tin và Truyền thông
-
-Hà Nội
-
-https://www.cdcnin.edu.vn/
-
-
-39
 Trường Cao đẳng Thương mại và Du lịch Hà Nội
-
-https://hcct.edu.vn/
-
-
-40
 Trường Cao đẳng Thủy lợi Bắc Bộ
-
-Hà Nam
-
-http://www.caodangthuyloibacbo.edu.vn/
-
-
-41
 Trường Cao đẳng Truyền hình
-
-Hà Nội
-
-https://vtvcollege.vtv.vn/
-
-
-42
 Trường Cao đẳng Văn hóa Nghệ thuật Thái Bình
-
-Thái Bình
-
-http://cdvhntthaibinh.edu.vn/
-
-
-43
 Trường Cao đẳng Văn hóa Nghệ thuật và Du lịch Nam Định
-
-Nam Định
-
-http://cdvhntdlnd.edu.vn/
-
-
-44
 Trường Cao đẳng Vĩnh Phúc
-
-Vĩnh Phúc
-
-http://caodangvinhphuc.edu.vn/
-
-
-45
 Trường Cao đẳng Xây dựng công trình đô thị
-
-Hà Nội
-
-http://www.cuwc.edu.vn/
-
-
-46
 Trường Cao đẳng Xây dựng Nam Định
-
-Nam Định
-
-http://www.cdxdnd.edu.vn/default.aspx Lưu trữ 2023-02-03 tại Wayback Machine
-
-
-47
 Trường Cao đẳng Xây dựng số 1
-
-Hà Nội
-
-http://www.ctc1.edu.vn/
-
-
-48
 Trường Cao đẳng Công nghiệp Huế
-
-Thừa Thiên Huế
-
-http://www.hueic.edu.vn/
-
-
-49
 Trường Cao đẳng Giao thông Huế
-
-http://cdgthue.edu.vn/
-
-
-50
 Trường Cao đẳng Giao thông vận tải Trung ương IV
-
-Nghệ An
-
-http://cdgtvttw4.edu.vn/
-
-
-51
 Trường Cao đẳng Luật miền Trung
-
-Quảng Bình
-
-https://caodangluatmientrung.edu.vn/
-
-
-52
 Trường Cao đẳng Kinh tế Kỹ thuật Công thương
-
-Thanh Hóa
-
-http://cdktktct.edu.vn/
-
-
-53
 Trường Cao đẳng Kỹ thuật Công – Nông nghiệp Quảng Bình
-
-Quảng Bình
-
-http://ktcnnqb.edu.vn/
-
-
-54
 Trường Cao đẳng Nông nghiệp Thanh Hóa
-
-Thanh Hóa
-
-http://caodangnongnghiepth.edu.vn/
-
-
-55
 Trường Cao đẳng Nguyễn Du
-
-Hà Tĩnh
-
-
-
-
-56
 Trường Cao đẳng Thể dục Thể thao Thanh Hóa
-
-Thanh Hóa
-
-
-
-
-57
 Trường Cao đẳng Văn hóa Nghệ thuật Nghệ An
-
-Nghệ An
-
-https://www.vhna.edu.vn/
-
-
-58
 Trường Cao đẳng Bình Thuận
-
-Bình Thuận
-
-https://tcdbt.edu.vn/
-
-
-59
 Trường Cao đẳng Công nghệ, Kinh tế và Thủy lợi miền Trung
-
-Quảng Nam
-
-https://ckt.edu.vn/
-
-
-60
 Trường Cao đẳng Công thương Miền Trung
-
-Phú Yên
-
-https://mitc.edu.vn/
-
-
-61
 Trường Cao đẳng Điện lực miền Trung
-
-Quảng Nam
-
-https://cdmt.vn/
-
-
-62
 Trường Cao đẳng Giao thông vận tải Trung ương V
-
-Đà Nẵng
-
-http://www.caodanggtvttw5.edu.vn/
-
-
-63
 Trường Cao đẳng Kinh tế – Kế hoạch Đà Nẵng
-
-https://cep.edu.vn/
-
-
-64
 Trường Cao đẳng Kỹ thuật Công nghệ Quy Nhơn
-
-Bình Định
-
-http://cdktcnqn.edu.vn/
-
-
-65
 Trường Cao đẳng Lương thực - Thực phẩm
-
-Đà Nẵng
-
-http://cfi.edu.vn/
-
-
-66
 Trường Cao đẳng Quảng Nam
-
-Quảng Nam
-
-https://cdqn.edu.vn/
-
-
-67
 Trường Cao đẳng Thương mại
-
-Đà Nẵng
-
-https://cdtm.edu.vn/
-
-
-68
 Trường Cao đẳng Văn hóa – Nghệ thuật Đà Nẵng
-
-http://www.vhntdng.vn Lưu trữ 2021-05-19 tại Wayback Machine
-
-
-69
 Trường Cao đẳng Cộng đồng Đắk Nông
-
-Đắk Nông
-
-https://dncc.edu.vn/
-
-
-70
 Trường Cao đẳng Công nghệ và Kinh tế Bảo Lộc
-
-Lâm Đồng
-
-http://www.blc.edu.vn/
-
-
-71
 Trường Cao đẳng Văn hóa Nghệ thuật Đắk Lắk
-
-Đắk Lắk
-
-https://vhntdaklak.edu.vn/
-
-
-72
 Trường Cao đẳng Kon Tum
-
-Kon Tum
-
-https://ktcc.edu.vn/
-
-
-73
 Trường Cao đẳng Bình Phước
-
-Bình Phước
-
-https://cdbp.edu.vn/
-
-
-74
 Trường Cao đẳng Bách khoa Nam Sài Gòn
-
-TP. Hồ Chí Minh
-
-https://namsaigon.edu.vn/
-
-
-75
 Trường Cao đẳng Công nghệ Thủ Đức
-
-https://tdc.edu.vn/
-
-
-76
 Trường Cao đẳng Công nghiệp Cao su
-
-Bình Phước
-
-http://ric.edu.vn/
-
-
-77
 Trường Cao đẳng Công Thương Thành phố Hồ Chí Minh
-
-TP. Hồ Chí Minh
-
-https://hitu.edu.vn/
-
-
-78
 Trường Cao đẳng Điện lực Thành phố Hồ Chí Minh
-
-https://www.hepc.edu.vn/
-
-
-79
 Trường Cao đẳng Giao thông vận tải Thành phố Hồ Chí Minh
-
-https://www.hcmct.edu.vn/
-
-
-80
 Trường Cao đẳng Giao thông vận tải Trung ương III
-
-https://cvct3.edu.vn/
-
-
-81
 Trường Cao đẳng Giao thông vận tải Trung ương VI
-
-http://www.hcmct3.edu.vn/
-
-
-82
 Trường Cao đẳng Kinh tế – Công nghệ Thành phố Hồ Chí Minh
-
-http://www.hiast.edu.vn/
-
-
-83
 Trường Cao đẳng Kinh tế Đối ngoại
-
-https://www.cofer.edu.vn/
-
-
-84
 Trường Cao đẳng Kinh tế – Kỹ thuật Thành phố Hồ Chí Minh
-
-https://ktkthcm.edu.vn/
-
-
-85
 Trường Cao đẳng Kinh tế – Kỹ thuật Vinatex
-
-https://vinatexcollege.edu.vn/
-
-
-86
 Trường Cao đẳng Kinh tế Thành phố Hồ Chí Minh
-
-https://kthcm.edu.vn/
-
-
-87
 Trường Cao đẳng Kỹ thuật Cao Thắng
-
-https://caothang.edu.vn/
-
-
-88
 Trường Cao đẳng Kỹ thuật Công nghệ Bà Rịa – Vũng Tàu
-
-Bà Rịa – Vũng Tàu
-
-https://www.bctech.edu.vn/
-
-
-89
 Trường Cao đẳng Lý Tự Trọng Thành phố Hồ Chí Minh
-
-TP. Hồ Chí Minh
-
-https://lttc.edu.vn/
-
-
-90
 Trường Cao đẳng Mỹ thuật trang trí Đồng Nai
-
-Đồng Nai
-
-https://www.dncda.edu.vn/
-
-
-91
 Trường Cao đẳng Phát thanh Truyền hình II
-
-TP. Hồ Chí Minh
-
-https://vov.edu.vn/
-
-
-92
 Trường Cao đẳng Thống kê II
-
-Đồng Nai
-
-https://thongke2.edu.vn/
-
-
-93
 Trường Cao đẳng Văn hóa Nghệ thuật Thành phố Hồ Chí Minh
-
-TP. Hồ Chí Minh
-
-https://vhnthcm.edu.vn/
-
-
-94
 Trường Cao đẳng Xây dựng Thành phố Hồ Chí Minh
-
-https://hcc2.edu.vn/
-
-
-95
 Trường Cao đẳng Cơ điện và Nông nghiệp Nam Bộ
-
-Cần Thơ
-
-https://cea.edu.vn/
-
-
-96
 Trường Cao đẳng Cộng đồng Đồng Tháp
-
-Đồng Tháp
-
-https://dtcc.edu.vn/
-
-
-97
 Trường Cao đẳng Kiên Giang
-
-Kiên Giang
-
-https://www.kgc.edu.vn/
-
-
-98
 Trường Cao đẳng Kinh tế – Kỹ thuật Bạc Liêu
-
-Bạc Liêu
-
-http://www.ktktbl.edu.vn/
-
-
-99
 Trường Cao đẳng Kinh tế – Kỹ thuật Cần Thơ
-
-Cần Thơ
-
-https://www.ctec.edu.vn/ctec/index.php
-
-
-100
 Trường Cao đẳng Nông nghiệp Nam Bộ
-
-Tiền Giang
-
-https://nbac.edu.vn/
-
-
-101
 Trường Cao đẳng Văn hóa Nghệ thuật Cần Thơ
-
-Cần Thơ
-
-https://vhntct.edu.vn/
-
-
-102
 Trường Cao đẳng Kỹ thuật Quảng Trị
-
-Quảng Trị
-
-
-
-Ngoài công lập[sửa | sửa mã nguồn]Trường Cao đẳng ASEANTrường Cao đẳng Âu Lạc HuếTrường Cao đẳng Bách khoa Đà NẵngTrường Cao đẳng Bách khoa Hưng YênTrường Cao đẳng Bách ViệtTrường Cao đẳng Bán công Công nghệ và Quản trị doanh nghiệpTrường Cao đẳng Công nghệ Bắc HàTrường Cao đẳng Công nghệ Hà NộiTrường Cao đẳng Công nghệ thông tin Thành phố Hồ Chí MinhTrường Cao đẳng Công nghệ và Quản trị SonadeziTrường Cao đẳng Công nghệ và Thương mại Hà NộiTrường Cao đẳng Đại Việt – Hà NộiTrường Cao đẳng Đại Việt Đà NẵngTrường Cao đẳng Dược Hà NộiTrường Cao đẳng Hoan ChâuTrường Cao đẳng Kinh tế Công nghệ Thành phố Hồ Chí MinhTrường Cao đẳng Kinh tế Kỹ thuật Đông Du – Đà NẵngTrường Cao đẳng Kinh tế Kỹ thuật Hà NộiTrường Cao đẳng Kỹ thuật Công nghệ Bách KhoaTrường Cao đẳng Kỹ thuật Công nghệ Vạn XuânTrường Cao đẳng Lạc Việt – Đà NẵngTrường Cao đẳng Miền NamTrường Cao đẳng Ngoại ngữ – Công nghệ Việt NhậtTrường Cao đẳng Phương Đông – Đà NẵngTrường Cao đẳng Phương Đông – Quảng NamTrường Cao đẳng Quảng NgãiTrường cao đẳng Quốc tế BTEC FPTTrường Cao đẳng Quốc tế PegasusTrường Cao đẳng Tâm TríTrường Cao đẳng Tư thục Đức Trí – Đà NẵngTrường Cao đẳng Văn hoá Nghệ thuật và Du lịch Sài GònTrường Cao đẳng Viễn ĐôngTrường Cao đẳng Việt – AnhTrường Cao đẳng Việt MỹTrường Cao đẳng Y Dược Hồ Chí MinhTrường Cao đẳng Y Dược Hợp Lực – Thanh HóaTrường Cao đẳng Y Dược Pasteur Hà NộiTrường Cao đẳng Y Dược Pasteur Thành phố Hồ Chí MinhTrường Cao đẳng Y Dược Pasteur Yên BáiTrường Cao đẳng Y Dược Phú ThọTrường Cao đẳng Y Dược Sài GònTrường Cao đẳng Y khoa Phạm Ngọc ThạchTrường cao đẳng nghề[sửa | sửa mã nguồn]
-Khu vực Thành phố Hà NộiTrường Cao đẳng Cơ Điện và Công nghệ thực phẩm Hà NộiTrường Cao đẳng Điện lực miền BắcTrường Cao đẳng Đường sắtTrường Cao đẳng Giao thông vận tải Trung ương ITrường Cao đẳng Kỹ thuật trang thiết bị Y tếTrường Cao đẳng nghề An ninh – Công nghệTrường Cao đẳng nghề Bách khoa Hà Nội (Hactech)Trường Cao đẳng nghề Bách KhoaTrường Cao đẳng nghề Cơ điện Hà NộiTrường Cao đẳng nghề Công nghệ cao Hà NộiTrường Cao đẳng nghề Công nghệ và Kinh tế Hà NộiTrường Cao đẳng nghề Công nghiệp Hà NộiTrường Cao đẳng nghề Hùng VươngTrường Cao đẳng nghề Kinh doanh và Công nghệ Hà NộiTrường Cao đẳng nghề Kỹ thuật – Công nghệ – Kinh tế Simco Sông ĐàTrường Cao đẳng nghề Kỹ thuật Công nghệTrường Cao đẳng nghề Kỹ thuật Mỹ nghệ Việt NamTrường Cao đẳng Nghề Kỹ thuật và Nghiệp vụ Hà NộiTrường Cao đẳng nghề Long BiênTrường Cao đẳng nghề Nguyễn TrãiTrường Cao đẳng nghề Quốc tế Hà NộiTrường Cao đẳng nghề số 17 – Bộ Quốc phòngTrường Cao đẳng nghề Thăng LongTrường Cao đẳng nghề Trần Hưng ĐạoTrường Cao đẳng nghề Văn Lang Hà NộiTrường Cao đẳng nghề Việt Nam – Hàn Quốc Thành phố Hà NộiTrường Cao đẳng Phú ChâuTrường Cao đẳng Thực hành FPT
-Khu vực Thành phố Hồ Chí MinhTrường Cao đẳng Giao thông vận tải Đường thủy IITrường Cao đẳng Kinh tế – Kỹ thuật Thủ ĐứcTrường Cao đẳng Kỹ nghệ IITrường Cao đẳng Kỹ thuật NguyễnTrường TộTrường Cao đẳng nghề Công nghệ thông tin iSPACETrường Cao đẳng nghề Du lịch Sài GònTrường Cao đẳng Nghề Hàng hải Thành phố Hồ Chí MinhTrường Cao đẳng Nghề Kinh tế kỹ thuật Thành phố Hồ Chí MinhTrường Cao đẳng nghề Sài GònTrường Cao đẳng nghề số 7 – Bộ Quốc phòngTrường Cao đẳng Nghề Thành phố Hồ Chí MinhTrường Cao đẳng Quốc tế Thành phố Hồ Chí MinhTrường Cao đẳng Thủ Thiêm – TP. Hồ Chí Minh
-Khu vực phía bắc (Từ Hà Tĩnh trở ra)Trường Cao đẳng nghề Nông nghiệp và Phát triển nông thôn Thanh HóaTrường Cao đẳng Cơ điện Phú ThọTrường Cao đẳng Cơ điện và Xây dựng Bắc NinhTrường Cao đẳng Cơ giới Xây dựngTrường Cao đẳng Cơ khí Nông nghiệpTrường Cao đẳng Công nghiệp Bắc NinhTrường Cao đẳng Công nghiệp Dệt – May Nam ĐịnhTrường Cao đẳng Công Thương Thái NguyênTrường Cao đẳng Du lịch – Thương mại Nghệ AnTrường Cao đẳng Kỹ thuật Công nghệ Hòa BìnhTrường Cao đẳng Kỹ thuật Công nghệ Nam ĐịnhTrường Cao đẳng Kỹ thuật công nghệ Sơn LaTrường Cao đẳng Kỹ thuật và Công nghệ tỉnh Hà GiangTrường Cao đẳng Lào CaiTrường Cao đẳng nghề An Nhất VinhTrường Cao đẳng nghề Bắc GiangTrường Cao đẳng nghề Bắc NamTrường Cao đẳng nghề Bách nghệ Hải PhòngTrường Cao đẳng nghề Cơ điện Tây BắcTrường Cao đẳng nghề Cơ điện và Thủy lợiTrường Cao đẳng nghề Cơ điện xây dựng Tam ĐiệpTrường Cao đẳng nghề Cơ giới Ninh BìnhTrường Cao đẳng nghề Công nghệ Giấy và Cơ điệnTrường Cao đẳng nghề Công nghệ Hà TĩnhTrường Cao đẳng nghề Công nghệ LICOGI Thanh HóaTrường Cao đẳng nghề Công nghệ và Nông Lâm Đông BắcTrường Cao đẳng nghề Công nghệ và Nông Lâm Phú ThọTrường Cao đẳng nghề Công nghệ Việt– Hàn Bắc GiangTrường Cao đẳng nghề Công nghệ, Kinh tế và Chế biến lâm sảnTrường Cao đẳng nghề Công nghệ, Kinh tế và Thủy sảnTrường Cao đẳng nghề Công nghiệp Hải PhòngTrường Cao đẳng nghề Công nghiệp Thanh HóaTrường Cao đẳng nghề Công nghiệp Việt Bắc – VinacominTrường Cao đẳng nghề Công thương Việt NamTrường Cao đẳng nghề Đại AnTrường Cao đẳng nghề dân tộc nội trú Bắc KạnTrường Cao đẳng nghề Dịch vụ Hàng không AIRSERCOTrường Cao đẳng nghề Điện BiênTrường Cao đẳng nghề Du lịch và dịch vụ Hải PhòngTrường Cao đẳng nghề Duyên HảiTrường Cao đẳng Nghề Giao thông Cơ điện Quảng NinhTrường Cao đẳng nghề Giao thông Vận tải Đường thủy ITrường Cao đẳng nghề Giao thông vận tải trung ương IITrường Cao đẳng nghề Hà NamTrường Cao đẳng nghề Hải DươngTrường Cao đẳng nghề Kinh tế – Công nghệ VICETTrường Cao đẳng nghề Kinh tế – Kỹ thuật Bắc BộTrường Cao đẳng nghề Kinh tế – Kỹ thuật số 1 Nghệ AnTrường Cao đẳng nghề Kinh tế – Kỹ thuật Tô HiệuTrường Cao đẳng nghề Kỹ thuật – Công nghệ LODTrường Cao đẳng nghề Kỹ thuật Công nghiệp Việt Nam – Hàn Quốc Nghệ AnTrường Cao đẳng Nghề Kỹ thuật y tế Thăng LongTrường Cao đẳng Nghề Kỹ thuật–Công nghệ Tuyên QuangTrường Cao đẳng nghề Lam KinhTrường Cao đẳng nghề Lạng SơnTrường Cao đẳng nghề Lao động – Xã hội Hải PhòngTrường Cao đẳng nghề LILAMA–1Trường Cao đẳng nghề Phú ThọTrường Cao đẳng nghề Quản lý và Công nghệTrường Cao đẳng nghề số 1 – Bộ Quốc phòngTrường Cao đẳng nghề số 13 – Bộ Quốc phòngTrường Cao đẳng nghề số 19 – Bộ Quốc phòngTrường Cao đẳng nghề số 2 – Bộ Quốc phòngTrường Cao đẳng nghề số 20 – Bộ Quốc phòngTrường Cao đẳng nghề số 3 – Bộ Quốc phòngTrường Cao đẳng nghề số 4 – Bộ Quốc phòngTrường Cao đẳng nghề Sông ĐàTrường Cao đẳng nghề Thái BìnhTrường Cao đẳng nghề Thương mại và Công nghiệpTrường Cao đẳng nghề Việt – Hàn Quảng NinhTrường Cao đẳng nghề Việt Xô số 1Trường Cao đẳng nghề Việt–Đức Hà TĩnhTrường Cao đẳng nghề ViglaceraTrường Cao đẳng nghề Vĩnh PhúcTrường Cao đẳng nghề Yên BáiTrường Cao đẳng Than – Khoáng sản Việt NamTrường Cao đẳng Việt Đức Nghệ AnTrường Cao đẳng VMU
-Khu vực phía nam (Từ Quảng Bình trở vào)Trường Cao đẳng Cơ điện – Xây dựng và Nông Lâm Trung BộTrường Cao đẳng Công nghệ Quốc tế LILAMA–2Trường Cao đẳng Công nghệ Tây NguyênTrường Cao đẳng Công nghệ và Nông Lâm Nam BộTrường Cao đẳng Dầu khíTrường Cao đẳng Đồng KhởiTrường Cao đẳng Du lịch Cần ThơTrường Cao đẳng Du lịch Đà LạtTrường Cao đẳng Du lịch Đà NẵngTrường Cao đẳng Du lịch HuếTrường Cao đẳng Du lịch Nha TrangTrường Cao đẳng Du lịch Vũng TàuTrường Cao đẳng Hòa Bình Xuân LộcTrường Cao đẳng Kỹ nghệ Dung QuấtTrường Cao đẳng Kỹ thuật Công nghệ Bà Rịa – Vũng TàuTrường Cao đẳng Kỹ thuật Công nghệ Nha TrangTrường Cao đẳng Kỹ thuật Công nghệ Quy NhơnTrường Cao đẳng Kỹ thuật Đắk LắkTrường Cao đẳng Kỹ thuật Đồng NaiTrường Cao đẳng nghề An GiangTrường Cao đẳng nghề Bạc LiêuTrường Cao đẳng nghề Bình PhướcTrường Cao đẳng nghề Bình ThuậnTrường Cao đẳng nghề Cần ThơTrường Cao đẳng nghề Cơ giới Quảng NgãiTrường Cao đẳng nghề Cơ giới và Thủy lợiTrường Cao đẳng nghề Công nghệ cao Đồng AnTrường Cao đẳng nghề Công nghệ cao Đồng NaiTrường Cao đẳng nghề Công nghệ Sài GònTrường Cao đẳng nghề Đà LạtTrường Cao đẳng nghề Đà NẵngTrường Cao đẳng nghề Đồng ThápTrường Cao đẳng nghề Hoa SenTrường Cao đẳng Nghề Khách sạn Du lịch Quốc tế IMPERIALTrường Cao đẳng nghề Kiên GiangTrường Cao đẳng nghề Kỹ thuật Công nghệ LADECTrường Cao đẳng nghề Kỹ thuật thiết bị Y tế Bình DươngTrường Cao đẳng nghề Long AnTrường Cao đẳng nghề Nguyễn Tri PhươngTrường Cao đẳng nghề Nguyễn Văn TrỗiTrường Cao đẳng nghề Ninh ThuậnTrường Cao đẳng nghề Phú YênTrường Cao đẳng nghề Quảng BìnhTrường Cao đẳng nghề Quảng NamTrường Cao đẳng nghề Quốc tế Nam ViệtTrường Cao đẳng nghề số 21 – Bộ Quốc phòngTrường Cao đẳng nghề số 22 – Bộ Quốc phòngTrường Cao đẳng nghề số 23 – Bộ Quốc phòngTrường Cao đẳng nghề số 5 – Bộ Quốc phòngTrường Cao đẳng nghề số 8 – Bộ Quốc phòngTrường Cao đẳng nghề số 9 – Bộ Quốc phòngTrường Cao đẳng nghề Sóc TrăngTrường Cao đẳng nghề Tây NinhTrường Cao đẳng nghề Tây Sài GònTrường Cao đẳng Nghề Thừa Thiên HuếTrường Cao đẳng nghề Tiền GiangTrường Cao đẳng nghề Trà VinhTrường Cao đẳng nghề Trần Đại NghĩaTrường Cao đẳng nghề Việt Nam – Hàn Quốc Cà MauTrường Cao đẳng nghề Việt Nam – SingaporeTrường Cao đẳng nghề Việt Nam–Hàn Quốc Quảng NgãiTrường Cao đẳng nghề Việt–Úc Đà NẵngTrường Cao đẳng nghề Vĩnh LongTrường Cao đẳng Quốc tế VabisTrường Cao đẳng ThacoTrường Cao đẳng Việt Nam–Hàn Quốc Bình Dương
-Xem thêm[sửa | sửa mã nguồn]
-Danh sáchtrường đại học, học viện và cao đẳng tại Hà Nội
-Danh sáchtrường đại học tại Thành phố Hồ Chí Minh
-Danh sáchtrường đại học và cao đẳng tại Đà Nẵng
-Hệ thống giáo dục Việt Nam
-Bộ Giáo dục và Đào tạo Việt Nam
-Danh sách cáctrường Trung học chuyên nghiệp của Việt Nam
-Danh sách cáctrường đại học, học viện và cao đẳng đào tạo ngành công nghệ thông tin ở Việt Nam
-Khối ngành đại học, cao đẳng ở Việt Nam
-Chú thích[sửa | sửa mã nguồn]
-Ghi chú[sửa | sửa mã nguồn]
-
-
-^ Ngày 23 tháng 9 năm 2022, Phó Thủ tướng Vũ Đức Đam đã ký Quyết định Quyết định số 1122/QĐ-TTg phê duyệt chủ trương thành lậpTrường Đại học Khoa học Sức khỏe dựa trên nền tảng phát triển từ Khoa Y, Đại học Quốc gia TP.HCM. Lộ trình thành lậptrường được tiến hành từng bước trong giai đoạn 2025–2030.
-
-^ Tiền thân là Khoa Công nghệ thông tin - Truyền thông thuộc ĐH Đà Nẵng, được đổi tên thành VKU sau thoả thuận giữa Chính phủ Việt Nam và Bộ Giáo dục Hàn Quốc
-
-^ Ngày 5 tháng 12 năm 2022, Thủ tướng Chính phủ ban hành Quyết định số 1512/QĐ-TTg về việc chuyểnTrường Đại học Bách khoa Hà Nội thành Đại học Bách khoa Hà Nội. Theo đó, Đại học Bách khoa Hà Nội trở thành đại học thứ sáu của Việt Nam.
-
-^ Bao gồm trụ sở chính tại Hà Nội vàTrường Đại học Ngoại thương cơ sở II tại Thành phố Hồ Chí Minh.
-
-^Trường Đại học công lập thành lập dựa trên thoả thuận giữa Chính phủ Việt Nam và Bộ Giáo dục CHLB Đức
-
-^Trường Đại học Y Dược Thành phố Hồ Chí Minh được đổi tên thành Đại học Y Dược Thành phố Hồ Chí Minh (UMP) theo Quyết định số 2223/QĐ-BYT ngày 18 tháng 6 năm 2003 của Bộ trưởng Bộ Y tế. Tuy nhiên, về bản chất UMP vẫn chỉ tương đương với 1trường đại học chuyên ngành lĩnh vực Y - Dược. Tên gọi "Đại học" của UMP xuất phát từ việc UMP bao gồm 2 bộ phận: Cơ sở đào tạo Trường) và Cơ sở khám - chữa bệnh - Nghiên cứu (Bệnh viện), cả 2 cơ sở đều có các Khoa trực thuộc bên dưới. Hiện tại, UMP vẫn sử dụng tên gọi chính thức "Đại học Y dược TP.HCM" trên con dấu
-
-^ Học viện Chính trị Quốc gia Hồ Chí Minh hoạt động tương tự như mô hình của đại học đa thành viên, quản lý trực tiếp Học viện Báo chí và Tuyên truyền và 4 Học viện Chính trị phân theo khu vực từ I đến IV
-
-^ Kể từ ngày 1 tháng 1 năm 2023,Trường Đại học Nội vụ Hà Nội chính thức sáp nhập vào Học viện Hành chính Quốc gia theo Quyết định số 27/2022/QĐ-TTg Quy định chức năng, nhiệm vụ, quyền hạn và cơ cấu tổ chức của Học viện Hành chính Quốc gia trực thuộc Bộ Nội vụ được ban hành ngày 19 tháng 12 năm 2022.
-
-^Trường Đại học Việt - Pháp
-
-^ Do hoạt động không hiệu quả và có nhiều hạn chế trong quá trình đào tạo, vào ngày 17 tháng 01 năm 2016, Bộ Công an được Chính phủ phê duyệt Quyết định mua lạiTrường ĐH Hà Hoa Tiên làm cơ sở để thành lập cáctrường ĐH đào tạo chiến sĩ CANN sau này.
-
-
-Tham khảo[sửa | sửa mã nguồn]
-
-
-^ Hoàng Thị Xuân Hoa (21 tháng 5 năm 2023). “Tự chủ đại học: Xu thế của phát triển”. Đại học Quốc gia Hà Nội. Truy cập ngày 21 tháng 5 năm 2023.
-
-^ Yến Anh (28 tháng 11 năm 2018). “Đại học lo bị bỏ rơi khi tự chủ”. Báo Giáo dục. Truy cập ngày 21 tháng 5 năm 2023.
-
-^Trường Đại học Cần Thơ. “Luật giáo dục đại học sử đổi năm 2018” (PDF).
-
-^ Trung tâm Truyền thông giáo dục (27 tháng 2 năm 2023). Trường Đại học Cần Thơ cần có khát vọng phát triển lớn hơn nữa”. Bộ Giáo dục và Đào tạo. Truy cập ngày 12 tháng 6 năm 2023.
-
-^ Mỹ Anh (5 tháng 12 năm 2022). “ChuyểnTrường Đại học Bách khoa Hà Nội thành Đại học Bách khoa Hà Nội”. Báo điện tử Đảng Cộng sản Việt Nam. Truy cập ngày 6 tháng 5 năm 2023.
-
-^ Hạnh, Nguyễn Đức (17 tháng 3 năm 2023). “Chính thức chuyểnTrường ĐH Bách khoa Hà Nội thành ĐH Bách khoa Hà Nội”. Cổng tin tức thành phố Hải Phòng. Truy cập ngày 6 tháng 5 năm 2023.
-
-^ ONLINE, TUOI TRE (4 tháng 10 năm 2023). Trường đại học Kinh tế TP.HCM chính thức chuyển thành Đại học Kinh tế TP.HCM”. TUOI TRE ONLINE. Truy cập ngày 5 tháng 10 năm 2023.
-
-^ Mai Châm (23 tháng 1 năm 2023). “Lộ trình "chuyển mình" thành đại học củaTrường ĐH Kinh tế quốc dân”. Dân Trí. Truy cập ngày 12 tháng 6 năm 2023.
-
-^ “Danh sách các cơ sở giáo dục đại học, viện nghiên cứu đào tạo trình độ tiến sĩ, cáctrường cao đẳng có đào tạo ngành giáo dục mầm non trong hệ thống giáo dục quốc dân”. Bộ Giáo dục và Đào tạo. Truy cập ngày 6 tháng 5 năm 2023.
-
-^ “Học viện Ngân hàng (BAV) trở thành đối tác chiến lược đầu tiên của CityU tại Việt Nam từ năm 2012”.
-
-^ Tiêu Hà (23 tháng 1 năm 2018). Trường học là doanh nghiệp siêu lợi nhuận?”. Phụ Nữ. Truy cập ngày 21 tháng 5 năm 2023.
-
-^ Vũ Phương Nhi (26 tháng 9 năm 2022). “Chuyển 5trường Dự bị Đại học, Phổ thông vùng cao về trực thuộc Ủy ban Dân tộc”. Cổng thông tin điện tử Chính phủ. Truy cập ngày 7 tháng 5 năm 2023.
-
-
-
-
-Liên kết ngoài[sửa | sửa mã nguồn]
-Trang chủ của Bộ giáo dục và Đào tạo Lưu trữ 2017-06-03 tại Wayback Machine
-Danh sách các đại học cấp vùng Lưu trữ 2013-03-07 tại Wayback Machine
-Danh sách cáctrường đại học, cao đẳng Lưu trữ 2013-03-02 tại Wayback Machine
-Danh sách các học viện Lưu trữ 2013-03-17 tại Wayback Machine
-Danh sách cáctrường khác Lưu trữ 2013-03-02 tại Wayback Machine
-Quy hoạch mạng lưới cáctrường đại học và cao đẳng giai đoạn 2006 – 2020 của Thủ tướng Việt Nam[liên kết hỏng]
-xtsĐại học trọng điểm quốc gia Việt NamĐại học quốc gia
-Hà Nội
+Đại học quốc gia Hà Nội
 Thành phố Hồ Chí Minh
 Đại học vùng
 Huế
@@ -3792,8 +2267,7 @@ Huế
 Thái NguyênTrường đại học vùng
 Vinh
 Cần Thơ
-Đại họcTrường đại học, Học viện đầu ngànhGiáo dụcSư phạm Hà Nội  · Sư phạm Thành phố Hồ Chí MinhKinh tếKinh tế Quốc dân  · Kinh tế Thành phố Hồ Chí MinhKhoa học sức khỏeY Hà Nội  · Quân y  · Y Dược Thành phố Hồ Chí MinhKỹ thuậtNông nghiệp Việt Nam  · Bách khoa Hà Nội  · Kỹ thuật Quân sựBáo chí – Truyền thôngBáo chí và Tuyên truyềnVận tải – Hậu cầnHàng hải Việt NamDanh sáchtrường đại học, học viện và cao đẳng tại Việt Nam
-xtsHệ thống Đại học ASEANBrunei
+Brunei
 Đại học Brunei Darussalam
 Campuchia
 Đại học Hoàng gia Phnôm Pênh
@@ -3828,45 +2302,7 @@ Thái Lan
 Đại học Chulalongkorn
 Đại học Mahidol
 Đại học Chiang Mai
-Đại học Prince of Songkla
-Việt Nam
+Đại học Prince of Songkla Việt Nam
 Đại học Quốc gia Hà Nội
-Đại học Quốc gia Thành phố Hồ Chí MinhTrường Đại học Cần Thơ
-
-xtsDiễn đàn 4trường Đại học Đông Á (BESETOHA) Trung Quốc Hàn Quốc Nhật Bản Việt Nam
-
-
-
-
-
-
-
-
-
-
-
-Đại học Bắc KinhPeking UniversityĐại học Quốc gia SeoulSeoul National UniversityĐại học TokyoThe University of TokyoĐại học Quốc gia Hà NộiVietnam National University, Hanoi
-xtsTổ chức dịch vụ giáo dục tại Việt NamTập đoàn Nguyễn HoàngTrường Đại học Gia Định (GDU)Trường Đại học Bà Rịa – Vũng Tàu (BVU)Trường Đại học Quốc tế Hồng Bàng (HIU)Trường Đại học Hoa Sen (HSU)
-Tổ chức Giáo dục FPTTrường Đại học FPT (FPT)
-Greenwich Việt NamTrường Cao đẳng Thực hành FPTTrường Cao đẳng Quốc tế BTEC FPT
-HUTECH EducationTrường Đại học Công nghệ Thành phố Hồ Chí Minh (DKC)Trường Đại học Kinh tế – Tài chính Thành phố Hồ Chí Minh (UEF)
-Tập đoàn Dệt May Việt NamTrường Đại học Nguyễn Tất Thành (NTT)
-HungHau HoldingsTrường Đại học Văn Hiến (DVH)
-Tập đoàn Giáo dục Văn LangTrường Đại học Văn Lang (DVL)Trường Đại học Kinh tế – Kỹ thuật Bình Dương (DKB)
-Trung tâm đào tạo bóng đá trẻ PVF (PVF)†
-Đại học RMITTrường Đại học Quốc tế RMIT Việt Nam (RMU)*
-Quỹ Tín thác Sáng kiến Đại học Việt NamTrường Đại học Fulbright Việt Nam (FUV)*
-Học viện Công dân Toàn cầuTrường Đại học Yersin Đà Lạt (DYD)
-Tập đoàn Tân TạoTrường Đại học Tân Tạo (TTU)
-Tập đoàn VingroupTrường Đại học VinUni (VinUni)
-VinSchool
-Tổng Công ty Kinh BắcTrường Đại học Hùng Vương Thành phố Hồ Chí Minh (DHV)
-Tập đoàn Giáo dục EQuestTrường Đại học Phú Xuân (DPX)
-Broward College Vietnam*Trường Cao đẳng Việt MỹTrường Kinh doanh Sài Gòn (SBS)
-Tập đoàn PhenikaaTrường Đại học Phenikaa (PKA)
-Becamex IDCTrường Đại học Quốc tế Miền Đông (EIU)
-Cá nhân, pháp nhân khácTrường Đại học Phương Đông (DPD)Trường Đại học Thăng Long (DTL)Trường Đại học Đại Nam (DDN)Trường Đại học Thành Đô (TDD)Trường Đại học Nguyễn Trãi (NTU)Trường Đại học Hòa Bình (ETU)Trường Đại học Đông Đô (DDU)Trường Đại học Quản lý và Công nghệ Hải Phòng (DHP)Trường Đại học Công nghệ Đông Á (DDA)Trường Đại học Chu Văn An (DCA)Trường Đại học Lương Thế Vinh (DTV)Trường Đại học Quốc tế Bắc Hà (DBH)Trường Đại học Công nghiệp Vinh (DCV)Trường Đại học Công nghệ Vạn Xuân (DVX)Trường Đại học Duy Tân (DDT)Trường Đại học Kiến trúc Đà Nẵng (KTD)Trường Đại học Phan Thiết (DPT)Trường Đại học Ngoại ngữ – Tin học Thành phố Hồ Chí Minh (DNT)Trường Đại học Quốc tế Sài Gòn (SIU)Trường Đại học Công nghệ Sài Gòn (DSG)Trường Đại học Lạc Hồng (DLH)Trường Đại học Kinh tế Công nghiệp Long An (DLA)Trường Đại học Quang Trung (DQT)Trường Đại học Nam Cần Thơ (DNC)Trường Đại học Tây Đô (DTD)Trường Đại học VõTrường Toản (VTT)Trường Đại học Công nghệ Đồng Nai (DCD)Trường Đại học Quốc tế Bắc Hà (DBH)
-"Chữ nghiêng" biểu thị cáctrường cao đẳng; "*" biểu thịtrường công lập ở quốc gia khác và làtrường tư thục tại Việt Nam; "†" biểu thịtrường/hệ giáo dục khác.Chữ ghi chú trong ngoặc đơn là mã tuyển sinh của cáctrường.
-
-
-
+Đại học Quốc gia Thành phố Hồ Chí Minh
+Trường Đại học Cần Thơ

@@ -11,13 +11,13 @@ import mysql.connector
 #     )
 #     return mydb
 
-#DB của Phương
+#Phương
 def connectDB():
     mydb = mysql.connector.connect(
     host="localhost",
     user="root",
-    password="",
-    database="chatbot_rasa",
+    password="12345",
+    database="rasa_data",
     port=3306,
     )
     return mydb
