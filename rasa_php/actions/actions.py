@@ -47,16 +47,7 @@ class action_hocphi(Action):
         user_input = tracker.latest_message['text']
         print("action hoc phi: " + user_input)
 
-        if hocphi_entity:
-            hoc_phi_database = get_hoc_phi
-            dispatcher.utter_message(text="Mức học phí ước tính 1 năm của các ngành học là: ")
-            for value in hoc_phi_database:
-                dispatcher.utter_message(text=f"{value[0]} : {value[1]} VND")
-        else:
-            # Tạo một đối tượng write_file
-            file_writer = write_file()
-            # Truyền user_input và gọi hàm get_log_file()
-            file_writer.get_log_file("action hoc phi: "+user_input)
+
 
         return []
     
