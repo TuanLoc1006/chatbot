@@ -1,26 +1,26 @@
 import mysql.connector
 
 #DB Lộc (chạy thì mở ra)
-# def connectDB():
-#     mydb = mysql.connector.connect(
-#     host="localhost",
-#     user="root",
-#     password="",
-#     database="chatbot_rasa",
-#     port=3306,
-#     )
-#     return mydb
-
-#Phương
 def connectDB():
     mydb = mysql.connector.connect(
     host="localhost",
     user="root",
-    password="12345",
-    database="rasa_data",
+    password="",
+    database="chatbot_rasa",
     port=3306,
     )
     return mydb
+
+#Phương
+# def connectDB():
+#     mydb = mysql.connector.connect(
+#     host="localhost",
+#     user="root",
+#     password="12345",
+#     database="rasa_data",
+#     port=3306,
+#     )
+#     return mydb
 
 def nganh():
     db_connection = handleDB().get_connect()
@@ -55,3 +55,4 @@ class handleDB:
         return getHocPhi()
     def get_chuong_trinh_dao_tao(self):
         return getChuongTrinhDaoTao()
+    
