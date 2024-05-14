@@ -15,7 +15,8 @@ get_nganh = handledb.get_nganh()
 get_hoc_phi = handledb.get_hoc_phi()
 get_CTDT = handledb.get_chuong_trinh_dao_tao()
 
-
+ghifile = write_file()
+get_write_file = ghifile.get_ghi_log_file()
 
 class action_nganh(Action):
     def name(self):
@@ -31,7 +32,7 @@ class action_nganh(Action):
             dispatcher.utter_message(text="Danh sách các ngành có trong chương trình đào tạo của Đại học Y Dược Cần Thơ:")
             for item in nganh_database:
                 dispatcher.utter_message(text="- " + item[0].capitalize())
-                
+
             return []
 class action_hocphi(Action):
     def name(self):
@@ -39,11 +40,10 @@ class action_hocphi(Action):
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        
+
         hocphi_entity = next(tracker.get_latest_entity_values('hocphi'), None)
         user_input = tracker.latest_message['text']
         print("action hoc phi: " + user_input)
-
 
         if hocphi_entity:
             hoc_phi_database = get_hoc_phi
@@ -53,7 +53,7 @@ class action_hocphi(Action):
         else:
             dispatcher.utter_message
         return []
-    
+
 class action_chuongtrinhdaotao(Action):
     def name(self):
         return "action_chuong_trinh_dao_tao"
