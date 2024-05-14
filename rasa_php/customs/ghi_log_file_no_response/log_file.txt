@@ -1,1 +1,7 @@
+<<<<<<< HEAD
 tiền học ngành yNội dung muốn ghi vào tệp
+=======
+Action học phí: tiền học ngành y
+Action học phí: tiền học ngành
+Action học phí: tiền học ngành
+>>>>>>> 277151ba90e088941d3aa68de854dc0481f25ae3

@@ -156,7 +156,7 @@ nlu:
     - liệt kê một số ngành học
     - cho tôi biết trường có bao nhiêu ngành
     - liệt kê cho tôi các ngành học
-  
+
 - intent: ask_hoc_phi
   examples: |
     - [học phí](hocphi) bao nhiêu
@@ -384,12 +384,6 @@ nlu:
     - nếu tôi cần một chút sự hỗ trợ kỹ thuật, liệu bạn có thể cung cấp được không
     - tôi đang cần một số thông tin, liệu bạn có thể cung cấp cho tôi không
     - nếu tôi muốn biết cách làm một việc nào đó, bạn có thể hướng dẫn cho tôi không
-- intent: ask_cac_truong_dai_hoc_vietnam
-  examples: |
-    - các trường đại học ở việt nam
-    - liệt kê các trường đại học ở Việt Nam
-    - việt nam có các trường nào
-
 
 - intent: ask_university
   examples: |
@@ -839,3 +833,7 @@ nlu:
     - [Phân hiệu Đại học Đà Nẵng tại Kon Tum](university)
     - [HUST](university)
     - [Đại học Bách khoa Hà Nội](university)
+
+- intent: ask_diem_tuyen_sinh
+  examples: |
+    - học phí 

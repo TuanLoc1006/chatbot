@@ -15,6 +15,6 @@ ghi_log_file("Nội dung muốn ghi vào tệp")
 class write_file:
     def __init__(self):
         pass
-    
+
     def get_ghi_log_file(self, user_input):
         return ghi_log_file(user_input)

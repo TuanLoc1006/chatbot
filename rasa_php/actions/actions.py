@@ -54,7 +54,7 @@ class action_hocphi(Action):
             # Tạo một đối tượng write_file
             file_writer = write_file()
             # Truyền user_input và gọi hàm get_log_file()
-            file_writer.get_ghi_log_file(user_input)
+            file_writer.get_ghi_log_file('Action học phí: '+user_input)
 
         return []
     
@@ -92,6 +92,17 @@ class action_khong_the_tra_loi(Action):
         else :
             dispatcher.utter_message(text="Rất tiếc tôi không có thông tin về trường bạn yêu cầu.")
           
+        return []
+    
+class acction_tuyen_sinh(Action):
+    def name(self):
+        return "action_tuyen_sinh"
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+            
+        
         return []
     
     ##################################################
