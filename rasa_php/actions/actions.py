@@ -54,7 +54,7 @@ class action_hocphi(Action):
             # Tạo một đối tượng write_file
             file_writer = write_file()
             # Truyền user_input và gọi hàm get_log_file()
-            file_writer.get_log_file(user_input)
+            file_writer.get_ghi_log_file(user_input)
 
         return []
     
