@@ -1,5 +1,5 @@
 <?php
-include '../../db_con.php';
+include '../../includes/db_con.php';
 
 include '../../ghi_file/add_data_nlu.php';
 include '../../ghi_file/add_data_domain.php';

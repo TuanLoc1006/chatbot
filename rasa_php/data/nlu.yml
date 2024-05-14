@@ -834,6 +834,3 @@ nlu:
     - [HUST](university)
     - [Đại học Bách khoa Hà Nội](university)
 
-- intent: ask_diem_tuyen_sinh
-  examples: |
-    - học phí 
