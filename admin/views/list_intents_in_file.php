@@ -1,5 +1,5 @@
 <?php
-include "../../db_con.php";
+include "../../includes/db_con.php";
 
 $sql_intents = "SELECT DISTINCT i.intent_name,i.intent_id
 FROM `intents` i 
@@ -14,7 +14,7 @@ if ($result && $result->num_rows > 0) {
         $intent_name = $row['intent_name'];
         ?>
         <div class="card">
-            <a href="intent_detail_in_file.php?intent_id=<?php echo $intent_id; ?>" class="card-link">
+            <a href="./intent_detail_in_file.php?intent_id=<?php echo $intent_id; ?>" class="card-link">
                 <div class="card-body">
                     <h5 class="card-title"><?php echo $intent_name; ?></h5>
                     <input type="submit" name="" hidden value="<?php echo $intent_id ?>">

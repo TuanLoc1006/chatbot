@@ -1,5 +1,5 @@
 <?php
-include "db_con.php";
+include "../includes/db_con.php";
 
 if (isset($_POST['delete_intent'])) {
     $intent_id = $_POST['intent_id'];
@@ -14,7 +14,7 @@ if (isset($_POST['delete_intent'])) {
         $sql_intents = "DELETE FROM intents WHERE intent_id = $intent_id";
         if ($conn->query($sql_intents) === TRUE) {
             // Nếu xóa thành công, chuyển hướng đến trang chính
-            header("Location: index.php");
+            header("Location: ../index.php");
             exit();
         } else {
             echo "Error deleting record from intents table: " . $conn->error;

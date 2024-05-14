@@ -1,12 +1,12 @@
 <?php
-include "db_con.php";
+include "../includes/db_con.php";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (isset($_POST["id"])) {
         $id = $_POST["id"];
 
         // Xóa dòng từ CSDL dựa vào ID
-        $sql_delete_example = "DELETE FROM answer_intent WHERE id = $id";
+        $sql_delete_example = "DELETE FROM example_intent WHERE id = $id";
         if ($conn->query($sql_delete_example) === TRUE) {
             // Đóng kết nối đến CSDL
             $conn->close();
@@ -18,7 +18,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             echo "Lỗi: " . $conn->error;
         }
     } else {
-        echo "Lỗi: Không tìm thấy ID answer";
+        echo "Lỗi: Không tìm thấy ID";
     }
 } else {
     echo "Lỗi: Yêu cầu không hợp lệ";

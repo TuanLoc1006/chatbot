@@ -1,5 +1,5 @@
 <?php
-include "db_con.php";
+// include "includes/db_con.php";
 
 $sql_intents = "SELECT `intent_id`, `intent_name`, `status_file` FROM `intents`";
 $result = $conn->query($sql_intents);
@@ -11,7 +11,7 @@ if ($result && $result->num_rows > 0) {
         $status_file = $row['status_file'];
         ?>
         <div class="card">
-            <a href="intent_details.php?intent_id=<?php echo $intent_id; ?>" class="card-link">
+            <a href="client/intent_details.php?intent_id=<?php echo $intent_id; ?>" class="card-link">
                 <div class="card-body">
                     <h5 class="card-title"><?php echo $intent_name; ?></h5>
                     <?php if ($status_file == 1) { ?>
@@ -23,9 +23,9 @@ if ($result && $result->num_rows > 0) {
                 </div>
             </a>
             <?php if ($status_file == 0) { ?> <!-- Kiểm tra status_file -->
-                <form method="post" action="delete_intent.php" onsubmit="return confirmDelete();">
+                <form method="post" action="client/delete_intent.php" onsubmit="return confirmDelete();">
                     <input type="hidden" name="intent_id" value="<?php echo $intent_id ?>">
-                    <input type="submit" class="btn btn-danger" value="Xoa" name="delete_intent">
+                    <input type="submit" class="btn btn-danger" value="Xóa chủ đề" name="delete_intent">
                 </form>
             <?php } ?>
         </div>

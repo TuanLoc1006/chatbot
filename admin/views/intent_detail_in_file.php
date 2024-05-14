@@ -1,5 +1,5 @@
 <?php
-include "../../db_con.php";
+include "../../includes/db_con.php";
 
 // Kiểm tra xem có tham số intent_id được truyền qua URL không
 if (isset($_GET['intent_id'])) {

@@ -1,5 +1,5 @@
 <?php
-include "db_con.php";
+include "../includes/db_con.php";
 
 // Kiểm tra xem có tham số intent_id được truyền qua URL không
 if (isset($_GET['intent_id'])) {
@@ -28,15 +28,16 @@ if (isset($_GET['intent_id'])) {
 
         <body>
             <h3><a href="./admin/views/home.php">Trang admin</a></h3>
-            <h3><a href="./index.php">Trang user</a></h3>
+            <h3><a href="../index.php">Trang user</a></h3>
             <div class="container">
                 <div class="row">
                     <div class="col-md-6">
-                        <h2>Intent Details</h2>
+                        <h2>Thông tin chi tiết chủ đề</h2>
                         <!-- <p><strong>Intent Name:</strong> <?php echo $row['intent_name']; ?> </p> -->
 
                         <div class="question-list">
-                            <h2>Mẫu câu hỏi:</h2>
+                            <h2>Các mẫu câu hỏi về cùng 1 chủ đề:</h2>
+                            <p>Ví dụ: xin chào, chào bạn, hello, hi, bonjour, nice to meet you</p>
                             <?php
                             $sql_ex_intents = "SELECT `id`, `intent_id`, `example_question`, `status_file` FROM `example_intent` WHERE `intent_id`='$intent_id' ";
                             $result_example_intent = $conn->query($sql_ex_intents);
@@ -48,7 +49,7 @@ if (isset($_GET['intent_id'])) {
                         </div>
 
                         <div class="answer-list">
-                            <h2>Mãu câu trả lời:</h2>
+                            <h2>Các mẫu câu trả lời:</h2>
                             <?php
                             $sql_chat_answer = "SELECT `id`, `intent_id`, `chat_answer`, `status_file` FROM `answer_intent` WHERE `intent_id`='$intent_id'";
                             $result_chat_answer = $conn->query($sql_chat_answer);
@@ -62,7 +63,7 @@ if (isset($_GET['intent_id'])) {
 
                     </div>
                     <div class="col-md-6">
-                        <h3>Thêm câu hỏi tương tự</h3>
+                        <h3>Tạo câu hỏi tương tự</h3>
                         <?php
                         $intent_id = $_GET['intent_id'];
                         $sql_intent_details = "SELECT * FROM `intents` WHERE `intent_id` = $intent_id";
@@ -72,9 +73,9 @@ if (isset($_GET['intent_id'])) {
                             $intent_name = $row['intent_name'];
                         }
                         ?>
-                        <form method="post" action="save_data.php">
+                        <form method="post" action="./save_data.php">
                             <div class="form-group">
-                                <label for="intentName">Id</label>
+                                <label for="intentName">Id chủ đề:</label>
                                 <input class="form-control" name="intent_id" type="text"
                                     value="<?php echo $row['intent_id']; ?>" readonly><br>
                                 <label for="intentName">Tên Intent (chủ đề cuộc trò chuyện)</label>
@@ -89,7 +90,7 @@ if (isset($_GET['intent_id'])) {
                                     rows="3"></textarea>
                             </div>
                             <div class="form-group">
-                                <label for="answer">Câu trả lời cho chủ đề trên</label>
+                                <label for="answer">Câu trả lời cho chủ đề này</label>
                                 <textarea class="form-control" id="answer" name="answer" placeholder="Nhập câu trả lời"
                                     rows="3"></textarea>
                             </div>
