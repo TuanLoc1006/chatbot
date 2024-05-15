@@ -8,6 +8,12 @@ from .constants import Constant
 
 from customs.ghi_log_file_no_response.write_file import write_file
 
+# loc
+from typing import Dict, Text, Any, List, Union
+from rasa_sdk import Action, Tracker
+from rasa_sdk.executor import CollectingDispatcher
+from rasa_sdk.forms import FormValidationAction
+# phuong
 
 handledb = handleDB()
 get_connect = handledb.get_connect()
@@ -55,6 +61,7 @@ class action_hocphi(Action):
             file_writer = write_file()
             # Truyền user_input và gọi hàm get_log_file()
             file_writer.get_ghi_log_file('Action học phí: '+user_input)
+
 
         return []
     

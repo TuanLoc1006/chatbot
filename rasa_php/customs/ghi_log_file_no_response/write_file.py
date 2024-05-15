@@ -5,12 +5,10 @@ def ghi_log_file(user_input):
 
         with open(directory_path + "log_file.txt", "a", encoding="utf-8") as file:
             file.write(user_input + '\n')
-        print("Ghi file thành công!")
+        print("Đã ghi câu hỏi chưa trả lời được vào log file")
     except IOError:
         print("Lỗi: Không thể ghi file.")
 
-# Gọi hàm với user_input bất kỳ
-ghi_log_file("Nội dung muốn ghi vào tệp")
 
 class write_file:
     def __init__(self):
