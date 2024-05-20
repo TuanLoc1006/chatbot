@@ -9,3 +9,9 @@ https://www.youtube.com/watch?v=2r-nkS41bOs&list=PLp9h3aIPyUbZyCUP4ELTaS2ajxKNWa
 
 chatbot widget rasa
 https://github.com/JiteshGaikwad/Chatbot-Widget/tree/main
+
+
+rasa command
+
+rasa visualize
+rasa data validate

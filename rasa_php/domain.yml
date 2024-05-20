@@ -1,11 +1,15 @@
 version: "3.1"
 
 actions:
-  - action_nganh
-  - action_hoc_phi
-  - action_chuong_trinh_dao_tao
-  - acion_liet_ke_truong
-  - action_khong_biet
+    - validate_simple_form
+    - action_say_data
+    - action_chatgpt_fallback
+    - action_greet_user
+#   - action_nganh
+#   - action_hoc_phi
+#   - action_chuong_trinh_dao_tao
+#   - acion_liet_ke_truong
+#   - action_khong_biet
 
 intents:
   - greet
@@ -15,22 +19,60 @@ intents:
   - mood_great
   - mood_unhappy
   - bot_challenge
+  - inform
   ##################
 
-  - ask_nganh
-  - ask_hoc_phi
+  # - ask_nganh
+  # - ask_hoc_phi
   - ask_thong_tin_truong
-  - ask_chuong_trinh_dao_tao
-  - ask_chuc_nang
-  - ask_cac_truong_dai_hoc_vietnam
-  - ask_university
+  # - ask_chuong_trinh_dao_tao
+  # - ask_chuc_nang
+  # - ask_cac_truong_dai_hoc_vietnam
+  # - ask_university
 
 entities:
-  - hocphi
-  - nganh
-  - university
+    - email
+    - number
+#   - hocphi
+#   - nganh
+#   - university
+
+
+slots:
+  email:
+      type: text
+      influence_conversation: true
+      mappings:
+      - type: from_entity
+        entity: email
+
+  phone:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: number
+      condition:
+      - active_loop: simple_form
+        required_slot: phone
+  
+
+forms:
+  simple_form:
+    required_slots:
+      - email
+      - phone
 
 responses: 
+  utter_ask_email:
+  - text: "vui lòng cung cấp email?"
+
+  utter_ask_phone:
+  - text: "vui lòng cung cấp số điện thoại?"
+
+  utter_ask_slot:
+    - text: "Vui lòng cung cấp email và số điện thoại trước khi chat"
+    
   utter_greet:
     - text: "Chào! Chào mừng bạn đến với Bot Rasa."
     - text: "Chào! bạn tôi có thể giúp gì cho bạn?"
@@ -49,14 +91,14 @@ responses:
     - text: "Bye bye"
     - text: "hẹn gặp lại"
 
-  utter_cac_truong_dai_hoc_khac:
-  - text: "Xin lỗi tôi chỉ cung cấp thông tin về Đại học Y Dược Cần Thơ (ctump)"
+  # utter_cac_truong_dai_hoc_khac:
+  # - text: "Xin lỗi tôi chỉ cung cấp thông tin về Đại học Y Dược Cần Thơ (ctump)"
   
   utter_iamabot:
   - text: "Tôi là hệ thống trả lời tự động của trường Đại học Y Dược Cần Thơ"
 
-  utter_cac_chuc_nang:
-  - text: "Tôi có thể giải đáp thắc mắc của bạn về học phí, chương trình đào tạo... và các thông tin về Đại học Y dược Cần Thơ."
+  # utter_cac_chuc_nang:
+  # - text: "Tôi có thể giải đáp thắc mắc của bạn về học phí, chương trình đào tạo... và các thông tin về Đại học Y dược Cần Thơ."
 
   utter_thong_tin_truong:
   - text: "Trường Đại học Y Dược Cần Thơ là trường đại học Khoa học Sức khỏe hệ công lập trực thuộc Bộ Y tế duy nhất tại Đồng bằng sông Cửu Long, Việt Nam. Trường Đại học Y Dược Cần Thơ cũng là một trong những trường đào tạo Y – Dược tốt nhất Việt Nam nói chung và khu vực Đồng bằng Sông Cửu Long nói riêng. Có sứ mạng đào tạo bác sĩ, dược sĩ có trình độ đại học, sau đại học, nghiên cứu khoa học và chuyển giao công nghệ y dược, hỗ trợ phát triển hệ thống y tế nhằm đáp ứng nhu cầu chăm sóc sức khỏe cho nhân dân khu vực vùng Đồng bằng sông Cửu Long. Được xếp vào nhóm trường đại học trọng điểm quốc gia Việt Nam, trực thuộc Bộ Y tế."

@@ -9,10 +9,11 @@ from .constants import Constant
 from customs.ghi_log_file_no_response.write_file import write_file
 
 # loc
-from typing import Dict, Text, Any, List, Union
-from rasa_sdk import Action, Tracker
+from rasa_sdk import Action, Tracker, FormValidationAction
 from rasa_sdk.executor import CollectingDispatcher
-from rasa_sdk.forms import FormValidationAction
+from rasa_sdk.events import UserUtteranceReverted
+import requests 
+import re
 # phuong
 
 handledb = handleDB()
@@ -113,3 +114,127 @@ class acction_tuyen_sinh(Action):
         return []
     
     ##################################################
+
+class ActionSayData(Action):
+
+    def name(self) -> Text:
+        return "action_say_data"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        email = tracker.get_slot("email")
+        phone = tracker.get_slot("phone")
+        
+        dispatcher.utter_message(text=f"Email bạn cung cấp là: {email},số điện thoại là: {phone}")
+
+        return []
+    
+
+
+class ValidateSimpleForm(FormValidationAction):
+
+    def name(self) -> Text:
+        return "validate_simple_form"
+
+    def validate_phone(
+        self,
+        value: Text,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: Dict[Text, Any],
+    ) -> Dict[Text, Any]:
+        if len(value) == 10 and value.isdigit():
+            # Trả về số điện thoại hợp lệ
+            return {"phone": value}
+        else:
+            # Trả về None nếu số điện thoại không hợp lệ
+            dispatcher.utter_message(text="Invalid phone number")
+            return {"phone": None}
+
+    def validate_email(
+        self,
+        value: Text,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: Dict[Text, Any],
+    ) -> Dict[Text, Any]:
+        email_regex = r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$'
+        if re.match(email_regex, value):
+            # Trả về email hợp lệ
+            return {"email": value}
+        else:
+            # Trả về None nếu email không hợp lệ
+            dispatcher.utter_message(text="Invalid email address")
+            return {"email": None}
+
+# class ValidateSimpleForm(FormValidationAction):
+
+#     def name(self) -> Text:
+#         return "validate_simple_form"
+
+#     def validate_phone(
+#         self,
+#         value: Text,
+#         dispatcher: CollectingDispatcher,
+#         tracker: Tracker,
+#         domain: Dict[Text, Any],
+#     ) -> Dict[Text, Any]:
+#         if len(value) == 10 and value.isdigit():
+#             # Trả về số điện thoại hợp lệ
+#             return {"phone": value}
+#         else:
+#             # Trả về None nếu số điện thoại không hợp lệ
+#             dispatcher.utter_message(text="Invalid phone number")
+#             return {"phone": None}
+
+
+class ActionChatGPTFallback(Action):
+    def name(self) -> str:
+        return "action_chatgpt_fallback"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        
+        user_message = tracker.latest_message.get('text')
+        print("user_ask: "+user_message)
+        try:
+            response = requests.post(
+                'https://api.openai.com/v1/engines/davinci-codex/completions',
+                headers={
+                    'Authorization': f'Bearer YOUR_OPENAI_API_KEY',
+                    'Content-Type': 'application/json'
+                },
+                json={
+                    'prompt': user_message,
+                    'max_tokens': 150
+                }
+            )
+            
+            response_data = response.json()
+
+            if 'choices' in response_data and len(response_data['choices']) > 0:
+                chatgpt_reply = response_data['choices'][0]['text'].strip()
+            else:
+                chatgpt_reply = "Xin lỗi, tôi không thể đưa ra câu trả lời vào lúc này."
+
+        except Exception as e:
+            chatgpt_reply = f"Đã xảy ra lỗi: {str(e)}"
+        
+        dispatcher.utter_message(text=chatgpt_reply)
+        
+        # Ngăn vòng lặp bằng cách hoàn nguyên trạng thái người dùng
+        return [UserUtteranceReverted()]
+
+
+class ActionGreetUser(Action):
+    def name(self) -> Text:
+        return "action_greet_user"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        dispatcher.utter_message(text="Hello! How can I help you today?")
+        return []

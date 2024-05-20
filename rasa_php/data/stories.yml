@@ -1,41 +1,86 @@
 version: "3.1"
 
 stories:
-- story: sad path 2
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: deny
-  - action: utter_goodbye
 
-- story: hoi ve nganh dao tao
-  steps:
-  - intent: ask_nganh
-  - action: action_nganh
 
-- story: hoi ve hoc phi
-  steps:
-  - intent: ask_hoc_phi
-  - action: action_hoc_phi
 
-- story: hoi ve chuong trinh dao tao nganh y khoa
-  steps:
-  - intent: ask_chuong_trinh_dao_tao
-  - action: action_chuong_trinh_dao_tao
-- story: hoi ve các chức năng của chat bot
-  steps:
-  - intent: ask_chuc_nang
-  - action: utter_cac_chuc_nang
+# - story: User greets and fills out form
+#   steps:
+#   - intent: ask_thong_tin_truong
+#   - action: simple_form
+#   - action: utter_thong_tin_truong
 
-- story: hoi ve thong tin cua truong
-  steps:
-  - intent: ask_thong_tin_truong
-  - action: utter_thong_tin_truong
+# - story: Hoi ve thong tin cua truong
+#   steps:
+#   - intent: ask_thong_tin_truong
+#   - action: simple_form
+#   - active_loop: simple_form
+#   - action: utter_submit_form
+#   - action: utter_thong_tin_truong
+# - story: Hoi ve nganh dao tao
+#   steps:
+#   - intent: ask_nganh
+#   - action: action_nganh
 
-- story: hoi ve cac truong khac -> tl la ko biet
-  steps:
-  - intent: ask_university
-  - action: action_khong_biet
+# - story: Hoi ve hoc phi
+#   steps:
+#   - intent: ask_hoc_phi
+#   - action: action_hoc_phi
+
+# - story: Hoi ve chuong trinh dao tao nganh y khoa
+#   steps:
+#   - intent: ask_chuong_trinh_dao_tao
+#   - action: action_chuong_trinh_dao_tao
+
+# - story: Hoi ve cac chuc nang cua chat bot
+#   steps:
+#   - intent: ask_chuc_nang
+#   - action: utter_cac_chuc_nang
+
+
+
+# - story: Hoi ve cac truong khac
+#   steps:
+#   - intent: ask_university
+#   - action: action_khong_biet
+
+
+# - story: sad path 2
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: mood_unhappy
+#   - action: utter_cheer_up
+#   - action: utter_did_that_help
+#   - intent: deny
+#   - action: utter_goodbye
+
+
+# - story: hoi ve nganh dao tao
+#   steps:
+#   - intent: ask_nganh
+#   - action: action_nganh
+
+# - story: hoi ve hoc phi
+#   steps:
+#   - intent: ask_hoc_phi
+#   - action: action_hoc_phi
+
+# - story: hoi ve chuong trinh dao tao nganh y khoa
+#   steps:
+#   - intent: ask_chuong_trinh_dao_tao
+#   - action: action_chuong_trinh_dao_tao
+# - story: hoi ve các chức năng của chat bot
+#   steps:
+#   - intent: ask_chuc_nang
+#   - action: utter_cac_chuc_nang
+
+# - story: hoi ve thong tin cua truong
+#   steps:
+#   - intent: ask_thong_tin_truong
+#   - action: utter_thong_tin_truong
+
+# - story: hoi ve cac truong khac -> tl la ko biet
+#   steps:
+#   - intent: ask_university
+#   - action: action_khong_biet
