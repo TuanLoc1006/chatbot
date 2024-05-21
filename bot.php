@@ -184,7 +184,7 @@
                     $("#chat-widget-input").val("");
 
                     $("#chat-widget-messages").append("<div><strong>You:</strong> " + userMessage + "</div>");
-                    console.log(userMessage)
+                    console.log(userMessage);
                     $.ajax({
                         type: "POST",
                         url: "chat_handler.php", // Đường dẫn tới tệp PHP xử lý yêu cầu
@@ -200,17 +200,19 @@
                                     // Kiểm tra nếu response là một đường dẫn hình ảnh
                                     if (/\.(png|jpg|jpeg|gif)$/i.test(response)) {
                                         var img = '<img class="myImg" style="width:100%;max-width:300px" src="' + response + '" alt="Image" />';
-                                        $("#chat-widget-messages").append("<div ><strong class='text-danger'>Bot:</strong> " + img + "</div>");
+                                        $("#chat-widget-messages").append("<div><strong class='text-danger'>Bot:</strong> " + img + "</div>");
                                         // click để hiển thị modal hình ảnh
                                         $("#chat-widget-messages .myImg").last().on("click", function() {
                                             displayImageModal(this.src);
                                         });
                                     }
-                                    // Kiểm tra nếu response là một liên kết
-                                    else if (isValidURL(response)) {
-                                        $("#chat-widget-messages").append("<div><strong>Bot:</strong> <a href='" + response + "' target='_blank'>" + response + "</a></div>");
+                                    // Kiểm tra nếu response có chứa các URL
+                                    else if (containsURL(response)) {
+                                        // Chuyển các URL thành liên kết
+                                        response = response.replace(/\b(http[s]?:\/\/\S+)/gi, "<a href='$1' target='_blank'>$1</a>");
+                                        $("#chat-widget-messages").append("<div><strong>Bot:</strong> " + response + "</div>");
                                     } else {
-                                        $("#chat-widget-messages").append("<div><strong>Bot:</strong> " + response + "</div>")
+                                        $("#chat-widget-messages").append("<div><strong>Bot:</strong> " + response + "</div>");
                                     }
                                 });
                             } catch (e) {
@@ -225,34 +227,16 @@
             });
         });
 
-        // Hàm kiểm tra xem một chuỗi có phải là một URL hợp lệ hay không
-        function isValidURL(str) {
-            var pattern = new RegExp('^(https?:\\/\\/)?' + // protocol
-                '((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|' + // domain name
-                '((\\d{1,3}\\.){3}\\d{1,3}))' + // OR ip (v4) address
-                '(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*' + // port and path
-                '(\\?[;&a-z\\d%_.~+=-]*)?' + // query string
-                '(\\#[-a-z\\d_]*)?$', 'i'); // fragment locator
-            return !!pattern.test(str);
+        // Hàm kiểm tra xem một chuỗi có chứa URL hay không
+        function containsURL(str) {
+            var urlPattern = /\b(http[s]?:\/\/\S+)/gi;
+            return urlPattern.test(str);
         }
 
-        function displayImageModal(imageUrl) {
-            var modal = document.getElementById("myModal");
-            var modalImg = document.getElementById("img01");
-            var captionText = document.getElementById("caption");
-
-            modal.style.display = "block";
-            modalImg.src = imageUrl;
-            modalImg.alt = "Image";
-            captionText.innerHTML = "Image Caption";
+        function displayImageModal(src) {
+            document.getElementById('img01').src = src;
+            document.getElementById('myModal').style.display = "block";
         }
-
-        var span = document.getElementsByClassName("close")[0];
-
-        span.onclick = function() {
-            var modal = document.getElementById("myModal");
-            modal.style.display = "none";
-        };
     </script>
 
 </body>

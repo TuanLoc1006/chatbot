@@ -80,7 +80,7 @@ class action_chuongtrinhdaotao(Action):
             
             for item in CTDT:
                 if item[0].lower() == nganh_entity.lower():
-                    dispatcher.utter_message(text=f"Tham khảo chương trình đào tạo ngành {item[0]} tại: '{item[1]}'")
+                    dispatcher.utter_message(text=f"Tham khảo chương trình đào tạo ngành {item[0]} tại: {item[1]}")
         else : dispatcher.utter_message(text=f"Bạn cần biết chương trình đào tạo của ngành nào?")
         return []
     
