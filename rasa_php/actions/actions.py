@@ -92,7 +92,8 @@ class action_khong_the_tra_loi(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         university_entity = next(tracker.get_latest_entity_values('university'), None)
-        
+        user_input = tracker.latest_message['text']
+        print("action khong biet: " + user_input)
         if university_entity:
             university_entity = university_entity.lower()
             predefined_universities = [
@@ -215,62 +216,27 @@ class ActionChatGPTFallback(Action):
         # Ngăn vòng lặp bằng cách hoàn nguyên trạng thái người dùng
         return [UserUtteranceReverted()]
 
-
-# class ActionChatGPTFallback(Action):
-#     def name(self) -> str:
-#         return "action_chatgpt_fallback"
-
-#     def run(self, dispatcher: CollectingDispatcher,
-#             tracker: Tracker,
-#             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        
-#         user_message = tracker.latest_message.get('text')
-#         print("user_ask: " + user_message)
-#         try:
-#             response = requests.post(
-#                 'https://api.openai.com/v1/engines/davinci-codex/completions',
-#                 headers={
-#                     'Authorization': f'Bearer YOUR_OPENAI_API_KEY',
-#                     'Content-Type': 'application/json'
-#                 },
-#                 json={
-#                     'prompt': user_message,
-#                     'max_tokens': 150
-#                 }
-#             )
-            
-#             response_data = response.json()
-
-#             if 'choices' in response_data and len(response_data['choices']) > 0:
-#                 chatgpt_reply = response_data['choices'][0]['text'].strip()
-#             else:
-#                 chatgpt_reply = "Câu hỏi đang cập nhât, bạn có muốn để lại thông tin liên hệ"
-
-#         except Exception as e:
-#             chatgpt_reply = f"Đã xảy ra lỗi: {str(e)}"
-        
-#         buttons = [
-#             {"title": "Có", "payload": "/greet"},
-#             {"title": "Kết thúc hội thoại", "payload": "/goodbye"}
-#         ]
-        
-#         dispatcher.utter_message(text=chatgpt_reply, buttons=buttons)
-        
-#         # Ngăn vòng lặp bằng cách hoàn nguyên trạng thái người dùng
-#         return [UserUtteranceReverted()]
-
-
-
-
-
-# class ActionGreetUser(Action):
-#     def name(self) -> Text:
-#         return "action_greet_user"
-
-#     def run(self, dispatcher: CollectingDispatcher,
-#             tracker: Tracker,
-#             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-
-#         dispatcher.utter_message(text="Hello! How can I help you today?")
-#         return []
+def clean_user_input(text):
+    """
+    Làm gọn dữ liệu người dùng nhập vào.
     
+    Parameters:
+    text (str): Chuỗi văn bản từ người dùng.
+
+    Returns:
+    str: Chuỗi văn bản đã được làm gọn.
+    """
+    # Loại bỏ khoảng trắng đầu và cuối chuỗi
+    text = text.strip()
+    
+    # Chuyển đổi chữ hoa thành chữ thường
+    text = text.lower()
+    
+    # Loại bỏ các ký tự đặc biệt, chỉ giữ lại chữ cái và số
+    text = re.sub(r'[^a-z0-9\s]', '', text)
+    
+    # Loại bỏ khoảng trắng thừa giữa các từ
+    text = re.sub(r'\s+', ' ', text)
+    
+    return text
+

@@ -173,15 +173,17 @@ nlu:
     - [học phí](hocphi) của trường đại học y dược là bao nhiêu
     - [học phí](hocphi) của trường là bao nhiêu
     - trường này học khoảng bao nhiêu tiền
-    - học trường này tốn bao nhiêu tiền
-    - học trường này có đắt không
+    - học trường này [tốn bao nhiêu tiền](hocphi)
+    - học trường này có [đắt tiền](hocphi) không
     - [học phí](hocphi) có đắt không
     - [học phí](hocphi) trường đại học y dược
     - [học phí](hocphi) đại học y dược
     - các ngành học bao nhiêu tiền
     - [học phí](hocphi) là bao nhiêu
     - giá [học phí](hocphi)
-
+    - [học phí](hocphi) trường này tốn bao nhiêu tiền
+    - [giá tiền](hocphi) học bao nhiêu
+    - [chi phí](hocphi) trường này có đắt không
 
 - intent: ask_chuong_trinh_dao_tao
   examples:  |

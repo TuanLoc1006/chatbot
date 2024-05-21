@@ -6,12 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rasa app</title>
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
-        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <link rel="stylesheet" href="../assets/css/box_chat.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
     <style>
         body {
             font-family: Arial, Helvetica, sans-serif;
@@ -149,12 +146,9 @@
     <div class="container">
         <h1>Welcome to my chatbot</h1>
         <img src="" alt="">
-        <button id="chat-widget-button" type="button"
-            class="btn btn-primary rounded-circle chat-sign-button position-fixed"
-            style="bottom: 20px; right: 20px;"></button>
+        <button id="chat-widget-button" type="button" class="btn btn-primary rounded-circle chat-sign-button position-fixed" style="bottom: 20px; right: 20px;">💬</button>
 
-        <div id="chat-widget" class="card position-fixed shadow d-none"
-            style="bottom: 100px; right:20px ; width: 300px;">
+        <div id="chat-widget" class="card position-fixed shadow d-none" style="bottom: 100px; right:20px ; width: 300px;">
 
             <div class="card-header bg-primary text-white">
                 ChatBot
@@ -175,16 +169,16 @@
     </div>
 
     <script>
-        $(document).ready(function () {
-            $("#chat-widget-button").on("click", function () {
+        $(document).ready(function() {
+            $("#chat-widget-button").on("click", function() {
                 $("#chat-widget").toggleClass("d-none");
             });
 
-            $("#chat-widget-close-button").on("click", function () {
+            $("#chat-widget-close-button").on("click", function() {
                 $("#chat-widget").addClass("d-none");
             });
 
-            $("#chat-widget-input").keypress(function (event) {
+            $("#chat-widget-input").keypress(function(event) {
                 if (event.which === 13) {
                     let userMessage = $("#chat-widget-input").val();
                     $("#chat-widget-input").val("");
@@ -195,28 +189,36 @@
                         type: "POST",
                         url: "chat_handler.php", // Đường dẫn tới tệp PHP xử lý yêu cầu
                         contentType: "application/json",
-                        data: JSON.stringify({ message: userMessage }),
-
-                        success: function (res) {
-                            // Kiểm tra nếu res là một đường dẫn hình ảnh
-                            if (/\.(png|jpg|jpeg|gif)$/i.test(res)) {
-                                var img = '<img class="myImg" style="width:100%;max-width:300px" src="' + res + '" alt="Image" />';
-                                $("#chat-widget-messages").append("<div ><strong class='text-danger'>Bot:</strong> " + img + "</div>");
-                                // click để hiển thị modal hình ảnh
-                                $("#chat-widget-messages .myImg").last().on("click", function () {
-                                    displayImageModal(this.src);
+                        data: JSON.stringify({
+                            message: userMessage
+                        }),
+                        success: function(res) {
+                            console.log(res);
+                            try {
+                                let responses = JSON.parse(res);
+                                responses.forEach(function(response) {
+                                    // Kiểm tra nếu response là một đường dẫn hình ảnh
+                                    if (/\.(png|jpg|jpeg|gif)$/i.test(response)) {
+                                        var img = '<img class="myImg" style="width:100%;max-width:300px" src="' + response + '" alt="Image" />';
+                                        $("#chat-widget-messages").append("<div ><strong class='text-danger'>Bot:</strong> " + img + "</div>");
+                                        // click để hiển thị modal hình ảnh
+                                        $("#chat-widget-messages .myImg").last().on("click", function() {
+                                            displayImageModal(this.src);
+                                        });
+                                    }
+                                    // Kiểm tra nếu response là một liên kết
+                                    else if (isValidURL(response)) {
+                                        $("#chat-widget-messages").append("<div><strong>Bot:</strong> <a href='" + response + "' target='_blank'>" + response + "</a></div>");
+                                    } else {
+                                        $("#chat-widget-messages").append("<div><strong>Bot:</strong> " + response + "</div>")
+                                    }
                                 });
-                            }
-                            // Kiểm tra nếu res là một liên kết
-                            else if (isValidURL(res)) {
-                                $("#chat-widget-messages").append("<div><strong>Bot:</strong> <a href='" + res + "' target='_blank'>" + res + "</a></div>");
-                            }
-                            else {
-                                $("#chat-widget-messages").append("<div><strong>Bot:</strong> " + res + "</div>")
+                            } catch (e) {
+                                console.log("Invalid JSON response from server");
                             }
                         },
-                        error: function (error) {
-                            console.log('loi ')
+                        error: function(error) {
+                            console.log('Error: ', error);
                         }
                     });
                 }
@@ -247,13 +249,13 @@
 
         var span = document.getElementsByClassName("close")[0];
 
-        span.onclick = function () {
+        span.onclick = function() {
             var modal = document.getElementById("myModal");
             modal.style.display = "none";
         };
     </script>
 
-    <script src="../assets/javascript/box_chat.js"></script>
 </body>
 
 </html>
+``
