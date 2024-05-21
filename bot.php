@@ -172,6 +172,7 @@
         $(document).ready(function() {
             $("#chat-widget-button").on("click", function() {
                 $("#chat-widget").toggleClass("d-none");
+                scrollChatToBottom(); // Khi mở chat widget, tự động cuộn xuống dưới cùng
             });
 
             $("#chat-widget-close-button").on("click", function() {
@@ -215,6 +216,7 @@
                                         $("#chat-widget-messages").append("<div><strong>Bot:</strong> " + response + "</div>");
                                     }
                                 });
+                                scrollChatToBottom(); // Sau khi thêm tin nhắn mới, tự động cuộn xuống dưới cùng
                             } catch (e) {
                                 console.log("Invalid JSON response from server");
                             }
@@ -236,6 +238,12 @@
         function displayImageModal(src) {
             document.getElementById('img01').src = src;
             document.getElementById('myModal').style.display = "block";
+        }
+
+        // Hàm tự động cuộn xuống dưới cùng của khung chat
+        function scrollChatToBottom() {
+            var chatMessages = document.getElementById('chat-widget-messages');
+            chatMessages.scrollTop = chatMessages.scrollHeight;
         }
     </script>
 
