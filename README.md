@@ -15,3 +15,9 @@ rasa command
 
 rasa visualize
 rasa data validate
+
+chat terminal
+rasa shell
+
+chay action.py
+rasa run actions
