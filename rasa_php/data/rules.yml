@@ -14,7 +14,6 @@ rules:
 
 - rule: activate form loop
   steps:
-  # - action: action_greet_user
   - intent: greet
   - action: simple_form
   - active_loop: simple_form

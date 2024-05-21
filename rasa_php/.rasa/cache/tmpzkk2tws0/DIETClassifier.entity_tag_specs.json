@@ -1,0 +1,36 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-email",
+      "2": "I-email",
+      "3": "L-email",
+      "4": "U-email",
+      "5": "B-hocphi",
+      "6": "I-hocphi",
+      "7": "L-hocphi",
+      "8": "U-hocphi",
+      "9": "B-number",
+      "10": "I-number",
+      "11": "L-number",
+      "12": "U-number",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-email": 1,
+      "I-email": 2,
+      "L-email": 3,
+      "U-email": 4,
+      "B-hocphi": 5,
+      "I-hocphi": 6,
+      "L-hocphi": 7,
+      "U-hocphi": 8,
+      "B-number": 9,
+      "I-number": 10,
+      "L-number": 11,
+      "U-number": 12,
+      "O": 0
+    },
+    "num_tags": 13
+  }
+]

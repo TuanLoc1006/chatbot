@@ -37,9 +37,9 @@ class action_nganh(Action):
             print("action nganh: "+user_input)
             dispatcher.utter_message(text="Danh sách các ngành có trong chương trình đào tạo của Đại học Y Dược Cần Thơ:")
             for item in nganh_database:
-                dispatcher.utter_message(text="- " + item[0].capitalize())
-                
+                dispatcher.utter_message(text="- " + item[0].capitalize())            
             return []
+    
 class action_hocphi(Action):
     def name(self):
         return "action_hoc_phi"
@@ -50,8 +50,6 @@ class action_hocphi(Action):
         hocphi_entity = next(tracker.get_latest_entity_values('hocphi'), None)
         user_input = tracker.latest_message['text']
         print("action hoc phi: " + user_input)
-
-
         if hocphi_entity:
             hoc_phi_database = get_hoc_phi
             dispatcher.utter_message(text="Mức học phí ước tính 1 năm của các ngành học là: ")
@@ -89,18 +87,31 @@ class action_chuongtrinhdaotao(Action):
 class action_khong_the_tra_loi(Action):
     def name(self):
         return "action_khong_biet"
+
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        university_entity = next(tracker.get_latest_entity_values('university'), None).lower()
+        university_entity = next(tracker.get_latest_entity_values('university'), None)
+        
         if university_entity:
+            university_entity = university_entity.lower()
+            predefined_universities = [
+                'ctump', 
+                'y dược cần thơ', 
+                'đại học y dược cần thơ', 
+                'trường y dược cần thơ', 
+                'trường này'
+            ]
+            
+            if any(uni in university_entity for uni in predefined_universities):
+                dispatcher.utter_message(text="Bạn cần biết thông tin gì?")
+            else:
+                dispatcher.utter_message(text="Rất tiếc tôi không có thông tin về trường bạn yêu cầu.")
+        else:
             dispatcher.utter_message(text="Rất tiếc tôi không có thông tin về trường bạn yêu cầu.")
-        elif(university_entity=='ctump' or university_entity=='y dược cần thơ' or university_entity=='đại học y dược cần thơ' or university_entity=='trường y dược cần thơ' or university_entity=='trường này'):
-            dispatcher.utter_message(text="Bạn cần biết thông tin gì?")
-        else :
-            dispatcher.utter_message(text="Rất tiếc tôi không có thông tin về trường bạn yêu cầu.")
-          
+        
         return []
+
     
 class acction_tuyen_sinh(Action):
     def name(self):
@@ -108,9 +119,6 @@ class acction_tuyen_sinh(Action):
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-
-            
-        
         return []
     
     ##################################################
@@ -168,26 +176,6 @@ class ValidateSimpleForm(FormValidationAction):
             dispatcher.utter_message(text="Invalid email address")
             return {"email": None}
 
-# class ValidateSimpleForm(FormValidationAction):
-
-#     def name(self) -> Text:
-#         return "validate_simple_form"
-
-#     def validate_phone(
-#         self,
-#         value: Text,
-#         dispatcher: CollectingDispatcher,
-#         tracker: Tracker,
-#         domain: Dict[Text, Any],
-#     ) -> Dict[Text, Any]:
-#         if len(value) == 10 and value.isdigit():
-#             # Trả về số điện thoại hợp lệ
-#             return {"phone": value}
-#         else:
-#             # Trả về None nếu số điện thoại không hợp lệ
-#             dispatcher.utter_message(text="Invalid phone number")
-#             return {"phone": None}
-
 
 class ActionChatGPTFallback(Action):
     def name(self) -> str:
@@ -228,13 +216,61 @@ class ActionChatGPTFallback(Action):
         return [UserUtteranceReverted()]
 
 
-class ActionGreetUser(Action):
-    def name(self) -> Text:
-        return "action_greet_user"
+# class ActionChatGPTFallback(Action):
+#     def name(self) -> str:
+#         return "action_chatgpt_fallback"
 
-    def run(self, dispatcher: CollectingDispatcher,
-            tracker: Tracker,
-            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+#     def run(self, dispatcher: CollectingDispatcher,
+#             tracker: Tracker,
+#             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        
+#         user_message = tracker.latest_message.get('text')
+#         print("user_ask: " + user_message)
+#         try:
+#             response = requests.post(
+#                 'https://api.openai.com/v1/engines/davinci-codex/completions',
+#                 headers={
+#                     'Authorization': f'Bearer YOUR_OPENAI_API_KEY',
+#                     'Content-Type': 'application/json'
+#                 },
+#                 json={
+#                     'prompt': user_message,
+#                     'max_tokens': 150
+#                 }
+#             )
+            
+#             response_data = response.json()
 
-        dispatcher.utter_message(text="Hello! How can I help you today?")
-        return []
+#             if 'choices' in response_data and len(response_data['choices']) > 0:
+#                 chatgpt_reply = response_data['choices'][0]['text'].strip()
+#             else:
+#                 chatgpt_reply = "Câu hỏi đang cập nhât, bạn có muốn để lại thông tin liên hệ"
+
+#         except Exception as e:
+#             chatgpt_reply = f"Đã xảy ra lỗi: {str(e)}"
+        
+#         buttons = [
+#             {"title": "Có", "payload": "/greet"},
+#             {"title": "Kết thúc hội thoại", "payload": "/goodbye"}
+#         ]
+        
+#         dispatcher.utter_message(text=chatgpt_reply, buttons=buttons)
+        
+#         # Ngăn vòng lặp bằng cách hoàn nguyên trạng thái người dùng
+#         return [UserUtteranceReverted()]
+
+
+
+
+
+# class ActionGreetUser(Action):
+#     def name(self) -> Text:
+#         return "action_greet_user"
+
+#     def run(self, dispatcher: CollectingDispatcher,
+#             tracker: Tracker,
+#             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+#         dispatcher.utter_message(text="Hello! How can I help you today?")
+#         return []
+    
