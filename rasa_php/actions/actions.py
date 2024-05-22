@@ -34,7 +34,7 @@ class action_nganh(Action):
             # print(nganh_database)
             
             user_input = tracker.latest_message['text']
-            print("action nganh: "+user_input)
+            print("action hỏi ngành học: "+user_input)
             dispatcher.utter_message(text="Danh sách các ngành có trong chương trình đào tạo của Đại học Y Dược Cần Thơ:")
             for item in nganh_database:
                 dispatcher.utter_message(text="- " + item[0].capitalize())            
@@ -58,32 +58,54 @@ class action_hocphi(Action):
         else:
             # Tạo một đối tượng write_file
             file_writer = write_file()
-            # Truyền user_input và gọi hàm get_log_file()
             file_writer.get_ghi_log_file('Action học phí: '+user_input)
-
-
         return []
     
-class action_chuongtrinhdaotao(Action):
+# class action_chuongtrinhdaotao(Action):
+#     def name(self):
+#         return "action_chuong_trinh_dao_tao"
+#     def run(self, dispatcher: CollectingDispatcher,
+#             tracker: Tracker,
+#             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+#         user_input = tracker.latest_message['text']
+#         print("action hỏi ctdt: "+user_input) 
+#         nganh_entity = next(tracker.get_latest_entity_values('nganh'), None)
+#         if nganh_entity:
+#             CTDT = get_CTDT
+#             print(CTDT)
+#             for item in CTDT:
+#                 if item[0].lower() == nganh_entity.lower():
+#                     dispatcher.utter_message(text=f"Tham khảo chương trình đào tạo ngành {item[0]} tại: {item[1]}")
+#         else : dispatcher.utter_message(text=f"Bạn cần biết chương trình đào tạo của ngành nào?")
+#         return []
+
+class ActionChuongTrinhDaoTao(Action):
     def name(self):
         return "action_chuong_trinh_dao_tao"
+    
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        
         user_input = tracker.latest_message['text']
-        print("action ctdt: "+user_input)
+        print(f"action hỏi ctdt: {user_input}") 
         
         nganh_entity = next(tracker.get_latest_entity_values('nganh'), None)
+        
         if nganh_entity:
             CTDT = get_CTDT
-            # print(CTDT)
-            
             for item in CTDT:
                 if item[0].lower() == nganh_entity.lower():
                     dispatcher.utter_message(text=f"Tham khảo chương trình đào tạo ngành {item[0]} tại: {item[1]}")
-        else : dispatcher.utter_message(text=f"Bạn cần biết chương trình đào tạo của ngành nào?")
+                    break
+            else:
+                dispatcher.utter_message(text=f"Không tìm thấy chương trình đào tạo cho ngành {nganh_entity}.")
+        else:
+            dispatcher.utter_message(text="Bạn cần biết chương trình đào tạo của ngành nào?")
+        
         return []
-    
+
+
 class action_khong_the_tra_loi(Action):
     def name(self):
         return "action_khong_biet"
@@ -107,7 +129,7 @@ class action_khong_the_tra_loi(Action):
             if any(uni in university_entity for uni in predefined_universities):
                 dispatcher.utter_message(text="Bạn cần biết thông tin gì?")
             else:
-                dispatcher.utter_message(text="Rất tiếc tôi không có thông tin về trường bạn yêu cầu.")
+                dispatcher.utter_message(text="action khong biet: Rất tiếc tôi không có thông tin về trường bạn yêu cầu")
         else:
             dispatcher.utter_message(text="Rất tiếc tôi không có thông tin về trường bạn yêu cầu.")
         
@@ -158,7 +180,7 @@ class ValidateSimpleForm(FormValidationAction):
             return {"phone": value}
         else:
             # Trả về None nếu số điện thoại không hợp lệ
-            dispatcher.utter_message(text="Invalid phone number")
+            dispatcher.utter_message(text="Số điện thoại không hợp lệ")
             return {"phone": None}
 
     def validate_email(
@@ -174,7 +196,7 @@ class ValidateSimpleForm(FormValidationAction):
             return {"email": value}
         else:
             # Trả về None nếu email không hợp lệ
-            dispatcher.utter_message(text="Invalid email address")
+            dispatcher.utter_message(text="Email không hợp lệ!")
             return {"email": None}
 
 
@@ -206,37 +228,12 @@ class ActionChatGPTFallback(Action):
             if 'choices' in response_data and len(response_data['choices']) > 0:
                 chatgpt_reply = response_data['choices'][0]['text'].strip()
             else:
-                chatgpt_reply = "Xin lỗi, tôi không thể đưa ra câu trả lời vào lúc này."
+                chatgpt_reply = "action fallback: Xin lỗi, tôi không thể đưa ra câu trả lời vào lúc này."
 
         except Exception as e:
-            chatgpt_reply = f"Đã xảy ra lỗi: {str(e)}"
+            chatgpt_reply = f"action fallback: Đã xảy ra lỗi: {str(e)}"
         
         dispatcher.utter_message(text=chatgpt_reply)
         
         # Ngăn vòng lặp bằng cách hoàn nguyên trạng thái người dùng
         return [UserUtteranceReverted()]
-
-def clean_user_input(text):
-    """
-    Làm gọn dữ liệu người dùng nhập vào.
-    
-    Parameters:
-    text (str): Chuỗi văn bản từ người dùng.
-
-    Returns:
-    str: Chuỗi văn bản đã được làm gọn.
-    """
-    # Loại bỏ khoảng trắng đầu và cuối chuỗi
-    text = text.strip()
-    
-    # Chuyển đổi chữ hoa thành chữ thường
-    text = text.lower()
-    
-    # Loại bỏ các ký tự đặc biệt, chỉ giữ lại chữ cái và số
-    text = re.sub(r'[^a-z0-9\s]', '', text)
-    
-    # Loại bỏ khoảng trắng thừa giữa các từ
-    text = re.sub(r'\s+', ' ', text)
-    
-    return text
-

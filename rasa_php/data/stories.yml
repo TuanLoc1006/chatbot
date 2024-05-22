@@ -7,27 +7,27 @@ stories:
   - intent: ask_thong_tin_truong
   - action: utter_thong_tin_truong
   
-- story: hỏi về ngành đào tạo
+- story: hỏi về các ngành đào tạo
   steps:
   - intent: ask_nganh
   - action: action_nganh
 
-- story: Hoi ve hoc phi
+- story: Hỏi về học phí đào tạo
   steps:
   - intent: ask_hoc_phi
   - action: action_hoc_phi
 
-- story: Hoi ve chuong trinh dao tao nganh 
+- story: Hỏi chương trình đào tạo mỗi ngành
   steps:
   - intent: ask_chuong_trinh_dao_tao
   - action: action_chuong_trinh_dao_tao
 
-- story: Hoi ve cac chuc nang cua chat bot
+- story: Hỏi các chức năng bot làm được
   steps:
   - intent: ask_chuc_nang
   - action: utter_cac_chuc_nang
 
-- story: Hoi ve cac truong khac
+- story: Hỏi các trường đại học khác
   steps:
   - intent: ask_university
   - action: action_khong_biet

@@ -283,7 +283,8 @@ nlu:
     - các môn của ngành [hộ sinh](nganh) sẽ học
     - ngành [hộ sinh](nganh) học gì
     - sinh viên [hộ sinh](nganh) được học gì
-
+    - [hộ sinh](nganh)
+    
     - chương trình đào tạo ngành [kỹ thuật hình ảnh y học](nganh)
     - chương trình học của ngành [kỹ thuật hình ảnh y học](nganh)
     - ngành [kỹ thuật hình ảnh y học](nganh) được học gì
@@ -619,6 +620,7 @@ nlu:
     - [Đại học Quốc gia Hà Nội](university)
     - [Đại học Quốc gia Thành phố Hồ Chí Minh](university)
     - [Trường Đại học Cần Thơ](university)
+    - [ctu](university)
     - [VNU](university)
     - [Đại học Quốc gia Hà Nội](university)
     - [UET](university)
@@ -682,9 +684,9 @@ nlu:
     - [TNEC](university)
     - [Trường Cao đẳng Kinh tế Kỹ thuật](university)
     - [PH-TNU-LC](university)
-    - [Phân hiệu Đại học Thái Nguyên tại Lào Cai](university)
+    - [Đại học Thái Nguyên tại Lào Cai](university)
     - [PH-TNU-HG](university)
-    - [Phân hiệu Đại học Thái Nguyên tại Hà Giang](university)
+    - [Đại học Thái Nguyên tại Hà Giang](university)
     - [HueUni](university)
     - [Đại học Huế](university)
     - [HUSC](university)
@@ -712,7 +714,7 @@ nlu:
     - [FPE](university)
     - [Khoa Giáo dục thể chất](university)
     - [HU-QTC](university)
-    - [Phân hiệu Đại học Huế tại Quảng Trị](university)
+    - [Đại học Huế tại Quảng Trị](university)
     - [UDN](university)
     - [Đại học Đà Nẵng](university)
     - [DUT](university)
@@ -754,9 +756,9 @@ nlu:
     - [HCMUTE](university)
     - [Khoa Quốc tế](university)
     - [PH-TNU-LC](university)
-    - [Phân hiệu Đại học Thái Nguyên tại Lào Cai](university)
+    - [Đại học Thái Nguyên tại Lào Cai](university)
     - [PH-TNU-HG](university)
-    - [Phân hiệu Đại học Thái Nguyên tại Hà Giang](university)
+    - [Đại học Thái Nguyên tại Hà Giang](university)
     - [HueUni](university)
     - [Đại học Huế](university)
     - [HUSC](university)
@@ -784,7 +786,7 @@ nlu:
     - [FPE](university)
     - [Khoa Giáo dục thể chất](university)
     - [HU-QTC](university)
-    - [Phân hiệu Đại học Huế tại Quảng Trị](university)
+    - [Đại học Huế tại Quảng Trị](university)
     - [UDN](university)
     - [Đại học Đà Nẵng](university)
     - [DUT](university)
@@ -800,7 +802,7 @@ nlu:
     - [VKU](university)
     - [Trường Đại học Công nghệ thông tin và Truyền thông Việt - Hàn](university)
     - [PH-TNU-LC](university)
-    - [Phân hiệu Đại học Đà Nẵng tại Kon Tum](university)
+    - [Đại học Đà Nẵng tại Kon Tum](university)
     - [HUST](university)
     - [Đại học Bách khoa Hà Nội](university)
 
