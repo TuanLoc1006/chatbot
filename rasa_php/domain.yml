@@ -1,31 +1,32 @@
 version: "3.1"
 
 actions:
-  - validate_simple_form
-  - action_say_data
   - action_chatgpt_fallback
-  # - action_greet_user
-  - action_nganh
-  - action_hoc_phi
+  - action_thong_tin_truong
+  - action_thong_tin_nganh
   - action_chuong_trinh_dao_tao
+  - action_hoc_phi
+  # - validate_simple_form
+  # - action_say_data
+  # - action_greet_user
+  # - action_nganh
 #   - acion_liet_ke_truong
-  - action_khong_biet
+  # - action_khong_biet
 
 intents:
   # - deny
   # - mood_great
   # - mood_unhappy
+  # - inform
   - greet
   - goodbye
   - bot_challenge
-  - inform
-  - ask_nganh
-  - ask_hoc_phi
   - ask_thong_tin_truong
+  - ask_thong_tin_nganh
   - ask_chuong_trinh_dao_tao
+  - ask_hoc_phi
   - ask_chuc_nang
-  # - ask_cac_truong_dai_hoc_vietnam
-  - ask_university
+  # - ask_university
 
 entities:
   - email
@@ -35,32 +36,35 @@ entities:
   - university
 
 
-slots:
-  email:
-      type: text
-      influence_conversation: true
-      mappings:
-      - type: from_entity
-        entity: email
+# slots:
+#   email:
+#       type: text
+#       influence_conversation: true
+#       mappings:
+#       - type: from_entity
+#         entity: email
 
-  phone:
-    type: text
-    influence_conversation: true
-    mappings:
-    - type: from_entity
-      entity: number
-      condition:
-      - active_loop: simple_form
-        required_slot: phone
+#   phone:
+#     type: text
+#     influence_conversation: true
+#     mappings:
+#     - type: from_entity
+#       entity: number
+#       condition:
+#       - active_loop: simple_form
+#         required_slot: phone
   
 
-forms:
-  simple_form:
-    required_slots:
-      - email
-      - phone
+# forms:
+#   simple_form:
+#     required_slots:
+#       - email
+#       - phone
 
 responses: 
+  utter_ask_major:
+  - text: "Bạn học ngành nào vậy?"
+
   utter_ask_email:
   - text: "vui lòng cung cấp email?"
 
@@ -73,13 +77,6 @@ responses:
   - text: "Bạn cần gì?"
   - text: "Rất vui khi bạn đã hỏi"
 
-  # utter_cheer_up:
-  # - text: "Here is something to cheer you up:"
-  #   image: "https://i.imgur.com/nGF1K8f.jpg"
-
-  # utter_did_that_help:
-  # - text: "Tôi có thể giúp được gì cho bạn?"
-
   utter_goodbye:
   - text: "Tạm biệt! Hy vọng sớm gặp lại bạn! Chỉ cần nhập 'hey' hoặc 'hi' bất cứ lúc nào để chuyển hướng đến Phần giới thiệu của Bot :))"
   - text: "Bye bye"
@@ -88,13 +85,13 @@ responses:
   utter_ask_email_phone:
   - text: "Bạn vui lòng cung cấp email và số diện thoại trước khi chat"
 
-  utter_thong_tin_lien_he:
-  - text: "Bạn có muốn để lại thông tin liên hệ để admin giải đáp thắc mắc không"
-    buttons:
-      - title: "chat voi bot"
-        payload: "/greet"
-      - title: "chat voi admin"
-        payload: "/goodbye"
+  # utter_thong_tin_lien_he:
+  # - text: "Bạn có muốn để lại thông tin liên hệ để admin giải đáp thắc mắc không"
+  #   buttons:
+  #     - title: "chat voi bot"
+  #       payload: "/greet"
+  #     - title: "chat voi admin"
+  #       payload: "/goodbye"
   # utter_cac_truong_dai_hoc_khac:
   # - text: "Xin lỗi tôi chỉ cung cấp thông tin về Đại học Y Dược Cần Thơ (ctump)"
   
@@ -104,9 +101,7 @@ responses:
   utter_cac_chuc_nang:
   - text: "Tôi có thể giải đáp thắc mắc của bạn về học phí, chương trình đào tạo... và các thông tin về Đại học Y dược Cần Thơ."
 
-  utter_thong_tin_truong:
-  - text: "Trường Đại học Y Dược Cần Thơ là trường đại học Khoa học Sức khỏe hệ công lập trực thuộc Bộ Y tế duy nhất tại Đồng bằng sông Cửu Long, Việt Nam. Trường Đại học Y Dược Cần Thơ cũng là một trong những trường đào tạo Y – Dược tốt nhất Việt Nam nói chung và khu vực Đồng bằng Sông Cửu Long nói riêng. Có sứ mạng đào tạo bác sĩ, dược sĩ có trình độ đại học, sau đại học, nghiên cứu khoa học và chuyển giao công nghệ y dược, hỗ trợ phát triển hệ thống y tế nhằm đáp ứng nhu cầu chăm sóc sức khỏe cho nhân dân khu vực vùng Đồng bằng sông Cửu Long. Được xếp vào nhóm trường đại học trọng điểm quốc gia Việt Nam, trực thuộc Bộ Y tế."
-
+  
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true

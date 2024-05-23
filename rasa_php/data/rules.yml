@@ -12,32 +12,32 @@ rules:
   - intent: bot_challenge
   - action: utter_iamabot
 
-- rule: activate form loop
-  steps:
-  - intent: greet
-  - action: simple_form
-  - active_loop: simple_form
-
-- rule: submit form
-  condition:
-  - active_loop: simple_form
-  steps:
-  - action: simple_form
-  - active_loop: null
-  - slot_was_set:
-    - requested_slot: null
-  - action: action_say_data
-
-- rule: Inturuption in simple form
-  condition:
-  - active_loop: simple_form
-  steps:
-  - intent: bot_challenge
-  - action: utter_iamabot
-  # return to form loop
-  - action: simple_form
-  - active_loop: simple_form
 
 
-# ////////////////////////
+
+# - rule: activate form loop
+#   steps:
+#   - intent: greet
+#   - action: simple_form
+#   - active_loop: simple_form
+
+# - rule: submit form
+#   condition:
+#   - active_loop: simple_form
+#   steps:
+#   - action: simple_form
+#   - active_loop: null
+#   - slot_was_set:
+#     - requested_slot: null
+#   - action: action_say_data
+
+# - rule: Inturuption in simple form
+#   condition:
+#   - active_loop: simple_form
+#   steps:
+#   - intent: bot_challenge
+#   - action: utter_iamabot
+#   # return to form loop
+#   - action: simple_form
+#   - active_loop: simple_form
 
