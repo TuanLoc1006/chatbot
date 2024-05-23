@@ -10,21 +10,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <link rel="stylesheet" href="./assets/css/bot.css">
-    <style>
-        #chat-widget{
-            #chat-widget{
-                border-radius: 10%;
-                border: 2px solid;
-            }
-        }
-    </style>
 </head>
 
 <body>
 
     <div class="container">
-        <h1>Welcome to my chatbot</h1>
-        <img src="" alt="">
         <button id="chat-widget-button" type="button" class="btn btn-primary rounded-circle chat-sign-button position-fixed" style="bottom: 20px; right: 20px;">💬</button>
 
         <div id="chat-widget" class="card position-fixed shadow d-none" style="bottom: 100px; right:20px ; width: 300px;">
@@ -63,7 +53,7 @@
                     let userMessage = $("#chat-widget-input").val();
                     $("#chat-widget-input").val("");
 
-                    $("#chat-widget-messages").append("<div><strong>You:</strong> " + userMessage + "</div>");
+                    $("#chat-widget-messages").append("<div><strong>Bạn:</strong> " + userMessage + "</div>");
                     console.log(userMessage);
                     $.ajax({
                         type: "POST",
@@ -90,9 +80,9 @@
                                     else if (containsURL(response)) {
                                         // Chuyển các URL thành liên kết
                                         response = response.replace(/\b(http[s]?:\/\/\S+)/gi, "<a href='$1' target='_blank'>$1</a>");
-                                        $("#chat-widget-messages").append("<div><strong>Bot:</strong> " + response + "</div>");
+                                        $("#chat-widget-messages").append("<div><strong>CTUMP:</strong> " + response + "</div>");
                                     } else {
-                                        $("#chat-widget-messages").append("<div><strong>Bot:</strong> " + response + "</div>");
+                                        $("#chat-widget-messages").append("<div><strong>CTUMP:</strong> " + response + "</div>");
                                     }
                                 });
                                 scrollChatToBottom(); // Sau khi thêm tin nhắn mới, tự động cuộn xuống dưới cùng
