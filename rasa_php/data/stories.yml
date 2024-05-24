@@ -11,6 +11,7 @@ stories:
   steps:
   - intent: ask_thong_tin_nganh
   - action: action_thong_tin_nganh
+  
 
 - story: Hỏi chương trình đào tạo mỗi ngành
   steps:
@@ -21,6 +22,7 @@ stories:
   steps:
   - intent: ask_hoc_phi
   - action: action_hoc_phi
+  
 
 
 
@@ -29,13 +31,27 @@ stories:
   - intent: ask_chuc_nang
   - action: utter_cac_chuc_nang
 
+- story: Hỏi là đang chat với ai
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+- story: hỏi về địa điểm các phòng ở đâu
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: ask_dia_diem_cac_khoa
+    - action: action_hoi_dia_diem
+
+
+
+
+
+
 # - story: Hỏi các trường đại học khác
 #   steps:
 #   - intent: ask_university
 #   - action: action_khong_biet
-
-
-
 
 # - story: hỏi về ngành học
 #     steps:

@@ -1,0 +1,44 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-hocphi",
+      "2": "I-hocphi",
+      "3": "L-hocphi",
+      "4": "U-hocphi",
+      "5": "B-location",
+      "6": "I-location",
+      "7": "L-location",
+      "8": "U-location",
+      "9": "B-nganh",
+      "10": "I-nganh",
+      "11": "L-nganh",
+      "12": "U-nganh",
+      "13": "B-university",
+      "14": "I-university",
+      "15": "L-university",
+      "16": "U-university",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-hocphi": 1,
+      "I-hocphi": 2,
+      "L-hocphi": 3,
+      "U-hocphi": 4,
+      "B-location": 5,
+      "I-location": 6,
+      "L-location": 7,
+      "U-location": 8,
+      "B-nganh": 9,
+      "I-nganh": 10,
+      "L-nganh": 11,
+      "U-nganh": 12,
+      "B-university": 13,
+      "I-university": 14,
+      "L-university": 15,
+      "U-university": 16,
+      "O": 0
+    },
+    "num_tags": 17
+  }
+]

@@ -6,6 +6,7 @@ actions:
   - action_thong_tin_nganh
   - action_chuong_trinh_dao_tao
   - action_hoc_phi
+  - action_hoi_dia_diem
   # - validate_simple_form
   # - action_say_data
   # - action_greet_user
@@ -26,16 +27,28 @@ intents:
   - ask_chuong_trinh_dao_tao
   - ask_hoc_phi
   - ask_chuc_nang
-  # - ask_university
+  - ask_dia_diem_cac_khoa
 
 entities:
-  - email
-  - number
   - hocphi
   - nganh
   - university
+  - location
+  # - email
+  # - number
 
 
+slots:
+  location:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: location
+
+forms:
+  location_form:
+    required_slots:
+      - location
 # slots:
 #   email:
 #       type: text
@@ -62,14 +75,16 @@ entities:
 #       - phone
 
 responses: 
-  utter_ask_major:
-  - text: "Bạn học ngành nào vậy?"
+  # utter_ask_major:
+  # - text: "Bạn học ngành nào vậy?"
 
-  utter_ask_email:
-  - text: "vui lòng cung cấp email?"
+  # utter_ask_email:
+  # - text: "vui lòng cung cấp email?"
 
-  utter_ask_phone:
-  - text: "vui lòng cung cấp số điện thoại?"
+  # utter_ask_phone:
+  # - text: "vui lòng cung cấp số điện thoại?"
+  utter_localtion:
+  - text: "o ctump"
     
   utter_greet:
   - text: "Chào! Chào mừng bạn đến với Bot Rasa."
@@ -82,8 +97,8 @@ responses:
   - text: "Bye bye"
   - text: "hẹn gặp lại"
 
-  utter_ask_email_phone:
-  - text: "Bạn vui lòng cung cấp email và số diện thoại trước khi chat"
+  # utter_ask_email_phone:
+  # - text: "Bạn vui lòng cung cấp email và số diện thoại trước khi chat"
 
   # utter_thong_tin_lien_he:
   # - text: "Bạn có muốn để lại thông tin liên hệ để admin giải đáp thắc mắc không"
@@ -101,7 +116,7 @@ responses:
   utter_cac_chuc_nang:
   - text: "Tôi có thể giải đáp thắc mắc của bạn về học phí, chương trình đào tạo... và các thông tin về Đại học Y dược Cần Thơ."
 
-  
+
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true

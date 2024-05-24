@@ -10,7 +10,9 @@ https://www.youtube.com/watch?v=2r-nkS41bOs&list=PLp9h3aIPyUbZyCUP4ELTaS2ajxKNWa
 chatbot widget rasa
 https://github.com/JiteshGaikwad/Chatbot-Widget/tree/main
 
-
+nlu loi chinh ta
+https://arxiv.org/abs/1810.07150
+https://arxiv.org/pdf/1810.07150
 rasa command
 
 rasa visualize

@@ -33,9 +33,9 @@ class ActionThongTinTruong(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         universityy_entity = next(tracker.get_latest_entity_values('university'), None)
-        logging.info("{}{}".format('Call action_thong_tin_truong: ', universityy_entity))
         user_input = tracker.latest_message['text']
         print("người dùng hỏi thông tin trường: "+user_input)
+        logging.info("{}{}".format('Call action_thong_tin_truong: ', universityy_entity))
         # Tạo từ điển các từ liên quan đến "Đại học Y Dược Cần Thơ"
         related_terms = {
             "ctump", 
@@ -82,9 +82,9 @@ class action_nganh(Action):
                 domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
             nganh_database = get_nganh
             # print(nganh_database)
-            logging.info("{}{}".format('Call action_thong_tin_nganh: ', nganh_database))
             user_input = tracker.latest_message['text']
             print("người dùng hỏi ngành học: "+user_input)
+            logging.info("{}{}".format('Call action_thong_tin_nganh: ', nganh_database))
             dispatcher.utter_message(text="Danh sách các ngành có trong chương trình đào tạo của Đại học Y Dược Cần Thơ, tìm hiểu kĩ hơn bạn có thể nhắn tên ngành cho minh:")
             for item in nganh_database:
                 dispatcher.utter_message(text="- " + item[0].capitalize())            
@@ -128,8 +128,8 @@ class action_hocphi(Action):
         
         hocphi_entity = next(tracker.get_latest_entity_values('hocphi'), None)
         user_input = tracker.latest_message['text']
-        logging.info("{}{}".format('Call action_hoc_phi: ', hocphi_entity))
         print("người dùng hỏi học phí: " + user_input)
+        logging.info("{}{}".format('Call action_hoc_phi: ', hocphi_entity))
         if hocphi_entity:
             hoc_phi_database = get_hoc_phi
             dispatcher.utter_message(text="Mức học phí ước tính 1 năm của các ngành học là: ")
@@ -140,7 +140,31 @@ class action_hocphi(Action):
             file_writer = write_file()
             file_writer.get_ghi_log_file('Action học phí: '+user_input)
         return []
-    
+
+
+class actionHoiDiaDiem(Action):
+    def name(self):
+        return "action_hoi_dia_diem"
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        
+        diaDiem_entity = next(tracker.get_latest_entity_values('location'), None)
+        user_input = tracker.latest_message['text']
+        print("người dùng hỏi địa điểm: " + user_input)
+        logging.info("{}{}".format('Call action_dia_diem: ', diaDiem_entity))
+        # print(";;;;"+diaDiem_entity)
+        if diaDiem_entity:
+          
+            dispatcher.utter_message(text=f"Địa điểm của khoa {diaDiem_entity} nằm ở khu A, tầng 2.")
+           
+        else:
+            dispatcher.utter_message(text=f"Địa điểm {diaDiem_entity} không có hoặc không tìm thấy.")
+            # Tạo một đối tượng write_file
+            file_writer = write_file()
+            file_writer.get_ghi_log_file('Action học phí: '+user_input)
+        return []
+
 # class action_chuongtrinhdaotao(Action):
 #     def name(self):
 #         return "action_chuong_trinh_dao_tao"

@@ -2,10 +2,14 @@ recipe: default.v1
 
 assistant_id: 20240110-074001-foggy-compressor
 
+# # RegexFeaturizer 
+# Tạo các tính năng để trích xuất thực thể và phân loại mục đích. một tính năng sẽ được đặt để đánh dấu xem biểu thức này có được tìm thấy trong tin nhắn của người dùng hay không. Tất cả các tính năng sau đó sẽ được đưa vào trình phân loại/trình trích xuất thực thể nhằm đơn giản hóa việc phân loại
+
+#LexicalSyntacticFeaturizer Tạo các đặc điểm từ vựng và cú pháp cho thông báo của người dùng để hỗ trợ trích xuất thực thể.
 language: vi
 pipeline:
   - name: WhitespaceTokenizer
-  - name: RegexFeaturizer
+  - name: RegexFeaturizer  
   - name: LexicalSyntacticFeaturizer
   - name: CountVectorsFeaturizer
   - name: CountVectorsFeaturizer
