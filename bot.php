@@ -6,155 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rasa app</title>
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
-        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <link rel="stylesheet" href="../assets/css/box_chat.css">
-    <style>
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-        }
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-        #myImg {
-            border-radius: 5px;
-            cursor: pointer;
-            transition: 0.3s;
-        }
-
-        #myImg:hover {
-            opacity: 0.7;
-        }
-
-        /* The Modal (background) */
-        .modal {
-            display: none;
-            /* Hidden by default */
-            position: fixed;
-            /* Stay in place */
-            z-index: 1;
-            /* Sit on top */
-            padding-top: 100px;
-            /* Location of the box */
-            left: 0;
-            top: 0;
-            width: 100%;
-            /* Full width */
-            height: 100%;
-            /* Full height */
-            overflow: auto;
-            /* Enable scroll if needed */
-            background-color: rgb(0, 0, 0);
-            /* Fallback color */
-            background-color: rgba(0, 0, 0, 0.9);
-            /* Black w/ opacity */
-        }
-
-        /* Modal Content (image) */
-        .modal-content {
-            margin: auto;
-            display: block;
-            width: 80%;
-            max-width: 700px;
-        }
-
-        /* Caption of Modal Image */
-        #caption {
-            margin: auto;
-            display: block;
-            width: 80%;
-            max-width: 700px;
-            text-align: center;
-            color: #ccc;
-            padding: 10px 0;
-            height: 150px;
-        }
-
-        /* Add Animation */
-        .modal-content,
-        #caption {
-            -webkit-animation-name: zoom;
-            -webkit-animation-duration: 0.6s;
-            animation-name: zoom;
-            animation-duration: 0.6s;
-        }
-
-        @-webkit-keyframes zoom {
-            from {
-                -webkit-transform: scale(0)
-            }
-
-            to {
-                -webkit-transform: scale(1)
-            }
-        }
-
-        @keyframes zoom {
-            from {
-                transform: scale(0)
-            }
-
-            to {
-                transform: scale(1)
-            }
-        }
-
-        /* The Close Button */
-        .close {
-            position: absolute;
-            top: 15px;
-            right: 35px;
-            color: #f1f1f1;
-            font-size: 40px;
-            font-weight: bold;
-            transition: 0.3s;
-        }
-
-        .close:hover,
-        .close:focus {
-            color: #bbb;
-            text-decoration: none;
-            cursor: pointer;
-        }
-
-        /* 100% Image Width on Smaller Screens */
-        @media only screen and (max-width: 700px) {
-            .modal-content {
-                width: 100%;
-            }
-        }
-
-        .chat-sign-button {
-            width: 50px;
-            height: 50px;
-            font-size: 24px;
-        }
-
-        #chat-widget-close-button {
-            margin-left: 60%;
-        }
-
-        #chat-widget-messages {
-            height: 300px;
-            /* Độ cao tối đa của khung chat */
-            overflow-y: auto;
-            /* Thêm thanh cuộn khi nội dung quá lớn */
-        }
-    </style>
+    <link rel="stylesheet" href="./assets/css/bot.css">
 </head>
 
 <body>
 
     <div class="container">
-        <h1>Welcome to my chatbot</h1>
-        <img src="" alt="">
-        <button id="chat-widget-button" type="button"
-            class="btn btn-primary rounded-circle chat-sign-button position-fixed"
-            style="bottom: 20px; right: 20px;"></button>
+        <button id="chat-widget-button" type="button" class="btn btn-primary rounded-circle chat-sign-button position-fixed" style="bottom: 20px; right: 20px;">💬</button>
 
-        <div id="chat-widget" class="card position-fixed shadow d-none"
-            style="bottom: 100px; right:20px ; width: 300px;">
+        <div id="chat-widget" class="card position-fixed shadow d-none" style="bottom: 100px; right:20px ; width: 300px;">
 
             <div class="card-header bg-primary text-white">
                 ChatBot
@@ -175,85 +38,85 @@
     </div>
 
     <script>
-        $(document).ready(function () {
-            $("#chat-widget-button").on("click", function () {
+        $(document).ready(function() {
+            $("#chat-widget-button").on("click", function() {
                 $("#chat-widget").toggleClass("d-none");
+                scrollChatToBottom(); // Khi mở chat widget, tự động cuộn xuống dưới cùng
             });
 
-            $("#chat-widget-close-button").on("click", function () {
+            $("#chat-widget-close-button").on("click", function() {
                 $("#chat-widget").addClass("d-none");
             });
 
-            $("#chat-widget-input").keypress(function (event) {
+            $("#chat-widget-input").keypress(function(event) {
                 if (event.which === 13) {
                     let userMessage = $("#chat-widget-input").val();
                     $("#chat-widget-input").val("");
 
-                    $("#chat-widget-messages").append("<div><strong>You:</strong> " + userMessage + "</div>");
-                    console.log(userMessage)
+                    $("#chat-widget-messages").append("<div><strong>Bạn:</strong> " + userMessage + "</div>");
+                    console.log(userMessage);
                     $.ajax({
                         type: "POST",
                         url: "chat_handler.php", // Đường dẫn tới tệp PHP xử lý yêu cầu
                         contentType: "application/json",
-                        data: JSON.stringify({ message: userMessage }),
-
-                        success: function (res) {
-                            // Kiểm tra nếu res là một đường dẫn hình ảnh
-                            if (/\.(png|jpg|jpeg|gif)$/i.test(res)) {
-                                var img = '<img class="myImg" style="width:100%;max-width:300px" src="' + res + '" alt="Image" />';
-                                $("#chat-widget-messages").append("<div ><strong class='text-danger'>Bot:</strong> " + img + "</div>");
-                                // click để hiển thị modal hình ảnh
-                                $("#chat-widget-messages .myImg").last().on("click", function () {
-                                    displayImageModal(this.src);
+                        data: JSON.stringify({
+                            message: userMessage
+                        }),
+                        success: function(res) {
+                            console.log(res);
+                            try {
+                                let responses = JSON.parse(res);
+                                responses.forEach(function(response) {
+                                    // Kiểm tra nếu response là một đường dẫn hình ảnh
+                                    if (/\.(png|jpg|jpeg|gif)$/i.test(response)) {
+                                        var img = '<img class="myImg" style="width:100%;max-width:300px" src="' + response + '" alt="Image" />';
+                                        $("#chat-widget-messages").append("<div><strong class='text-danger'>Bot:</strong> " + img + "</div>");
+                                        // click để hiển thị modal hình ảnh
+                                        $("#chat-widget-messages .myImg").last().on("click", function() {
+                                            displayImageModal(this.src);
+                                        });
+                                    }
+                                    // Kiểm tra nếu response có chứa các URL
+                                    else if (containsURL(response)) {
+                                        // Chuyển các URL thành liên kết
+                                        response = response.replace(/\b(http[s]?:\/\/\S+)/gi, "<a href='$1' target='_blank'>$1</a>");
+                                        $("#chat-widget-messages").append("<div><strong>CTUMP:</strong> " + response + "</div>");
+                                    } else {
+                                        $("#chat-widget-messages").append("<div><strong>CTUMP:</strong> " + response + "</div>");
+                                    }
                                 });
-                            }
-                            // Kiểm tra nếu res là một liên kết
-                            else if (isValidURL(res)) {
-                                $("#chat-widget-messages").append("<div><strong>Bot:</strong> <a href='" + res + "' target='_blank'>" + res + "</a></div>");
-                            }
-                            else {
-                                $("#chat-widget-messages").append("<div><strong>Bot:</strong> " + res + "</div>")
+                                scrollChatToBottom(); // Sau khi thêm tin nhắn mới, tự động cuộn xuống dưới cùng
+                            } catch (e) {
+                                console.log("Invalid JSON response from server");
                             }
                         },
-                        error: function (error) {
-                            console.log('loi ')
+                        error: function(error) {
+                            console.log('Error: ', error);
                         }
                     });
                 }
+                scrollChatToBottom();
             });
         });
 
-        // Hàm kiểm tra xem một chuỗi có phải là một URL hợp lệ hay không
-        function isValidURL(str) {
-            var pattern = new RegExp('^(https?:\\/\\/)?' + // protocol
-                '((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|' + // domain name
-                '((\\d{1,3}\\.){3}\\d{1,3}))' + // OR ip (v4) address
-                '(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*' + // port and path
-                '(\\?[;&a-z\\d%_.~+=-]*)?' + // query string
-                '(\\#[-a-z\\d_]*)?$', 'i'); // fragment locator
-            return !!pattern.test(str);
+        // Hàm kiểm tra xem một chuỗi có chứa URL hay không
+        function containsURL(str) {
+            var urlPattern = /\b(http[s]?:\/\/\S+)/gi;
+            return urlPattern.test(str);
         }
 
-        function displayImageModal(imageUrl) {
-            var modal = document.getElementById("myModal");
-            var modalImg = document.getElementById("img01");
-            var captionText = document.getElementById("caption");
-
-            modal.style.display = "block";
-            modalImg.src = imageUrl;
-            modalImg.alt = "Image";
-            captionText.innerHTML = "Image Caption";
+        function displayImageModal(src) {
+            document.getElementById('img01').src = src;
+            document.getElementById('myModal').style.display = "block";
         }
 
-        var span = document.getElementsByClassName("close")[0];
-
-        span.onclick = function () {
-            var modal = document.getElementById("myModal");
-            modal.style.display = "none";
-        };
+        // Hàm tự động cuộn xuống dưới cùng của khung chat
+        function scrollChatToBottom() {
+            var chatMessages = document.getElementById('chat-widget-messages');
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        }
     </script>
 
-    <script src="../assets/javascript/box_chat.js"></script>
 </body>
 
 </html>

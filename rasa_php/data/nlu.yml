@@ -20,58 +20,57 @@ nlu:
     - bye bye
     - tạm biệt em
     - tạm biệt bot nhá
-    - cút
     - hẹn gặp lại
 
-- intent: affirm
-  examples: |
-    - dĩ nhiên
-    - đồng ý
-    - chắc chắn
-    - tôi đồng ý 
-    - không vấn đề
+# - intent: affirm
+#   examples: |
+#     - dĩ nhiên
+#     - đồng ý
+#     - chắc chắn
+#     - tôi đồng ý 
+#     - không vấn đề
 
-- intent: deny
-  examples: |
-    - không
-    - không bao giờ
-    - Tôi không nghĩ vậy
-    - không thích điều đó
-    - không đời nào
-    - không hẳn
+# - intent: deny
+#   examples: |
+#     - không
+#     - không bao giờ
+#     - Tôi không nghĩ vậy
+#     - không thích điều đó
+#     - không đời nào
+#     - không hẳn
 
-- intent: mood_great
-  examples: |
-    - hoàn hảo
-    - Tuyệt
-    - tuyệt vời
-    - cảm giác như một vị vua
-    - tuyệt vời
-    - Tôi đang cảm thấy rất tốt
-    - Tôi tuyệt vời
-    - Tôi tuyệt vời
-    - Tôi sẽ cứu thế giới
-    - siêu hấp dẫn
-    - cực kỳ tốt
-    - quá hoàn hảo
-    - tốt quá
-    - rất hoàn hảo
+# - intent: mood_great
+#   examples: |
+#     - hoàn hảo
+#     - Tuyệt
+#     - tuyệt vời
+#     - cảm giác như một vị vua
+#     - tuyệt vời
+#     - Tôi đang cảm thấy rất tốt
+#     - Tôi tuyệt vời
+#     - Tôi tuyệt vời
+#     - Tôi sẽ cứu thế giới
+#     - siêu hấp dẫn
+#     - cực kỳ tốt
+#     - quá hoàn hảo
+#     - tốt quá
+#     - rất hoàn hảo
 
-- intent: mood_unhappy
-  examples: |
-    - ngày của tôi thật kinh khủng
-    - tôi buồn
-    - tôi cảm thấy không được khỏe lắm
-    - tôi thất vọng
-    - siêu buồn
-    - tôi rất buồn
-    - buồn
-    - rất buồn
-    - không vui
-    - không tốt
-    - không tốt lắm
-    - buồn vô cùng
-    - buồn quá
+# - intent: mood_unhappy
+#   examples: |
+#     - ngày của tôi thật kinh khủng
+#     - tôi buồn
+#     - tôi cảm thấy không được khỏe lắm
+#     - tôi thất vọng
+#     - siêu buồn
+#     - tôi rất buồn
+#     - buồn
+#     - rất buồn
+#     - không vui
+#     - không tốt
+#     - không tốt lắm
+#     - buồn vô cùng
+#     - buồn quá
 
 - intent: bot_challenge
   examples: |
@@ -83,216 +82,159 @@ nlu:
     - m do ai tạo ra
     - m có phải là robot không
     - mày là gì
-    - mày là ai
 
-- intent: thank
-  examples: |
-    - cảm ơn
-    - cảm ơn nhìu nhé
-    - thanks
-    - thank you
-    - củm ơn
-    - mơn
-    - ok cảm ơn
-    - cảm ơn bạn
-    - cảm ơn đã giúp mình
-    - đa tạ
-    - mơn bạn
-    - thank u
-    - ok thanks
-    - cảm ơn bạn rất nhiều
-    - xin cảm ơn bạn
-    - cảm ơn bạn đã giúp đỡ
-    - Rất cảm kích sự giúp đỡ của bạn
-    - xin chân thành cảm ơn
-    - cảm ơn bạn vì sự hỗ trợ
-    - Rất động viên với sự giúp đỡ của bạn
-    - cảm ơn bạn đã luôn ở bên cạnh
-    - Sự giúp đỡ của bạn là quý báu
-    - xin gửi lời biết ơn tới bạn
 
 - intent: ask_thong_tin_truong
   examples: |
-    - thông tin về trường đại học y dược cần thơ
-    - thông tin về trường này
-    - tôi muốn biết về trường đại học y dược cần thơ
-    - ctump
-    - trường đại học y dược cần thơ
-    - tôi muốn có thông tin về trường đại học y dược cần thơ
-    - cho tôi xin thông tin về trường đại học này
-    - cho tôi xem thông tin về ctump
-    - giới thiệu cho tôi về trường này
-    - tất tần tật về ctump
-    - tất cả thông tin về trường y dược cần thơ
-    - tôi muốn tìm hiểu về trường y dược cần thơ
-    - đại học y dược cần thơ
-    - trường đại học y dược cần thơ
-    - giới thiệu về trường đại học y dược cần thơ
-    - lịch sử của trường đại học y dược cần thơ
-    - tất cả thông tin về y dược cần thơ
+    - thông tin về trường [ctump](university)
+    - thông tin về [đại học y dược cần thơ](university)
+    - thông tin về [đại học y cần thơ](university)
+    - thông tin về [y dược cần thơ](university)
+    - tất tần tật về [đại học y dược cần thơ](university)
+    - tôi muốn biết về [trường này](university)
+    - bạn có biết gì về [đại học y dược cần thơ](university) không?
+    - trường [đại học y dược cần thơ](university) nằm ở đâu?
+    - hãy nói về [trường đại học y dược cần thơ](university)
+    - thông tin chi tiết về [đại học y dược cần thơ](university)
+    - muốn biết về [đại học y dược cần thơ](university)
+    - bạn có thông tin gì về [đại học y dược cần thơ](university)?
+    - cung cấp thông tin về [đại học y dược cần thơ](university)
+    - cho tôi xin thông tin về [đại học y dược cần thơ](university)
+    - tìm thông tin về [đại học y dược cần thơ](university)
+    - hỏi thông tin về [đại học y dược cần thơ](university)
+    - thông tin tổng quan về [đại học y dược cần thơ](university)
+    - thông tin cơ bản về [đại học y dược cần thơ](university)
+    - thông tin liên quan đến [đại học y dược cần thơ](university)
+    - lịch sử của [đại học y dược cần thơ](university)
+    - mô tả về [đại học y dược cần thơ](university)
+    - lịch sử hình thành của [đại học y dược cần thơ](university)
+    - quá trình phát triển của [đại học y dược cần thơ](university)
+    - trường [đại học y dược cần thơ](university) có từ bao giờ?
+    - [đại học y dược cần thơ](university) được thành lập khi nào?
+    - lịch sử thành lập của [đại học y dược cần thơ](university)
+    - thông tin về [ctu medical and pharmaceutical university](university)
+    - thông tin về [can tho university of medicine and pharmacy](university)
+    - thông tin về [dhydct](university)
+    - thông tin về [dh y duoc can tho](university)
+    - thông tin về [can tho y duoc](university)
+    - thông tin về [can tho y duoc university](university)
+    - thông tin về [trường đại học y dược](university)
+    - thông tin về [đại học y dược ct](university)
+    - thông tin về [y dược ct](university)
+    - tất tần tật về [ctump](university)
+    - tất tần tật về [đại học y](university)
+    - tất tần tật về [đại học y dược](university)
+    - tất tần tật về [y dược cần thơ](university)
+    - tất tần tật về [trường này](university)
+    - tất tần tật về [trường](university)
+    - tất tần tật về [ctu medical and pharmaceutical university](university)
+    - tất tần tật về [can tho university of medicine and pharmacy](university)
+    - tất tần tật về [dhydct](university)
+    - tất tần tật về [dh y duoc can tho](university)
+    - tất tần tật về [can tho y duoc](university)
+    - tất tần tật về [can tho y duoc university](university)
+    - tất tần tật về [trường đại học y dược](university)
+    - tất tần tật về [đại học y cần thơ](university)
+    - tất tần tật về [đại học y dược ct](university)
+    - tất tần tật về [y dược ct](university)
+    - thông tin mới nhất về [ctump](university)
+    - thông tin mới nhất về [đại học y dược cần thơ](university)
+    - thông tin mới nhất về [đại học y cần thơ](university)
+    - thông tin mới nhất về [y dược cần thơ](university)
+    - thông tin mới nhất về [ctu medical and pharmaceutical university](university)
+    - thông tin mới nhất về [can tho university of medicine and pharmacy](university)
+    - thông tin mới nhất về [dhydct](university)
+    - thông tin mới nhất về [dh y duoc can tho](university)
+    - thông tin mới nhất về [can tho y duoc](university)
+    - thông tin mới nhất về [can tho y duoc university](university)
+    - thông tin mới nhất về [trường đại học y dược](university)
+    - thông tin mới nhất về [đại học y dược ct](university)
+    - thông tin mới nhất về [y dược ct](university)
+    - mô tả [trường này](university)
+    - giải thích về [trường](university)
+    - mô tả [địa điểm này](university)
+    - thông tin [địa điểm](university)
+    
+- intent: ask_thong_tin_nganh
+  examples: |
+    - Trường có các ngành nào?
+    - Trường có mấy ngành?
+    - Số ngành trường có?
+    - Số ngành trường đào tạo?
+    - Trường có bao nhiêu ngành?
+    - Trường Đại học Y Dược Cần Thơ có bao nhiêu ngành?
+    - Trường đại học này đào tạo các ngành nào?
+    - Trường này có mấy ngành?
+    - Trường này có ngành nào?
+    - Trường đào tạo các ngành nào?
+    - Các ngành có trong chương trình đào tạo?
+    - Trường đào tạo bao nhiêu ngành?
+    - CTUMP có mấy ngành?
+    - CTUMP đào tạo mấy ngành?
+    - Liệt kê các ngành.
+    - Liệt kê các ngành trường đào tạo.
+    - Liệt kê một số ngành học.
+    - Cho tôi biết trường có bao nhiêu ngành.
+    - Liệt kê cho tôi các ngành học
+    - Trường Đại học Y Dược Cần Thơ có những ngành gì?
+    - Các ngành được đào tạo tại Đại học Y Dược Cần Thơ
+    - Đại học Y Dược Cần Thơ có những ngành đào tạo nào?
+    - Cho tôi biết các ngành học ở trường Đại học Y Dược Cần Thơ
+    - Trường này có đào tạo những ngành nào?
+    - Các ngành hiện có tại Đại học Y Dược Cần Thơ
+    - Những ngành nào đang được đào tạo tại Đại học Y Dược Cần Thơ?
+    - Đại học Y Dược Cần Thơ đào tạo bao nhiêu ngành học?
+    - Các ngành hiện có trong chương trình đào tạo của Đại học Y Dược Cần Thơ
+    - Liệt kê các ngành hiện có tại Đại học Y Dược Cần Thơ
 
-- intent: ask_nganh
-  examples: |  
-    - trường có các ngành nào
-    - trường có mấy ngành
-    - số ngành trường có
-    - số ngành trường đào tạo
-    - trường có các ngành nào
-    - trường có bao nhiêu ngành
-    - trường đại học y dược cần thơ có bao nhiêu ngành
-    - trường đạo học này đào tạo các ngành nào
-    - trường này có mấy ngành
-    - trường này có ngành nào
-    - trường có các ngành nào
-    - trường đào tạo các ngành nào
-    - các ngành có trong chương trình đào tạo
-    - số ngành trường có
-    - trường đào tạo bao nhiêu ngành
-    - trường đại học y dược cần thơ có bao nhiêu ngành
-    - ctump có mấy ngành
-    - ctump đào tạo mấy ngành
-    - liệt kê các ngành
-    - liệt kê các ngành trường đào tạo
-    - liệt kê một số ngành học
-    - cho tôi biết trường có bao nhiêu ngành
-    - liệt kê cho tôi các ngành học
 
+- intent: ask_chuong_trinh_dao_tao
+  examples:  |
+    - chương trình đào tạo ngành [y khoa](nganh)
+    - chương trình học của ngành [răng hàm mặt](nganh)
+    - ngành [dược](nganh) được học gì
+    - [y học cổ truyền](nganh) được học những gì
+    - [y học dự phòng](nganh) sẽ học gì
+    - sinh viên sẽ được học gì khi học ngành [điều dưỡng](nganh)
+    - sinh viên được đào tạo về gì khi học [kỹ thuật xét nghiệm y học](nganh)
+    - học [hộ sinh](nganh) được học gì 
+    - các môn của ngành [y khoa](nganh) sẽ học
+    - ngành [kỹ thuật hình ảnh y học](nganh) học gì
+    - sinh viên [y tế công cộng](nganh) được học gì
+
+
+- intent: ask_dia_diem_cac_khoa
+  examples: |
+    - tìm khoa [y](location)
+    - [y học dự phòng] ở đâu?
+    - làm sao đi đến [kỹ thuật xét nghiệm y học](location)
+    - chỉ tôi đến khoa [điều dưỡng](location)
+    - chỉ tôi đường đi tới khoa [răng hàm mặt](location)
+    - đường đi đến khoa [dược](location)
+    - khoa [hộ sinh](location) nằm ở đâu?
+    - tôi muốn tìm khoa [y học cổ truyền](location)
+    - tìm [kỹ thuật hình ảnh](location)
+    
 - intent: ask_hoc_phi
   examples: |
     - [học phí](hocphi) bao nhiêu
     - [học phí](hocphi) của trường đại học y dược là bao nhiêu
     - [học phí](hocphi) của trường là bao nhiêu
     - trường này học khoảng bao nhiêu tiền
-    - học trường này tốn bao nhiêu tiền
-    - học trường này có đắt không
+    - học trường này [tốn bao nhiêu tiền](hocphi)
+    - học trường này có [đắt tiền](hocphi) không
     - [học phí](hocphi) có đắt không
     - [học phí](hocphi) trường đại học y dược
     - [học phí](hocphi) đại học y dược
     - các ngành học bao nhiêu tiền
     - [học phí](hocphi) là bao nhiêu
     - giá [học phí](hocphi)
+    - [học phí](hocphi) trường này tốn bao nhiêu tiền
+    - [giá tiền](hocphi) học bao nhiêu
+    - [chi phí](hocphi) trường này có đắt không
+    - [đóng tiền](hocphi) khoảng bao nhiêu
+    - [chi tiêu](hocphi) khoảng bao nhiêu
 
-- intent: ask_chuong_trinh_dao_tao
-  examples:  |
-    - chương trình đào tạo ngành [y khoa](nganh)
-    - chương trình học của ngành [y khoa](nganh)
-    - ngành [y khoa](nganh) được học gì
-    - [y khoa](nganh) được học những gì
-    - [y khoa](nganh) sẽ học gì
-    - sinh viên sẽ được học gì khi học ngành [y khoa](nganh)
-    - sinh viên được đào tạo về gì khi học [y khoa](nganh)
-    - học [y khoa](nganh) được học gì 
-    - các môn của ngành [y khoa](nganh) sẽ học
-    - ngành [y khoa](nganh) học gì
-    - sinh viên [y khoa](nganh) được học gì
-
-    - chương trình đào tạo của ngành [răng hàm mặt](nganh)
-    - chương trình học của ngành [răng hàm mặt](nganh)
-    - ngành [răng hàm mặt](nganh) được học gì
-    - [răng hàm mặt](nganh) được học những gì
-    - [răng hàm mặt](nganh) sẽ học gì
-    - sinh viên sẽ được học gì khi học ngành [răng hàm mặt](nganh)
-    - sinh viên được đào tạo về gì khi học [răng hàm mặt](nganh)
-    - học [răng hàm mặt](nganh) được học gì
-    - các môn của ngành [răng hàm mặt](nganh) sẽ học
-    - ngành [răng hàm mặt](nganh) học gì
-    - sinh viên [răng hàm mặt](nganh) được học gì
-
-    - chương trình đào tạo của ngành [dược học](nganh)
-    - chương trình học của ngành [dược học](nganh)
-    - ngành [dược học](nganh) được học gì
-    - [dược học](nganh) được học những gì
-    - [dược học](nganh) sẽ học gì
-    - sinh viên sẽ được học gì khi học ngành [dược học](nganh)
-    - sinh viên được đào tạo về gì khi học [dược học](nganh)
-    - học [dược học](nganh) được học gì
-    - các môn của ngành [dược học](nganh) sẽ học
-    - ngành [dược học](nganh) học gì
-    - sinh viên [dược học](nganh) được học gì
-
-    - chương trình đào tạo của ngành [y học cổ truyền](nganh)
-    - chương trình học của ngành [y học cổ truyền](nganh)
-    - ngành [y học cổ truyền](nganh) được học gì
-    - [y học cổ truyền](nganh) được học những gì
-    - [y học cổ truyền](nganh) sẽ học gì
-    - sinh viên sẽ được học gì khi học ngành [y học cổ truyền](nganh)
-    - sinh viên được đào tạo về gì khi học [y học cổ truyền](nganh)
-    - học [y học cổ truyền](nganh) được học gì
-    - các môn của ngành [y học cổ truyền](nganh) sẽ học
-    - ngành [y học cổ truyền](nganh) học gì
-    - sinh viên [y học cổ truyền](nganh) được học gì
-
-    - chương trình đào tạo của ngành [y học dự phòng](nganh)
-    - chương trình học của ngành [y học dự phòng](nganh)
-    - ngành [y học dự phòng](nganh) được học gì
-    - [y học dự phòng](nganh) được học những gì
-    - [y học dự phòng](nganh) sẽ học gì
-    - sinh viên sẽ được học gì khi học ngành [y học dự phòng](nganh)
-    - sinh viên được đào tạo về gì khi học [y học dự phòng](nganh)
-    - học [y học dự phòng](nganh) được học gì
-    - các môn của ngành [y học dự phòng](nganh) sẽ học
-    - ngành [y học dự phòng](nganh) học gì
-    - sinh viên [y học dự phòng](nganh) được học gì
-
-    - chương trình đào tạo của ngành [điều dưỡng](nganh)
-    - chương trình học của ngành [điều dưỡng](nganh)
-    - ngành [điều dưỡng](nganh) được học gì
-    - [điều dưỡng](nganh) được học những gì
-    - [điều dưỡng](nganh) sẽ học gì
-    - sinh viên sẽ được học gì khi học ngành [điều dưỡng](nganh)
-    - sinh viên được đào tạo về gì khi học [điều dưỡng](nganh)
-    - học [điều dưỡng](nganh) được học gì
-    - các môn của ngành [điều dưỡng](nganh) sẽ học
-    - ngành [điều dưỡng](nganh) học gì
-    - sinh viên [điều dưỡng](nganh) được học gì
-
-    - chương trình đào tạo của ngành [kỹ thuật xét nghiệm y học](nganh)
-    - chương trình học của ngành [kỹ thuật xét nghiệm y học](nganh)
-    - ngành [kỹ thuật xét nghiệm y học](nganh) được học gì
-    - [kỹ thuật xét nghiệm y học](nganh) được học những gì
-    - [kỹ thuật xét nghiệm y học](nganh) sẽ học gì
-    - sinh viên sẽ được học gì khi học ngành [kỹ thuật xét nghiệm y học](nganh)
-    - sinh viên được đào tạo về gì khi học [kỹ thuật xét nghiệm y học](nganh)
-    - học [kỹ thuật xét nghiệm y học](nganh) được học gì
-    - các môn của ngành [kỹ thuật xét nghiệm y học](nganh) sẽ học
-    - ngành [kỹ thuật xét nghiệm y học](nganh) học gì
-    - sinh viên [kỹ thuật xét nghiệm y học](nganh) được học gì
-
-    - chương trình đào tạo ngành [hộ sinh)(nganh)
-    - chương trình học của ngành [hộ sinh)(nganh)
-    - ngành [hộ sinh)(nganh) được học gì
-    - [hộ sinh)(nganh) được học những gì
-    - [hộ sinh)(nganh) sẽ học gì
-    - sinh viên sẽ được học gì khi học ngành [hộ sinh)(nganh)
-    - sinh viên được đào tạo về gì khi học [hộ sinh)(nganh)
-    - học [hộ sinh)(nganh) được học gì 
-    - các môn của ngành [hộ sinh)(nganh) sẽ học
-    - ngành [hộ sinh)(nganh) học gì
-    - sinh viên [hộ sinh)(nganh) được học gì
-
-    - chương trình đào tạo ngành [kỹ thuật hình ảnh y học](nganh)
-    - chương trình học của ngành [kỹ thuật hình ảnh y học](nganh)
-    - ngành [kỹ thuật hình ảnh y học](nganh) được học gì
-    - [kỹ thuật hình ảnh y học](nganh) được học những gì
-    - [kỹ thuật hình ảnh y học](nganh) sẽ học gì
-    - sinh viên sẽ được học gì khi học ngành [kỹ thuật hình ảnh y học](nganh)
-    - sinh viên được đào tạo về gì khi học [kỹ thuật hình ảnh y học](nganh)
-    - học [kỹ thuật hình ảnh y học](nganh) được học gì 
-    - các môn của ngành [kỹ thuật hình ảnh y học](nganh) sẽ học
-    - ngành [kỹ thuật hình ảnh y học](nganh) học gì
-    - sinh viên [kỹ thuật hình ảnh y học](nganh) được học gì
-
-    - chương trình đào tạo ngành [y tế công cộng](nganh)
-    - chương trình học của ngành [y tế công cộng](nganh)
-    - ngành [y tế công cộng](nganh) được học gì
-    - [y tế công cộng](nganh) được học những gì
-    - [y tế công cộng](nganh) sẽ học gì
-    - sinh viên sẽ được học gì khi học ngành [y tế công cộng](nganh)
-    - sinh viên được đào tạo về gì khi học [y tế công cộng](nganh)
-    - học [y tế công cộng](nganh) được học gì 
-    - các môn của ngành [y tế công cộng](nganh) sẽ học
-    - ngành [y tế công cộng](nganh) học gì
-    - sinh viên [y tế công cộng](nganh) được học gì
 
 - intent: ask_chuc_nang
   examples: |
@@ -303,8 +245,6 @@ nlu:
     - chức năng của bạn là gì
     - bạn có thể làm gì
     - mày làm được gì
-    - mày giúp gì được cho tao
-    - mày giúp gì được cho t
     - tôi làm được gì với bạn
     - tao có thể hỏi những gì
     - mày có thể trả lời những gì
@@ -313,527 +253,68 @@ nlu:
     - bạn có thể hỗ trợ với những vấn đề gì
     - có gì đặc biệt mà bạn có thể làm được không
     - tôi đang cần một ít sự giúp đỡ, bạn có thể đáp ứng được không
-    - bạn làm được gì trong trường hợp này
     - có thể gửi yêu cầu cho bạn về việc gì?
     - tôi cần một ít sự hỗ trợ, liệu bạn có thể đáp ứng được không
     - nếu tôi cần một ít thông tin hoặc sự hỗ trợ, tôi có thể dựa vào bạn không
-    - bạn có thể hỗ trợ với những vấn đề nào trong lĩnh vực của bạn
-    - tôi cần một ít sự chỉ dẫn, bạn có thể giúp tôi không
-    - nếu tôi có một vài câu hỏi, liệu bạn có thể trả lời chúng không
-    - tôi muốn biết nếu bạn có thể giúp đỡ với một vấn đề cụ thể hay không
-    - có phải bạn có thể hỗ trợ với một loạt các vấn đề không
-    - tôi muốn xác nhận xem bạn có thể đáp ứng được yêu cầu của tôi không
-    - có gì đặc biệt về khả năng của bạn mà tôi có thể tận dụng không
-    - tôi cần một chút hướng dẫn, liệu bạn có thể cung cấp được không?
-    - nếu tôi muốn biết thêm thông tin về một chủ đề cụ thể, tôi có thể tìm kiếm sự giúp đỡ từ bạn được không
-    - tôi đang gặp khó khăn với một vấn đề, liệu bạn có thể hỗ trợ tôi không
-    - nếu tôi muốn tìm hiểu thêm về một lĩnh vực cụ thể, bạn có thể cung cấp thông tin cho tôi không
-    - tôi cần một số gợi ý về việc làm tiếp theo, bạn có thể giúp tôi không
-    - nếu tôi có một dự án cần hoàn thành, liệu bạn có thể hỗ trợ tôi với nó không
-    - tôi muốn tìm hiểu cách làm một việc cụ thể, bạn có thể chỉ dẫn cho tôi được không
-    - nếu tôi cần một ít sự khuyến nghị, liệu bạn có thể đáp ứng được không
-    - tôi đang tìm kiếm sự giúp đỡ, liệu bạn có thể hỗ trợ tôi với nó không
-    - nếu tôi muốn biết cách giải quyết một vấn đề, bạn có thể cung cấp hướng dẫn cho tôi không
-    - tôi muốn nâng cao kiến thức của mình về một chủ đề, bạn có thể giúp tôi không
-    - nếu tôi cần một chút sự hỗ trợ kỹ thuật, liệu bạn có thể cung cấp được không
-    - tôi đang cần một số thông tin, liệu bạn có thể cung cấp cho tôi không
-    - nếu tôi muốn biết cách làm một việc nào đó, bạn có thể hướng dẫn cho tôi không
+  # - bạn có thể hỗ trợ với những vấn đề nào trong lĩnh vực của bạn
+  # - tôi cần một ít sự chỉ dẫn, bạn có thể giúp tôi không
+  # - nếu tôi có một vài câu hỏi, liệu bạn có thể trả lời chúng không
+  # - tôi muốn biết nếu bạn có thể giúp đỡ với một vấn đề cụ thể hay không
+  # - có phải bạn có thể hỗ trợ với một loạt các vấn đề không
+  # - tôi muốn xác nhận xem bạn có thể đáp ứng được yêu cầu của tôi không
+  # - có gì đặc biệt về khả năng của bạn mà tôi có thể tận dụng không
+  # - tôi cần một chút hướng dẫn, liệu bạn có thể cung cấp được không?
+  # - nếu tôi muốn biết thêm thông tin về một chủ đề cụ thể, tôi có thể tìm kiếm sự giúp đỡ từ bạn được không
+  # - tôi đang gặp khó khăn với một vấn đề, liệu bạn có thể hỗ trợ tôi không
+  # - nếu tôi muốn tìm hiểu thêm về một lĩnh vực cụ thể, bạn có thể cung cấp thông tin cho tôi không
+  # - tôi cần một số gợi ý về việc làm tiếp theo, bạn có thể giúp tôi không
+  # - nếu tôi có một dự án cần hoàn thành, liệu bạn có thể hỗ trợ tôi với nó không
+  # - tôi muốn tìm hiểu cách làm một việc cụ thể, bạn có thể chỉ dẫn cho tôi được không
+  # - nếu tôi cần một ít sự khuyến nghị, liệu bạn có thể đáp ứng được không
+  # - tôi đang tìm kiếm sự giúp đỡ, liệu bạn có thể hỗ trợ tôi với nó không
+  # - nếu tôi muốn biết cách giải quyết một vấn đề, bạn có thể cung cấp hướng dẫn cho tôi không
+  # - tôi muốn nâng cao kiến thức của mình về một chủ đề, bạn có thể giúp tôi không
+  # - nếu tôi cần một chút sự hỗ trợ kỹ thuật, liệu bạn có thể cung cấp được không
+  # - tôi đang cần một số thông tin, liệu bạn có thể cung cấp cho tôi không
+  # - nếu tôi muốn biết cách làm một việc nào đó, bạn có thể hướng dẫn cho tôi không
 
-################################
-- intent: ask_chuc_nang
-  examples: |
-    - tôi có thể hỏi gì
-    - các chức năng bạn có
-    - bạn có thể giúp gì cho tôi
-    - bạn làm được những gì
-    - chức năng của bạn là gì
-    - bạn có thể làm gì
-    - mày làm được gì
-    - mày giúp gì được cho tao
-    - mày giúp gì được cho t
-    - tôi làm được gì với bạn
-    - tao có thể hỏi những gì
-    - mày có thể trả lời những gì
-    - có điều gì bạn có thể giúp tôi với không
-    - tôi có thể nhờ bạn giúp với việc gì
-    - bạn có thể hỗ trợ với những vấn đề gì
-    - có gì đặc biệt mà bạn có thể làm được không
-    - tôi đang cần một ít sự giúp đỡ, bạn có thể đáp ứng được không
-    - bạn làm được gì trong trường hợp này
-    - có thể gửi yêu cầu cho bạn về việc gì?
-    - tôi cần một ít sự hỗ trợ, liệu bạn có thể đáp ứng được không
-    - nếu tôi cần một ít thông tin hoặc sự hỗ trợ, tôi có thể dựa vào bạn không
-    - bạn có thể hỗ trợ với những vấn đề nào trong lĩnh vực của bạn
-    - tôi cần một ít sự chỉ dẫn, bạn có thể giúp tôi không
-    - nếu tôi có một vài câu hỏi, liệu bạn có thể trả lời chúng không
-    - tôi muốn biết nếu bạn có thể giúp đỡ với một vấn đề cụ thể hay không
-    - có phải bạn có thể hỗ trợ với một loạt các vấn đề không
-    - tôi muốn xác nhận xem bạn có thể đáp ứng được yêu cầu của tôi không
-    - có gì đặc biệt về khả năng của bạn mà tôi có thể tận dụng không
-    - tôi cần một chút hướng dẫn, liệu bạn có thể cung cấp được không?
-    - nếu tôi muốn biết thêm thông tin về một chủ đề cụ thể, tôi có thể tìm kiếm sự giúp đỡ từ bạn được không
-    - tôi đang gặp khó khăn với một vấn đề, liệu bạn có thể hỗ trợ tôi không
-    - nếu tôi muốn tìm hiểu thêm về một lĩnh vực cụ thể, bạn có thể cung cấp thông tin cho tôi không
-    - tôi cần một số gợi ý về việc làm tiếp theo, bạn có thể giúp tôi không
-    - nếu tôi có một dự án cần hoàn thành, liệu bạn có thể hỗ trợ tôi với nó không
-    - tôi muốn tìm hiểu cách làm một việc cụ thể, bạn có thể chỉ dẫn cho tôi được không
-    - nếu tôi cần một ít sự khuyến nghị, liệu bạn có thể đáp ứng được không
-    - tôi đang tìm kiếm sự giúp đỡ, liệu bạn có thể hỗ trợ tôi với nó không
-    - nếu tôi muốn biết cách giải quyết một vấn đề, bạn có thể cung cấp hướng dẫn cho tôi không
-    - tôi muốn nâng cao kiến thức của mình về một chủ đề, bạn có thể giúp tôi không
-    - nếu tôi cần một chút sự hỗ trợ kỹ thuật, liệu bạn có thể cung cấp được không
-    - tôi đang cần một số thông tin, liệu bạn có thể cung cấp cho tôi không
-    - nếu tôi muốn biết cách làm một việc nào đó, bạn có thể hướng dẫn cho tôi không
 
-- intent: ask_university
-  examples: |
-    - [ctump](university)
-    - [đại học y dược cần thơ](university)
-    - [trường y dược cần thơ](university)
-    - [trường đại học y dược cần thơ](university)
-    - [trường này](university)
-    
-    - [Trường Đại học Văn hoá Nghệ thuật Quân đội](university)
-    - [Trường Cao đẳng Công nghiệp Quốc phòng](university)
-    - [Trường Cao đẳng Công nghệ và Kỹ thuật Ô tô](university)
-    - [Trường Cao đẳng Quân y 1](university)
-    - [Trường Đại học Sĩ quan Tăng - Thiết giáp](university)
-    - [Trường Đại học Nguyễn Huệ /Trường Đại học Sĩ quan Lục quân 2](university)
-    - [Học viện Lục quân](university)
-    - [Học viện Hải quân](university)
-    - [Trường Sĩ quan Không quân](university)
-    - [Trường Đại học Ngô Quyền /Trường Đại học Sĩ quan Công Binh](university)
-    - [Trường Đại học Trần Đại Nghĩa /Trường Đại học Sĩ quan Kỹ thuật Quân sự Vin - hem - pích(university)
-    - [Trường Cao đẳng Quân y 2](university)
-    - [Trường Cao đẳng Kỹ thuật Hải quân](university)
-    - [Học viện An ninh nhân dân](university)
-    - [Học viện Cảnh sát nhân dân](university)
-    - [Học viện Chính trị - Công an Nhân dân](university)
-    - [Học viện Quốc tế](university)
-    - [Trường Đại học Phòng cháy chữa cháy](university)
-    - [Trường Đại học Kỹ thuật - Hậu cần - Công an Nhân dân](university)
-    - [Trường Đại học An ninh nhân dân](university)
-    - [Trường Đại học Quốc tế RMIT Việt Nam](university)
-    - [Cơ sở độc lập của Đại học RMIT tại Việt Nam](university)
-    - [Trường Đại học Fulbright Việt Nam](university)
-    - [Trường Đại học phi lợi nhuận quản lý bởi Chính phủ Liên bang Hoa Kỳ](university)
-    - [Trường Đại học Anh Quốc - Việt Nam](university)
-    - [Trường Đại học Y khoa Tokyo Việt Nam](university)
-    - [Trường Dự bị Đại học Thành phố Hồ Chí Minh](university)
-    - [Trường Dự bị Đại học Dân tộc Trung ương Nha Trang](university)
-    - [Trường Dự bị Đại học Dân tộc Sầm Sơn](university)
-    - [Trường Dự bị Đại học Dân tộc Trung ương](university)
-    - [Trường Cao đẳng Sư phạm Bà Rịa - Vũng Tàu](university)
-    - [Trường Cao đẳng Sư phạm Bắc Ninh](university)
-    - [Trường Cao đẳng Sư phạm Cao Bằng](university)
-    - [Trường Cao đẳng Sư phạm Đắk Lắk](university)
-    - [Trường Cao đẳng Sư phạm Điện Biên](university)
-    - [Trường Cao đẳng Sư phạm Gia Lai](university)
-    - [Trường Cao đẳng Sư phạm Hòa Bình](university)
-    - [Trường Cao đẳng Sư phạm Kiên Giang](university)
-    - [Trường Cao đẳng Sư phạm Lạng Sơn](university)
-    - [Trường Cao đẳng Sư phạm Long An](university)
-    - [Trường Cao đẳng Sư phạm Nam Định](university)
-    - [Trường Cao đẳng Sư phạm Nghệ An](university)
-    - [Trường Cao đẳng Sư phạm Quảng Trị](university)
-    - [Trường Cao đẳng Sư phạm Tây Ninh](university)
-    - [Trường Cao đẳng Sư phạm Thái Bình](university)
-    - [Trường Cao đẳng Sư phạm Thừa Thiên Huế](university)
-    - [Trường Cao đẳng Sư phạm Trung ương](university)
-    - [Trường Cao đẳng Sư phạm Trung ương Nha Trang](university)
-    - [Trường Cao đẳng Sư phạm Trung ương Thành phố Hồ Chí Minh](university)
-    - [Trường Cao đẳng Thái Nguyên](university)
-    - [Trường Cao đẳng Yên Bái](university)
-    - [Trường Cao đẳng Bắc Kạn](university)
-    - [Trường Cao đẳng Bến Tre](university)
-    - [Trường Cao đẳng Bình Định](university)
-    - [Trường Cao đẳng Bình Phước](university)
-    - [Trường Cao đẳng Cần Thơ](university)
-    - [Trường Cao đẳng Cộng đồng Cà Mau](university)
-    - [Trường Cao đẳng Cộng đồng Hà Nội](university)
-    - [Trường Cao đẳng Cộng đồng Hậu Giang](university)
-    - [Trường Cao đẳng Cộng đồng Hưng Yên](university)
-    - [Trường Cao đẳng Cộng đồng Lai Châu](university)
-    - [Trường Cao đẳng Cộng đồng Sóc Trăng](university)
-    - [Trường Cao đẳng Đà Lạt](university)
-    - [Trường Cao đẳng Ngô Gia Tự Bắc Giang](university)
-    - [Trường Cao đẳng Sơn La](university)
-    - [Trường Cao đẳng Vĩnh Long](university)
-    - [Trường Cao đẳng Vĩnh Phúc](university)
-    - [Trường Cao đẳng Đại Việt Sài Gòn](university)
-    - [Trường Cao đẳng Y tế Điện Biên](university)
-    - [Trường Cao đẳng Y tế Lạng Sơn](university)
-    - [Trường Cao đẳng Y tế Phú Thọ](university)
-    - [Trường Cao đẳng Y tế Quảng Ninh](university)
-    - [Trường Cao đẳng Y tế Sơn La](university)
-    - [Trường Cao đẳng Y tế Thái Nguyên](university)
-    - [Trường Cao đẳng Y tế Bắc Ninh](university)
-    - [Trường Cao đẳng Y tế Bạch Mai](university)
-    - [Trường Cao đẳng Y tế Đắk Lắk](university)
-    - [Trường Cao đẳng Y tế Đặng Văn Ngữ](university)
-    - [Trường Cao đẳng Y tế Hà Đông](university)
-    - [Trường Cao đẳng Y tế Hà Nam](university)
-    - [Trường Cao đẳng Y tế Hà Nội](university)
-    - [Trường Cao đẳng Y tế Hải Dương](university)
-    - [Trường Cao đẳng Y tế Hải Phòng](university)
-    - [Trường Cao đẳng Y tế Hưng Yên](university)
-    - [Trường Cao đẳng Y tế Lâm Đồng](university)
-    - [Trường Cao đẳng Y tế Ninh Bình](university)
-    - [Trường Cao đẳng Y tế Thái Bình](university)
-    - [Trường Cao đẳng Y - Dược Hợp Lực](university)
-    - [Trường Cao đẳng Y tế Hà Tĩnh](university)
-    - [Trường Cao đẳng Y tế Quảng Trị](university)
-    - [Trường Cao đẳng Y tế Huế](university)
-    - [Trường Cao đẳng Y tế Quảng Bình](university)
-    - [Trường Cao đẳng Y tế Thanh Hóa](university)
-    - [Trường Cao đẳng Y tế Bình Định](university)
-    - [Trường Cao đẳng Y tế Đặng Thùy Trâm](university)
-    - [Trường Cao đẳng Y tế Khánh Hòa](university)
-    - [Trường Cao đẳng Y tế Phú Yên](university)
-    - [Trường Cao đẳng Y tế Quảng Nam](university)
-    - [Trường Cao đẳng Y tế Bình Dương](university)
-    - [Trường Cao đẳng Y tế Đồng Nai](university)
-    - [Trường Cao đẳng Y tế Bạc Liêu](university)
-    - [Trường Cao đẳng Y tế Cà Mau](university)
-    - [Trường Cao đẳng Y tế Cần Thơ](university)
-    - [Trường Cao đẳng Y tế Đồng Tháp](university)
-    - [Trường Cao đẳng Y tế Kiên Giang](university)
-    - [Trường Cao đẳng Y tế Tiền Giang](university)
-    - [Trường Cao đẳng Y tế Trà Vinh](university)
-    - [Trường Cao đẳng Cơ khí - Luyện kim](university)
-    - [Trường Cao đẳng Công nghệ và Kinh tế Công nghiệp](university)
-    - [Trường Cao đẳng Công nghiệp Thái Nguyên](university)
-    - [Trường Cao đẳng Công nghiệp Thực phẩm](university)
-    - [Trường Cao đẳng Công nghiệp và Xây dựng](university)
-    - [Trường Cao đẳng Công nghiệp Việt Đức](university)
-    - [Trường Cao đẳng Kinh tế - Tài chính Thái Nguyên](university)
-    - [Trường Cao đẳng Kinh tế Kỹ thuật Điện Biên](university)
-    - [Trường Cao đẳng Kinh tế Kỹ thuật Phú Thọ](university)
-    - [Trường Cao đẳng Kỹ thuật Công nghiệp](university)
-    - [Trường Cao đẳng Nông Lâm Đông Bắc](university)
-    - [Trường Cao đẳng Thương mại và Du lịch Thái Nguyên](university)
-    - [Trường Cao đẳng Văn hóa Nghệ thuật và Du lịch Hạ Long](university)
-    - [Trường Cao đẳng Văn hóa Nghệ thuật Tây Bắc](university)
-    - [Trường Cao đẳng Văn hóa Nghệ thuật Việt Bắc](university)
-    - [Trường Cao đẳng Cộng đồng Hà Tây](university)
-    - [Trường Cao đẳng Cộng đồng Hải Phòng](university)
-    - [Trường Cao đẳng Công nghệ và Kinh tế Hà Nội](university)
-    - [Trường Cao đẳng Công nghệ Viettronics](university)
-    - [Trường Cao đẳng Công nghiệp Hưng Yên](university)
-    - [Trường Cao đẳng Công nghiệp Nam Định](university)
-    - [Trường Cao đẳng Công nghiệp và Thương mại](university)
-    - [Trường Cao đẳng Điện tử - Điện lạnh Hà Nội](university)
-    - [Trường Cao đẳng Du lịch Hà Nội](university)
-    - [Trường Cao đẳng Dược Trung ương Hải Dương](university)
-    - [Trường Cao đẳng Hàng hải I](university)
-    - [Trường Cao đẳng Kinh tế - Kỹ thuật Thương mại](university)
-    - [Trường Cao đẳng Kinh tế - Kỹ thuật Trung ương](university)
-    - [Trường Cao đẳng Kinh tế - Kỹ thuật Vĩnh Phúc](university)
-    - [Trường Cao đẳng Kinh tế Công nghiệp Hà Nội](university)
-    - [Trường Cao đẳng Kinh tế và Công nghệ thực phẩm](university)
-    - [Trường Cao đẳng Kinh tế, Kỹ thuật và Thủy sản](university)
-    - [Trường Cao đẳng Múa Việt Nam](university)
-    - [Trường Cao đẳng Nghệ thuật Hà Nội](university)
-    - [Trường Cao đẳng Nông nghiệp và Phát triển nông thôn Bắc Bộ](university)
-    - [Trường Cao đẳng Phát thanh - Truyền hình I](university)
-    - [Trường Cao đẳng Thống kê](university)
-    - [Trường Cao đẳng Thông tin và Truyền thông](university)
-    - [Trường Cao đẳng Thương mại và Du lịch Hà Nội](university)
-    - [Trường Cao đẳng Thủy lợi Bắc Bộ](university)
-    - [Trường Cao đẳng Truyền hình](university)
-    - [Trường Cao đẳng Văn hóa Nghệ thuật Thái Bình](university)
-    - [Trường Cao đẳng Văn hóa Nghệ thuật và Du lịch Nam Định](university)
-    - [Trường Cao đẳng Vĩnh Phúc](university)
-    - [Trường Cao đẳng Xây dựng công trình đô thị](university)
-    - [Trường Cao đẳng Xây dựng Nam Định](university)
-    - [Trường Cao đẳng Xây dựng số 1](university)
-    - [Trường Cao đẳng Công nghiệp Huế](university)
-    - [Trường Cao đẳng Giao thông Huế](university)
-    - [Trường Cao đẳng Giao thông vận tải Trung ương IV](university)
-    - [Trường Cao đẳng Luật miền Trung](university)
-    - [Trường Cao đẳng Kinh tế Kỹ thuật Công thương](university)
-    - [Trường Cao đẳng Kỹ thuật Công - Nông nghiệp Quảng Bình](university)
-    - [Trường Cao đẳng Nông nghiệp Thanh Hóa](university)
-    - [Trường Cao đẳng Nguyễn Du](university)
-    - [Trường Cao đẳng Thể dục Thể thao Thanh Hóa](university)
-    - [Trường Cao đẳng Văn hóa Nghệ thuật Nghệ An](university)
-    - [Trường Cao đẳng Bình Thuận](university)
-    - [Trường Cao đẳng Công nghệ, Kinh tế và Thủy lợi miền Trung](university)
-    - [Trường Cao đẳng Công thương Miền Trung](university)
-    - [Trường Cao đẳng Điện lực miền Trung](university)
-    - [Trường Cao đẳng Giao thông vận tải Trung ương V](university)
-    - [Trường Cao đẳng Kinh tế - Kế hoạch Đà Nẵng](university)
-    - [Trường Cao đẳng Kỹ thuật Công nghệ Quy Nhơn](university)
-    - [Trường Cao đẳng Lương thực - Thực phẩm](university)
-    - [Trường Cao đẳng Quảng Nam](university)
-    - [Trường Cao đẳng Thương mại](university)
-    - [Trường Cao đẳng Văn hóa - Nghệ thuật Đà Nẵng](university)
-    - [Trường Cao đẳng Cộng đồng Đắk Nông](university)
-    - [Trường Cao đẳng Công nghệ và Kinh tế Bảo Lộc](university)
-    - [Trường Cao đẳng Văn hóa Nghệ thuật Đắk Lắk](university)
-    - [Trường Cao đẳng Kon Tum](university)
-    - [Trường Cao đẳng Bình Phước](university)
-    - [Trường Cao đẳng Bách khoa Nam Sài Gòn](university)
-    - [Trường Cao đẳng Công nghệ Thủ Đức](university)
-    - [Trường Cao đẳng Công nghiệp Cao su](university)
-    - [Trường Cao đẳng Công Thương Thành phố Hồ Chí Minh](university)
-    - [Trường Cao đẳng Điện lực Thành phố Hồ Chí Minh](university)
-    - [Trường Cao đẳng Giao thông vận tải Thành phố Hồ Chí Minh](university)
-    - [Trường Cao đẳng Giao thông vận tải Trung ương III](university)
-    - [Trường Cao đẳng Giao thông vận tải Trung ương VI](university)
-    - [Trường Cao đẳng Kinh tế - Công nghệ Thành phố Hồ Chí Minh](university)
-    - [Trường Cao đẳng Kinh tế Đối ngoại](university)
-    - [Trường Cao đẳng Kinh tế - Kỹ thuật Thành phố Hồ Chí Minh](university)
-    - [Trường Cao đẳng Kinh tế - Kỹ thuật Vinatex](university)
-    - [Trường Cao đẳng Kinh tế Thành phố Hồ Chí Minh](university)
-    - [Trường Cao đẳng Kỹ thuật Cao Thắng](university)
-    - [Trường Cao đẳng Kỹ thuật Công nghệ Bà Rịa - Vũng Tàu](university)
-    - [Trường Cao đẳng Lý Tự Trọng Thành phố Hồ Chí Minh](university)
-    - [Trường Cao đẳng Mỹ thuật trang trí Đồng Nai](university)
-    - [Trường Cao đẳng Phát thanh Truyền hình II](university)
-    - [Trường Cao đẳng Thống kê II](university)
-    - [Trường Cao đẳng Văn hóa Nghệ thuật Thành phố Hồ Chí Minh](university)
-    - [Trường Cao đẳng Xây dựng Thành phố Hồ Chí Minh](university)
-    - [Trường Cao đẳng Cơ điện và Nông nghiệp Nam Bộ](university)
-    - [Trường Cao đẳng Cộng đồng Đồng Tháp](university)
-    - [Trường Cao đẳng Kiên Giang](university)
-    - [Trường Cao đẳng Kinh tế - Kỹ thuật Bạc Liêu](university)
-    - [Trường Cao đẳng Kinh tế - Kỹ thuật Cần Thơ](university)
-    - [Trường Cao đẳng Nông nghiệp Nam Bộ](university)
-    - [Trường Cao đẳng Văn hóa Nghệ thuật Cần Thơ](university)
-    - [Trường Cao đẳng Kỹ thuật Quảng Trị](university)
-    - [Đại học quốc gia Hà Nội](university)
-    - [Thành phố Hồ Chí Minh](university)
-    - [Đại học vùng](university)
-    - [Huế](university)
-    - [Đà Nẵng](university)
-    - [Thái NguyênTrường đại học vùng](university)
-    - [Vinh](university)
-    - [Cần Thơ](university)
-    - [Brunei](university)
-    - [Đại học Brunei Darussalam](university)
-    - [Campuchia](university)
-    - [Đại học Hoàng gia Phnôm Pênh](university)
-    - [Đại học Kinh tế và Luật Hoàng gia](university)
-    - [Indonesia](university)
-    - [Đại học Indonesia](university)
-    - [Đại học Gadjah Mada](university)
-    - [Viện Công nghệ Bandung](university)
-    - [Đại học Airlangga](university)
-    - [Lào](university)
-    - [Đại học Quốc gia Lào](university)
-    - [Malaysia](university)
-    - [Đại học Sains Malaysia](university)
-    - [Đại học Malaya](university)
-    - [Đại học Kebangsaan Malaysia](university)
-    - [Đại học Utara Malaysia](university)
-    - [Đại học Putra Malaysia](university)
-    - [Philippines](university)
-    - [Đại học De La Salle-Manila](university)
-    - [Đại học Philippines](university)
-    - [Đại học Ateneo de Manila](university)
-    - [Myanmar](university)
-    - [Học viện Kinh tế Yangon](university)
-    - [Đại học Yangon](university)
-    - [Học viện Kinh tế Yangon](university)
-    - [Singapore](university)
-    - [Đại học Quốc gia Singapore](university)
-    - [Đại học Công nghệ Nanyang](university)
-    - [Đại học Quản lý Singapore](university)
-    - [Thái Lan](university)
-    - [Đại học Burapha](university)
-    - [Đại học Chulalongkorn](university)
-    - [Đại học Mahidol](university)
-    - [Đại học Chiang Mai](university)
-    - [Đại học Prince of Songkla Việt Nam](university)
-    - [Đại học Quốc gia Hà Nội](university)
-    - [Đại học Quốc gia Thành phố Hồ Chí Minh](university)
-    - [Trường Đại học Cần Thơ](university)
-    - [VNU](university)
-    - [Đại học Quốc gia Hà Nội](university)
-    - [UET](university)
-    - [Trường Đại học Công nghệ](university)
-    - [UEd](university)
-    - [Trường Đại học Giáo dục](university)
-    - [UEB](university)
-    - [Trường Đại học Kinh tế](university)
-    - [HUS](university)
-    - [Trường Đại học Khoa học Tự nhiên](university)
-    - [HUSSH](university)
-    - [Trường Đại học Khoa học Xã hội và Nhân văn](university)
-    - [ULIS](university)
-    - [Trường Đại học Ngoại ngữ](university)
-    - [VNU-UMP](university)
-    - [Trường Đại học Y Dược](university)
-    - [VJU](university)
-    - [Trường Đại học Việt Nhật](university)
-    - [VNU-UL](university)
-    - [Trường Đại học Luật](university)
-    - [HSB](university)
-    - [Trường Quản trị và Kinh doanh](university)
-    - [VNU-IS](university)
-    - [Trường Quốc tế](university)
-    - [SIS](university)
-    - [Trường Khoa học liên ngành và Nghệ thuật](university)
-    - [AGU](university)
-    - [Trường Đại học An Giang](university)
-    - [HCMUT](university)
-    - [Trường Đại học Bách khoa](university)
-    - [UIT](university)
-    - [Trường Đại học Công nghệ Thông tin](university)
-    - [HCMUS](university)
-    - [Trường Đại học Khoa học Tự nhiên](university)
-    - [HCMUSSH](university)
-    - [Trường Đại học Khoa học Xã hội và Nhân văn](university)
-    - [UEL](university)
-    - [Trường Đại học Kinh tế - Luật](university)
-    - [HCMIU](university)
-    - [Trường Đại học Quốc tế](university)
-    - [UHS](university)
-    - [Khoa Y](university)
-    - [SPAS](university)
-    - [Khoa Chính trị - Hành chính](university)
-    - [TNUICT](university)
-    - [Trường Đại học Công nghệ Thông tin và Truyền thông](university)
-    - [TNUS](university)
-    - [Trường Đại học Khoa học](university)
-    - [TNUEBA](university)
-    - [Trường Đại học Kinh tế và Quản trị kinh doanh](university)
-    - [TNUT](university)
-    - [Trường Đại học Kỹ thuật Công nghiệp](university)
-    - [TNUAF](university)
-    - [Trường Đại học Nông Lâm](university)
-    - [TNUED](university)
-    - [Trường Đại học Sư phạm](university)
-    - [TNUMP](university)
-    - [Trường Đại học Y Dược](university)
-    - [TNNN](university)
-    - [Trường Ngoại ngữ](university)
-    - [TNEC](university)
-    - [Trường Cao đẳng Kinh tế Kỹ thuật](university)
-    - [PH-TNU-LC](university)
-    - [Phân hiệu Đại học Thái Nguyên tại Lào Cai](university)
-    - [PH-TNU-HG](university)
-    - [Phân hiệu Đại học Thái Nguyên tại Hà Giang](university)
-    - [HueUni](university)
-    - [Đại học Huế](university)
-    - [HUSC](university)
-    - [Trường Đại học Khoa học](university)
-    - [HCE](university)
-    - [Trường Đại học Kinh tế](university)
-    - [HUL](university)
-    - [Trường Đại học Luật](university)
-    - [HUA](university)
-    - [Trường Đại học Nghệ thuật](university)
-    - [HUCFL](university)
-    - [Trường Đại học Ngoại ngữ](university)
-    - [HUAF](university)
-    - [Trường Đại học Nông Lâm](university)
-    - [HUCE](university)
-    - [Trường Đại học Sư phạm](university)
-    - [YDH](university)
-    - [Trường Đại học Y Dược Huế](university)
-    - [HUHT](university)
-    - [Trường Du lịch](university)
-    - [HUET](university)
-    - [Khoa Kỹ thuật và Công nghệ](university)
-    - [HUIS](university)
-    - [Khoa Quốc tế](university)
-    - [FPE](university)
-    - [Khoa Giáo dục thể chất](university)
-    - [HU-QTC](university)
-    - [Phân hiệu Đại học Huế tại Quảng Trị](university)
-    - [UDN](university)
-    - [Đại học Đà Nẵng](university)
-    - [DUT](university)
-    - [Trường Đại học Bách khoa](university)
-    - [UIT](university)
+# - intent: thank
+#   examples: |
+#     - cảm ơn
+#     - cảm ơn nhìu nhé
+#     - thanks
+#     - thank you
+#     - củm ơn
+#     - mơn
+#     - ok cảm ơn
+#     - cảm ơn bạn
+#     - cảm ơn đã giúp mình
+#     - đa tạ
+#     - mơn bạn
+#     - thank u
+#     - ok thanks
+#     - cảm ơn bạn rất nhiều
+#     - xin cảm ơn bạn
+#     - cảm ơn bạn đã giúp đỡ
+#     - Rất cảm kích sự giúp đỡ của bạn
+#     - xin chân thành cảm ơn
+#     - cảm ơn bạn vì sự hỗ trợ
+#     - Rất động viên với sự giúp đỡ của bạn
+#     - cảm ơn bạn đã luôn ở bên cạnh
+#     - Sự giúp đỡ của bạn là quý báu
+#     - xin gửi lời biết ơn tới bạn
 
-    - [UIT](university)
-    - [Trường Đại học Công nghệ Thông tin](university)
-    - [HCMUS](university)
-    - [Trường Đại học Khoa học Tự nhiên](university)
-    - [HCMUSSH](university)
-    - [Trường Đại học Khoa học Xã hội và Nhân văn](university)
-    - [UEL](university)
-    - [Trường Đại học Kinh tế - Luật](university)
-    - [HCMIU](university)
-    - [Trường Đại học Quốc tế](university)
-    - [UHS](university)
-    - [Khoa Y](university)
-    - [SPAS](university)
-    - [Khoa Chính trị - Hành chính](university)
-    - [TNUICT](university)
-    - [Trường Đại học Công nghệ Thông tin và Truyền thông](university)
-    - [TNUS](university)
-    - [Trường Đại học Khoa học](university)
-    - [TNUEBA](university)
-    - [Trường Đại học Kinh tế và Quản trị kinh doanh](university)
-    - [TNUT](university)
-    - [Trường Đại học Kỹ thuật Công nghiệp](university)
-    - [TNUAF](university)
-    - [Trường Đại học Nông Lâm](university)
-    - [TNUEd](university)
-    - [Trường Đại học Sư phạm](university)
-    - [TNUMP](university)
-    - [Trường Đại học Y Dược](university)
-    - [TNNN](university)
-    - [Trường Ngoại ngữ](university)
-    - [TNEC](university)
-    - [Trường Cao đẳng Kinh tế Kỹ thuật](university)
-    - [HCMUTE](university)
-    - [Khoa Quốc tế](university)
-    - [PH-TNU-LC](university)
-    - [Phân hiệu Đại học Thái Nguyên tại Lào Cai](university)
-    - [PH-TNU-HG](university)
-    - [Phân hiệu Đại học Thái Nguyên tại Hà Giang](university)
-    - [HueUni](university)
-    - [Đại học Huế](university)
-    - [HUSC](university)
-    - [Trường Đại học Khoa học](university)
-    - [HCE](university)
-    - [Trường Đại học Kinh tế](university)
-    - [HUL](university)
-    - [Trường Đại học Luật](university)
-    - [HUA](university)
-    - [Trường Đại học Nghệ thuật](university)
-    - [HUCFL](university)
-    - [Trường Đại học Ngoại ngữ](university)
-    - [HUAF](university)
-    - [Trường Đại học Nông Lâm](university)
-    - [HUCE](university)
-    - [Trường Đại học Sư phạm](university)
-    - [YDH](university)
-    - [Trường Đại học Y Dược Huế](university)
-    - [HUHT](university)
-    - [Trường Du lịch](university)
-    - [HUET](university)
-    - [Khoa Kỹ thuật và Công nghệ](university)
-    - [HUIS](university)
-    - [Khoa Quốc tế](university)
-    - [FPE](university)
-    - [Khoa Giáo dục thể chất](university)
-    - [HU-QTC](university)
-    - [Phân hiệu Đại học Huế tại Quảng Trị](university)
-    - [UDN](university)
-    - [Đại học Đà Nẵng](university)
-    - [DUT](university)
-    - [Trường Đại học Bách khoa](university)
-    - [DUE](university)
-    - [Trường Đại học Kinh tế](university)
-    - [DUEd](university)
-    - [Trường Đại học Sư phạm](university)
-    - [DNUFL](university)
-    - [Trường Đại học Ngoại ngữ](university)
-    - [DNUTE](university)
-    - [Trường Đại học Sư phạm Kỹ thuật](university)
-    - [VKU](university)
-    - [Trường Đại học Công nghệ thông tin và Truyền thông Việt - Hàn](university)
-    - [PH-TNU-LC](university)
-    - [Phân hiệu Đại học Đà Nẵng tại Kon Tum](university)
-    - [HUST](university)
-    - [Đại học Bách khoa Hà Nội](university)
 
-- intent: ask_diem_tuyen_sinh
-  examples: |
-    - học phí 
+
+# - intent: inform
+#   examples: |
+#     - [0939838189](number)
+#     - đây là số điện thoại của tôi [0939059009](number)
+#     - bạn có thể gọi tôi thông qua số này [0918398775](number)
+#     - số liên lạc dây nè [0123456789](number)
+
+#     - email tôi là [loc@gmail.com](email)
+#     - đây là địa chỉ mail liên hệ [phuong@student.ctu.edu.vn](email)
+#     - [tien@gmail.com](email)
+#     - email làm việc là [hoanglam@gmail.com](email)
