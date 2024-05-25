@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Chat</title>
+  <style>
+    .chat-box {
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin: 10px;
+    }
+    .chat-messages {
+      list-style-type: none;
+      padding: 0;
+    }
+    .chat-messages li {
+      margin: 5px 0;
+    }
+  </style>
+</head>
+<body>
+  <h1>Admin Chat</h1>
+  <div id="chat-container"></div>
+  <script src="/socket.io/socket.io.js"></script>
+  <script>
+    const socket = io();
+
+    socket.emit('register', 'admin');
+
+    const chatContainer = document.getElementById('chat-container');
+    const chats = {};
+
+    function createChatBox(userId) {
+      const chatBox = document.createElement('div');
+      chatBox.className = 'chat-box';
+      chatBox.id = `chat-${userId}`;
+
+      const title = document.createElement('h2');
+      title.textContent = `Chat with ${userId}`;
+      chatBox.appendChild(title);
+
+      const messages = document.createElement('ul');
+      messages.className = 'chat-messages';
+      chatBox.appendChild(messages);
+
+      const form = document.createElement('form');
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const input = form.querySelector('input');
+        if (input.value) {
+          socket.emit('chat message', { to: userId, message: input.value });
+          const item = document.createElement('li');
+          item.textContent = `Admin: ${input.value}`;
+          messages.appendChild(item);
+          input.value = '';
+        }
+      });
+
+      const input = document.createElement('input');
+      input.type = 'text';
+      input.placeholder = 'Type a message...';
+      form.appendChild(input);
+
+      chatBox.appendChild(form);
+      chatContainer.appendChild(chatBox);
+
+      chats[userId] = messages;
+    }
+
+    socket.on('chat message', (msg) => {
+      if (!chats[msg.from]) {
+        createChatBox(msg.from);
+        console.log(msg)
+      }
+      const item = document.createElement('li');
+      item.textContent = `${msg.from}: ${msg.message}`;
+      chats[msg.from].appendChild(item);
+    });
+
+    // Log connection status
+    socket.on('connect', () => {
+      console.log('Connected to server');
+    });
+
+    socket.on('disconnect', () => {
+      console.log('Disconnected from server');
+    });
+  </script>
+</body>
+</html>
