@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<!-- Coding By CodingNepal - youtube.com/codingnepal -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ADMIN</title>
+    <link rel="stylesheet" href="../css/admin_chat.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+</head>
+
+<body>
+    <div class="wrapper">
+        <section class="users">
+
+            <header>
+                <div class="content">
+                    <img src="https://t4.ftcdn.net/jpg/02/29/75/83/360_F_229758328_7x8jwCwjtBMmC6rgFzLFhZoEpLobB6L8.jpg"
+                        alt="">
+                    <div class="details">
+                        <span>Quản trị viên</span>
+                        <p>Online</p>
+                    </div>
+                </div>
+                <a href="" class="logout">Logout</a>
+            </header>
+            <div class="search">
+                <span class="text">Select an user to start chat</span>
+                <input type="text" placeholder="Enter name to search...">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+            <!-- Danh sách người chat -->
+            <div class="users-list">
+
+
+            </div>
+        </section>
+    </div>
+
+
+    <!-- ############ IMPORT SOCKET ########### -->
+    <script src="/socket.io/socket.io.js"></script>
+    <script type="text/javascript" src="../js/admin_chat.js"></script>
+</body>
+</html>

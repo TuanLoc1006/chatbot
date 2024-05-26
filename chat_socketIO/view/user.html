@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>User</title>
+    <link rel="stylesheet" href="../css/user.css">
+</head>
+
+<body>
+    <ul id="messages"></ul>
+    <form id="form" action="">
+        <input id="user-name" required type="text" placeholder="Nhập tên để chat">
+        <input id="input" autocomplete="off" /><button>Send</button>
+        <button id="toggle-btn">Disconnect</button>
+    </form>
+    <!-- ############ IMPORT SOCKET ########### -->
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+        //truy cập trang -> gửi userId đến server để lấy tin nhắn cũ
+        document.addEventListener('DOMContentLoaded', (e)=>{
+            const saveUID = localStorage.getItem('uID')
+            if(saveUID){
+                socket.emit('getUserMessages', { saveUID });
+            }
+        })
+
+        //kiểm tra tên người dùng trong localstorage
+        document.addEventListener('DOMContentLoaded', (e) => {
+            const saveName = localStorage.getItem('userName');
+            if (saveName) {
+                //hiển thị tên người dùng
+                document.getElementById('user-name').value = saveName;
+            }
+        })
+
+        //hàm tạo chuỗi ngẫu nhiên 100 byte làm id
+        function generateRandomString(length) {
+            const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-';
+            let result = '';
+            const charactersLength = characters.length;
+            for (let i = 0; i < length; i++) {
+                result += characters.charAt(Math.floor(Math.random() * charactersLength));
+            }
+            return result;
+        }
+        const randomString = generateRandomString(100);
+
+
+        //lưu tên người dùng lên localstorage
+        if (!localStorage.getItem('uID')) {
+            localStorage.setItem('uID', randomString);
+        }
+
+        ////////////////SOCKET
+        const socket = io();
+        const form = document.getElementById('form');
+        const input = document.getElementById('input');
+        const messages_content = document.getElementById('messages');
+
+        //Disconnect
+        const toggleButton = document.getElementById('toggle-btn');
+        toggleButton.addEventListener('click', (e) => {
+            e.preventDefault();
+            if (socket.connected) {
+                toggleButton.innerText = 'Connect';
+                socket.disconnect();
+            } else {
+                toggleButton.innerText = 'Disconnect';
+                socket.connect();
+            }
+        });
+        //gửi tin nhắn
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            //lưu tên người dùng lên local
+            const inputName = document.getElementById('user-name').value;
+            localStorage.setItem('userName', inputName)
+
+            if (input.value) {
+                socket.emit('send_to_server', {
+                    uID: localStorage.getItem('uID'),
+                    uName: localStorage.getItem('userName'),
+                    message: input.value,
+                });
+                input.value = '';
+            }
+        });
+        
+        //nhận tin từ server và hiển thị (realtime)
+        //gửi đến server , server emit lại tin vừa gửi đi để hiển thị
+        socket.on('server_send_to_client', (msg) => {
+            const item = document.createElement('li');
+            item.textContent = 'Bạn: '+msg;
+            messages_content.appendChild(item);
+            window.scrollTo(0, document.body.scrollHeight);
+        });
+        
+        //hiển thị tin nhắn cũ từ database
+        socket.on(`${localStorage.getItem('uID')}`, (messages)=>{
+
+            messages.sort((a,b)=> new Date(a.timestamp) - new Date(b.timestamp));
+            //console.log(messages)
+
+            messages.forEach(msg =>{
+                //console.log(msg.message)
+                const item = document.createElement('li')
+                item.textContent = 'Bạn: '+ msg.message
+                messages_content.appendChild(item)
+            })
+        })
+    </script>
+</body>
+</html>
