@@ -13,6 +13,8 @@ const io = new Server(server, {
     connectionStateRecovery: {}
 });
 
+app.use(express.static(__dirname));
+
 const Message = require('./model/message');
 const User = require('./model/user')
 
@@ -25,16 +27,12 @@ function generateRandomString(length) {
     }
     return result;
 }
-const adminID = generateRandomString(100);
-console.log(adminID)
+// const adminID = generateRandomString(100);
+
 
 mongoose.connect('mongodb://localhost:27017/chat')
     .then(() => console.log('Kết nối csdl thành công !'))
     .catch(err => console.log(err));
-
-
-app.use(express.static(join(__dirname)));
-
 
 app.get('/', (req, res) => {
     res.sendFile(join(__dirname, "/view/", 'user.html'));
@@ -73,7 +71,7 @@ io.on('connection', (socket) => {
         var data = {
             'senderID': msg.uID,
             'senderName': msg.uName,
-            'receiverID': adminID,
+            'receiverID': 'ADMIN',
             'message': msg.message,
             'timestamp': vietnamTime
         }

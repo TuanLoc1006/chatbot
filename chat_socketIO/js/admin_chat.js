@@ -3,55 +3,46 @@ const socket = io();
 ////////////Khởi tạo adminID
 const adminID = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-';
 socket.emit('adminID', adminID);
+// console.log('ADMIN ID LA '+adminID)
 
 //nhận tin nhắn realtime từ người dùng
 //hiển thị chat người dùng gửi đến
 socket.on('server_send_to_admin', (msg) => {
+    
+    console.log(msg)
 
     //tạo div chứa tin nhắn
     const messContainer = document.createElement('div');
-    
-    console.log(msg)
+    const userList = document.querySelector('.users-list')
+    userList.innerHTML += `<a href="#">
+    <div class="content">
+    <img src="https://t4.ftcdn.net/jpg/02/29/75/83/360_F_229758328_7x8jwCwjtBMmC6rgFzLFhZoEpLobB6L8.jpg" alt="">
+    <div class="details">
+        <span>${msg.senderName}</span>
+        <p>${msg.message}</p>
+    </div>
+    </div>
+    <div class="status-dot '. $offline .'"><i class="fas fa-circle"></i></div>
+</a>`
 })
 
-const form = document.getElementById('form-chat');
-const input_chat = document.getElementById('input-chat');
-
-//gửi tin nhắn đến server
-form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const input_data = input_chat.value;
-    console.log(input_data);
-    if (input_data) {
-        socket.emit('admin_send_to_server', {
-            message: input_data
-        });
-        input_chat.value = '';
-    }
-})
 
 /////////////CALL API LẤY DANH SÁCH NGƯỜI DÙNG
 document.addEventListener('DOMContentLoaded', async function (e) {
     const response = await fetch('/api/get_user');
     const users = await response.json();
-    console.log(users)
-    
-    const listUser = document.querySelector('.list-search-user-chat');
-
+    const userList = document.querySelector('.users-list')
     users.forEach(user => {
-        listUser.innerHTML += `<div class="user-chat" data-username="${user.userName}">
-        <div class="user-chat-img">
-            <img src="https://img.freepik.com/free-vector/blue-circle-with-white-user_78370-4707.jpg"
-                alt="" />
-            <div class="offline"></div>
-            <div>${user.userName}</div>
+        userList.innerHTML += `<a href="#">
+        <div class="content">
+        <img src="https://t4.ftcdn.net/jpg/02/29/75/83/360_F_229758328_7x8jwCwjtBMmC6rgFzLFhZoEpLobB6L8.jpg" alt="">
+        <div class="details">
+            <span>${user.userName}</span>
+            <p>${user.lastMessage}</p>
         </div>
-
-        <div class="user-chat-text">
-            <p class="mt-0 mb-0"><strong>${user.userName}</strong></p>
-            <small>Hi, how are you?</small>
         </div>
-    </div>`
+        <div class="status-dot '. $offline .'"><i class="fas fa-circle"></i></div>
+    </a>`
     })
 });
 
