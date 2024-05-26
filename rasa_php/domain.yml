@@ -6,8 +6,15 @@ actions:
   - action_thong_tin_nganh
   - action_chuong_trinh_dao_tao
   - action_hoc_phi
+
   - action_hoi_dia_diem_khoa
+  - action_hoi_email_khoa
+  - action_hoi_sdt_khoa
+  
   - action_hoi_dia_diem_phong
+  - action_hoi_email_phong
+  - action_hoi_sdt_phong
+  
   # - validate_simple_form
   # - action_say_data
   # - action_greet_user
@@ -20,6 +27,7 @@ intents:
   # - mood_great
   # - mood_unhappy
   # - inform
+  - sinh_vien_ho_tro_tao_chat_ctump
   - greet
   - goodbye
   - bot_challenge
@@ -28,9 +36,16 @@ intents:
   - ask_chuong_trinh_dao_tao
   - ask_hoc_phi
   - ask_chuc_nang
+
   - ask_dia_diem_cac_khoa
+  - ask_email_cac_khoa
+  - ask_sdt_cac_khoa
+
   - ask_dia_diem_cac_phong_ban
-  - ask_thoi_gian_nhap_hoc
+  - ask_email_cac_phong_ban
+  - ask_sdt_cac_phong_ban
+  - ask_cap_lai_the_sinh_vien
+  # - ask_thoi_gian_nhap_hoc
 
 entities:
   - hocphi
@@ -40,8 +55,10 @@ entities:
   - location_khoa
   - email_khoa
   - sdt_khoa
-  
+
   - location_phong
+  - email_phong
+  - sdt_phong
   # - email
   # - number
 
@@ -83,16 +100,12 @@ entities:
 #       - phone
 
 responses: 
-  # utter_ask_major:
-  # - text: "Bạn học ngành nào vậy?"
 
   # utter_ask_email:
   # - text: "vui lòng cung cấp email?"
 
   # utter_ask_phone:
   # - text: "vui lòng cung cấp số điện thoại?"
-  utter_localtion:
-  - text: "o ctump"
     
   utter_greet:
   - text: "Chào! Chào mừng bạn đến với Bot Rasa."
@@ -105,8 +118,8 @@ responses:
   - text: "Bye bye"
   - text: "hẹn gặp lại"
 
-  # utter_ask_email_phone:
-  # - text: "Bạn vui lòng cung cấp email và số diện thoại trước khi chat"
+  utter_cap_lai_the_sinh_vien:
+  - text: "Bạn vui lòng xem đầy đủ thông tin tại đây http://www.ctump.edu.vn/?tabid=3130&ndid=18047&key=Quy_trinh_cap_lai_the_sinh_vien"
 
   # utter_thong_tin_lien_he:
   # - text: "Bạn có muốn để lại thông tin liên hệ để admin giải đáp thắc mắc không"
@@ -123,6 +136,9 @@ responses:
 
   utter_cac_chuc_nang:
   - text: "Tôi có thể giải đáp thắc mắc của bạn về học phí, chương trình đào tạo... và các thông tin về Đại học Y dược Cần Thơ."
+  
+  utter_sinh_vien_tao_chat_ctump:
+  - text: "Phạm Thành Tuấn Lộc và Ngô Thanh Phương cùng với sự hỗ trợ của các anh phòng Thông tin và truyền thông, đã xây dựng nên chat bot ctump"
 
 
 session_config:

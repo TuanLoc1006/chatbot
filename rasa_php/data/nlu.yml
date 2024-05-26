@@ -22,56 +22,6 @@ nlu:
     - tạm biệt bot nhá
     - hẹn gặp lại
 
-# - intent: affirm
-#   examples: |
-#     - dĩ nhiên
-#     - đồng ý
-#     - chắc chắn
-#     - tôi đồng ý 
-#     - không vấn đề
-
-# - intent: deny
-#   examples: |
-#     - không
-#     - không bao giờ
-#     - Tôi không nghĩ vậy
-#     - không thích điều đó
-#     - không đời nào
-#     - không hẳn
-
-# - intent: mood_great
-#   examples: |
-#     - hoàn hảo
-#     - Tuyệt
-#     - tuyệt vời
-#     - cảm giác như một vị vua
-#     - tuyệt vời
-#     - Tôi đang cảm thấy rất tốt
-#     - Tôi tuyệt vời
-#     - Tôi tuyệt vời
-#     - Tôi sẽ cứu thế giới
-#     - siêu hấp dẫn
-#     - cực kỳ tốt
-#     - quá hoàn hảo
-#     - tốt quá
-#     - rất hoàn hảo
-
-# - intent: mood_unhappy
-#   examples: |
-#     - ngày của tôi thật kinh khủng
-#     - tôi buồn
-#     - tôi cảm thấy không được khỏe lắm
-#     - tôi thất vọng
-#     - siêu buồn
-#     - tôi rất buồn
-#     - buồn
-#     - rất buồn
-#     - không vui
-#     - không tốt
-#     - không tốt lắm
-#     - buồn vô cùng
-#     - buồn quá
-
 - intent: bot_challenge
   examples: |
     - bạn có phải robot không?
@@ -121,7 +71,7 @@ nlu:
     - thông tin về [trường đại học y dược](university)
     - thông tin về [đại học y dược ct](university)
     - thông tin về [y dược ct](university)
-    - tất tần tật về [ctump](university)
+    - tìm hiểu về [ctump](university)
     - tất tần tật về [đại học y](university)
     - tất tần tật về [đại học y dược](university)
     - tất tần tật về [y dược cần thơ](university)
@@ -201,7 +151,7 @@ nlu:
     - các môn của ngành [y khoa](nganh) sẽ học
     - ngành [kỹ thuật hình ảnh y học](nganh) học gì
     - sinh viên [y tế công cộng](nganh) được học gì
-
+    - đào tạo ngành [điều dưỡng]
 
 - intent: ask_dia_diem_cac_khoa
   examples: |
@@ -235,7 +185,7 @@ nlu:
 
 - intent: ask_sdt_cac_khoa
   examples: |
-    - Số điện thoại của khoa [y](sdt_khoa) là gì?
+    - Số liên lạc của khoa [y](sdt_khoa) là gì?
     - Cho tôi xin số điện thoại của khoa [dược](sdt_khoa)
     - Số điện thoại khoa [Y tế công cộng](sdt_khoa) là gì?
     - Khoa [y học dự phòng](sdt_khoa) có số điện thoại không?
@@ -243,11 +193,11 @@ nlu:
     - Tôi cần số điện thoại của khoa [điều dưỡng](sdt_khoa)
     - Số điện thoại khoa [răng hàm mặt](sdt_khoa) là gì?
     - Làm sao để liên hệ qua số điện thoại với khoa [hộ sinh](sdt_khoa)?
-    - Số điện thoại của khoa [y học cổ truyền](sdt_khoa) là gì?
+    - Số liên hệ của khoa [y học cổ truyền](sdt_khoa) là gì?
     - Tôi muốn biết số điện thoại của khoa [kỹ thuật hình ảnh](sdt_khoa)
     - Khoa [Khoa học cơ bản](sdt_khoa) có số điện thoại không?
-    - Số điện thoại của khoa [kỹ thuật hình ảnh y học](sdt_khoa) là gì?
-    
+    - tôi cần gọi đến khoa [kỹ thuật hình ảnh y học](sdt_khoa) là gì?
+
 - intent: ask_dia_diem_cac_phong_ban
   examples: |
     - làm sao đi đến phòng [Công tác sinh viên](location_phong)
@@ -274,6 +224,63 @@ nlu:
     - tọa độ [Bệnh viện](location_phong) đi ra tới đâu
     - muốn tìm phòng [công đoàn](location_phong)
     - giúp tôi tìm phòng [Đoàn thanh niên - Hội sinh viên](location_phong)
+
+
+- intent: ask_email_cac_phong_ban
+  examples: |
+    - làm sao để liên lạc với phòng [Công tác sinh viên](email_phong)
+    - email phòng [ctsv](email_phong) là gì?
+    - phòng [Đào tạo đại học](email_phong) có email là gì vậy?
+    - tôi cần email của phòng [Đào tạo sau đại học](email_phong)
+    - cho tôi biết email phòng [hành chánh tổng hợp](email_phong)
+    - phòng [NCKH-HTQT](email_phong) có email không
+    - email của phòng [nghiên cứu khoa học](email_phong) là gì?
+    - làm sao để gửi email đến phòng [Quản trị thiết bị](email_phong)
+    - phòng [Tài chính kế toán](email_phong) có email không
+    - phòng [Tổ chức cán bộ](email_phong) có địa chỉ email gì 
+    - phòng [Thông tin và Truyền thông](email_phong) có thể liên hệ qua email nào
+    - phòng [Đảm bảo chất lượng](email_phong) dùng email gì
+    - email của phòng [Khảo thí](email_phong) là gì?
+    - phòng [Thanh tra - Pháp chế](email_phong) có email liên hệ không
+    - phòng [Quản lý Dự án xây dựng Trường](email_phong) có email gì
+
+    - Trung tâm [Đào tạo theo nhu cầu xã hội](email_phong) dùng email nào
+    - email của Trung tâm [dịch vụ và hỗ trợ sinh viên](email_phong) là gì
+    - làm sao để gửi email cho [Thư viện](email_phong)
+    - email của [Đơn vị HLKN](email_phong) là gì
+    - email của đơn vị [huấn luyện kĩ năng](email_phong)
+    - làm sao để liên hệ với [Bệnh viện](email_phong) qua email
+    - muốn biết email của phòng [công đoàn](email_phong)
+    - giúp tôi tìm email phòng [Đoàn thanh niên - Hội sinh viên](email_phong)
+
+- intent: ask_sdt_cac_phong_ban
+  examples: |
+    - làm sao để liên lạc với phòng [Công tác sinh viên](sdt_phong)
+    - số điện thoại phòng [ctsv](sdt_phong) là gì?
+    - phòng [Đào tạo đại học](sdt_phong) có số điện thoại là gì vậy?
+    - tôi cần số điện thoại của phòng [Đào tạo sau đại học](sdt_phong)
+    - cho tôi biết số điện thoại phòng [hành chánh tổng hợp](sdt_phong)
+    - phòng [NCKH-HTQT](sdt_phong) có số điện thoại không
+    - số điện thoại của phòng [nghiên cứu khoa học](sdt_phong) là gì?
+    - làm sao để gọi đến phòng [Quản trị thiết bị](sdt_phong)
+    - phòng [Tài chính kế toán](sdt_phong) có số điện thoại không
+    - phòng [Tổ chức cán bộ](sdt_phong) có số điện thoại gì 
+    - phòng [Thông tin và Truyền thông](sdt_phong) có thể liên hệ qua số điện thoại nào
+    - phòng [Đảm bảo chất lượng](sdt_phong) dùng số điện thoại gì
+    - số điện thoại của phòng [Khảo thí](sdt_phong) là gì?
+    - phòng [Thanh tra - Pháp chế](sdt_phong) có số điện thoại liên hệ không
+    - phòng [Quản lý Dự án xây dựng Trường](sdt_phong) có số điện thoại gì
+
+    - Trung tâm [Đào tạo theo nhu cầu xã hội](sdt_phong) dùng số điện thoại nào
+    - số điện thoại của Trung tâm [dịch vụ và hỗ trợ sinh viên](sdt_phong) là gì
+    - làm sao để gọi đến [Thư viện](sdt_phong)
+    - số điện thoại của [Đơn vị HLKN](sdt_phong) là gì
+    - số điện thoại của đơn vị [huấn luyện kĩ năng](sdt_phong)
+    - làm sao để liên hệ với [Bệnh viện](sdt_phong) qua điện thoại
+    - muốn biết số điện thoại của phòng [công đoàn](sdt_phong)
+    - giúp tôi tìm số điện thoại phòng [Đoàn thanh niên - Hội sinh viên](sdt_phong)
+
+
 
 - intent: ask_hoc_phi
   examples: |
@@ -316,27 +323,7 @@ nlu:
     - có thể gửi yêu cầu cho bạn về việc gì?
     - tôi cần một ít sự hỗ trợ, liệu bạn có thể đáp ứng được không
     - nếu tôi cần một ít thông tin hoặc sự hỗ trợ, tôi có thể dựa vào bạn không
-  # - bạn có thể hỗ trợ với những vấn đề nào trong lĩnh vực của bạn
-  # - tôi cần một ít sự chỉ dẫn, bạn có thể giúp tôi không
-  # - nếu tôi có một vài câu hỏi, liệu bạn có thể trả lời chúng không
-  # - tôi muốn biết nếu bạn có thể giúp đỡ với một vấn đề cụ thể hay không
-  # - có phải bạn có thể hỗ trợ với một loạt các vấn đề không
-  # - tôi muốn xác nhận xem bạn có thể đáp ứng được yêu cầu của tôi không
-  # - có gì đặc biệt về khả năng của bạn mà tôi có thể tận dụng không
-  # - tôi cần một chút hướng dẫn, liệu bạn có thể cung cấp được không?
-  # - nếu tôi muốn biết thêm thông tin về một chủ đề cụ thể, tôi có thể tìm kiếm sự giúp đỡ từ bạn được không
-  # - tôi đang gặp khó khăn với một vấn đề, liệu bạn có thể hỗ trợ tôi không
-  # - nếu tôi muốn tìm hiểu thêm về một lĩnh vực cụ thể, bạn có thể cung cấp thông tin cho tôi không
-  # - tôi cần một số gợi ý về việc làm tiếp theo, bạn có thể giúp tôi không
-  # - nếu tôi có một dự án cần hoàn thành, liệu bạn có thể hỗ trợ tôi với nó không
-  # - tôi muốn tìm hiểu cách làm một việc cụ thể, bạn có thể chỉ dẫn cho tôi được không
-  # - nếu tôi cần một ít sự khuyến nghị, liệu bạn có thể đáp ứng được không
-  # - tôi đang tìm kiếm sự giúp đỡ, liệu bạn có thể hỗ trợ tôi với nó không
-  # - nếu tôi muốn biết cách giải quyết một vấn đề, bạn có thể cung cấp hướng dẫn cho tôi không
-  # - tôi muốn nâng cao kiến thức của mình về một chủ đề, bạn có thể giúp tôi không
-  # - nếu tôi cần một chút sự hỗ trợ kỹ thuật, liệu bạn có thể cung cấp được không
-  # - tôi đang cần một số thông tin, liệu bạn có thể cung cấp cho tôi không
-  # - nếu tôi muốn biết cách làm một việc nào đó, bạn có thể hướng dẫn cho tôi không
+ 
 
 
 - intent: ask_thoi_gian_nhap_hoc
@@ -352,6 +339,33 @@ nlu:
     - Khi nào CTUMP tổ chức tuần lễ sinh hoạt công dân đầu khóa?
     - Thời gian cụ thể để tân sinh viên đến nhận lớp tại CTUMP?
 
+
+
+- intent: ask_cap_lai_the_sinh_vien
+  examples: |
+    - tôi bị mất thẻ sinh viên, làm sao để cấp lại?
+    - thủ tục cấp lại thẻ sinh viên như thế nào?
+    - hướng dẫn cấp lại thẻ sinh viên giúp tôi với
+    - tôi muốn làm lại thẻ sinh viên thì phải làm sao?
+    - làm lại thẻ sinh viên cần những gì?
+    - tôi bị mất thẻ sinh viên, xin cấp lại thẻ mới
+    - quy trình cấp lại thẻ sinh viên là gì?
+    - làm cách nào để được cấp lại thẻ sinh viên?
+    - xin cấp lại thẻ sinh viên
+    - làm lại thẻ sinh viên ở đâu?
+    - phí cấp lại thẻ sinh viên là bao nhiêu?
+    - tôi bị mất thẻ sinh viên, cần làm gì để được cấp lại?
+    - tôi cần cấp lại thẻ sinh viên, hướng dẫn giúp tôi
+    - mất thẻ sinh viên, muốn làm lại thì phải làm sao?
+    - thủ tục để cấp lại thẻ sinh viên gồm những gì?
+
+
+
+- intent: sinh_vien_ho_tro_tao_chat_ctump
+  examples: |
+    - biết Phạm Thành Tuấn Lộc ctu không?
+    - sinh viên Ngô Thanh Phương đại học cần thơ
+    - 2 sinh viên hỗ trợ tạo chat bot ctump
 
 # - intent: thank
 #   examples: |

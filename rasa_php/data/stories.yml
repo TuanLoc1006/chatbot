@@ -39,20 +39,49 @@ stories:
   - intent: greet
   - action: utter_greet
 
-- story: hỏi về địa điểm các phòng ở đâu
+- story: hỏi về địa điểm các khoa ở đâu
   steps:
   - intent: ask_dia_diem_cac_khoa
   - action: action_hoi_dia_diem_khoa
+
+
+- story: hỏi về email các khoa 
+  steps:
+  - intent: ask_email_cac_khoa
+  - action: action_hoi_email_khoa
+
+- story: hỏi về số điện thoại các khoa 
+  steps:
+  - intent: ask_sdt_cac_khoa
+  - action: action_hoi_sdt_khoa
 
 - story: hỏi về địa điểm các phòng ở đâu
   steps:
   - intent: ask_dia_diem_cac_phong_ban
   - action: action_hoi_dia_diem_phong
 
+- story: hỏi về email các phòng ban
+  steps:
+  - intent: ask_email_cac_phong_ban
+  - action: action_hoi_email_phong
+
+- story: hỏi về số điện thoại các phòng ban 
+  steps:
+  - intent: ask_sdt_cac_phong_ban
+  - action: action_hoi_sdt_phong
+
+
+- story: hỏi quy trình cấp lại thẻ sinh viên
+  steps:
+  - intent: ask_cap_lai_the_sinh_vien
+  - action: utter_cap_lai_the_sinh_vien
 
 
 
-
+- story: Hỏi sinh viên tạo chat ctump
+  steps:
+  - intent: sinh_vien_ho_tro_tao_chat_ctump
+  - action: utter_sinh_vien_tao_chat_ctump
 # - story: Hỏi các trường đại học khác
 #   steps:
 #   - intent: ask_university

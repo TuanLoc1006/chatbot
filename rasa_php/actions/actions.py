@@ -176,6 +176,75 @@ class actionHoiDiaDiemKhoa(Action):
         return []
     
 
+class actionHoiEmailKhoa(Action):
+    def name(self):
+        return "action_hoi_email_khoa"
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        
+        email_entity = next(tracker.get_latest_entity_values('email_khoa'), None)
+        user_input = tracker.latest_message['text']
+        print("người dùng hỏi email khoa: " + user_input)
+        logging.info("{}{}".format('Call action_email_khoa: ', email_entity))
+        if email_entity: 
+            try:
+                # Khởi tạo đối tượng handledb
+                handledb_instance = handleDB()
+                infor_khoa_phong_ban_db = handledb_instance.get_khoa_phong_ban(email_entity)
+                
+                if infor_khoa_phong_ban_db:
+                    email = infor_khoa_phong_ban_db[0][4]
+                    dispatcher.utter_message(text=f"Email của khoa là: {email}.")
+                else:
+                    dispatcher.utter_message(text=f"Không tìm thấy email cho khoa {email_entity}.")
+            except Exception as e:
+                dispatcher.utter_message(text="Đã xảy ra lỗi khi truy vấn cơ sở dữ liệu email khoa.")
+                logging.error(f"Error querying database khoa: {e}")
+           
+        else:
+            dispatcher.utter_message(text=f"Email khoa không có hoặc không tìm thấy.")
+            # Tạo một đối tượng write_file
+            file_writer = write_file()
+            file_writer.get_ghi_log_file('action_email_khoa: '+user_input)
+        return []
+    
+
+class actionHoiSoDienThoaiKhoa(Action):
+    def name(self):
+        return "action_hoi_sdt_khoa"
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        
+        email_entity = next(tracker.get_latest_entity_values('sdt_khoa'), None)
+        user_input = tracker.latest_message['text']
+        print("người dùng hỏi sdt khoa: " + user_input)
+        logging.info("{}{}".format('Call action_sdt_khoa: ', email_entity))
+        if email_entity: 
+            try:
+                # Khởi tạo đối tượng handledb
+                handledb_instance = handleDB()
+                infor_khoa_phong_ban_db = handledb_instance.get_khoa_phong_ban(email_entity)
+                
+                if infor_khoa_phong_ban_db:
+                    sdt = infor_khoa_phong_ban_db[0][3]
+                    dispatcher.utter_message(text=f"Số điện thoại của khoa là: {sdt}.")
+                else:
+                    dispatcher.utter_message(text=f"Không tìm thấy số điện thoại khoa {email_entity}.")
+            except Exception as e:
+                dispatcher.utter_message(text="Đã xảy ra lỗi khi truy vấn cơ sở dữ liệu sdt khoa.")
+                logging.error(f"Error querying database khoa: {e}")
+           
+        else:
+            dispatcher.utter_message(text=f"Số điện thoại khoa không có hoặc không tìm thấy.")
+            # Tạo một đối tượng write_file
+            file_writer = write_file()
+            file_writer.get_ghi_log_file('action_sdt_khoa: '+user_input)
+        return []
+    
+
+
 
 class ActionHoiDiaDiemPhong(Action):
     def name(self):
@@ -214,6 +283,74 @@ class ActionHoiDiaDiemPhong(Action):
 
 
 
+
+class actionHoiEmailPhong(Action):
+    def name(self):
+        return "action_hoi_email_phong"
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        
+        email_entity = next(tracker.get_latest_entity_values('email_phong'), None)
+        user_input = tracker.latest_message['text']
+        print("người dùng hỏi email phong: " + user_input)
+        logging.info("{}{}".format('Call action_email_phong: ', email_entity))
+        if email_entity: 
+            try:
+                # Khởi tạo đối tượng handledb
+                handledb_instance = handleDB()
+                infor_khoa_phong_ban_db = handledb_instance.get_khoa_phong_ban(email_entity)
+                
+                if infor_khoa_phong_ban_db:
+                    email = infor_khoa_phong_ban_db[0][4]
+                    dispatcher.utter_message(text=f"Email của phòng là: {email}.")
+                else:
+                    dispatcher.utter_message(text=f"Không tìm thấy email cho phòng {email_entity}.")
+            except Exception as e:
+                dispatcher.utter_message(text="Đã xảy ra lỗi khi truy vấn cơ sở dữ liệu email phòng.")
+                logging.error(f"Error querying database phòng: {e}")
+           
+        else:
+            dispatcher.utter_message(text=f"Email phòng không có hoặc không tìm thấy.")
+            # Tạo một đối tượng write_file
+            file_writer = write_file()
+            file_writer.get_ghi_log_file('action_email_phong: '+user_input)
+        return []
+    
+
+class actionHoiSoDienThoaiPhong(Action):
+    def name(self):
+        return "action_hoi_sdt_phong"
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        
+        email_entity = next(tracker.get_latest_entity_values('sdt_phong'), None)
+        user_input = tracker.latest_message['text']
+        print("người dùng hỏi sdt phòng: " + user_input)
+        logging.info("{}{}".format('Call action_sdt_phong: ', email_entity))
+        if email_entity: 
+            try:
+                # Khởi tạo đối tượng handledb
+                handledb_instance = handleDB()
+                infor_khoa_phong_ban_db = handledb_instance.get_khoa_phong_ban(email_entity)
+                
+                if infor_khoa_phong_ban_db:
+                    sdt = infor_khoa_phong_ban_db[0][3]
+                    dispatcher.utter_message(text=f"Số điện thoại của phòng là: {sdt}.")
+                else:
+                    dispatcher.utter_message(text=f"Không tìm thấy số điện thoại phòng {email_entity}.")
+            except Exception as e:
+                dispatcher.utter_message(text="Đã xảy ra lỗi khi truy vấn cơ sở dữ liệu sdt phòng.")
+                logging.error(f"Error querying database phòng: {e}")
+           
+        else:
+            dispatcher.utter_message(text=f"Số điện thoại phòng không có hoặc không tìm thấy.")
+            # Tạo một đối tượng write_file
+            file_writer = write_file()
+            file_writer.get_ghi_log_file('action_sdt_phòng: '+user_input)
+        return []
+    
 
 
 

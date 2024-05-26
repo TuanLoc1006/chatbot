@@ -1,8 +1,3 @@
-y học dự phòng
-Action học phí: vị trí kỹ thuật hình ảnh y học
-Action học phí: đường đi tới khoa điều dưỡng
-Action học phí: đường đi tới khoa y
-Action học phí: phòng đào tạo đai học
-action_dia_diem_phong: đường tới thư viện
-action_dia_diem_phong: dẫn đường tới thư viện
-Action ctdt: xét nghiệm y học
+Action ctdt: đào tạo Điều dưỡng
+action_dia_diem_khoa: Tìm hiểu ctump
+action_email_phong: Email phòng

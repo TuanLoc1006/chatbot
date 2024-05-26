@@ -13,11 +13,11 @@
 </head>
 
 <body>
-
+    
     <div class="container">
         <button id="chat-widget-button" type="button" class="btn btn-primary rounded-circle chat-sign-button position-fixed" style="bottom: 20px; right: 20px;">💬</button>
 
-        <div id="chat-widget" class="card position-fixed shadow d-none" style="bottom: 100px; right:20px ; width: 300px;">
+        <div id="chat-widget" class="card position-fixed shadow d-none " style="bottom: 100px; right:20px ; width: 300px;">
 
             <div class="card-header bg-primary text-white">
                 ChatBot
@@ -27,8 +27,10 @@
             <div id="chat-widget-messages" class="card-body">
                 <!-- chat here -->
             </div>
-            <div class="card-footer">
-                <input type="text" class="form-control" id="chat-widget-input" placeholder="Type your message...">
+            <div class="card-footer" style="display: flex;">
+                <input type="text" class="form-control" id="chat-widget-input" placeholder="Type your message..." style="flex: 1;">
+                <!-- Thêm nút gửi -->
+                <button id="send-message-button" type="button" class="btn btn-primary" style="margin-left: 10px;">Send</button>
             </div>
             <div id="myModal" class="modal">
                 <span class="close" onclick="document.getElementById('myModal').style.display='none'">&times;</span>
@@ -36,6 +38,7 @@
             </div>
         </div>
     </div>
+
 
     <script>
         $(document).ready(function() {
@@ -50,53 +53,62 @@
 
             $("#chat-widget-input").keypress(function(event) {
                 if (event.which === 13) {
-                    let userMessage = $("#chat-widget-input").val();
-                    $("#chat-widget-input").val("");
-
-                    $("#chat-widget-messages").append("<div><strong>Bạn:</strong> " + userMessage + "</div>");
-                    console.log(userMessage);
-                    $.ajax({
-                        type: "POST",
-                        url: "chat_handler.php", // Đường dẫn tới tệp PHP xử lý yêu cầu
-                        contentType: "application/json",
-                        data: JSON.stringify({
-                            message: userMessage
-                        }),
-                        success: function(res) {
-                            console.log(res);
-                            try {
-                                let responses = JSON.parse(res);
-                                responses.forEach(function(response) {
-                                    // Kiểm tra nếu response là một đường dẫn hình ảnh
-                                    if (/\.(png|jpg|jpeg|gif)$/i.test(response)) {
-                                        var img = '<img class="myImg" style="width:100%;max-width:300px" src="' + response + '" alt="Image" />';
-                                        $("#chat-widget-messages").append("<div><strong class='text-danger'>Bot:</strong> " + img + "</div>");
-                                        // click để hiển thị modal hình ảnh
-                                        $("#chat-widget-messages .myImg").last().on("click", function() {
-                                            displayImageModal(this.src);
-                                        });
-                                    }
-                                    // Kiểm tra nếu response có chứa các URL
-                                    else if (containsURL(response)) {
-                                        // Chuyển các URL thành liên kết
-                                        response = response.replace(/\b(http[s]?:\/\/\S+)/gi, "<a href='$1' target='_blank'>$1</a>");
-                                        $("#chat-widget-messages").append("<div><strong>CTUMP:</strong> " + response + "</div>");
-                                    } else {
-                                        $("#chat-widget-messages").append("<div><strong>CTUMP:</strong> " + response + "</div>");
-                                    }
-                                });
-                                scrollChatToBottom(); // Sau khi thêm tin nhắn mới, tự động cuộn xuống dưới cùng
-                            } catch (e) {
-                                console.log("Invalid JSON response from server");
-                            }
-                        },
-                        error: function(error) {
-                            console.log('Error: ', error);
-                        }
-                    });
+                    sendMessage(); // Gửi tin nhắn khi nhấn phím Enter
                 }
-                scrollChatToBottom();
             });
+
+            // Xử lý khi nhấn nút gửi
+            $("#send-message-button").on("click", function() {
+                sendMessage();
+            });
+
+            // Hàm gửi tin nhắn
+            function sendMessage() {
+                let userMessage = $("#chat-widget-input").val();
+                $("#chat-widget-input").val("");
+
+                $("#chat-widget-messages").append("<div style='background-color: #4291e6; padding: 10px; border-radius: 12px; margin-bottom: 10px; color: white;'><strong>Bạn:</strong> " + userMessage + "</div>");
+                console.log(userMessage);
+                $.ajax({
+                    type: "POST",
+                    url: "chat_handler.php", // Đường dẫn tới tệp PHP xử lý yêu cầu
+                    contentType: "application/json",
+                    data: JSON.stringify({
+                        message: userMessage
+                    }),
+                    success: function(res) {
+                        console.log(res);
+                        try {
+                            let responses = JSON.parse(res);
+                            responses.forEach(function(response) {
+                                // Kiểm tra nếu response là một đường dẫn hình ảnh
+                                if (/\.(png|jpg|jpeg|gif)$/i.test(response)) {
+                                    var img = '<img class="myImg" style="width:100%;max-width:300px" src="' + response + '" alt="Image" />';
+                                    $("#chat-widget-messages").append("<div><strong class='text-danger'>Bot:</strong> " + img + "</div>");
+                                    // click để hiển thị modal hình ảnh
+                                    $("#chat-widget-messages .myImg").last().on("click", function() {
+                                        displayImageModal(this.src);
+                                    });
+                                }
+                                // Kiểm tra nếu response có chứa các URL
+                                else if (containsURL(response)) {
+                                    // Chuyển các URL thành liên kết
+                                    response = response.replace(/\b(http[s]?:\/\/\S+)/gi, "<a href='$1' target='_blank'>$1</a>");
+                                    $("#chat-widget-messages").append("<div style='background-color: #ccc; padding: 10px; border-radius: 12px; margin-bottom: 10px; color: black;'><strong>CTUMP:</strong> " + response + "</div>");
+                                } else {
+                                    $("#chat-widget-messages").append("<div style='background-color: #ccc; padding: 10px; border-radius: 12px; margin-bottom: 10px; color: black;'><strong>CTUMP:</strong> " + response + "</div>");
+                                }
+                            });
+                            scrollChatToBottom(); // Sau khi thêm tin nhắn mới, tự động cuộn xuống dưới cùng
+                        } catch (e) {
+                            console.log("Invalid JSON response from server");
+                        }
+                    },
+                    error: function(error) {
+                        console.log('Error: ', error);
+                    }
+                });
+            }
         });
 
         // Hàm kiểm tra xem một chuỗi có chứa URL hay không
