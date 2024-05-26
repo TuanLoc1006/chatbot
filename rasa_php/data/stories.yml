@@ -24,8 +24,6 @@ stories:
   - action: action_hoc_phi
   
 
-
-
 - story: Hỏi các chức năng bot làm được
   steps:
   - intent: ask_chuc_nang
@@ -36,13 +34,20 @@ stories:
   - intent: bot_challenge
   - action: utter_iamabot
 
+- story: Hỏi là đang chat với ai
+  steps:
+  - intent: greet
+  - action: utter_greet
+
 - story: hỏi về địa điểm các phòng ở đâu
   steps:
-    - intent: greet
-    - action: utter_greet
-    - intent: ask_dia_diem_cac_khoa
-    - action: action_hoi_dia_diem
+  - intent: ask_dia_diem_cac_khoa
+  - action: action_hoi_dia_diem_khoa
 
+- story: hỏi về địa điểm các phòng ở đâu
+  steps:
+  - intent: ask_dia_diem_cac_phong_ban
+  - action: action_hoi_dia_diem_phong
 
 
 

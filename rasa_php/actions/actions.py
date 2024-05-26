@@ -23,7 +23,7 @@ get_connect = handledb.get_connect()
 get_nganh = handledb.get_nganh()
 get_hoc_phi = handledb.get_hoc_phi()
 get_CTDT = handledb.get_chuong_trinh_dao_tao()
-
+# get_khoa_phong_ban = handledb.get_khoa_phong_ban()
 
 class ActionThongTinTruong(Action):
     def name(self) -> Text:
@@ -142,28 +142,83 @@ class action_hocphi(Action):
         return []
 
 
-class actionHoiDiaDiem(Action):
+class actionHoiDiaDiemKhoa(Action):
     def name(self):
-        return "action_hoi_dia_diem"
+        return "action_hoi_dia_diem_khoa"
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         
-        diaDiem_entity = next(tracker.get_latest_entity_values('location'), None)
+        diaDiem_entity = next(tracker.get_latest_entity_values('location_khoa'), None)
         user_input = tracker.latest_message['text']
-        print("người dùng hỏi địa điểm: " + user_input)
-        logging.info("{}{}".format('Call action_dia_diem: ', diaDiem_entity))
-        # print(";;;;"+diaDiem_entity)
-        if diaDiem_entity:
-          
-            dispatcher.utter_message(text=f"Địa điểm của khoa {diaDiem_entity} nằm ở khu A, tầng 2.")
+        print("người dùng hỏi địa điểm khoa: " + user_input)
+        logging.info("{}{}".format('Call action_dia_diem_khoa: ', diaDiem_entity))
+        if diaDiem_entity: 
+            try:
+                # Khởi tạo đối tượng handledb
+                handledb_instance = handleDB()
+                infor_khoa_phong_ban_db = handledb_instance.get_khoa_phong_ban(diaDiem_entity)
+                
+                if infor_khoa_phong_ban_db:
+                    dia_chi = infor_khoa_phong_ban_db[0][2]
+                    dispatcher.utter_message(text=f"Địa điểm của khoa {diaDiem_entity} nằm ở {dia_chi}.")
+                else:
+                    dispatcher.utter_message(text=f"Không tìm thấy địa điểm cho khoa {diaDiem_entity}.")
+            except Exception as e:
+                dispatcher.utter_message(text="Đã xảy ra lỗi khi truy vấn cơ sở dữ liệu.")
+                logging.error(f"Error querying database khoa: {e}")
            
         else:
-            dispatcher.utter_message(text=f"Địa điểm {diaDiem_entity} không có hoặc không tìm thấy.")
+            dispatcher.utter_message(text=f"Địa điểm không có hoặc không tìm thấy.")
             # Tạo một đối tượng write_file
             file_writer = write_file()
-            file_writer.get_ghi_log_file('Action học phí: '+user_input)
+            file_writer.get_ghi_log_file('action_dia_diem_khoa: '+user_input)
         return []
+    
+
+
+class ActionHoiDiaDiemPhong(Action):
+    def name(self):
+        return "action_hoi_dia_diem_phong"
+    
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        
+        diaDiem_entity = next(tracker.get_latest_entity_values('location_phong'), None)
+        user_input = tracker.latest_message['text']
+        print("Người dùng hỏi địa điểm phòng: " + user_input)
+        logging.info("{}{}".format('Call action_dia_diem_phong: ', diaDiem_entity))
+        
+        if diaDiem_entity:
+            try:
+                # Khởi tạo đối tượng handledb
+                handledb_instance = handleDB()
+                infor_khoa_phong_ban_db = handledb_instance.get_khoa_phong_ban(diaDiem_entity)
+                
+                if infor_khoa_phong_ban_db:
+                    dia_chi = infor_khoa_phong_ban_db[0][2]
+                    dispatcher.utter_message(text=f"Địa điểm của phòng {diaDiem_entity} nằm ở {dia_chi}.")
+                else:
+                    dispatcher.utter_message(text=f"Không tìm thấy địa điểm cho phòng {diaDiem_entity}.")
+            except Exception as e:
+                dispatcher.utter_message(text="Đã xảy ra lỗi khi truy vấn cơ sở dữ liệu.")
+                logging.error(f"Error querying database phong: {e}")
+        else:
+            dispatcher.utter_message(text="Địa điểm không có hoặc không tìm thấy.")
+            file_writer = write_file()
+            file_writer.get_ghi_log_file('action_dia_diem_phong: ' + user_input)
+        
+        return []
+
+
+
+
+
+
+
+
+    
 
 # class action_chuongtrinhdaotao(Action):
 #     def name(self):
@@ -310,7 +365,7 @@ class ActionChatGPTFallback(Action):
             if 'choices' in response_data and len(response_data['choices']) > 0:
                 chatgpt_reply = response_data['choices'][0]['text'].strip()
             else:
-                chatgpt_reply = "action fallback: Xin lỗi, tôi không thể đưa ra câu trả lời vào lúc này."
+                chatgpt_reply = "action fallback: Xin lỗi tôi chưa hiểu ý bạn, bạn vui lòng mô tả chi tiết hơn được không?"
 
         except Exception as e:
             chatgpt_reply = f"action fallback: Đã xảy ra lỗi: {str(e)}"

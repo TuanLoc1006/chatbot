@@ -205,16 +205,76 @@ nlu:
 
 - intent: ask_dia_diem_cac_khoa
   examples: |
-    - tìm khoa [y](location)
-    - [y học dự phòng] ở đâu?
-    - làm sao đi đến [kỹ thuật xét nghiệm y học](location)
-    - chỉ tôi đến khoa [điều dưỡng](location)
-    - chỉ tôi đường đi tới khoa [răng hàm mặt](location)
-    - đường đi đến khoa [dược](location)
-    - khoa [hộ sinh](location) nằm ở đâu?
-    - tôi muốn tìm khoa [y học cổ truyền](location)
-    - tìm [kỹ thuật hình ảnh](location)
+    - tìm khoa [y](location_khoa)
+    - đường đi đến khoa [dược](location_khoa)
+    - tôi muốn biết khoa [Y tế công cộng](location_khoa) đi hướng nào
+    - khoa [y học dự phòng](location_khoa) ở đâu?
+    - làm sao đi đến [kỹ thuật xét nghiệm y học](location_khoa)
+    - chỉ tôi đến khoa [điều dưỡng](location_khoa)
+    - chỉ tôi đường đi tới khoa [răng hàm mặt](location_khoa)
+    - khoa [hộ sinh](location_khoa) nằm ở đâu?
+    - tôi muốn tìm khoa [y học cổ truyền](location_khoa)
+    - tìm [kỹ thuật hình ảnh](location_khoa)
+    - Khoa [Khoa học cơ bản](location_khoa)
+    - dẫn tao đi qua [kỹ thuật hình ảnh y học](location_khoa)
+
+- intent: ask_email_cac_khoa
+  examples: |
+    - Email của khoa [y](email_khoa) là gì?
+    - Cho tôi xin địa chỉ email của khoa [dược](email_khoa)
+    - Email khoa [Y tế công cộng](email_khoa) là gì?
+    - Khoa [y học dự phòng](email_khoa) có email không?
+    - Email khoa [kỹ thuật xét nghiệm y học](email_khoa) là gì?
+    - Tôi cần email của khoa [điều dưỡng](email_khoa)
+    - Email khoa [răng hàm mặt](email_khoa) là gì?
+    - Làm sao để liên hệ qua email với khoa [hộ sinh](email_khoa)?
+    - Địa chỉ email của khoa [y học cổ truyền](email_khoa) là gì?
+    - Tôi muốn biết email của khoa [kỹ thuật hình ảnh](email_khoa)
+    - Khoa [Khoa học cơ bản](email_khoa) có email không?
+    - Địa chỉ email của khoa [kỹ thuật hình ảnh y học](email_khoa) là gì?
+
+- intent: ask_sdt_cac_khoa
+  examples: |
+    - Số điện thoại của khoa [y](sdt_khoa) là gì?
+    - Cho tôi xin số điện thoại của khoa [dược](sdt_khoa)
+    - Số điện thoại khoa [Y tế công cộng](sdt_khoa) là gì?
+    - Khoa [y học dự phòng](sdt_khoa) có số điện thoại không?
+    - Số điện thoại khoa [kỹ thuật xét nghiệm y học](sdt_khoa) là gì?
+    - Tôi cần số điện thoại của khoa [điều dưỡng](sdt_khoa)
+    - Số điện thoại khoa [răng hàm mặt](sdt_khoa) là gì?
+    - Làm sao để liên hệ qua số điện thoại với khoa [hộ sinh](sdt_khoa)?
+    - Số điện thoại của khoa [y học cổ truyền](sdt_khoa) là gì?
+    - Tôi muốn biết số điện thoại của khoa [kỹ thuật hình ảnh](sdt_khoa)
+    - Khoa [Khoa học cơ bản](sdt_khoa) có số điện thoại không?
+    - Số điện thoại của khoa [kỹ thuật hình ảnh y học](sdt_khoa) là gì?
     
+- intent: ask_dia_diem_cac_phong_ban
+  examples: |
+    - làm sao đi đến phòng [Công tác sinh viên](location_phong)
+    - tìm phòng [ctsv](location_phong)
+    - phòng [Đào tạo đại học](location_phong) ở đâu vậy?
+    - tôi cần đường đi đến phòng [Đào tạo sau đại học](location_phong)
+    - dẫn đường tới phòng [hành chánh tổng hợp](location_phong)
+    - phòng [NCKH-HTQT](location_phong) đi đường nào
+    - vị trí [nghiên cứu khoa học](location_phong)
+    - tọa độ [Quản trị thiết bị](location_phong) ở khoa nào
+    - phòng [Tài chính kế toán](location_phong) ở khu vực nào
+    - phòng [Tổ chức cán bộ](location_phong) ở lầu mấy 
+    - phòng [Thông tin và Truyền thông](location_phong) đi đường nào thế
+    - phòng [Đảm bảo chất lượng](location_phong) ở tòa nhà nào
+    - phòng [Khảo thí](location_phong) ở chổ nào
+    - phòng [Thanh tra - Pháp chế](location_phong)
+    - phòng [Quản lý Dự án xây dựng Trường](location_phong) ở tầng nào
+
+    - Trung tâm [Đào tạo theo nhu cầu xã hội](location_phong) đi đường nào
+    - dẫn đường đến Trung tâm [dịch vụ và hỗ trợ sinh viên](location_phong) 
+    - tìm chổ [Thư viện](location_phong) đi hướng nào
+    - vị trí [Đơn vị HLKN](location_phong) ở chổ nào
+    - tìm đơn vị [huấn luyện kĩ năng](location_phong)
+    - tọa độ [Bệnh viện](location_phong) đi ra tới đâu
+    - muốn tìm phòng [công đoàn](location_phong)
+    - giúp tôi tìm phòng [Đoàn thanh niên - Hội sinh viên](location_phong)
+
 - intent: ask_hoc_phi
   examples: |
     - [học phí](hocphi) bao nhiêu
@@ -277,6 +337,20 @@ nlu:
   # - nếu tôi cần một chút sự hỗ trợ kỹ thuật, liệu bạn có thể cung cấp được không
   # - tôi đang cần một số thông tin, liệu bạn có thể cung cấp cho tôi không
   # - nếu tôi muốn biết cách làm một việc nào đó, bạn có thể hướng dẫn cho tôi không
+
+
+- intent: ask_thoi_gian_nhap_hoc
+  examples: |
+    - Thời gian nhập học tại Đại học Y Dược Cần Thơ là khi nào?
+    - Khi nào thì bắt đầu kỳ nhập học của CTUMP?
+    - tường tổ chức nhập học vào thời điểm nào trong năm?
+    - Lịch nhập học cho tân sinh viên tại Đại học Y Dược Cần Thơ là ngày nào?
+    - Đại học Y Dược Cần Thơ bắt đầu năm học mới vào lúc nào?
+    - Thời gian làm thủ tục nhập học cho sinh viên mới tại CTUMP?
+    - CTUMP có công bố lịch nhập học cho năm học mới chưa?
+    - Kỳ nhập học tại Đại học Y Dược Cần Thơ diễn ra vào tháng mấy?
+    - Khi nào CTUMP tổ chức tuần lễ sinh hoạt công dân đầu khóa?
+    - Thời gian cụ thể để tân sinh viên đến nhận lớp tại CTUMP?
 
 
 # - intent: thank

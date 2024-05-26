@@ -1,10 +1,8 @@
-Action học phí: tôi đi học
-Action học phí: samsung
-Action ctdt: y tế công cong
-Action học phí: khoa duoc
-Action học phí: thong tin truong
-Action học phí: mô tả
-Action học phí: mô tả truowngfw nayf
-Action học phí: điện thoại bị hư sửa sao
-Action học phí: mua táo
-Action học phí: mua dùm bánh mì
+y học dự phòng
+Action học phí: vị trí kỹ thuật hình ảnh y học
+Action học phí: đường đi tới khoa điều dưỡng
+Action học phí: đường đi tới khoa y
+Action học phí: phòng đào tạo đai học
+action_dia_diem_phong: đường tới thư viện
+action_dia_diem_phong: dẫn đường tới thư viện
+Action ctdt: xét nghiệm y học

@@ -1,0 +1,52 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-hocphi",
+      "2": "I-hocphi",
+      "3": "L-hocphi",
+      "4": "U-hocphi",
+      "5": "B-location_khoa",
+      "6": "I-location_khoa",
+      "7": "L-location_khoa",
+      "8": "U-location_khoa",
+      "9": "B-location_phong",
+      "10": "I-location_phong",
+      "11": "L-location_phong",
+      "12": "U-location_phong",
+      "13": "B-nganh",
+      "14": "I-nganh",
+      "15": "L-nganh",
+      "16": "U-nganh",
+      "17": "B-university",
+      "18": "I-university",
+      "19": "L-university",
+      "20": "U-university",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-hocphi": 1,
+      "I-hocphi": 2,
+      "L-hocphi": 3,
+      "U-hocphi": 4,
+      "B-location_khoa": 5,
+      "I-location_khoa": 6,
+      "L-location_khoa": 7,
+      "U-location_khoa": 8,
+      "B-location_phong": 9,
+      "I-location_phong": 10,
+      "L-location_phong": 11,
+      "U-location_phong": 12,
+      "B-nganh": 13,
+      "I-nganh": 14,
+      "L-nganh": 15,
+      "U-nganh": 16,
+      "B-university": 17,
+      "I-university": 18,
+      "L-university": 19,
+      "U-university": 20,
+      "O": 0
+    },
+    "num_tags": 21
+  }
+]

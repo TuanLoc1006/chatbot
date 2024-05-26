@@ -6,7 +6,8 @@ actions:
   - action_thong_tin_nganh
   - action_chuong_trinh_dao_tao
   - action_hoc_phi
-  - action_hoi_dia_diem
+  - action_hoi_dia_diem_khoa
+  - action_hoi_dia_diem_phong
   # - validate_simple_form
   # - action_say_data
   # - action_greet_user
@@ -28,27 +29,34 @@ intents:
   - ask_hoc_phi
   - ask_chuc_nang
   - ask_dia_diem_cac_khoa
+  - ask_dia_diem_cac_phong_ban
+  - ask_thoi_gian_nhap_hoc
 
 entities:
   - hocphi
   - nganh
   - university
-  - location
+
+  - location_khoa
+  - email_khoa
+  - sdt_khoa
+  
+  - location_phong
   # - email
   # - number
 
 
-slots:
-  location:
-    type: text
-    mappings:
-      - type: from_entity
-        entity: location
+# slots:
+#   location:
+#     type: text
+#     mappings:
+#       - type: from_entity
+#         entity: location
 
-forms:
-  location_form:
-    required_slots:
-      - location
+# forms:
+#   location_form:
+#     required_slots:
+#       - location
 # slots:
 #   email:
 #       type: text

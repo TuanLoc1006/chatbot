@@ -44,6 +44,16 @@ def getChuongTrinhDaoTao():
     result = cursor.fetchall()
     return result
 
+
+def getThongTinKhoaPhongBan(entity):
+    db_connection = handleDB().get_connect()
+    cursor = db_connection.cursor()
+    query = "SELECT `ma_khoa_phong_ban`, `ten_khoa_phong_ban`, `dia_chi_khoa_phong_ban`, `dien_thoai_khoa_phong_ban`, `email_khoa_phong_ban`, `fax` FROM `khoa_phong_ban` WHERE `ten_khoa_phong_ban` LIKE %s"
+    cursor.execute(query, ('%' + entity + '%',))
+    result = cursor.fetchall()
+    return result
+
+
 class handleDB:
     def __init__(self):
         pass
@@ -55,4 +65,6 @@ class handleDB:
         return getHocPhi()
     def get_chuong_trinh_dao_tao(self):
         return getChuongTrinhDaoTao()
+    def get_khoa_phong_ban(self,entity):
+        return getThongTinKhoaPhongBan(entity)
     

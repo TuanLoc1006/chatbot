@@ -12,8 +12,9 @@ chuong trinh dao tao
 hoc phi
 >>>>>>> 3a47bde590ce08fad31795f4de9576bab475a540
 
+các phòng , khoa ctump
+http://www.ctump.edu.vn/Default.aspx?tabid=2036
 
-phòng đao tao o dau
 hoc y mat bao nhieu nam
 khi nao nhap hoc
 co ktx khong
