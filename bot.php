@@ -17,10 +17,10 @@
     <div class="container">
         <button id="chat-widget-button" type="button" class="btn btn-primary rounded-circle chat-sign-button position-fixed" style="bottom: 20px; right: 20px;">💬</button>
 
-        <div id="chat-widget" class="card position-fixed shadow d-none " style="bottom: 100px; right:20px ; width: 300px;">
+        <div id="chat-widget" class="card position-fixed shadow d-none " style="bottom: 100px; right:20px ; width: 320px;">
 
             <div class="card-header bg-primary text-white">
-                ChatBot
+                CTUMP 
                 <button id="chat-widget-close-button" type="button" class=" btn btn-light">X</button>
             </div>
 

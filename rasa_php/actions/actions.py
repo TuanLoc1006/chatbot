@@ -326,6 +326,8 @@ class actionHoiSoDienThoaiPhong(Action):
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         
         email_entity = next(tracker.get_latest_entity_values('sdt_phong'), None)
+        
+        
         user_input = tracker.latest_message['text']
         print("người dùng hỏi sdt phòng: " + user_input)
         logging.info("{}{}".format('Call action_sdt_phong: ', email_entity))
@@ -354,58 +356,44 @@ class actionHoiSoDienThoaiPhong(Action):
 
 
 
+class ActionChatGPTFallback(Action):
+    def name(self) -> str:
+        return "action_chatgpt_fallback"
 
-    
-
-# class action_chuongtrinhdaotao(Action):
-#     def name(self):
-#         return "action_chuong_trinh_dao_tao"
-#     def run(self, dispatcher: CollectingDispatcher,
-#             tracker: Tracker,
-#             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-#         user_input = tracker.latest_message['text']
-#         print("action hỏi ctdt: "+user_input) 
-#         nganh_entity = next(tracker.get_latest_entity_values('nganh'), None)
-#         if nganh_entity:
-#             CTDT = get_CTDT
-#             print(CTDT)
-#             for item in CTDT:
-#                 if item[0].lower() == nganh_entity.lower():
-#                     dispatcher.utter_message(text=f"Tham khảo chương trình đào tạo ngành {item[0]} tại: {item[1]}")
-#         else : dispatcher.utter_message(text=f"Bạn cần biết chương trình đào tạo của ngành nào?")
-#         return []
-
-
-
-
-# class action_khong_the_tra_loi(Action):
-#     def name(self):
-#         return "action_khong_biet"
-
-#     def run(self, dispatcher: CollectingDispatcher,
-#             tracker: Tracker,
-#             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-#         university_entity = next(tracker.get_latest_entity_values('university'), None)
-#         user_input = tracker.latest_message['text']
-#         print("action khong biet: " + user_input)
-#         if university_entity:
-#             university_entity = university_entity.lower()
-#             predefined_universities = [
-#                 'ctump', 
-#                 'y dược cần thơ', 
-#                 'đại học y dược cần thơ', 
-#                 'trường y dược cần thơ', 
-#                 'trường này'
-#             ]
-            
-#             if any(uni in university_entity for uni in predefined_universities):
-#                 dispatcher.utter_message(text="Bạn cần biết thông tin gì?")
-#             else:
-#                 dispatcher.utter_message(text="action khong biet: Rất tiếc tôi không có thông tin về trường bạn yêu cầu")
-#         else:
-#             dispatcher.utter_message(text="Rất tiếc tôi không có thông tin về trường bạn yêu cầu.")
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         
-#         return []
+        user_message = tracker.latest_message.get('text')
+        print("user_ask: "+user_message)
+        # logging.info("{}{}".format('Call action_fall_back: ', user_message))
+        try:
+            response = requests.post(
+                'https://api.openai.com/v1/engines/davinci-codex/completions',
+                headers={
+                    'Authorization': f'Bearer YOUR_OPENAI_API_KEY',
+                    'Content-Type': 'application/json'
+                },
+                json={
+                    'prompt': user_message,
+                    'max_tokens': 150
+                }
+            )
+            
+            response_data = response.json()
+
+            if 'choices' in response_data and len(response_data['choices']) > 0:
+                chatgpt_reply = response_data['choices'][0]['text'].strip()
+            else:
+                chatgpt_reply = "action fallback: Xin lỗi tôi chưa hiểu ý bạn, bạn vui lòng mô tả chi tiết hơn được không?"
+
+        except Exception as e:
+            chatgpt_reply = f"action fallback: Đã xảy ra lỗi: {str(e)}"
+        
+        dispatcher.utter_message(text=chatgpt_reply)
+        
+        # Ngăn vòng lặp bằng cách hoàn nguyên trạng thái người dùng
+        return [UserUtteranceReverted()]
 
     
 # class acction_tuyen_sinh(Action):
@@ -426,7 +414,7 @@ class actionHoiSoDienThoaiPhong(Action):
 #     def run(self, dispatcher: CollectingDispatcher,
 #             tracker: Tracker,
 #             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-#         email = tracker.get_slot("email")
+#         email = tracker.("email")
 #         phone = tracker.get_slot("phone")
 #         logging.info("{}{}".format('Call action_say_data: '))
 
@@ -472,42 +460,3 @@ class actionHoiSoDienThoaiPhong(Action):
 #             dispatcher.utter_message(text="Email không hợp lệ!")
 #             return {"email": None}
 
-
-class ActionChatGPTFallback(Action):
-    def name(self) -> str:
-        return "action_chatgpt_fallback"
-
-    def run(self, dispatcher: CollectingDispatcher,
-            tracker: Tracker,
-            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        
-        user_message = tracker.latest_message.get('text')
-        print("user_ask: "+user_message)
-        # logging.info("{}{}".format('Call action_fall_back: ', user_message))
-        try:
-            response = requests.post(
-                'https://api.openai.com/v1/engines/davinci-codex/completions',
-                headers={
-                    'Authorization': f'Bearer YOUR_OPENAI_API_KEY',
-                    'Content-Type': 'application/json'
-                },
-                json={
-                    'prompt': user_message,
-                    'max_tokens': 150
-                }
-            )
-            
-            response_data = response.json()
-
-            if 'choices' in response_data and len(response_data['choices']) > 0:
-                chatgpt_reply = response_data['choices'][0]['text'].strip()
-            else:
-                chatgpt_reply = "action fallback: Xin lỗi tôi chưa hiểu ý bạn, bạn vui lòng mô tả chi tiết hơn được không?"
-
-        except Exception as e:
-            chatgpt_reply = f"action fallback: Đã xảy ra lỗi: {str(e)}"
-        
-        dispatcher.utter_message(text=chatgpt_reply)
-        
-        # Ngăn vòng lặp bằng cách hoàn nguyên trạng thái người dùng
-        return [UserUtteranceReverted()]

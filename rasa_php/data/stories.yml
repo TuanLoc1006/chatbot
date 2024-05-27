@@ -77,11 +77,16 @@ stories:
   - action: utter_cap_lai_the_sinh_vien
 
 
-
-- story: Hỏi sinh viên tạo chat ctump
+- story: Hỏi các ngành đào tạo sau đại học
   steps:
-  - intent: sinh_vien_ho_tro_tao_chat_ctump
-  - action: utter_sinh_vien_tao_chat_ctump
+  - intent: ask_nganh_dao_tao_sau_dai_hoc
+  - action: utter_dao_tao_sau_dai_hoc
+
+- story: Hỏi sinh quy trình tuyển sinh 
+  steps:
+  - intent: ask_quy_trinh_tuyen_sinh
+  - action: utter_quy_trinh_tuyen_sinh_dai_hoc
+
 # - story: Hỏi các trường đại học khác
 #   steps:
 #   - intent: ask_university

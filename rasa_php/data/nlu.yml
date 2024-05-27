@@ -215,7 +215,6 @@ nlu:
     - phòng [Khảo thí](location_phong) ở chổ nào
     - phòng [Thanh tra - Pháp chế](location_phong)
     - phòng [Quản lý Dự án xây dựng Trường](location_phong) ở tầng nào
-
     - Trung tâm [Đào tạo theo nhu cầu xã hội](location_phong) đi đường nào
     - dẫn đường đến Trung tâm [dịch vụ và hỗ trợ sinh viên](location_phong) 
     - tìm chổ [Thư viện](location_phong) đi hướng nào
@@ -223,12 +222,14 @@ nlu:
     - tìm đơn vị [huấn luyện kĩ năng](location_phong)
     - tọa độ [Bệnh viện](location_phong) đi ra tới đâu
     - muốn tìm phòng [công đoàn](location_phong)
-    - giúp tôi tìm phòng [Đoàn thanh niên - Hội sinh viên](location_phong)
+    - giúp tôi tìm phòng [Đoàn thanh niên Hội sinh viên](location_phong)
+    - tôi cần biết phòng [Phòng Tài chính kế toán](location_phong) ở đâu
+
 
 
 - intent: ask_email_cac_phong_ban
   examples: |
-    - làm sao để liên lạc với phòng [Công tác sinh viên](email_phong)
+    - liên lạc với phòng [Công tác sinh viên](email_phong) bằng cách nào
     - email phòng [ctsv](email_phong) là gì?
     - phòng [Đào tạo đại học](email_phong) có email là gì vậy?
     - tôi cần email của phòng [Đào tạo sau đại học](email_phong)
@@ -243,7 +244,6 @@ nlu:
     - email của phòng [Khảo thí](email_phong) là gì?
     - phòng [Thanh tra - Pháp chế](email_phong) có email liên hệ không
     - phòng [Quản lý Dự án xây dựng Trường](email_phong) có email gì
-
     - Trung tâm [Đào tạo theo nhu cầu xã hội](email_phong) dùng email nào
     - email của Trung tâm [dịch vụ và hỗ trợ sinh viên](email_phong) là gì
     - làm sao để gửi email cho [Thư viện](email_phong)
@@ -252,7 +252,8 @@ nlu:
     - làm sao để liên hệ với [Bệnh viện](email_phong) qua email
     - muốn biết email của phòng [công đoàn](email_phong)
     - giúp tôi tìm email phòng [Đoàn thanh niên - Hội sinh viên](email_phong)
-
+    - tôi cần biết email [Phòng Tài chính kế toán](email_phong) là gì
+    
 - intent: ask_sdt_cac_phong_ban
   examples: |
     - làm sao để liên lạc với phòng [Công tác sinh viên](sdt_phong)
@@ -270,7 +271,6 @@ nlu:
     - số điện thoại của phòng [Khảo thí](sdt_phong) là gì?
     - phòng [Thanh tra - Pháp chế](sdt_phong) có số điện thoại liên hệ không
     - phòng [Quản lý Dự án xây dựng Trường](sdt_phong) có số điện thoại gì
-
     - Trung tâm [Đào tạo theo nhu cầu xã hội](sdt_phong) dùng số điện thoại nào
     - số điện thoại của Trung tâm [dịch vụ và hỗ trợ sinh viên](sdt_phong) là gì
     - làm sao để gọi đến [Thư viện](sdt_phong)
@@ -279,8 +279,7 @@ nlu:
     - làm sao để liên hệ với [Bệnh viện](sdt_phong) qua điện thoại
     - muốn biết số điện thoại của phòng [công đoàn](sdt_phong)
     - giúp tôi tìm số điện thoại phòng [Đoàn thanh niên - Hội sinh viên](sdt_phong)
-
-
+    - tôi cần số điện thoại [Phòng Tài chính kế toán](sdt_phong)
 
 - intent: ask_hoc_phi
   examples: |
@@ -326,21 +325,6 @@ nlu:
  
 
 
-- intent: ask_thoi_gian_nhap_hoc
-  examples: |
-    - Thời gian nhập học tại Đại học Y Dược Cần Thơ là khi nào?
-    - Khi nào thì bắt đầu kỳ nhập học của CTUMP?
-    - tường tổ chức nhập học vào thời điểm nào trong năm?
-    - Lịch nhập học cho tân sinh viên tại Đại học Y Dược Cần Thơ là ngày nào?
-    - Đại học Y Dược Cần Thơ bắt đầu năm học mới vào lúc nào?
-    - Thời gian làm thủ tục nhập học cho sinh viên mới tại CTUMP?
-    - CTUMP có công bố lịch nhập học cho năm học mới chưa?
-    - Kỳ nhập học tại Đại học Y Dược Cần Thơ diễn ra vào tháng mấy?
-    - Khi nào CTUMP tổ chức tuần lễ sinh hoạt công dân đầu khóa?
-    - Thời gian cụ thể để tân sinh viên đến nhận lớp tại CTUMP?
-
-
-
 - intent: ask_cap_lai_the_sinh_vien
   examples: |
     - tôi bị mất thẻ sinh viên, làm sao để cấp lại?
@@ -359,13 +343,63 @@ nlu:
     - mất thẻ sinh viên, muốn làm lại thì phải làm sao?
     - thủ tục để cấp lại thẻ sinh viên gồm những gì?
 
-
-
-- intent: sinh_vien_ho_tro_tao_chat_ctump
+- intent: ask_nganh_dao_tao_sau_dai_hoc
   examples: |
-    - biết Phạm Thành Tuấn Lộc ctu không?
-    - sinh viên Ngô Thanh Phương đại học cần thơ
-    - 2 sinh viên hỗ trợ tạo chat bot ctump
+    - Trường có bao nhiêu mã ngành đào tạo [sau đại học](dao_tao_sau_dai_hoc)?
+    - Có bao nhiêu mã ngành đào tạo [sau đại học](dao_tao_sau_dai_hoc) tại trường?
+    - Trường đào tạo bao nhiêu mã ngành [sau đại học](dao_tao_sau_dai_hoc)?
+    - Tổng cộng có bao nhiêu mã ngành [sau đại học](dao_tao_sau_dai_hoc) ở trường?
+    - Trường cung cấp bao nhiêu mã ngành đào tạo [sau đại học](dao_tao_sau_dai_hoc)?
+    - Trường có những mã ngành [sau đại học](dao_tao_sau_dai_hoc) nào?
+    - Số lượng mã ngành đào tạo [sau đại học](dao_tao_sau_dai_hoc) của trường là bao nhiêu?
+    - Trường có bao nhiêu mã ngành ở bậc [sau đại học](dao_tao_sau_dai_hoc)?
+    - Trường đào tạo [sau đại học](dao_tao_sau_dai_hoc) có bao nhiêu mã ngành?
+    - Trường có bao nhiêu chương trình đào tạo [sau đại học](dao_tao_sau_dai_hoc)?
+
+- intent: ask_quy_trinh_tuyen_sinh
+  examples: |
+    - Hình thức tuyển sinh bao gồm những hình thức nào?
+    - Có những hình thức tuyển sinh nào?
+    - Trường có những hình thức tuyển sinh nào?
+    - Những hình thức tuyển sinh của trường là gì?
+    - Trường tổ chức tuyển sinh theo những hình thức nào?
+    - Các hình thức tuyển sinh hiện có là gì?
+    - Hình thức tuyển sinh của trường gồm những gì?
+    - Các cách thức tuyển sinh hiện nay là gì?
+    - Trường có bao nhiêu hình thức tuyển sinh?
+    - Hình thức tuyển sinh là gì?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# - intent: ask_thoi_gian_nhap_hoc
+#   examples: |
+#     - Thời gian nhập học tại Đại học Y Dược Cần Thơ là khi nào?
+#     - Khi nào thì bắt đầu kỳ nhập học của CTUMP?
+#     - tường tổ chức nhập học vào thời điểm nào trong năm?
+#     - Lịch nhập học cho tân sinh viên tại Đại học Y Dược Cần Thơ là ngày nào?
+#     - Đại học Y Dược Cần Thơ bắt đầu năm học mới vào lúc nào?
+#     - Thời gian làm thủ tục nhập học cho sinh viên mới tại CTUMP?
+#     - CTUMP có công bố lịch nhập học cho năm học mới chưa?
+#     - Kỳ nhập học tại Đại học Y Dược Cần Thơ diễn ra vào tháng mấy?
+#     - Khi nào CTUMP tổ chức tuần lễ sinh hoạt công dân đầu khóa?
+#     - Thời gian cụ thể để tân sinh viên đến nhận lớp tại CTUMP?
+
+
+
+
 
 # - intent: thank
 #   examples: |
