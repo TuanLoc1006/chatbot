@@ -109,49 +109,50 @@ nlu:
   examples: |
     - Trường có các ngành nào?
     - Trường có mấy ngành?
-    - Số ngành trường có?
     - Số ngành trường đào tạo?
     - Trường có bao nhiêu ngành?
     - Trường Đại học Y Dược Cần Thơ có bao nhiêu ngành?
     - Trường đại học này đào tạo các ngành nào?
-    - Trường này có mấy ngành?
-    - Trường này có ngành nào?
     - Trường đào tạo các ngành nào?
     - Các ngành có trong chương trình đào tạo?
     - Trường đào tạo bao nhiêu ngành?
     - CTUMP có mấy ngành?
     - CTUMP đào tạo mấy ngành?
-    - Liệt kê các ngành.
-    - Liệt kê các ngành trường đào tạo.
     - Liệt kê một số ngành học.
     - Cho tôi biết trường có bao nhiêu ngành.
     - Liệt kê cho tôi các ngành học
     - Trường Đại học Y Dược Cần Thơ có những ngành gì?
-    - Các ngành được đào tạo tại Đại học Y Dược Cần Thơ
     - Đại học Y Dược Cần Thơ có những ngành đào tạo nào?
     - Cho tôi biết các ngành học ở trường Đại học Y Dược Cần Thơ
-    - Trường này có đào tạo những ngành nào?
     - Các ngành hiện có tại Đại học Y Dược Cần Thơ
-    - Những ngành nào đang được đào tạo tại Đại học Y Dược Cần Thơ?
     - Đại học Y Dược Cần Thơ đào tạo bao nhiêu ngành học?
-    - Các ngành hiện có trong chương trình đào tạo của Đại học Y Dược Cần Thơ
     - Liệt kê các ngành hiện có tại Đại học Y Dược Cần Thơ
 
 
 - intent: ask_chuong_trinh_dao_tao
   examples:  |
     - chương trình đào tạo ngành [y khoa](nganh)
-    - chương trình học của ngành [răng hàm mặt](nganh)
-    - ngành [dược](nganh) được học gì
-    - [y học cổ truyền](nganh) được học những gì
-    - [y học dự phòng](nganh) sẽ học gì
-    - sinh viên sẽ được học gì khi học ngành [điều dưỡng](nganh)
-    - sinh viên được đào tạo về gì khi học [kỹ thuật xét nghiệm y học](nganh)
-    - học [hộ sinh](nganh) được học gì 
     - các môn của ngành [y khoa](nganh) sẽ học
+    - [y khoa](nganh)
+    - y [học cổ truyền](nganh) được học những gì
+    - y [tế công cộng](nganh) được học gì
+    - thông tin ngành y [học dự phòng](nganh) 
+    - y [học dự phòng](nganh) 
+    - đào tạo ngành [hộ sinh](nganh) được học gì 
+    - [hộ sinh](nganh) 
+    - chương trình học của ngành [răng hàm mặt](nganh)
+    - [răng hàm mặt](nganh)
+    - ngành [dược](nganh) được học gì
+    - [dược](nganh) 
+    - sinh viên sẽ được học gì khi học ngành [điều dưỡng](nganh)
+    - [điều dưỡng](nganh)
+    - đào tạo ngành [kỹ thuật xét nghiệm y học](nganh)
+    - [kỹ thuật xét nghiệm y học](nganh)
+    - ngành [hộ sinh](nganh) học gì?
+    - [hộ sinh](nganh)
     - ngành [kỹ thuật hình ảnh y học](nganh) học gì
-    - sinh viên [y tế công cộng](nganh) được học gì
-    - đào tạo ngành [điều dưỡng]
+    - [kỹ thuật hình ảnh y học](nganh) 
+  
 
 - intent: ask_dia_diem_cac_khoa
   examples: |

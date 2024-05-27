@@ -13,15 +13,14 @@
 </head>
 
 <body>
-    
+
     <div class="container">
         <button id="chat-widget-button" type="button" class="btn btn-primary rounded-circle chat-sign-button position-fixed" style="bottom: 20px; right: 20px;">💬</button>
 
-        <div id="chat-widget" class="card position-fixed shadow d-none " style="bottom: 100px; right:20px ; width: 320px;">
-
+        <div id="chat-widget" class="card position-fixed shadow d-none " style="bottom: 100px; right:20px ; width: 320px;height: 500px;">
             <div class="card-header bg-primary text-white">
-                CTUMP 
-                <button id="chat-widget-close-button" type="button" class=" btn btn-light">X</button>
+                <h6 id="title-chatbot">CTUMP</h6>
+                <button id="chat-widget-close-button" type="button" class="btn btn-light">X</button>
             </div>
 
             <div id="chat-widget-messages" class="card-body">
@@ -39,11 +38,17 @@
         </div>
     </div>
 
-
     <script>
         $(document).ready(function() {
+            let welcomeMessageShown = false; // Biến để kiểm tra xem tin nhắn chào mừng đã được hiển thị chưa
+
             $("#chat-widget-button").on("click", function() {
                 $("#chat-widget").toggleClass("d-none");
+                if (!welcomeMessageShown) { // Kiểm tra nếu tin nhắn chào mừng chưa được hiển thị
+                    $("#chat-widget-messages").append("<div style='background-color: #ccc; padding: 10px; border-radius: 12px; margin-bottom: 10px; color: black;'><strong>CTUMP:</strong> Xin chào, tôi có thể giúp bạn tìm kiếm thông tin về: - Các ngành đào tạo, thông tin các khoa, phòng ban, thẻ sinh viên,</div>");
+                    welcomeMessageShown = true; // Đánh dấu là đã hiển thị tin nhắn chào mừng
+                    scrollChatToBottom(); // Sau khi thêm tin nhắn mới, tự động cuộn xuống dưới cùng
+                }
                 scrollChatToBottom(); // Khi mở chat widget, tự động cuộn xuống dưới cùng
             });
 
@@ -128,6 +133,7 @@
             chatMessages.scrollTop = chatMessages.scrollHeight;
         }
     </script>
+
 
 </body>
 

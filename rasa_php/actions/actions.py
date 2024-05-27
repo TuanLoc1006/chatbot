@@ -22,7 +22,7 @@ handledb = handleDB()
 get_connect = handledb.get_connect()
 get_nganh = handledb.get_nganh()
 get_hoc_phi = handledb.get_hoc_phi()
-get_CTDT = handledb.get_chuong_trinh_dao_tao()
+# get_CTDT = handledb.get_chuong_trinh_dao_tao()
 # get_khoa_phong_ban = handledb.get_khoa_phong_ban()
 
 class ActionThongTinTruong(Action):
@@ -90,7 +90,6 @@ class action_nganh(Action):
                 dispatcher.utter_message(text="- " + item[0].capitalize())            
             return []
 
-
 class ActionChuongTrinhDaoTao(Action):
     def name(self):
         return "action_chuong_trinh_dao_tao"
@@ -100,22 +99,33 @@ class ActionChuongTrinhDaoTao(Action):
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         
         user_input = tracker.latest_message['text']
-        print(f"người dùng hỏi ctdt: {user_input}") 
+        logging.info(f"Người dùng hỏi ctdt: {user_input}") 
         
         nganh_entity = next(tracker.get_latest_entity_values('nganh'), None)
-        logging.info("{}{}".format('Call action_ctdt: ', nganh_entity))
+        logging.info(f"Call action_ctdt: {nganh_entity}")
+        
         if nganh_entity:
-            CTDT = get_CTDT
-            for item in CTDT:
-                if item[0].lower() == nganh_entity.lower():
-                    dispatcher.utter_message(text=f"Tham khảo chương trình đào tạo ngành {item[0]} tại: {item[1]}")
-                    break
-            else:
-                dispatcher.utter_message(text=f"Không tìm thấy chương trình đào tạo cho ngành {nganh_entity}.")
-                file_writer = write_file()
-                file_writer.get_ghi_log_file('Action ctdt: '+user_input)
+            try:
+                # Khởi tạo đối tượng handledb
+                handledb_instance = handleDB()
+                ctdt_cua_nganh = handledb_instance.get_chuong_trinh_dao_tao(nganh_entity)
+                
+                if ctdt_cua_nganh:
+                    ctdt = ctdt_cua_nganh[0][1]
+                    dispatcher.utter_message(text=f"Tham khảo chương trình đào tạo ngành {nganh_entity} tại {ctdt}")
+                else:
+                    dispatcher.utter_message(text=f"Không tìm thấy chương trình đào tạo ngành {nganh_entity}.")
+            except Exception as e:
+                dispatcher.utter_message(text="Đã xảy ra lỗi khi truy vấn cơ sở dữ liệu ctdt")
+                logging.error(f"Error querying database ctdt: {e}")
         else:
-            dispatcher.utter_message(text="Bạn cần biết chương trình đào tạo của ngành nào?")
+            dispatcher.utter_message(text="Không tìm thấy chương trình đào tạo cho ngành được yêu cầu.")
+            # Tạo một đối tượng write_file và ghi log nếu không tìm thấy entity
+            try:
+                file_writer = write_file()
+                file_writer.get_ghi_log_file(f'Action ctdt: {user_input}')
+            except Exception as e:
+                logging.error(f"Error writing log file: {e}")
         
         return []
     
