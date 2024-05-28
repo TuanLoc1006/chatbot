@@ -45,7 +45,7 @@
             $("#chat-widget-button").on("click", function() {
                 $("#chat-widget").toggleClass("d-none");
                 if (!welcomeMessageShown) { // Kiểm tra nếu tin nhắn chào mừng chưa được hiển thị
-                    $("#chat-widget-messages").append("<div style='background-color: #ccc; padding: 10px; border-radius: 12px; margin-bottom: 10px; color: black;'><strong>CTUMP:</strong> Xin chào, tôi có thể giúp bạn tìm kiếm thông tin về: - Các ngành đào tạo, thông tin các khoa, phòng ban, thẻ sinh viên,</div>");
+                    $("#chat-widget-messages").append("<div style='background-color: #ccc; padding: 10px; border-radius: 12px; margin-bottom: 10px; color: black;'><strong>CTUMP:</strong> Xin chào, tôi có thể giúp bạn tìm kiếm thông tin về: - Các ngành đào tạo, thông tin các khoa, phòng ban, thẻ sinh viên,...</div>");
                     welcomeMessageShown = true; // Đánh dấu là đã hiển thị tin nhắn chào mừng
                     scrollChatToBottom(); // Sau khi thêm tin nhắn mới, tự động cuộn xuống dưới cùng
                 }
