@@ -1,11 +1,8 @@
 const express = require('express');
-
 const {Server} = require('socket.io');
-const { join }= require('node:path');
+// const { join }= require('node:path');
 const { createServer } = require('node:http');
 const mongoose = require('mongoose');
-const session = require('express-session');
-const timeStamp = require('node:console');
 
 const app = express();
 const server = createServer(app)
@@ -18,29 +15,44 @@ app.use(express.static(__dirname));
 const Message = require('./model/message');
 const User = require('./model/user')
 
-function generateRandomString(length) {
-    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-';
-    let result = '';
-    const charactersLength = characters.length;
-    for (let i = 0; i < length; i++) {
-        result += characters.charAt(Math.floor(Math.random() * charactersLength));
+// const connectDB = async () => {
+//     try {
+//         await mongoose.connect('mongodb://localhost:27017/chat');
+//         console.log('Kết nối MongoDB thành công');
+//     } catch (err) {
+//         console.error('Lỗi khi kết nối cơ sở dữ liệu:', err);
+//     }
+// };
+// connectDB();
+
+const connectDB = async () => {
+    try {
+        await mongoose.connect('mongodb://127.0.0.1:27017/chat');
+        console.log('Kết nối MongoDB thành công');
+    } catch (err) {
+        console.error('Lỗi khi kết nối cơ sở dữ liệu:', err);
     }
-    return result;
-}
+};
+connectDB();
+// function generateRandomString(length) {
+//     const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+//     let result = '';
+//     const charactersLength = characters.length;
+//     for (let i = 0; i < length; i++) {
+//         result += characters.charAt(Math.floor(Math.random() * charactersLength));
+//     }
+//     return result;
+// }
 // const adminID = generateRandomString(100);
 
-
-mongoose.connect('mongodb://localhost:27017/chat')
-    .then(() => console.log('Kết nối csdl thành công !'))
-    .catch(err => console.log(err));
-
 app.get('/', (req, res) => {
-    res.sendFile(join(__dirname, "/view/", 'user.html'));
+    res.sendFile(__dirname+'/view/user.html');
 });
 
 app.get('/admin-chat', (req, res) => {
     res.sendFile(__dirname+'/view/admin_chat.html');
 })
+
 //API lấy user
 app.get('/api/get_user', async (req, res) => {
     //lấy người dùng gửi về admin
@@ -97,7 +109,6 @@ io.on('connection', (socket) => {
                     {userID: msg.uID},
                     { $set:{lastMessage : msg.message} }
                 )
-                console.log('Cập nhật tin nhắn thành công');
             }
         } catch(err){
             console.log('Lỗi khi thêm user', err)
@@ -120,12 +131,8 @@ io.on('connection', (socket) => {
 
         
     });
-
-
     ////////////////////////// ADMIN
-
 });
-
 
 server.listen(3000, () => {
     console.log('Server running at http://localhost:3000');
