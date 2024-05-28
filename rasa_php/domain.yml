@@ -19,9 +19,6 @@ actions:
   # - action_say_data
   # - action_greet_user
   # - action_nganh
-#   - acion_liet_ke_truong
-  # - action_khong_biet
-
 intents:
   # - deny
   # - mood_great
@@ -49,7 +46,7 @@ intents:
   - ask_nganh_dao_tao_sau_dai_hoc
   - ask_quy_trinh_tuyen_sinh
 
-  # - ask_thoi_gian_nhap_hoc
+
 
 entities:
   - hocphi
@@ -104,7 +101,6 @@ entities:
 #       - phone
 
 responses: 
-
   # utter_ask_email:
   # - text: "vui lòng cung cấp email?"
 

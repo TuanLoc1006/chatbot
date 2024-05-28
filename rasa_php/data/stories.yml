@@ -86,19 +86,3 @@ stories:
   steps:
   - intent: ask_quy_trinh_tuyen_sinh
   - action: utter_quy_trinh_tuyen_sinh_dai_hoc
-
-# - story: Hỏi các trường đại học khác
-#   steps:
-#   - intent: ask_university
-#   - action: action_khong_biet
-
-# - story: hỏi về ngành học
-#     steps:
-#       - intent: greet
-#       - action: utter_greet
-#       - action: utter_ask_major
-#       - intent: ask_death_province
-#       - action: location_form
-#       - active_loop: location_form
-#       - active_loop: null
-#       - action: action_redeath_province
