@@ -86,3 +86,15 @@ stories:
   steps:
   - intent: ask_quy_trinh_tuyen_sinh
   - action: utter_quy_trinh_tuyen_sinh_dai_hoc
+
+############################################# PHUONG
+
+# - story: hỏi về cơ hội học tập và nghiên cứu
+#   steps:
+#   - intent: ask_co_hoi_hoc_tap_nghien_cuu
+#   - action: 
+
+- story:  hỏi về yếu tố được xét học bổng 
+  steps:
+    - intent: ask_yeu_to_xet_hoc_bong
+    - action: action_yeu_to_xet_hoc_bong

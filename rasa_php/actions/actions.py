@@ -389,7 +389,6 @@ class ActionChatGPTFallback(Action):
                     'max_tokens': 150
                 }
             )
-            
             response_data = response.json()
 
             if 'choices' in response_data and len(response_data['choices']) > 0:
@@ -405,7 +404,7 @@ class ActionChatGPTFallback(Action):
         # Ngăn vòng lặp bằng cách hoàn nguyên trạng thái người dùng
         return [UserUtteranceReverted()]
 
-    
+
 # class acction_tuyen_sinh(Action):
 #     def name(self):
 #         return "action_tuyen_sinh"
@@ -414,7 +413,7 @@ class ActionChatGPTFallback(Action):
 #             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 #         return []
     
-    ##################################################
+##################################################
 
 # class ActionSayData(Action):
 
@@ -470,3 +469,17 @@ class ActionChatGPTFallback(Action):
 #             dispatcher.utter_message(text="Email không hợp lệ!")
 #             return {"email": None}
 
+##########################################################
+#######  PHUONG
+# 5.	Cơ hội thực tập và nghiên cứu.
+
+class action_yeu_to_xet_hoc_bong(Action):
+    def name(self):
+        return "action_yeu_to_xet_hoc_bong"
+    def run(self, dispatcher: CollectingDispatcher,
+                tracker: Tracker,
+                domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+            dispatcher.utter_message(f"1. Đăng ký học và thi tối thiểu 10 tín chỉ mỗi kỳ, hoặc số tín chỉ tối đa mở theo khóa/ngành (không tính Giáo dục Thể chất và Giáo dục quốc phòng - An ninh). 2.Điểm trung bình chung học tập từ 3.0 trở lên.
+Điểm thi/kiểm tra lần đầu không có điểm dưới 2.0 hoặc kiểm tra hết môn không đạt. 3.Điểm rèn luyện từ loại tốt trở lên.
+Không bị kỷ luật từ mức khiển trách trở lên. 4.Đóng học phí và kinh phí đào tạo đúng thời hạn trong học kỳ xét học bổng.");
+            return []

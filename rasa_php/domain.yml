@@ -14,6 +14,8 @@ actions:
   - action_hoi_dia_diem_phong
   - action_hoi_email_phong
   - action_hoi_sdt_phong
+################# PHUONG
+  - action_yeu_to_xet_hoc_bong
   
   # - validate_simple_form
   # - action_say_data
@@ -46,7 +48,9 @@ intents:
   - ask_nganh_dao_tao_sau_dai_hoc
   - ask_quy_trinh_tuyen_sinh
 
-
+############################### PHUONG
+  - ask_co_hoi_hoc_tap_nghien_cuu
+  - ask_yeu_to_xet_hoc_bong
 
 entities:
   - hocphi

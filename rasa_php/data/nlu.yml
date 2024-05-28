@@ -27,7 +27,7 @@ nlu:
     - bạn có phải robot không?
     - Bạn có phải là con người?
     - tôi đang nói chuyện với robot phải không?
-    - Tôi đang nói chuyện với con người à?
+    - tôi đang nói chuyện với con người à?
     - mày là ai
     - m do ai tạo ra
     - m có phải là robot không
@@ -107,25 +107,25 @@ nlu:
     
 - intent: ask_thong_tin_nganh
   examples: |
-    - Trường có các ngành nào?
-    - Trường có mấy ngành?
-    - Số ngành trường đào tạo?
-    - Trường có bao nhiêu ngành?
-    - Trường Đại học Y Dược Cần Thơ có bao nhiêu ngành?
-    - Trường đại học này đào tạo các ngành nào?
-    - Trường đào tạo các ngành nào?
-    - Các ngành có trong chương trình đào tạo?
-    - Trường đào tạo bao nhiêu ngành?
-    - CTUMP có mấy ngành?
-    - CTUMP đào tạo mấy ngành?
+    - trường có các ngành nào?
+    - trường có mấy ngành?
+    - số ngành trường đào tạo?
+    - trường có bao nhiêu ngành?
+    - trường Đại học Y Dược Cần Thơ có bao nhiêu ngành?
+    - trường đại học này đào tạo các ngành nào?
+    - trường đào tạo các ngành nào?
+    - các ngành có trong chương trình đào tạo?
+    - trường đào tạo bao nhiêu ngành?
+    - cTUMP có mấy ngành?
+    - cTUMP đào tạo mấy ngành?
     - Liệt kê một số ngành học.
-    - Cho tôi biết trường có bao nhiêu ngành.
+    - cho tôi biết trường có bao nhiêu ngành.
     - Liệt kê cho tôi các ngành học
-    - Trường Đại học Y Dược Cần Thơ có những ngành gì?
-    - Đại học Y Dược Cần Thơ có những ngành đào tạo nào?
-    - Cho tôi biết các ngành học ở trường Đại học Y Dược Cần Thơ
-    - Các ngành hiện có tại Đại học Y Dược Cần Thơ
-    - Đại học Y Dược Cần Thơ đào tạo bao nhiêu ngành học?
+    - trường Đại học Y Dược Cần Thơ có những ngành gì?
+    - đại học Y Dược Cần Thơ có những ngành đào tạo nào?
+    - cho tôi biết các ngành học ở trường Đại học Y Dược Cần Thơ
+    - các ngành hiện có tại Đại học Y Dược Cần Thơ
+    - đại học Y Dược Cần Thơ đào tạo bao nhiêu ngành học?
     - Liệt kê các ngành hiện có tại Đại học Y Dược Cần Thơ
 
 
@@ -172,30 +172,30 @@ nlu:
 - intent: ask_email_cac_khoa
   examples: |
     - Email của khoa [y](email_khoa) là gì?
-    - Cho tôi xin địa chỉ email của khoa [dược](email_khoa)
+    - cho tôi xin địa chỉ email của khoa [dược](email_khoa)
     - Email khoa [Y tế công cộng](email_khoa) là gì?
     - Khoa [y học dự phòng](email_khoa) có email không?
     - Email khoa [kỹ thuật xét nghiệm y học](email_khoa) là gì?
-    - Tôi cần email của khoa [điều dưỡng](email_khoa)
+    - tôi cần email của khoa [điều dưỡng](email_khoa)
     - Email khoa [răng hàm mặt](email_khoa) là gì?
     - Làm sao để liên hệ qua email với khoa [hộ sinh](email_khoa)?
     - Địa chỉ email của khoa [y học cổ truyền](email_khoa) là gì?
-    - Tôi muốn biết email của khoa [kỹ thuật hình ảnh](email_khoa)
+    - tôi muốn biết email của khoa [kỹ thuật hình ảnh](email_khoa)
     - Khoa [Khoa học cơ bản](email_khoa) có email không?
     - Địa chỉ email của khoa [kỹ thuật hình ảnh y học](email_khoa) là gì?
 
 - intent: ask_sdt_cac_khoa
   examples: |
-    - Số liên lạc của khoa [y](sdt_khoa) là gì?
-    - Cho tôi xin số điện thoại của khoa [dược](sdt_khoa)
-    - Số điện thoại khoa [Y tế công cộng](sdt_khoa) là gì?
+    - số liên lạc của khoa [y](sdt_khoa) là gì?
+    - cho tôi xin số điện thoại của khoa [dược](sdt_khoa)
+    - số điện thoại khoa [Y tế công cộng](sdt_khoa) là gì?
     - Khoa [y học dự phòng](sdt_khoa) có số điện thoại không?
-    - Số điện thoại khoa [kỹ thuật xét nghiệm y học](sdt_khoa) là gì?
-    - Tôi cần số điện thoại của khoa [điều dưỡng](sdt_khoa)
-    - Số điện thoại khoa [răng hàm mặt](sdt_khoa) là gì?
+    - số điện thoại khoa [kỹ thuật xét nghiệm y học](sdt_khoa) là gì?
+    - tôi cần số điện thoại của khoa [điều dưỡng](sdt_khoa)
+    - số điện thoại khoa [răng hàm mặt](sdt_khoa) là gì?
     - Làm sao để liên hệ qua số điện thoại với khoa [hộ sinh](sdt_khoa)?
-    - Số liên hệ của khoa [y học cổ truyền](sdt_khoa) là gì?
-    - Tôi muốn biết số điện thoại của khoa [kỹ thuật hình ảnh](sdt_khoa)
+    - số liên hệ của khoa [y học cổ truyền](sdt_khoa) là gì?
+    - tôi muốn biết số điện thoại của khoa [kỹ thuật hình ảnh](sdt_khoa)
     - Khoa [Khoa học cơ bản](sdt_khoa) có số điện thoại không?
     - tôi cần gọi đến khoa [kỹ thuật hình ảnh y học](sdt_khoa) là gì?
 
@@ -216,7 +216,7 @@ nlu:
     - phòng [Khảo thí](location_phong) ở chổ nào
     - phòng [Thanh tra - Pháp chế](location_phong)
     - phòng [Quản lý Dự án xây dựng Trường](location_phong) ở tầng nào
-    - Trung tâm [Đào tạo theo nhu cầu xã hội](location_phong) đi đường nào
+    - trung tâm [Đào tạo theo nhu cầu xã hội](location_phong) đi đường nào
     - dẫn đường đến Trung tâm [dịch vụ và hỗ trợ sinh viên](location_phong) 
     - tìm chổ [Thư viện](location_phong) đi hướng nào
     - vị trí [Đơn vị HLKN](location_phong) ở chổ nào
@@ -245,14 +245,14 @@ nlu:
     - email của phòng [Khảo thí](email_phong) là gì?
     - phòng [Thanh tra - Pháp chế](email_phong) có email liên hệ không
     - phòng [Quản lý Dự án xây dựng Trường](email_phong) có email gì
-    - Trung tâm [Đào tạo theo nhu cầu xã hội](email_phong) dùng email nào
+    - trung tâm [Đào tạo theo nhu cầu xã hội](email_phong) dùng email nào
     - email của Trung tâm [dịch vụ và hỗ trợ sinh viên](email_phong) là gì
     - làm sao để gửi email cho [Thư viện](email_phong)
     - email của [Đơn vị HLKN](email_phong) là gì
     - email của đơn vị [huấn luyện kĩ năng](email_phong)
     - làm sao để liên hệ với [Bệnh viện](email_phong) qua email
     - muốn biết email của phòng [công đoàn](email_phong)
-    - giúp tôi tìm email phòng [Đoàn thanh niên - Hội sinh viên](email_phong)
+    - giúp tôi tìm email phòng [Đoàn thanh niên - hội sinh viên](email_phong)
     - tôi cần biết email [Phòng Tài chính kế toán](email_phong) là gì
     
 - intent: ask_sdt_cac_phong_ban
@@ -272,14 +272,14 @@ nlu:
     - số điện thoại của phòng [Khảo thí](sdt_phong) là gì?
     - phòng [Thanh tra - Pháp chế](sdt_phong) có số điện thoại liên hệ không
     - phòng [Quản lý Dự án xây dựng Trường](sdt_phong) có số điện thoại gì
-    - Trung tâm [Đào tạo theo nhu cầu xã hội](sdt_phong) dùng số điện thoại nào
+    - trung tâm [Đào tạo theo nhu cầu xã hội](sdt_phong) dùng số điện thoại nào
     - số điện thoại của Trung tâm [dịch vụ và hỗ trợ sinh viên](sdt_phong) là gì
     - làm sao để gọi đến [Thư viện](sdt_phong)
     - số điện thoại của [Đơn vị HLKN](sdt_phong) là gì
     - số điện thoại của đơn vị [huấn luyện kĩ năng](sdt_phong)
     - làm sao để liên hệ với [Bệnh viện](sdt_phong) qua điện thoại
     - muốn biết số điện thoại của phòng [công đoàn](sdt_phong)
-    - giúp tôi tìm số điện thoại phòng [Đoàn thanh niên - Hội sinh viên](sdt_phong)
+    - giúp tôi tìm số điện thoại phòng [Đoàn thanh niên - hội sinh viên](sdt_phong)
     - tôi cần số điện thoại [Phòng Tài chính kế toán](sdt_phong)
 
 - intent: ask_hoc_phi
@@ -346,26 +346,68 @@ nlu:
 
 - intent: ask_nganh_dao_tao_sau_dai_hoc
   examples: |
-    - Trường có bao nhiêu mã ngành đào tạo [sau đại học](dao_tao_sau_dai_hoc)?
-    - Có bao nhiêu mã ngành đào tạo [sau đại học](dao_tao_sau_dai_hoc) tại trường?
-    - Trường đào tạo bao nhiêu mã ngành [sau đại học](dao_tao_sau_dai_hoc)?
-    - Tổng cộng có bao nhiêu mã ngành [sau đại học](dao_tao_sau_dai_hoc) ở trường?
-    - Trường cung cấp bao nhiêu mã ngành đào tạo [sau đại học](dao_tao_sau_dai_hoc)?
-    - Trường có những mã ngành [sau đại học](dao_tao_sau_dai_hoc) nào?
-    - Số lượng mã ngành đào tạo [sau đại học](dao_tao_sau_dai_hoc) của trường là bao nhiêu?
-    - Trường có bao nhiêu mã ngành ở bậc [sau đại học](dao_tao_sau_dai_hoc)?
-    - Trường đào tạo [sau đại học](dao_tao_sau_dai_hoc) có bao nhiêu mã ngành?
-    - Trường có bao nhiêu chương trình đào tạo [sau đại học](dao_tao_sau_dai_hoc)?
+    - trường có bao nhiêu mã ngành đào tạo [sau đại học](dao_tao_sau_dai_hoc)?
+    - có bao nhiêu mã ngành đào tạo [sau đại học](dao_tao_sau_dai_hoc) tại trường?
+    - trường đào tạo bao nhiêu mã ngành [sau đại học](dao_tao_sau_dai_hoc)?
+    - tổng cộng có bao nhiêu mã ngành [sau đại học](dao_tao_sau_dai_hoc) ở trường?
+    - trường cung cấp bao nhiêu mã ngành đào tạo [sau đại học](dao_tao_sau_dai_hoc)?
+    - trường có những mã ngành [sau đại học](dao_tao_sau_dai_hoc) nào?
+    - số lượng mã ngành đào tạo [sau đại học](dao_tao_sau_dai_hoc) của trường là bao nhiêu?
+    - trường có bao nhiêu mã ngành ở bậc [sau đại học](dao_tao_sau_dai_hoc)?
+    - trường đào tạo [sau đại học](dao_tao_sau_dai_hoc) có bao nhiêu mã ngành?
+    - trường có bao nhiêu chương trình đào tạo [sau đại học](dao_tao_sau_dai_hoc)?
 
 - intent: ask_quy_trinh_tuyen_sinh
   examples: |
-    - Hình thức tuyển sinh bao gồm những hình thức nào?
-    - Có những hình thức tuyển sinh nào?
-    - Trường có những hình thức tuyển sinh nào?
-    - Những hình thức tuyển sinh của trường là gì?
-    - Trường tổ chức tuyển sinh theo những hình thức nào?
-    - Các hình thức tuyển sinh hiện có là gì?
-    - Hình thức tuyển sinh của trường gồm những gì?
-    - Các cách thức tuyển sinh hiện nay là gì?
-    - Trường có bao nhiêu hình thức tuyển sinh?
-    - Hình thức tuyển sinh là gì?
+    - hình thức tuyển sinh bao gồm những hình thức nào?
+    - có những hình thức tuyển sinh nào?
+    - trường có những hình thức tuyển sinh nào?
+    - những hình thức tuyển sinh của trường là gì?
+    - trường tổ chức tuyển sinh theo những hình thức nào?
+    - các hình thức tuyển sinh hiện có là gì?
+    - hình thức tuyển sinh của trường gồm những gì?
+    - các cách thức tuyển sinh hiện nay là gì?
+    - trường có bao nhiêu hình thức tuyển sinh?
+    - hình thức tuyển sinh là gì?
+
+
+##########################################
+######################### PHUONG
+- intent: ask_co_hoi_hoc_tap_nghien_cuu
+  examples: |
+    - trường có hỗ trợ trong việc tìm kiếm và sắp xếp thực tập không
+    - trường có giúp đỡ sinh viên trong việc tìm kiếm và sắp xếp chỗ thực tập không
+    - trường có cung cấp dịch vụ hỗ trợ sinh viên trong việc tìm thực tập không
+    - trường có tổ chức chương trình hỗ trợ tìm kiếm và sắp xếp thực tập cho sinh viên không
+    - trường có hỗ trợ sinh viên trong quá trình tìm kiếm và xin thực tập không
+    - trường có cung cấp các nguồn lực để giúp sinh viên tìm và sắp xếp chỗ thực tập không
+    - trường có chương trình hỗ trợ sinh viên tìm và sắp xếp thực tập không
+    - trường có trợ giúp sinh viên trong việc tìm kiếm và sắp xếp vị trí thực tập không
+    - trường có các dịch vụ tư vấn để hỗ trợ sinh viên tìm kiếm và sắp xếp thực tập không
+    - trường có cung cấp hướng dẫn và hỗ trợ sinh viên trong việc tìm chỗ thực tập không
+    - trường có hỗ trợ sinh viên trong việc liên hệ và sắp xếp các cơ hội thực tập không
+
+- intent: ask_yeu_to_xet_hoc_bong
+  examples: |
+    - điều kiện nào cần thiết để được xét học bổng
+    - những tiêu chí để xét học bổng là gì
+    - để được xét học bổng, tôi cần đạt những yêu cầu nào
+    - những yếu tố nào quan trọng để được nhận học bổng
+    - để xin học bổng, tôi cần đáp ứng các điều kiện gì
+    - các tiêu chuẩn để được cấp học bổng là gì
+    - học bổng yêu cầu những điều kiện nào
+    - cần những tiêu chí gì để đủ điều kiện nhận học bổng
+    - điều kiện cần thiết để nhận được học bổng là gì
+    - muốn được xét học bổng, tôi phải đạt những tiêu chí nào
+    - những yêu cầu nào cần đạt để có thể xin học bổng
+    - để đủ điều kiện nhận học bổng, tôi cần đạt những gì
+    - học bổng xét dựa trên những yếu tố nào
+    - những gì cần thiết để được cấp học bổng
+    - tiêu chí để được xét duyệt học bổng là gì
+    - tôi cần đáp ứng những điều kiện nào để được xét học bổng
+    - yêu cầu nào phải đạt để xin học bổng
+    - các yếu tố nào được xem xét khi cấp học bổng
+    - muốn nhận học bổng, cần đáp ứng các tiêu chuẩn nào
+    - cần đạt những yêu cầu gì để đủ điều kiện được xét học bổng
+
+    
