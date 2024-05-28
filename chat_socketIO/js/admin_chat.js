@@ -117,6 +117,7 @@ function register_popup(id, name) {
         return;
     }
 
+    //Lộc làm popup chat
     // tạo phần tử popup mới
     const popupBox = document.createElement('div');
     popupBox.classList.add('popup-box', 'chat-popup');
