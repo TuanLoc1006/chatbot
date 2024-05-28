@@ -19,15 +19,11 @@ actions:
   # - action_say_data
   # - action_greet_user
   # - action_nganh
-#   - acion_liet_ke_truong
-  # - action_khong_biet
-
 intents:
   # - deny
   # - mood_great
   # - mood_unhappy
   # - inform
-  - sinh_vien_ho_tro_tao_chat_ctump
   - greet
   - goodbye
   - bot_challenge
@@ -44,8 +40,13 @@ intents:
   - ask_dia_diem_cac_phong_ban
   - ask_email_cac_phong_ban
   - ask_sdt_cac_phong_ban
+
   - ask_cap_lai_the_sinh_vien
-  # - ask_thoi_gian_nhap_hoc
+
+  - ask_nganh_dao_tao_sau_dai_hoc
+  - ask_quy_trinh_tuyen_sinh
+
+
 
 entities:
   - hocphi
@@ -59,8 +60,8 @@ entities:
   - location_phong
   - email_phong
   - sdt_phong
-  # - email
-  # - number
+ 
+  - dao_tao_sau_dai_hoc
 
 
 # slots:
@@ -100,7 +101,6 @@ entities:
 #       - phone
 
 responses: 
-
   # utter_ask_email:
   # - text: "vui lòng cung cấp email?"
 
@@ -108,9 +108,7 @@ responses:
   # - text: "vui lòng cung cấp số điện thoại?"
     
   utter_greet:
-  - text: "Chào! Chào mừng bạn đến với Bot Rasa."
   - text: "Chào! bạn tôi có thể giúp gì cho bạn?"
-  - text: "Bạn cần gì?"
   - text: "Rất vui khi bạn đã hỏi"
 
   utter_goodbye:
@@ -134,12 +132,17 @@ responses:
   utter_iamabot:
   - text: "Tôi là hệ thống trả lời tự động của trường Đại học Y Dược Cần Thơ"
 
+  utter_dao_tao_sau_dai_hoc:
+  - text: "Tham khảo thông tin chi tiết về đào tạo sau đại học tại đây: http://www.ctump.edu.vn/default.aspx?tabid=1036"
+
+  utter_quy_trinh_tuyen_sinh_dai_hoc:
+  - text: "Tham khảo quy trình tuyển sinh đại học tại đây: http://www.ctump.edu.vn/default.aspx?tabid=1037"
+
   utter_cac_chuc_nang:
   - text: "Tôi có thể giải đáp thắc mắc của bạn về học phí, chương trình đào tạo... và các thông tin về Đại học Y dược Cần Thơ."
   
-  utter_sinh_vien_tao_chat_ctump:
-  - text: "Phạm Thành Tuấn Lộc và Ngô Thanh Phương cùng với sự hỗ trợ của các anh phòng Thông tin và truyền thông, đã xây dựng nên chat bot ctump"
 
+  
 
 session_config:
   session_expiration_time: 60

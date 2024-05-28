@@ -1,3 +1,31 @@
 Action ctdt: đào tạo Điều dưỡng
 action_dia_diem_khoa: Tìm hiểu ctump
 action_email_phong: Email phòng
+Action học phí: thanks
+action_sdt_khoa: số điện thoại email
+action_sdt_phòng: số điện thoại email Phòng Công tác sinh viên
+Action ctdt: Hộ sinh
+action_dia_diem_khoa: ngành y khoa
+action_dia_diem_phong: phòng này
+action_dia_diem_phong: phòng y tế
+Action học phí: điểm chuẩn
+action_sdt_phòng: số điện thoại
+action_email_phong: Email phòng
+Action học phí: tất cả
+Action ctdt: chương trình đào tạo khoa y
+Action ctdt: chương trình đào tạo ngành y
+Action ctdt: ngành hộ sinh
+action_ctdt: ngành Dược học gì
+action_ctdt: Kỹ thuật hình ảnh y học
+action_ctdt: Kỹ thuật hình ảnh y học
+action_dia_diem_khoa: y khoa
+action_dia_diem_khoa: ngành y khoa
+action_dia_diem_khoa: ngành y khoa
+action_dia_diem_khoa: y khoa
+action_dia_diem_khoa: ngành y khoa
+Action ctdt: y tế công cộng
+Action ctdt: ngành y học
+Action ctdt: Y học cổ truyền
+Action học phí: Dược
+Action ctdt: Ngành dược
+action_dia_diem_khoa: điều dưỡng

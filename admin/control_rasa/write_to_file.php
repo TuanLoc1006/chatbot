@@ -18,7 +18,7 @@ if ($result->num_rows > 0) {
         FROM `intents` i 
         JOIN example_intent e ON e.intent_id = i.intent_id 
         JOIN answer_intent a ON a.intent_id = i.intent_id 
-        WHERE  e.status_file = '0' and a.status_file = '0'";
+        WHERE  e.status_file = '0' and a.status_file = '0' and i.selected = '1'";
         $resultsql = $conn->query($sql);
         if ($resultsql->num_rows > 0) {
             while ($rowIntent = $resultsql->fetch_assoc()) {

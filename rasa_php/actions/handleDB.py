@@ -37,10 +37,11 @@ def getHocPhi():
     result = cursor.fetchall()
     return result
 
-def getChuongTrinhDaoTao():
+def getChuongTrinhDaoTao(entity):
     db_connection = handleDB().get_connect()
     cursor = db_connection.cursor()
-    cursor.execute("SELECT a.ten_nganh, b.chuong_trinh_dao_tao FROM nganh AS a JOIN chuong_trinh_dao_tao AS b ON a.ma_nganh = b.ma_nganh")
+    query = "SELECT n.ten_nganh ,c.chuong_trinh_dao_tao FROM `nganh` n JOIN chuong_trinh_dao_tao c on n.ma_nganh=c.ma_nganh WHERE n.ten_nganh LIKE %s"
+    cursor.execute(query, ('%' + entity + '%',))
     result = cursor.fetchall()
     return result
 
@@ -63,8 +64,10 @@ class handleDB:
         return nganh()
     def get_hoc_phi(self):
         return getHocPhi()
-    def get_chuong_trinh_dao_tao(self):
-        return getChuongTrinhDaoTao()
-    def get_khoa_phong_ban(self,entity):
+    
+    def get_chuong_trinh_dao_tao(self, entity):
+        return getChuongTrinhDaoTao(entity)
+    
+    def get_khoa_phong_ban(self, entity):
         return getThongTinKhoaPhongBan(entity)
     

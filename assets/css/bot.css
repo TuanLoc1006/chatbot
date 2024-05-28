@@ -116,15 +116,18 @@ body {
     font-size: 24px;
 }
 
-
-
-#chat-widget-close-button {
-    margin-left: 60%;
-}
-
 #chat-widget-messages {
     height: 300px;
     /* Độ cao tối đa của khung chat */
     overflow-y: auto;
     /* Thêm thanh cuộn khi nội dung quá lớn */
+}
+
+#chat-widget-close-button{
+    color: red;
+}
+
+#title-chatbot{
+    display: inline;
+    margin-right: 64%;
 }
