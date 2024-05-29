@@ -113,6 +113,7 @@
                         console.log('Error: ', error);
                     }
                 });
+                scrollChatToBottom(); 
             }
         });
 

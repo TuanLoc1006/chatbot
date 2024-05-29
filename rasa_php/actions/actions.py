@@ -313,7 +313,7 @@ class actionHoiEmailPhong(Action):
                 
                 if infor_khoa_phong_ban_db:
                     email = infor_khoa_phong_ban_db[0][4]
-                    dispatcher.utter_message(text=f"Email của phòng là: {email}.")
+                    dispatcher.utter_message(text=f"Email của phòng {email_entity} là: {email}.")
                 else:
                     dispatcher.utter_message(text=f"Không tìm thấy email cho phòng {email_entity}.")
             except Exception as e:
@@ -335,23 +335,23 @@ class actionHoiSoDienThoaiPhong(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         
-        email_entity = next(tracker.get_latest_entity_values('sdt_phong'), None)
+        sdt_entity = next(tracker.get_latest_entity_values('sdt_phong'), None)
         
         
         user_input = tracker.latest_message['text']
         print("người dùng hỏi sdt phòng: " + user_input)
-        logging.info("{}{}".format('Call action_sdt_phong: ', email_entity))
-        if email_entity: 
+        logging.info("{}{}".format('Call action_sdt_phong: ', sdt_entity))
+        if sdt_entity: 
             try:
                 # Khởi tạo đối tượng handledb
                 handledb_instance = handleDB()
-                infor_khoa_phong_ban_db = handledb_instance.get_khoa_phong_ban(email_entity)
+                infor_khoa_phong_ban_db = handledb_instance.get_khoa_phong_ban(sdt_entity)
                 
                 if infor_khoa_phong_ban_db:
                     sdt = infor_khoa_phong_ban_db[0][3]
-                    dispatcher.utter_message(text=f"Số điện thoại của phòng là: {sdt}.")
+                    dispatcher.utter_message(text=f"Số điện thoại của phòng {sdt_entity} là: {sdt}.")
                 else:
-                    dispatcher.utter_message(text=f"Không tìm thấy số điện thoại phòng {email_entity}.")
+                    dispatcher.utter_message(text=f"Không tìm thấy số điện thoại phòng {sdt_entity}.")
             except Exception as e:
                 dispatcher.utter_message(text="Đã xảy ra lỗi khi truy vấn cơ sở dữ liệu sdt phòng.")
                 logging.error(f"Error querying database phòng: {e}")
@@ -364,6 +364,25 @@ class actionHoiSoDienThoaiPhong(Action):
         return []
     
 
+
+
+class action_yeu_to_xet_hoc_bong(Action):
+    def name(self):
+        return "action_yeu_to_xet_hoc_bong"
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        
+       
+        
+        user_input = tracker.latest_message['text']
+        print("người dùng hỏi sdt phòng: " + user_input)
+           
+       
+        dispatcher.utter_message(text=f"1. Đăng ký học và thi tối thiểu 10 tín chỉ mỗi kỳ, hoặc số tín chỉ tối đa mở theo khóa/ngành (không tính Giáo dục Thể chất và Giáo dục quốc phòng - An ninh). 2.Điểm trung bình chung học tập từ 3.0 trở lên. Điểm thi/kiểm tra lần đầu không có điểm dưới 2.0 hoặc kiểm tra hết môn không đạt. 3.Điểm rèn luyện từ loại tốt trở lên. Không bị kỷ luật từ mức khiển trách trở lên. 4.Đóng học phí và kinh phí đào tạo đúng thời hạn trong học kỳ xét học bổng. 4. Bạn cần biết chi tiết thì xem thêm tại mục này")
+           
+        return []
+    
 
 
 class ActionChatGPTFallback(Action):
@@ -472,14 +491,3 @@ class ActionChatGPTFallback(Action):
 ##########################################################
 #######  PHUONG
 # 5.	Cơ hội thực tập và nghiên cứu.
-
-class action_yeu_to_xet_hoc_bong(Action):
-    def name(self):
-        return "action_yeu_to_xet_hoc_bong"
-    def run(self, dispatcher: CollectingDispatcher,
-                tracker: Tracker,
-                domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-            dispatcher.utter_message(f"1. Đăng ký học và thi tối thiểu 10 tín chỉ mỗi kỳ, hoặc số tín chỉ tối đa mở theo khóa/ngành (không tính Giáo dục Thể chất và Giáo dục quốc phòng - An ninh). 2.Điểm trung bình chung học tập từ 3.0 trở lên.
-Điểm thi/kiểm tra lần đầu không có điểm dưới 2.0 hoặc kiểm tra hết môn không đạt. 3.Điểm rèn luyện từ loại tốt trở lên.
-Không bị kỷ luật từ mức khiển trách trở lên. 4.Đóng học phí và kinh phí đào tạo đúng thời hạn trong học kỳ xét học bổng.");
-            return []

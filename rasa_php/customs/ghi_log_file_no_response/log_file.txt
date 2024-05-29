@@ -30,3 +30,31 @@ Action học phí: Dược
 Action ctdt: Ngành dược
 action_dia_diem_khoa: điều dưỡng
 Action ctdt: quy trình ts
+Action học phí: thông tin học boongri=
+Action ctdt: cho tôi hỏi liên hệ của phòng công tác sinh viên
+Action ctdt: cho tôi hỏi liên hệ của Phòng Công tác sinh viên
+action_email_phong: Email
+Action ctdt: điện thoại của phòng công tác sinh vien
+Action ctdt: số điện thoaijphongf đào tạo
+action_sdt_phòng: số điện thoại phòng đào tạo
+Action ctdt: số điện thoại phòng đào tạo đại học
+Action ctdt: địa chỉ phòng đào tạo đại học
+action_sdt_phòng: địa chỉ Phòng Quản trị thiết bị
+action_dia_diem_khoa: địa chỉ phòng hành chánh
+action_dia_diem_khoa: địa chỉ phòng hành chánh
+action_email_phong: email phòng hành chánh
+action_email_phong: email phòng đào tạo
+Action ctdt: các ngành đào tạo
+action_dia_diem_khoa: cac nganh dao tao
+action_dia_diem_khoa: cac nganh dao tao
+Action ctdt: .
+Action ctdt: .
+Action ctdt: .
+Action ctdt: .
+Action ctdt: chương trình đào tạo
+Action ctdt: các ngành đào tạo
+action_email_phong: Liên hệ phòng đảm bảo chất lượng
+action_email_phong: Liên hệ phòng thanh tra
+action_email_phong: liên hệ phòng thanh tra
+action_email_phong: Liên hệ phòng thanh tra
+Action ctdt: yêu cầu tuyển sinh
