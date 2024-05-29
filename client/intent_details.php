@@ -27,7 +27,7 @@ if (isset($_GET['intent_id'])) {
         </head>
 
         <body>
-            <h3><a href="../admin/views/home.php">Trang admin</a></h3>
+            <!-- <h3><a href="../admin/views/home.php">Trang admin</a></h3> -->
             <h3><a href="../index.php">Trang user</a></h3>
             <div class="container">
                 <div class="row">
@@ -223,6 +223,7 @@ if (isset($_GET['intent_id'])) {
             </script>
 
         </body>
+        
 
         </html>
         <?php

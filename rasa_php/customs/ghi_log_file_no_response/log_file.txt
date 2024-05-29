@@ -58,3 +58,25 @@ action_email_phong: Liên hệ phòng thanh tra
 action_email_phong: liên hệ phòng thanh tra
 action_email_phong: Liên hệ phòng thanh tra
 Action ctdt: yêu cầu tuyển sinh
+Action học phí: thông tin trường ctu
+Action học phí: ctump
+Action học phí: ctump
+Action ctdt: thông tin các ngành học
+Action ctdt: ngành y
+Action ctdt: chương trình đào tạo
+Action ctdt: các chương trình đào tạo
+Action học phí: Thông tin đào tạo
+Action ctdt: Chương trình đào tạo
+action_dia_diem_phong: Có bao nhiêu phòng học
+Action học phí: Thông tin về sinh viên
+Action học phí: Thông tin trường
+action_dia_diem_phong: Học bỗng như thế nào
+Action học phí: Thông tin học bỗng
+Action học phí: Thông tin trường
+action_email_phong: Trường có liên kết với các công ty nước ngoài không
+Action ctdt: chương trình đào tạo
+Action ctdt: chương trình đào tạo ngành y
+action_email_phong: Trường có liên kết với các công ty nước ngoài không
+Action học phí: Thông tin trường
+Action học phí: Thông tin trường
+Action học phí: trường này

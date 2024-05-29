@@ -36,6 +36,7 @@ nlu:
 
 - intent: ask_thong_tin_truong
   examples: |
+    - [ctump](university)
     - thông tin về trường [ctump](university)
     - thông tin về [đại học y dược cần thơ](university)
     - thông tin về [đại học y cần thơ](university)
@@ -103,10 +104,12 @@ nlu:
     - mô tả [trường này](university)
     - giải thích về [trường](university)
     - mô tả [địa điểm này](university)
-    - thông tin [địa điểm](university)
+    - thông tin trường [địa điểm](university)
     
 - intent: ask_thong_tin_nganh
   examples: |
+    - các ngành đào tạo
+    - các ngành học
     - trường có các ngành nào?
     - trường có mấy ngành?
     - số ngành trường đào tạo?
@@ -156,6 +159,7 @@ nlu:
 
 - intent: ask_dia_diem_cac_khoa
   examples: |
+    - địa điểm khoa [y học dự phòng](location_khoa)
     - tìm khoa [y](location_khoa)
     - đường đi đến khoa [dược](location_khoa)
     - tôi muốn biết khoa [Y tế công cộng](location_khoa) đi hướng nào
@@ -306,7 +310,7 @@ nlu:
     - [chi tiêu](hocphi) khoảng bao nhiêu
 
 
-- intent: ask_chuc_nang
+- intent: ask_chuc_nang_bot_lam_duoc
   examples: |
     - tôi có thể hỏi gì
     - các chức năng bạn có
@@ -403,6 +407,7 @@ nlu:
     - Học sinh thi tuyển cần phải đạt mức học vấn nào?
     - Trường có quy định gì về học vấn cho học sinh thi tuyển?
     - yêu cầu tuyển sinh
+
 
     
 ##########################################

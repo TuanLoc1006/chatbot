@@ -26,7 +26,7 @@ stories:
 
 - story: Hỏi các chức năng bot làm được
   steps:
-  - intent: ask_chuc_nang
+  - intent: ask_chuc_nang_bot_lam_duoc
   - action: utter_cac_chuc_nang
 
 - story: Hỏi là đang chat với ai
@@ -34,7 +34,7 @@ stories:
   - intent: bot_challenge
   - action: utter_iamabot
 
-- story: Hỏi là đang chat với ai
+- story: xin chao ctump
   steps:
   - intent: greet
   - action: utter_greet
@@ -43,7 +43,6 @@ stories:
   steps:
   - intent: ask_dia_diem_cac_khoa
   - action: action_hoi_dia_diem_khoa
-
 
 - story: hỏi về email các khoa 
   steps:

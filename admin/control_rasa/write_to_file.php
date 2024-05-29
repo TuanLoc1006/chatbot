@@ -39,7 +39,8 @@ if ($result->num_rows > 0) {
                 } else {
                     echo "loi update status_file example_intent" . $conn->error;
                 }
-                add_data_to_file_domain($intent_Name, $chat_answer,$file_domain);
+                
+                // add_data_to_file_domain($intent_Name, $chat_answer,$file_domain);
 
                 $sql_chat_answer = "UPDATE `answer_intent` SET `status_file`='1' WHERE chat_answer = '$chat_answer'";
                 if ($conn->query($sql_chat_answer) === TRUE) {
@@ -51,7 +52,7 @@ if ($result->num_rows > 0) {
                
                 $utter_intent = "utter_" . $intent_Name; 
                
-                add_data_to_file_story($story_intent,$intent_Name,$utter_intent,$file_stories);
+                // add_data_to_file_story($story_intent,$intent_Name,$utter_intent,$file_stories);
             }
         }else{
             echo 0;

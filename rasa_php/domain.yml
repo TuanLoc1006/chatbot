@@ -33,7 +33,7 @@ intents:
   - ask_thong_tin_nganh
   - ask_chuong_trinh_dao_tao
   - ask_hoc_phi
-  - ask_chuc_nang
+  - ask_chuc_nang_bot_lam_duoc
 
   - ask_dia_diem_cac_khoa
   - ask_email_cac_khoa

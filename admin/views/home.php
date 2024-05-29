@@ -37,7 +37,7 @@
             <div class="col-md-4">
                 <a class="btn btn-secondary" href="../control_rasa/write_to_file.php">ghi file</a>
 
-                <form method="post" action="../control_rasa/train_rasa.php">
+                <!-- <form method="post" action="../control_rasa/train_rasa.php">
                     <input type="submit" name="train_rasa" class="btn btn-warning" value="Train Rasa">
                 </form>
 
@@ -47,7 +47,7 @@
 
                 <form method="post" action="../control_rasa/run_rasa.php">
                     <input type="submit" name="run_rasa" class="btn btn-primary" value="Run Rasa">
-                </form>
+                </form> -->
             </div>
         </div>
     </div>

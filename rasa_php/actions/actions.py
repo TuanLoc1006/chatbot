@@ -379,7 +379,7 @@ class action_yeu_to_xet_hoc_bong(Action):
         print("người dùng hỏi sdt phòng: " + user_input)
            
        
-        dispatcher.utter_message(text=f"1. Đăng ký học và thi tối thiểu 10 tín chỉ mỗi kỳ, hoặc số tín chỉ tối đa mở theo khóa/ngành (không tính Giáo dục Thể chất và Giáo dục quốc phòng - An ninh). 2.Điểm trung bình chung học tập từ 3.0 trở lên. Điểm thi/kiểm tra lần đầu không có điểm dưới 2.0 hoặc kiểm tra hết môn không đạt. 3.Điểm rèn luyện từ loại tốt trở lên. Không bị kỷ luật từ mức khiển trách trở lên. 4.Đóng học phí và kinh phí đào tạo đúng thời hạn trong học kỳ xét học bổng. 4. Bạn cần biết chi tiết thì xem thêm tại mục này")
+        dispatcher.utter_message(text=f"Các tiêu chí học bổng:</br>1. Đăng ký học và thi tối thiểu 10 tín chỉ mỗi kỳ, hoặc số tín chỉ tối đa mở theo khóa/ngành (không tính Giáo dục Thể chất và Giáo dục quốc phòng - An ninh).</br> 2.Điểm trung bình chung học tập từ 3.0 trở lên. Điểm thi/kiểm tra lần đầu không có điểm dưới 2.0 hoặc kiểm tra hết môn không đạt.</br> 3.Điểm rèn luyện từ loại tốt trở lên. Không bị kỷ luật từ mức khiển trách trở lên. 4.Đóng học phí và kinh phí đào tạo đúng thời hạn trong học kỳ xét học bổng.</br> 4. Bạn cần biết chi tiết thì xem thêm tại mục này")
            
         return []
     
