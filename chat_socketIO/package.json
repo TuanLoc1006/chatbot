@@ -9,6 +9,7 @@
   "type": "commonjs",
   "dependencies": {
     "@joeattardi/emoji-button": "^4.6.4",
+    "bootstrap-icons": "^1.11.3",
     "express": "^4.19.2",
     "express-session": "^1.18.0",
     "mongod": "^2.0.0",
