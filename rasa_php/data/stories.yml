@@ -22,7 +22,33 @@ stories:
   steps:
   - intent: ask_hoc_phi
   - action: action_hoc_phi
-  
+
+
+
+
+
+
+- story: Hỏi về học phí có tăng không
+  steps:
+  - intent: ask_hoc_phi_co_tang_khong
+  - action: action_hoc_phi_co_tang_khong
+
+- story: Hỏi về phương thức thanh toán học phí
+  steps:
+  - intent: ask_phuong_thuc_thanh_toan
+  - action: action_phuong_thuc_thanh_toan
+
+
+- story: Hỏi về hỗ trợ vay tiền học
+  steps:
+  - intent: ask_ho_tro_vay_tien_hoc
+  - action: action_ho_tro_vay_tien_hoc
+
+
+
+
+
+
 
 - story: Hỏi các chức năng bot làm được
   steps:
@@ -39,6 +65,12 @@ stories:
   - intent: greet
   - action: utter_greet
 
+
+- story: hỏi về thông tin các khoa
+  steps:
+  - intent: ask_thong_tin_cac_khoa
+  - action: action_hoi_thong_tin_khoa
+
 - story: hỏi về địa điểm các khoa ở đâu
   steps:
   - intent: ask_dia_diem_cac_khoa
@@ -53,6 +85,11 @@ stories:
   steps:
   - intent: ask_sdt_cac_khoa
   - action: action_hoi_sdt_khoa
+
+- story: hỏi về thông tin các phòng ban
+  steps:
+  - intent: ask_thong_tin_cac_phong_ban
+  - action: action_hoi_thong_tin_phong
 
 - story: hỏi về địa điểm các phòng ở đâu
   steps:

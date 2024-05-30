@@ -131,7 +131,7 @@
                         scrollChatToBottom(); // Automatically scroll to the bottom
                     } catch (e) {
                         console.log("Invalid JSON response from server");
-                        displayErrorMessage("Chat tự động hiện đang cập nhât, liên hệ admin để nhận hỗ trợ !");
+                        displayErrorMessage("Server hiện đang cập nhât, liên hệ admin để nhận hỗ trợ !");
                     }
                 },
                 error: function(error) {
