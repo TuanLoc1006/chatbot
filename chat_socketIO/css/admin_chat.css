@@ -506,7 +506,7 @@ body {
 }
 
 .chat-sidebar {
-    width: 500px;
+    width: 370px;
     position: fixed;
     height: 100%;
     right: 0px;
@@ -551,14 +551,14 @@ body {
     position: fixed;
     bottom: 0px;
     right: 220px;
-    height: 285px;
+    height: 530px;
     background-color: rgb(237, 239, 244);
-    width: 300px;
+    width: 389px;
     border: 1px solid rgba(29, 49, 91, .3);
 }
 
 .popup-box .popup-head {
-    background-color: #6d84b4;
+    background-color: #f0af34;
     padding: 5px;
     color: white;
     font-weight: bold;
@@ -581,7 +581,7 @@ body {
 }
 
 .popup-box .popup-messages {
-    height: 60%;
+    height: 86%;
     overflow-y: scroll;
 }
 
@@ -616,4 +616,17 @@ body {
 .status-dot {
     margin-left: 30px;
     /* Khoảng cách giữa nội dung chat và điểm trạng thái */
+}
+
+.popup-bottom {
+    display: flex;
+    justify-content: space-between;
+}
+
+.input-chat-admin {
+    width: 100%;
+}
+
+.input-group  {
+    padding: 10px;
 }

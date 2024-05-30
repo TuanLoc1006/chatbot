@@ -56,8 +56,20 @@ app.get('/admin-chat', (req, res) => {
 //API lấy user
 app.get('/api/get_user', async (req, res) => {
     //lấy người dùng gửi về admin
-    const user_data = await User.find()
-    res.status(200).send(user_data)
+    const user_data = await User.find();
+    res.status(200).send(user_data);
+})
+
+app.get('/api/get_mess_user', async(req, res) =>{
+    console.log('GỌI API lấy tin nhắn');
+    //nhận userid từ req , truy xuất db
+    const userid = req.query.userid;
+
+    const user_mess_data = await Message.find({senderID:userid})
+    console.log("Tin nhắn của người dùng")
+    console.log(user_mess_data)
+
+    res.status(200).json(user_mess_data);
 })
 
 io.on('connection', (socket) => {
@@ -69,7 +81,7 @@ io.on('connection', (socket) => {
         
         const uID = data.saveUID;
 
-        const messages = await Message.find({senderID: uID})
+        const messages = await Message.find({senderID: uID});
 
         //gửi tin nhắn từ database cho user 
         socket.emit(uID, (messages));
@@ -92,7 +104,7 @@ io.on('connection', (socket) => {
         
         try {
             //kiểm tra người dùng tồn tại
-            const getUser = await User.findOne({userID:msg.uID})
+            const getUser = await User.findOne({userID:msg.uID});
             if(!getUser){
                 var user = {
                     'userID': msg.uID,
@@ -100,9 +112,9 @@ io.on('connection', (socket) => {
                     'lastMessage': msg.message,
                     'status': 'on',
                 }
-                const userModel = new User(user)
-                await userModel.save()
-                console.log('Thêm người dùng thành công')
+                const userModel = new User(user);
+                await userModel.save();
+                console.log('Thêm người dùng thành công');
             } else {
                 //cập nhật tin nhắn cuối
                 await User.findOneAndUpdate(
