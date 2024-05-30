@@ -12,7 +12,7 @@ function callRasaAPI($userMessage) {
     $response = curl_exec($ch);
     if (curl_errno($ch)) {
         $error_msg = curl_error($ch);
-        echo json_encode(["Đã xảy ra lỗi: " . $error_msg], JSON_UNESCAPED_UNICODE);
+        echo json_encode(["Đã xảy ra lỗi kết nối server: " . $error_msg], JSON_UNESCAPED_UNICODE);
     }
     curl_close($ch);
     return $response;

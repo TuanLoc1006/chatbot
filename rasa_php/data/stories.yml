@@ -26,7 +26,7 @@ stories:
 
 - story: Hỏi các chức năng bot làm được
   steps:
-  - intent: ask_chuc_nang
+  - intent: ask_chuc_nang_bot_lam_duoc
   - action: utter_cac_chuc_nang
 
 - story: Hỏi là đang chat với ai
@@ -34,7 +34,7 @@ stories:
   - intent: bot_challenge
   - action: utter_iamabot
 
-- story: Hỏi là đang chat với ai
+- story: xin chao ctump
   steps:
   - intent: greet
   - action: utter_greet
@@ -43,7 +43,6 @@ stories:
   steps:
   - intent: ask_dia_diem_cac_khoa
   - action: action_hoi_dia_diem_khoa
-
 
 - story: hỏi về email các khoa 
   steps:
@@ -81,11 +80,18 @@ stories:
   steps:
   - intent: ask_nganh_dao_tao_sau_dai_hoc
   - action: utter_dao_tao_sau_dai_hoc
+  - intent: ask_nganh_dao_tao_sau_dai_hoc_moi_nhat
+  - action: utter_ask_nganh_dao_tao_sau_dai_hoc_moi_nhat
 
 - story: Hỏi sinh quy trình tuyển sinh 
   steps:
   - intent: ask_quy_trinh_tuyen_sinh
   - action: utter_quy_trinh_tuyen_sinh_dai_hoc
+  - intent: ask_trinh_do_hoc_van_tuyen_sinh
+  - action: utter_trinh_do_hoc_van_tuyen_sinh
+
+
+
 
 ############################################# PHUONG
 
@@ -96,5 +102,5 @@ stories:
 
 - story:  hỏi về yếu tố được xét học bổng 
   steps:
-    - intent: ask_yeu_to_xet_hoc_bong
-    - action: action_yeu_to_xet_hoc_bong
+  - intent: ask_yeu_to_xet_hoc_bong
+  - action: action_yeu_to_xet_hoc_bong

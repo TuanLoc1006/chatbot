@@ -33,7 +33,7 @@ intents:
   - ask_thong_tin_nganh
   - ask_chuong_trinh_dao_tao
   - ask_hoc_phi
-  - ask_chuc_nang
+  - ask_chuc_nang_bot_lam_duoc
 
   - ask_dia_diem_cac_khoa
   - ask_email_cac_khoa
@@ -46,8 +46,10 @@ intents:
   - ask_cap_lai_the_sinh_vien
 
   - ask_nganh_dao_tao_sau_dai_hoc
-  - ask_quy_trinh_tuyen_sinh
+  - ask_nganh_dao_tao_sau_dai_hoc_moi_nhat
 
+  - ask_quy_trinh_tuyen_sinh
+  - ask_trinh_do_hoc_van_tuyen_sinh
 ############################### PHUONG
   - ask_co_hoi_hoc_tap_nghien_cuu
   - ask_yeu_to_xet_hoc_bong
@@ -137,16 +139,20 @@ responses:
   - text: "Tôi là hệ thống trả lời tự động của trường Đại học Y Dược Cần Thơ"
 
   utter_dao_tao_sau_dai_hoc:
-  - text: "Tham khảo thông tin chi tiết về đào tạo sau đại học tại đây: http://www.ctump.edu.vn/default.aspx?tabid=1036"
-
-  utter_quy_trinh_tuyen_sinh_dai_hoc:
-  - text: "Tham khảo quy trình tuyển sinh đại học tại đây: http://www.ctump.edu.vn/default.aspx?tabid=1037"
+  - text: "Có 86 mã ngành đào tạo sau đại học và 8 ngành đào tạo sau đại học mới, tham khảo thông tin chi tiết về đào tạo sau đại học tại đây: http://www.ctump.edu.vn/default.aspx?tabid=1036"
 
   utter_cac_chuc_nang:
   - text: "Tôi có thể giải đáp thắc mắc của bạn về học phí, chương trình đào tạo... và các thông tin về Đại học Y dược Cần Thơ."
-  
 
+  utter_ask_nganh_dao_tao_sau_dai_hoc_moi_nhat:
+  - text: "Các ngành đào tạo mới sau đại hoc là: Tiến sĩ Nhi Khoa, Tiến sĩ KT Xét nghiệm Y học, Tiến sĩ Dược lý và Dược lâm sàng, Chuyên khoa II Lao và bệnh phổi, Chuyên khoa II PTTT & thẩm mỹ, Bác sĩ nội trú Gây mê hồi sức, Bác sĩ nội trú Tâm Thần, Chuyên khoa I Huyết học..."
   
+  utter_quy_trinh_tuyen_sinh_dai_hoc:
+  - text: "Thi tuyển và xét tuyển, tham khảo quy trình tuyển sinh đại học tại đây: http://www.ctump.edu.vn/default.aspx?tabid=1037 \nvà đăng ký hồ sơ tuyển sinh tại đây: https://htql.ctump.edu.vn/ctump/tuyensinh/"
+
+  utter_trinh_do_hoc_van_tuyen_sinh:
+  - text: "Tốt nghiệp 12/12 và đạt điểm xét tuyển của chuyên ngành như B00 (Toán, Hóa, Sinh), A00(Toán, Lý, Hóa),..."
+
 
 session_config:
   session_expiration_time: 60

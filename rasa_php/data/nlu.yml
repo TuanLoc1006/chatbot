@@ -36,6 +36,7 @@ nlu:
 
 - intent: ask_thong_tin_truong
   examples: |
+    - [ctump](university)
     - thông tin về trường [ctump](university)
     - thông tin về [đại học y dược cần thơ](university)
     - thông tin về [đại học y cần thơ](university)
@@ -103,10 +104,12 @@ nlu:
     - mô tả [trường này](university)
     - giải thích về [trường](university)
     - mô tả [địa điểm này](university)
-    - thông tin [địa điểm](university)
+    - thông tin trường [địa điểm](university)
     
 - intent: ask_thong_tin_nganh
   examples: |
+    - các ngành đào tạo
+    - các ngành học
     - trường có các ngành nào?
     - trường có mấy ngành?
     - số ngành trường đào tạo?
@@ -156,6 +159,7 @@ nlu:
 
 - intent: ask_dia_diem_cac_khoa
   examples: |
+    - địa điểm khoa [y học dự phòng](location_khoa)
     - tìm khoa [y](location_khoa)
     - đường đi đến khoa [dược](location_khoa)
     - tôi muốn biết khoa [Y tế công cộng](location_khoa) đi hướng nào
@@ -171,6 +175,7 @@ nlu:
 
 - intent: ask_email_cac_khoa
   examples: |
+    - liên hệ khoa [y](email_khoa)
     - Email của khoa [y](email_khoa) là gì?
     - cho tôi xin địa chỉ email của khoa [dược](email_khoa)
     - Email khoa [Y tế công cộng](email_khoa) là gì?
@@ -186,6 +191,7 @@ nlu:
 
 - intent: ask_sdt_cac_khoa
   examples: |
+    - sdt của khoa [y](sdt_khoa)
     - số liên lạc của khoa [y](sdt_khoa) là gì?
     - cho tôi xin số điện thoại của khoa [dược](sdt_khoa)
     - số điện thoại khoa [Y tế công cộng](sdt_khoa) là gì?
@@ -230,6 +236,7 @@ nlu:
 
 - intent: ask_email_cac_phong_ban
   examples: |
+    - liên hệ phòng [ctsv](email_phong)
     - liên lạc với phòng [Công tác sinh viên](email_phong) bằng cách nào
     - email phòng [ctsv](email_phong) là gì?
     - phòng [Đào tạo đại học](email_phong) có email là gì vậy?
@@ -239,11 +246,11 @@ nlu:
     - email của phòng [nghiên cứu khoa học](email_phong) là gì?
     - làm sao để gửi email đến phòng [Quản trị thiết bị](email_phong)
     - phòng [Tài chính kế toán](email_phong) có email không
-    - phòng [Tổ chức cán bộ](email_phong) có địa chỉ email gì 
+    - liên lạc [Tổ chức cán bộ](email_phong) có địa chỉ email gì 
     - phòng [Thông tin và Truyền thông](email_phong) có thể liên hệ qua email nào
     - phòng [Đảm bảo chất lượng](email_phong) dùng email gì
     - email của phòng [Khảo thí](email_phong) là gì?
-    - phòng [Thanh tra - Pháp chế](email_phong) có email liên hệ không
+    - liên hệ [Thanh tra - Pháp chế](email_phong) có email liên hệ không
     - phòng [Quản lý Dự án xây dựng Trường](email_phong) có email gì
     - trung tâm [Đào tạo theo nhu cầu xã hội](email_phong) dùng email nào
     - email của Trung tâm [dịch vụ và hỗ trợ sinh viên](email_phong) là gì
@@ -257,7 +264,7 @@ nlu:
     
 - intent: ask_sdt_cac_phong_ban
   examples: |
-    - làm sao để liên lạc với phòng [Công tác sinh viên](sdt_phong)
+    - sdt phòng [Công tác sinh viên](sdt_phong)
     - số điện thoại phòng [ctsv](sdt_phong) là gì?
     - phòng [Đào tạo đại học](sdt_phong) có số điện thoại là gì vậy?
     - tôi cần số điện thoại của phòng [Đào tạo sau đại học](sdt_phong)
@@ -303,7 +310,7 @@ nlu:
     - [chi tiêu](hocphi) khoảng bao nhiêu
 
 
-- intent: ask_chuc_nang
+- intent: ask_chuc_nang_bot_lam_duoc
   examples: |
     - tôi có thể hỏi gì
     - các chức năng bạn có
@@ -356,6 +363,20 @@ nlu:
     - trường có bao nhiêu mã ngành ở bậc [sau đại học](dao_tao_sau_dai_hoc)?
     - trường đào tạo [sau đại học](dao_tao_sau_dai_hoc) có bao nhiêu mã ngành?
     - trường có bao nhiêu chương trình đào tạo [sau đại học](dao_tao_sau_dai_hoc)?
+    - các ngành đào tạo [sau đại học](dao_tao_sau_dai_hoc)?
+
+- intent: ask_nganh_dao_tao_sau_dai_hoc_moi_nhat
+  examples: |
+    - Những ngành đào tạo sau đại học mới là gì?
+    - Có ngành học sau đại học mới nào không?
+    - Các chương trình sau đại học mới gồm những gì?
+    - Trường có thêm ngành sau đại học nào mới không?
+    - Các ngành sau đại học mới là gì?
+    - Những khóa học sau đại học mới được mở là gì?
+    - Có ngành sau đại học mới không?
+    - Trường có ngành nào mới cho hệ sau đại học?
+    - Ngành học mới cho sau đại học là gì?
+    - Chương trình đào tạo sau đại học mới nhất là gì?
 
 - intent: ask_quy_trinh_tuyen_sinh
   examples: |
@@ -369,8 +390,26 @@ nlu:
     - các cách thức tuyển sinh hiện nay là gì?
     - trường có bao nhiêu hình thức tuyển sinh?
     - hình thức tuyển sinh là gì?
+    - Hồ sơ tuyển sinh thì cần những giấy tờ gì? 
+    - tìm hiểu về quy trình tuyển sinh đại học
 
 
+- intent: ask_trinh_do_hoc_van_tuyen_sinh
+  examples: |
+    - Trường có yêu cầu học sinh thi tuyển phải đạt trình độ học vấn nào không?
+    - Yêu cầu học vấn cho học sinh thi tuyển vào trường là gì?
+    - Trình độ học vấn cần thiết để thi tuyển vào trường là gì?
+    - Để thi tuyển vào trường, học sinh cần đạt trình độ học vấn nào?
+    - Trường có yêu cầu cụ thể về học vấn khi thi tuyển không?
+    - Học sinh cần có trình độ học vấn nào để tham gia thi tuyển?
+    - Trình độ học vấn của học sinh có ảnh hưởng đến việc thi tuyển không?
+    - Thi tuyển vào trường cần phải đạt trình độ học vấn nào?
+    - Học sinh thi tuyển cần phải đạt mức học vấn nào?
+    - Trường có quy định gì về học vấn cho học sinh thi tuyển?
+    - yêu cầu tuyển sinh
+
+
+    
 ##########################################
 ######################### PHUONG
 - intent: ask_co_hoi_hoc_tap_nghien_cuu
@@ -410,4 +449,3 @@ nlu:
     - muốn nhận học bổng, cần đáp ứng các tiêu chuẩn nào
     - cần đạt những yêu cầu gì để đủ điều kiện được xét học bổng
 
-    

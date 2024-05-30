@@ -9,7 +9,7 @@
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <style>
-        .nav-user{
+        .nav-user {
             color: blue;
         }
     </style>
@@ -19,7 +19,7 @@
     <?php
     include "includes/db_con.php";
     ?>
-    <!-- <h3><a href="./admin/views/home.php">Trang admin</a></h3> -->
+    <h3><a href="./admin/views/home.php">Trang admin</a></h3>
     <h3><a href="./index.php">Trang user</a></h3>
     <div class="container">
         <div class="row">
@@ -38,9 +38,9 @@
                         <input type="text" class="form-control" id="intentName" name="intentName"
                             placeholder="Nhập chủ đề" required>
                     </div>
-                   
+
                     <button type="submit" class="btn btn-primary">Thêm mới</button>
-                   
+
                 </form>
             </div>
         </div>
@@ -48,8 +48,8 @@
     <?php
     require_once "bot.php";
     ?>
-    
-<!-- 
+
+    <!-- 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
         crossorigin="anonymous"></script>
