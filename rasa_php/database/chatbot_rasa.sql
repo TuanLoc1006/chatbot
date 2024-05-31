@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 30, 2024 at 04:16 AM
+-- Generation Time: May 31, 2024 at 03:43 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -58,6 +58,7 @@ CREATE TABLE `can_bo_nhan_vien` (
 CREATE TABLE `chuong_trinh_dao_tao` (
   `id` int(11) NOT NULL,
   `ma_nganh` varchar(45) NOT NULL,
+  `ma_nam_hoc` int(11) NOT NULL,
   `chuong_trinh_dao_tao` varchar(450) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
@@ -65,17 +66,17 @@ CREATE TABLE `chuong_trinh_dao_tao` (
 -- Dumping data for table `chuong_trinh_dao_tao`
 --
 
-INSERT INTO `chuong_trinh_dao_tao` (`id`, `ma_nganh`, `chuong_trinh_dao_tao`) VALUES
-(1, 'y-khoa', 'http://www.ctump.edu.vn/DesktopModules/NEWS/DinhKem/9079_Nganh-Y-khoa.pdf'),
-(2, 'rang-ham-mat', 'http://www.ctump.edu.vn/DesktopModules/NEWS/DinhKem/9220_2019.-BAN-MO-TA-CTDT-RHM.pdf'),
-(3, 'y-hoc-co-truyen', 'http://www.ctump.edu.vn/DesktopModules/NEWS/DinhKem/8831_Ban-mo-ta-CTDT-YHCT2019.pdf'),
-(4, 'y-hoc-du-phong', 'http://www.ctump.edu.vn/DesktopModules/NEWS/DinhKem/8819_CTDT-tin-chi-YHDP-2013.pdf'),
-(5, 'dieu-duong', 'http://www.ctump.edu.vn/DesktopModules/NEWS/DinhKem/3618_1.-DDDK-VLVH-24-11-17.pdf'),
-(6, 'ky-thuat-xet-nghiem-y-hoc', 'http://www.ctump.edu.vn/DesktopModules/NEWS/DinhKem/9218_Mota_CTDT_XN-2019.pdf'),
-(7, 'ho-sinh', 'Chưa cập nhật'),
-(8, 'y-te-cong-cong', 'http://www.ctump.edu.vn/DesktopModules/NEWS/DinhKem/8801_CTDT-tin-chi-YTCC-2013.pdf'),
-(9, 'ky-thuat-hinh-anh-y-hoc', 'Chưa cập nhật'),
-(10, 'duoc-hoc', 'http://www.ctump.edu.vn/DesktopModules/NEWS/DinhKem/5478_3625_CTDT-tin-chi-Duoc-24-11-17.pdf');
+INSERT INTO `chuong_trinh_dao_tao` (`id`, `ma_nganh`, `ma_nam_hoc`, `chuong_trinh_dao_tao`) VALUES
+(3, 'y-khoa', 1, 'http://www.ctump.edu.vn/DesktopModules/NEWS/DinhKem/9079_Nganh-Y-khoa.pdf'),
+(4, 'rang-ham-mat', 1, 'http://www.ctump.edu.vn/DesktopModules/NEWS/DinhKem/9220_2019.-BAN-MO-TA-CTDT-RHM.pdf'),
+(5, 'y-hoc-co-truyen', 1, 'http://www.ctump.edu.vn/DesktopModules/NEWS/DinhKem/8831_Ban-mo-ta-CTDT-YHCT2019.pdf'),
+(6, 'y-hoc-du-phong', 1, 'http://www.ctump.edu.vn/DesktopModules/NEWS/DinhKem/8819_CTDT-tin-chi-YHDP-2013.pdf'),
+(7, 'dieu-duong', 1, 'http://www.ctump.edu.vn/DesktopModules/NEWS/DinhKem/3618_1.-DDDK-VLVH-24-11-17.pdf'),
+(8, 'ky-thuat-xet-nghiem-y-hoc', 1, 'http://www.ctump.edu.vn/DesktopModules/NEWS/DinhKem/9218_Mota_CTDT_XN-2019.pdf'),
+(9, 'ho-sinh', 1, 'đang cập nhật'),
+(10, 'y-te-cong-cong', 1, 'http://www.ctump.edu.vn/DesktopModules/NEWS/DinhKem/8801_CTDT-tin-chi-YTCC-2013.pdf'),
+(11, 'ky-thuat-hinh-anh-y-hoc', 1, 'đang cập nhật'),
+(12, 'duoc-hoc', 1, 'http://www.ctump.edu.vn/DesktopModules/NEWS/DinhKem/5478_3625_CTDT-tin-chi-Duoc-24-11-17.pdf');
 
 -- --------------------------------------------------------
 
@@ -99,25 +100,26 @@ CREATE TABLE `example_intent` (
 CREATE TABLE `hoc_phi` (
   `id` int(11) NOT NULL,
   `ma_nganh` varchar(45) NOT NULL,
-  `gia_tien` int(11) NOT NULL,
-  `ma_nam_hoc` varchar(255) NOT NULL
+  `ma_nam_hoc` int(11) NOT NULL,
+  `gia_tien` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `hoc_phi`
 --
 
-INSERT INTO `hoc_phi` (`id`, `ma_nganh`, `gia_tien`, `ma_nam_hoc`) VALUES
-(1, 'y-khoa', 44100000, ''),
-(2, 'rang-ham-mat', 44100000, ''),
-(3, 'duoc-hoc', 44100000, ''),
-(4, 'y-hoc-co-truyen', 39200000, ''),
-(5, 'y-hoc-du-phong', 39200000, ''),
-(6, 'dieu-duong', 39200000, ''),
-(7, 'ky-thuat-xet-nghiem-y-hoc', 39200000, ''),
-(8, 'ho-sinh', 20400000, ''),
-(9, 'ky-thuat-hinh-anh-y-hoc', 20400000, ''),
-(10, 'y-te-cong-cong', 20400000, '');
+INSERT INTO `hoc_phi` (`id`, `ma_nganh`, `ma_nam_hoc`, `gia_tien`) VALUES
+(1, 'y-khoa', 3, '44100000'),
+(2, 'rang-ham-mat', 3, '44100000'),
+(3, 'duoc-hoc', 3, '44100000'),
+(4, 'y-hoc-co-truyen', 3, '39200000'),
+(5, 'y-hoc-du-phong', 3, '39200000'),
+(6, 'dieu-duong', 3, '39200000'),
+(7, 'ky-thuat-xet-nghiem-y-hoc', 3, '39200000'),
+(8, 'ho-sinh', 3, '20400000'),
+(9, 'ky-thuat-hinh-anh-y-hoc', 3, '20400000'),
+(10, 'y-te-cong-cong', 3, '20400000'),
+(11, 'y-khoa', 4, '50000000');
 
 -- --------------------------------------------------------
 
@@ -187,12 +189,32 @@ INSERT INTO `khoa_phong_ban` (`ma_khoa_phong_ban`, `ten_khoa_phong_ban`, `dia_ch
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `nam_hoc`
+--
+
+CREATE TABLE `nam_hoc` (
+  `ma_nam_hoc` int(11) NOT NULL,
+  `ten_nam_hoc` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `nam_hoc`
+--
+
+INSERT INTO `nam_hoc` (`ma_nam_hoc`, `ten_nam_hoc`) VALUES
+(1, '2021'),
+(2, '2022'),
+(3, '2023'),
+(4, '2024');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `nganh`
 --
 
 CREATE TABLE `nganh` (
-  `id` int(11) NOT NULL,
-  `ma_nganh` varchar(45) DEFAULT NULL,
+  `ma_nganh` varchar(45) NOT NULL,
   `ten_nganh` varchar(450) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
@@ -200,17 +222,17 @@ CREATE TABLE `nganh` (
 -- Dumping data for table `nganh`
 --
 
-INSERT INTO `nganh` (`id`, `ma_nganh`, `ten_nganh`) VALUES
-(1, 'y-khoa', 'Y Khoa'),
-(2, 'y-hoc-co-truyen', 'Y học cổ truyền'),
-(3, 'rang-ham-mat', 'Răng hàm mặt'),
-(4, 'duoc-hoc', 'Dược học'),
-(5, 'y-hoc-du-phong', 'Y học dụ phòng'),
-(6, 'dieu-duong', 'Điều dưỡng'),
-(7, 'ky-thuat-xet-nghiem-y-hoc', 'Kỹ thuật xét nghiệm y học'),
-(8, 'ho-sinh', 'Hộ sinh'),
-(9, 'ky-thuat-hinh-anh-y-hoc', 'Kỹ thuật hình ảnh y học'),
-(10, 'y-te-cong-cong', 'Y tế công cộng');
+INSERT INTO `nganh` (`ma_nganh`, `ten_nganh`) VALUES
+('dieu-duong', 'Điều dưỡng'),
+('duoc-hoc', 'Dược học'),
+('ho-sinh', 'Hộ sinh'),
+('ky-thuat-hinh-anh-y-hoc', 'Kỹ thuật hình ảnh y học'),
+('ky-thuat-xet-nghiem-y-hoc', 'Kỹ thuật xét nghiệm y học'),
+('rang-ham-mat', 'Răng hàm mặt'),
+('y-hoc-co-truyen', 'Y học cổ truyền'),
+('y-hoc-du-phong', 'Y học dự phòng'),
+('y-khoa', 'Y Khoa'),
+('y-te-cong-cong', 'Y tế công cộng');
 
 --
 -- Indexes for dumped tables
@@ -235,7 +257,8 @@ ALTER TABLE `can_bo_nhan_vien`
 --
 ALTER TABLE `chuong_trinh_dao_tao`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `fk_nganh_ma_nganh` (`ma_nganh`);
+  ADD KEY `ma_nganh` (`ma_nganh`),
+  ADD KEY `ma_nam_hoc` (`ma_nam_hoc`);
 
 --
 -- Indexes for table `example_intent`
@@ -249,7 +272,8 @@ ALTER TABLE `example_intent`
 --
 ALTER TABLE `hoc_phi`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `ma_nganh` (`ma_nganh`);
+  ADD KEY `ma_nganh` (`ma_nganh`),
+  ADD KEY `ma_nam_hoc` (`ma_nam_hoc`);
 
 --
 -- Indexes for table `intents`
@@ -264,11 +288,16 @@ ALTER TABLE `khoa_phong_ban`
   ADD PRIMARY KEY (`ma_khoa_phong_ban`);
 
 --
+-- Indexes for table `nam_hoc`
+--
+ALTER TABLE `nam_hoc`
+  ADD PRIMARY KEY (`ma_nam_hoc`);
+
+--
 -- Indexes for table `nganh`
 --
 ALTER TABLE `nganh`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `ma_nganh_index` (`ma_nganh`);
+  ADD PRIMARY KEY (`ma_nganh`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -290,7 +319,7 @@ ALTER TABLE `can_bo_nhan_vien`
 -- AUTO_INCREMENT for table `chuong_trinh_dao_tao`
 --
 ALTER TABLE `chuong_trinh_dao_tao`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `example_intent`
@@ -302,7 +331,7 @@ ALTER TABLE `example_intent`
 -- AUTO_INCREMENT for table `hoc_phi`
 --
 ALTER TABLE `hoc_phi`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `intents`
@@ -317,10 +346,10 @@ ALTER TABLE `khoa_phong_ban`
   MODIFY `ma_khoa_phong_ban` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 
 --
--- AUTO_INCREMENT for table `nganh`
+-- AUTO_INCREMENT for table `nam_hoc`
 --
-ALTER TABLE `nganh`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+ALTER TABLE `nam_hoc`
+  MODIFY `ma_nam_hoc` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- Constraints for dumped tables
@@ -343,7 +372,7 @@ ALTER TABLE `can_bo_nhan_vien`
 --
 ALTER TABLE `chuong_trinh_dao_tao`
   ADD CONSTRAINT `chuong_trinh_dao_tao_ibfk_1` FOREIGN KEY (`ma_nganh`) REFERENCES `nganh` (`ma_nganh`),
-  ADD CONSTRAINT `fk_nganh_ma_nganh` FOREIGN KEY (`ma_nganh`) REFERENCES `nganh` (`ma_nganh`);
+  ADD CONSTRAINT `chuong_trinh_dao_tao_ibfk_2` FOREIGN KEY (`ma_nam_hoc`) REFERENCES `nam_hoc` (`ma_nam_hoc`);
 
 --
 -- Constraints for table `example_intent`
@@ -355,7 +384,8 @@ ALTER TABLE `example_intent`
 -- Constraints for table `hoc_phi`
 --
 ALTER TABLE `hoc_phi`
-  ADD CONSTRAINT `hoc_phi_ibfk_1` FOREIGN KEY (`ma_nganh`) REFERENCES `nganh` (`ma_nganh`);
+  ADD CONSTRAINT `hoc_phi_ibfk_1` FOREIGN KEY (`ma_nganh`) REFERENCES `nganh` (`ma_nganh`),
+  ADD CONSTRAINT `hoc_phi_ibfk_2` FOREIGN KEY (`ma_nam_hoc`) REFERENCES `nam_hoc` (`ma_nam_hoc`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

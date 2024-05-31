@@ -51,14 +51,13 @@ class ActionThongTinTruong(Action):
             "đại học y cần thơ",
             "đại học y dược ct",
             "y dược ct",
-            "địa điểm này",
-            "địa điểm"
+            
         }
         
         if universityy_entity and universityy_entity.lower() in related_terms:
             # Trả lời thông tin về trường Đại học Y Dược Cần Thơ
             dispatcher.utter_message(
-                text="Trường Đại học Y Dược Cần Thơ là trường đại học Khoa học Sức khỏe hệ công lập trực thuộc Bộ Y tế duy nhất tại Đồng bằng sông Cửu Long, Việt Nam. Trường Đại học Y Dược Cần Thơ cũng là một trong những trường đào tạo Y – Dược tốt nhất Việt Nam nói chung và khu vực Đồng bằng Sông Cửu Long nói riêng."
+                text="</br>Trường Đại học Y Dược Cần Thơ là trường đại học Khoa học Sức khỏe hệ công lập trực thuộc Bộ Y tế duy nhất tại Đồng bằng sông Cửu Long, Việt Nam. </br>Trường Đại học Y Dược Cần Thơ cũng là một trong những trường đào tạo Y Dược tốt nhất Việt Nam nói chung và khu vực Đồng bằng Sông Cửu Long nói riêng."
             )
         else:
             # Trả lời rằng không có thông tin về trường này

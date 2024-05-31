@@ -49,10 +49,11 @@
                 $("#chat-widget-messages").append(`
                     <div style='background-color: #ccc; padding: 10px; border-radius: 12px; margin-bottom: 10px; color: black;'>
                         <strong>CTUMP:</strong> Xin chào, tôi có thể giúp bạn tìm kiếm thông tin về:
-                        <br> - Thông tin trường
+                        <br> - Thông tin trường này
                         <br> - Các ngành đào tạo
                         <br> - Chương trình đào tạo mỗi ngành
                         <br> - Thông tin các khoa, phòng ban (địa điểm, email, số điện thoại)
+                        <br> - Thông tin học phí theo năm
                         <br> - Cấp lại thẻ sinh viên
                         <br> - Các ngành đào tạo sau đại học
                         <br> - Quy trình tuyển sinh

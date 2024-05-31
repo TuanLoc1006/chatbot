@@ -34,3 +34,16 @@ Action học phí: các ngành học bao nhiêu tiền
 action_hoi_thong_tin_phong: thông tin học ohis
 Action học phí: các ngành học bao nhiêu tiền
 Action học phí: giá tiền học các ngành
+action_hoi_thong_tin_phong: thông tin trường
+action_hoi_thong_tin_phong: mô tả trường
+action_hoi_thong_tin_khoa: giới thiệu trường
+action_hoi_thong_tin_phong: mô tả trường dh ydct
+action_hoi_thong_tin_phong: liệt kê thông tin trường
+action_hoi_thong_tin_khoa: giới thiệu về ctump
+Action ctdt: thông tin đại học y dược
+action_hoi_thong_tin_phong: thông tin truong
+Action học phí: thông tin trường
+Action học phí: giới thiệu ctum
+Action học phí: Thông tin trường
+Action ctdt: Chương trình đào tạo mỗi ngành
+Action học phí: Thông tin trường

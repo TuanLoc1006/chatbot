@@ -104,7 +104,7 @@ nlu:
     - mô tả [trường này](university)
     - giải thích về [trường](university)
     - mô tả [địa điểm này](university)
-    - thông tin trường [địa điểm](university)
+    - [Thông tin trường này](university)
     
 - intent: ask_thong_tin_nganh
   examples: |
@@ -180,7 +180,7 @@ nlu:
     - liên hệ khoa [y](infor_khoa)
     - thông tin chi tiết khoa [dược](infor_khoa)
     - tôi muốn biết khoa [Y tế công cộng](infor_khoa)
-    - giới thiệu khoa [y học dự phòng](infor_khoa) ở đâu?
+    - khoa [y học dự phòng](infor_khoa) ở đâu?
     - mô tả chi tiết khoa [kỹ thuật xét nghiệm y học](infor_khoa)
     - khoa [điều dưỡng](infor_khoa)
     - khoa [răng hàm mặt](infor_khoa)
@@ -371,6 +371,7 @@ nlu:
     - [chi tiêu](hocphi) khoảng bao nhiêu
     - [Học phí](hocphi) cơ bản của 1 ngành là bao nhiêu 
     - [giá tiền](hocphi) các ngành
+    
 - intent: ask_hoc_phi_co_tang_khong
   examples: |
     - Học phí có được tăng theo từng năm không?
@@ -493,6 +494,21 @@ nlu:
     - tôi cần cấp lại thẻ sinh viên, hướng dẫn giúp tôi
     - mất thẻ sinh viên, muốn làm lại thì phải làm sao?
     - thủ tục để cấp lại thẻ sinh viên gồm những gì?
+
+
+
+- intent: ask_cap_lai_email_sinh_vien
+  examples: |
+    - tôi quên mật khẩu [email trường](cap_lai_email_sv)
+    - làm thế nào để [đặt lại mật khẩu email sinh viên](cap_lai_email_sv)?
+    - tôi quên mật khẩu [email sinh viên](cap_lai_email_sv), phải làm sao?
+    - hướng dẫn tôi cách [khôi phục mật khẩu email](cap_lai_email_sv) sinh viên.
+    - các bước để khôi phục mật khẩu email trường là gì?
+    - ai có thể giúp tôi lấy lại mật khẩu email sinh viên?
+    - tôi cần liên hệ với ai để khôi phục mật khẩu email trường?
+    - bộ phận hỗ trợ nào có thể giúp tôi khi tôi quên mật khẩu email sinh viên?
+    - quên mật khẩu email thì làm sao
+    - email sinh viên không đăng nhập được
 
 - intent: ask_nganh_dao_tao_sau_dai_hoc
   examples: |

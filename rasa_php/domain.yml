@@ -2,7 +2,9 @@ version: "3.1"
 
 actions:
   - action_chatgpt_fallback
+
   - action_thong_tin_truong
+
   - action_thong_tin_nganh
   - action_chuong_trinh_dao_tao
 
@@ -57,12 +59,14 @@ intents:
   - ask_sdt_cac_phong_ban
 
   - ask_cap_lai_the_sinh_vien
-
+  - ask_cap_lai_email_sinh_vien
   - ask_nganh_dao_tao_sau_dai_hoc
   - ask_nganh_dao_tao_sau_dai_hoc_moi_nhat
 
   - ask_quy_trinh_tuyen_sinh
   - ask_trinh_do_hoc_van_tuyen_sinh
+
+  
 ############################### PHUONG
   - ask_co_hoi_hoc_tap_nghien_cuu
   - ask_yeu_to_xet_hoc_bong
@@ -70,6 +74,7 @@ intents:
 entities:
   - hocphi
   - year
+
   - nganh
   - university
 
@@ -84,6 +89,8 @@ entities:
   - sdt_phong
  
   - dao_tao_sau_dai_hoc
+
+  - cap_lai_email_sv
 
 
 # slots:
@@ -128,6 +135,8 @@ responses:
 
   # utter_ask_phone:
   # - text: "vui lòng cung cấp số điện thoại?"
+  # utter_ask_tt_truong:
+  # - text: "</br>Trường Đại học Y Dược Cần Thơ là trường đại học Khoa học Sức khỏe hệ công lập trực thuộc Bộ Y tế duy nhất tại Đồng bằng sông Cửu Long, Việt Nam. </br>Trường Đại học Y Dược Cần Thơ cũng là một trong những trường đào tạo Y Dược tốt nhất Việt Nam nói chung và khu vực Đồng bằng Sông Cửu Long nói riêng."
     
   utter_greet:
   - text: "Chào! bạn tôi có thể giúp gì cho bạn?"
