@@ -12,7 +12,7 @@ from rasa_sdk.events import UserUtteranceReverted
 import requests 
 import re
 import logging
-
+from datetime import datetime
 logging.basicConfig(format='%(asctime)s - %(message)s',
                     datefmt='%d-%b-%y %H:%M:%S')
 # phuong
@@ -51,6 +51,8 @@ class ActionThongTinTruong(Action):
             "đại học y cần thơ",
             "đại học y dược ct",
             "y dược ct",
+            "thông tin trường này",
+            "thông tin trường",
             
         }
         
@@ -126,34 +128,6 @@ class ActionChuongTrinhDaoTao(Action):
                 logging.error(f"Error writing log file: {e}")
         
         return []
-    
-# class action_hocphi(Action):
-#     def name(self):
-#         return "action_hoc_phi"
-#     def run(self, dispatcher: CollectingDispatcher,
-#             tracker: Tracker,
-#             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        
-#         hocphi_entity = next(tracker.get_latest_entity_values('hocphi'), None)
-#         nam = next(tracker.get_latest_entity_values('year'), None)
-#         print(nam)
-#         user_input = tracker.latest_message['text']
-#         print("người dùng hỏi học phí: " + user_input)
-#         logging.info("{}{}".format('Call action_hoc_phi: ', hocphi_entity))
-
-#         if hocphi_entity:
-#             hocphi_entity = hocphi_entity.lower()
-#             hoc_phi_database = get_hoc_phi
-#             nam = hoc_phi_database[0][2]
-#             dispatcher.utter_message(text=f"Mức học phí ước tính năm {nam} của các ngành học là: ")
-#             for value in hoc_phi_database:
-#                 dispatcher.utter_message(text=f"{value[0]} : {value[1]} VND")
-#         else:
-#             # Tạo một đối tượng write_file
-#             file_writer = write_file()
-#             file_writer.get_ghi_log_file('Action học phí: '+user_input)
-#         return []
-
 class action_hocphi(Action):
     def name(self):
         return "action_hoc_phi"
@@ -164,30 +138,46 @@ class action_hocphi(Action):
         
         hocphi_entity = next(tracker.get_latest_entity_values('hocphi'), None)
         nam_entity = next(tracker.get_latest_entity_values('year'), None)
+        loai_hinh_dt = next(tracker.get_latest_entity_values('loai_hinh_dt'), None)
         user_input = tracker.latest_message['text']
         
-        logging.info("{}{}".format('Call action_hoc_phi: ', hocphi_entity))
+        logging.info(f"Call action_hoc_phi: {hocphi_entity}")
+        logging.info(f"Call action_hoc_phi_nam: {nam_entity}")
+        logging.info(f"Call action_hoc_phi_loai_hinh_dt: {loai_hinh_dt}")
+        current_year = datetime.now().year
+        year_aliases = {
+            "hiện tại": current_year,
+            "bây giờ": current_year,
+            "năm hiện tại": current_year,
+            "1" : current_year ,
+            "năm nay": current_year,
+            "năm rồi": current_year - 1,
+            "năm trước": current_year - 1,
 
+        }
         if hocphi_entity:
-            hocphi_entity = hocphi_entity.lower()
-            if nam_entity:
-                nam = nam_entity
+            nam = year_aliases.get(nam_entity.lower(), nam_entity) if nam_entity else current_year
+            if loai_hinh_dt is None or loai_hinh_dt == "đại học":
+                # loai_hinh_dt = "đại học"
+                handledb_instance = handleDB()
+                hoc_phi_database = handledb_instance.get_hoc_phi(nam)
+            
+                if hoc_phi_database:
+                    hoc_phi_message = f"<br/>Mức học phí trình độ đại học năm {nam} của các ngành học là:</br>"
+                    hoc_phi_message += "</br>".join([f"{value[0]} : {value[1]} VND" for value in hoc_phi_database])
+                    dispatcher.utter_message(text=hoc_phi_message)
+                else:
+                    dispatcher.utter_message(text="Không tìm thấy thông tin học phí cho năm được yêu cầu.")
             else:
-                nam = None  # Nếu không có năm được cung cấp, sử dụng None để lấy năm hiện tại
-            handledb_instance = handleDB()
-            hoc_phi_database = handledb_instance.get_hoc_phi(nam)
-            if hoc_phi_database:
-                dispatcher.utter_message(text=f"Mức học phí{' năm ' + str(nam) if nam else ' năm hiện tại'} của các ngành học là: ")
-                for value in hoc_phi_database:
-                    dispatcher.utter_message(text=f"{value[0]} : {value[1]} VND")
-            else:
-                dispatcher.utter_message(text="Không tìm thấy thông tin học phí cho năm được yêu cầu.")
+                dispatcher.utter_message(text=f"Không tìm thấy thông tin học phí cho loại hình đào tạo {loai_hinh_dt} ")
+
         else:
             # Nếu không có entity 'hocphi' được phát hiện, ghi log lại câu hỏi của người dùng
             file_writer = write_file()
-            file_writer.get_ghi_log_file('Action học phí: '+user_input)
+            file_writer.get_ghi_log_file(f'Action học phí: {user_input}')
             
         return []
+
 
 
 class actionHocPhiCoTangKhong(Action):
@@ -560,6 +550,93 @@ class action_yeu_to_xet_hoc_bong(Action):
         return []
     
 
+class actionCapLaiEmailSv(Action):
+    def name(self):
+        return "action_cap_lai_email_sv"
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        
+        cap_lai_email_entity = next(tracker.get_latest_entity_values('cap_lai_email_sv'), None)
+        user_input = tracker.latest_message['text']
+        print("người dùng hỏi cấp email: " + user_input)
+        logging.info("{}{}".format('Call action_cap_lai_email_sv: ', cap_lai_email_entity))
+        
+        if cap_lai_email_entity:  
+            dispatcher.utter_message(text=f"</br>Sinh viên liên hệ thầy Xô (Trung tâm CNTT), hoặc qua email: tvxo@ctump.edu.vn")  
+        else:
+            dispatcher.utter_message(text=f"Đã xảy ra lỗi khi yêu cầu cấp lại email sinh viên")
+            # Tạo một đối tượng write_file
+            file_writer = write_file()
+            file_writer.get_ghi_log_file('action_cap_lai_email_sv: '+user_input)
+        return []
+    
+
+class actionCapLaiBaohiemTaiNan(Action):
+    def name(self):
+        return "action_cap_lai_thanh_phi_bao_hiem_tai_nan"
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        
+        bhtn_entity = next(tracker.get_latest_entity_values('cap_lai_thanh_phi_bao_hiem_tai_nan'), None)
+        user_input = tracker.latest_message['text']
+        print("người dùng hỏi về bảo hiểm tai nạn: " + user_input)
+        logging.info("{}{}".format('Call action_cap_lai_thanh_phi_bao_hiem_tai_nan: ', bhtn_entity))
+        
+        if bhtn_entity:  
+            dispatcher.utter_message(text=f"</br>Sinh viên liên hệ Cô Linh (phòng đào tạo)</br> Địa chỉ: Tầng trệt, Khoa Y, Trường Đại học Y Dược Cần Thơ</br> Điện thoại: 0292. 3 831 531</br>Email: daotao@ctump.edu.vn")  
+        else:
+            dispatcher.utter_message(text=f"Đã xảy ra lỗi khi yêu cầu cấp lại bảo hiểm tai nạn cho sinh viên")
+            # Tạo một đối tượng write_file
+            file_writer = write_file()
+            file_writer.get_ghi_log_file('action_cap_lai_thanh_phi_bao_hiem_tai_nan: '+user_input)
+        return []
+
+
+class actionCapLaiTkQuanLyDaoTao(Action):
+    def name(self):
+        return "action_cap_lai_tai_khoan_quan_ly_dao_tao"
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        
+        tkdt_entity = next(tracker.get_latest_entity_values('cap_lai_tai_khoan_quan_ly_dao_tao'), None)
+        user_input = tracker.latest_message['text']
+        print("người dùng hỏi về bảo hiểm tai nạn: " + user_input)
+        logging.info("{}{}".format('Call action_cap_lai_tai_khoan_quan_ly_dao_tao: ', tkdt_entity))
+        
+        if tkdt_entity:  
+            dispatcher.utter_message(text=f"</br>Sinh viên liên hệ Thầy Hiệp (phòng đào tạo đại học)</br> Địa chỉ: Tầng trệt, Khoa Y, Trường Đại học Y Dược Cần Thơ</br> Điện thoại: 0292. 3 831 531</br>Email: daotao@ctump.edu.vn")  
+        else:
+            dispatcher.utter_message(text=f"Đã xảy ra lỗi khi yêu cầu cấp lại tài khoản quản lý đào tạo")
+            # Tạo một đối tượng write_file
+            file_writer = write_file()
+            file_writer.get_ghi_log_file('action_cap_lai_tai_khoan_quan_ly_dao_tao: '+user_input)
+        return []
+
+
+class actionCapLaiTheSv(Action):
+    def name(self):
+        return "action_cap_lai_the_sv"
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        
+        theSv_entity = next(tracker.get_latest_entity_values('cap_lai_the_sv'), None)
+        user_input = tracker.latest_message['text']
+        print("người dùng hỏi cấp lại thẻ sinh viên: " + user_input)
+        logging.info("{}{}".format('Call action_cap_lai_the_sv: ', theSv_entity))
+        
+        if theSv_entity:  
+            dispatcher.utter_message(text=f"</br>Để cấp lại thẻ sinh viên, bạn vui lòng xem đầy đủ thông tin tại đây http://www.ctump.edu.vn/?tabid=3130&ndid=18047&key=Quy_trinh_cap_lai_the_sinh_vien")  
+        else:
+            dispatcher.utter_message(text=f"Đã xảy ra lỗi khi yêu cầu cấp lại thẻ sinh viên")
+            # Tạo một đối tượng write_file
+            file_writer = write_file()
+            file_writer.get_ghi_log_file('action_cap_lai_the_sv: '+user_input)
+        return []
+
 
 class ActionChatGPTFallback(Action):
     def name(self) -> str:
@@ -570,6 +647,7 @@ class ActionChatGPTFallback(Action):
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         
         user_message = tracker.latest_message.get('text')
+
         print("user_ask: "+user_message)
         # logging.info("{}{}".format('Call action_fall_back: ', user_message))
         try:

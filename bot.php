@@ -54,10 +54,10 @@
                         <br> - Chương trình đào tạo mỗi ngành
                         <br> - Thông tin các khoa, phòng ban (địa điểm, email, số điện thoại)
                         <br> - Thông tin học phí theo năm
-                        <br> - Cấp lại thẻ sinh viên
+                        <br> - Cấp lại thẻ sinh viên, email, bảo hiểm tai nạn, tài khoản quản lý đào tạo
                         <br> - Các ngành đào tạo sau đại học
                         <br> - Quy trình tuyển sinh
-                        <br> - Thông tin học bổng, học phí các ngành
+                        <br> - Thông tin học bổng
                     </div>
                 `);
                 welcomeMessageShown = true; // Mark the welcome message as displayed

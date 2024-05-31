@@ -159,6 +159,7 @@ nlu:
     - chương trình đào tạo ngành [y khoa](nganh)
     - các môn của ngành [y khoa](nganh) sẽ học
     - [y khoa](nganh)
+    - [Y](nganh)
     - ngành [dược](nganh) được học gì?
     - [dược](nganh)
     - thông tin về chương trình học ngành [điều dưỡng](nganh)
@@ -180,7 +181,7 @@ nlu:
     - liên hệ khoa [y](infor_khoa)
     - thông tin chi tiết khoa [dược](infor_khoa)
     - tôi muốn biết khoa [Y tế công cộng](infor_khoa)
-    - khoa [y học dự phòng](infor_khoa) ở đâu?
+    - khoa [y học dự phòng](infor_khoa) 
     - mô tả chi tiết khoa [kỹ thuật xét nghiệm y học](infor_khoa)
     - khoa [điều dưỡng](infor_khoa)
     - khoa [răng hàm mặt](infor_khoa)
@@ -205,7 +206,7 @@ nlu:
     - tìm [kỹ thuật hình ảnh](location_khoa)
     - Khoa [Khoa học cơ bản](location_khoa)
     - dẫn tao đi qua [kỹ thuật hình ảnh y học](location_khoa)
-
+    - địa chỉ [Y học dự phòng](location_khoa) ở đâu?
 - intent: ask_email_cac_khoa
   examples: |
     - khoa [y](email_khoa)
@@ -277,8 +278,8 @@ nlu:
     - phòng [NCKH-HTQT](location_phong) đi đường nào
     - vị trí [nghiên cứu khoa học](location_phong)
     - tọa độ [Quản trị thiết bị](location_phong) ở khoa nào
-    - phòng [Tài chính kế toán](location_phong) ở khu vực nào
-    - phòng [Tổ chức cán bộ](location_phong) ở lầu mấy 
+    - địa chỉ phòng [Tài chính kế toán](location_phong) ở khu vực nào
+    - địa điểm phòng [Tổ chức cán bộ](location_phong) ở lầu mấy 
     - phòng [Thông tin và Truyền thông](location_phong) đi đường nào thế
     - phòng [Đảm bảo chất lượng](location_phong) ở tòa nhà nào
     - phòng [Khảo thí](location_phong) ở chổ nào
@@ -352,9 +353,9 @@ nlu:
 
 - intent: ask_hoc_phi
   examples: |
-    - thông tin [học phí](hocphi) [năm nay](year) bao nhiêu
-    - [học phí](hocphi) [bây giờ](year) của trường đại học y dược là bao nhiêu
-    - [học phí](hocphi) [hiện tại](year) của trường là bao nhiêu
+    - thông tin [học phí](hocphi) [năm nay](year) [sau đại học](loai_hinh_dt) bao nhiêu
+    - [học phí](hocphi) [bây giờ](year) [liên thông](loai_hinh_dt) của trường đại học y dược là bao nhiêu
+    - [học phí](hocphi) [hiện tại](year) [đại học](loai_hinh_dt) của trường là bao nhiêu
     - trường này học khoảng bao nhiêu tiền
     - học trường này [tốn bao nhiêu tiền](hocphi) vào [năm sau](year)
     - học trường này có [đắt tiền](hocphi) không
@@ -364,14 +365,26 @@ nlu:
     - các ngành học bao nhiêu tiền
     - [học phí](hocphi) [năm sau](year) là bao nhiêu
     - giá [học phí](hocphi)
-    - [học phí](hocphi) trường này tốn bao nhiêu tiền
-    - [giá tiền](hocphi) học bao nhiêu
-    - liệt kê [chi phí](hocphi) các ngành của trường
+    - [học phí](hocphi) [năm hiện tại](year) trường này tốn bao nhiêu tiền
+    - [giá tiền](hocphi) [năm rồi](year) học bao nhiêu
+    - liệt kê [chi phí](hocphi) [năm trước](year) các ngành của trường
     - [đóng tiền](hocphi) khoảng bao nhiêu
     - [chi tiêu](hocphi) khoảng bao nhiêu
     - [Học phí](hocphi) cơ bản của 1 ngành là bao nhiêu 
     - [giá tiền](hocphi) các ngành
-    
+    - cho mình hỏi [học phí](hocphi) tại trường ạ?
+
+
+# - intent: ask_hoc_phi_theo_loai_hinh_nganh
+#   examples: |
+#     - thông tin [học phí](hocphi) [chính quy](loai_hinh_dt) ngành [điều dưỡng](nganh)
+#     - [học phí](hocphi) [sau đại học](loai_hinh_dt) ngành [dược](nganh)
+#     - học [liên thông](loai_hinh_dt) ngành [y khoa](nganh) một năm bao nhiêu
+
+
+
+
+
 - intent: ask_hoc_phi_co_tang_khong
   examples: |
     - Học phí có được tăng theo từng năm không?
@@ -479,11 +492,12 @@ nlu:
 
 - intent: ask_cap_lai_the_sinh_vien
   examples: |
-    - tôi bị mất thẻ sinh viên, làm sao để cấp lại?
-    - thủ tục cấp lại thẻ sinh viên như thế nào?
     - hướng dẫn cấp lại thẻ sinh viên giúp tôi với
+    - tôi bị mất [thẻ sinh viên](cap_lai_the_sv), làm sao để cấp lại?
+    - thủ tục cấp lại [thẻ sv](cap_lai_the_sv) viên như thế nào?
+    - [cấp lại thẻ sinh viên](cap_lai_the_sv)
     - tôi muốn làm lại thẻ sinh viên thì phải làm sao?
-    - làm lại thẻ sinh viên cần những gì?
+    - làm lại [thẻ sinh viên](cap_lai_the_sv) cần những gì?
     - tôi bị mất thẻ sinh viên, xin cấp lại thẻ mới
     - quy trình cấp lại thẻ sinh viên là gì?
     - làm cách nào để được cấp lại thẻ sinh viên?
@@ -503,12 +517,40 @@ nlu:
     - làm thế nào để [đặt lại mật khẩu email sinh viên](cap_lai_email_sv)?
     - tôi quên mật khẩu [email sinh viên](cap_lai_email_sv), phải làm sao?
     - hướng dẫn tôi cách [khôi phục mật khẩu email](cap_lai_email_sv) sinh viên.
-    - các bước để khôi phục mật khẩu email trường là gì?
-    - ai có thể giúp tôi lấy lại mật khẩu email sinh viên?
+    - các bước để khôi phục mật khẩu [mail sinh viên] là gì?
+    - ai có thể giúp tôi lấy lại mật khẩu [email sv] sinh viên?
     - tôi cần liên hệ với ai để khôi phục mật khẩu email trường?
     - bộ phận hỗ trợ nào có thể giúp tôi khi tôi quên mật khẩu email sinh viên?
     - quên mật khẩu email thì làm sao
-    - email sinh viên không đăng nhập được
+    - [gmail] sinh viên không đăng nhập được
+    - tôi cần cấp lại địa chỉ mail sinh viên
+    - đăng nhập [tài khoản sinh viên](cap_lai_email_sv) không được
+    - liên hệ ai để [lấy lại mật khẩu email](cap_lai_email_sv)
+    - cấp lại [mail](cap_lai_email_sv) liên hệ ai?
+    - tôi quên mật khẩu [email](cap_lai_email_sv)
+
+
+- intent: ask_cap_lai_bao_hiem_tai_nan
+  examples: |
+    - yêu cầu cấp lại [bảo hiểm tai nạn](cap_lai_thanh_phi_bao_hiem_tai_nan)
+    - thanh phí [bảo hiểm tn](cap_lai_thanh_phi_bao_hiem_tai_nan) liên hệ ai
+    - quy trình đăng ký [bh tai nạn](cap_lai_thanh_phi_bao_hiem_tai_nan) ra sao
+    - tôi cần hỗ trợ [thanh phí bảo hiểm tai nạn](cap_lai_thanh_phi_bao_hiem_tai_nan)
+    - thanh phí [bhtn](cap_lai_thanh_phi_bao_hiem_tai_nan) ở đâu
+    - thông tin về [bảo hiểm tai nạn](cap_lai_thanh_phi_bao_hiem_tai_nan)
+    - đăng ký [bảo hiểm tai nạn](cap_lai_thanh_phi_bao_hiem_tai_nan)
+
+
+
+- intent: ask_cap_lai_tai_khoan_quan_ly_dao_tao
+  examples: |
+    - yêu cầu cấp lại tài khoản [quản lý đào tạo](cap_lai_tai_khoan_quan_ly_dao_tao)
+    - tài khoản [quản lý đt](cap_lai_tai_khoan_quan_ly_dao_tao) liên hệ ai
+    - quy trình đăng ký [ql đào tạo](cap_lai_tai_khoan_quan_ly_dao_tao) ra sao
+    - tôi cần hỗ trợ [qlđt](cap_lai_tai_khoan_quan_ly_dao_tao)
+    - cấp lại tài khoản [quan ly dao tao](cap_lai_tai_khoan_quan_ly_dao_tao)
+    - liên hệ ai để cấp lại tài khoản [quản lý đào tạo](cap_lai_tai_khoan_quan_ly_dao_tao)
+    - thông tin về tài khoản [quản lý đào tạo](cap_lai_tai_khoan_quan_ly_dao_tao)
 
 - intent: ask_nganh_dao_tao_sau_dai_hoc
   examples: |

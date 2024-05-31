@@ -47,3 +47,35 @@ Action học phí: giới thiệu ctum
 Action học phí: Thông tin trường
 Action ctdt: Chương trình đào tạo mỗi ngành
 Action học phí: Thông tin trường
+action_cap_lai_email_sv: đăng nhập tài khoản sinh viên không được
+action_cap_lai_email_sv: liên hệ ai để lấy lại mật khẩu email
+Action học phí: thông tin trường
+Action học phí: Thông tin trường này
+Action học phí: thông tin trường
+Action học phí: trường đại học ctu
+Action ctdt: Chương trình đào tạo mỗi ngành
+action_dia_diem_phong: địa chỉ phòng đào tạo sau đại học
+action_dia_diem_phong: địa chỉ phòng Đào tạo sau đại học
+action_dia_diem_phong: địa chỉ phòng Đào tạo đại học
+action_cap_lai_the_sv: Cấp lại thẻ sinh viên
+action_cap_lai_the_sv: mất thẻ sinh viên
+action_cap_lai_the_sv: tôi bị mất thẻ sinh viên
+action_cap_lai_the_sv: thẻ sv
+action_cap_lai_the_sv: cấp lại thẻ sinh viên
+action_cap_lai_the_sv: Cấp lại thẻ sinh viên,
+action_cap_lai_the_sv: tôi mất thẻ sinh viên
+action_email_phong: email không đăng nhập được
+Action học phí: 2024
+Action ctdt: Chương trình đào tạo ngành
+Action ctdt: ngành y
+Action ctdt: Chương trình đào tạo ngành
+Action ctdt: ngành y
+action_hoi_thong_tin_khoa: Thông tin các khoa
+action_hoi_thong_tin_khoa: Thông tin các khoa y học
+Action ctdt: ?
+Action ctdt: ?
+Action học phí: 323213
+Action ctdt: !
+Action ctdt: /.,
+Action ctdt: 
+Action ctdt: 

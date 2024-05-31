@@ -24,10 +24,6 @@ stories:
   - action: action_hoc_phi
 
 
-
-
-
-
 - story: Hỏi về học phí có tăng không
   steps:
   - intent: ask_hoc_phi_co_tang_khong
@@ -38,11 +34,6 @@ stories:
   - intent: ask_phuong_thuc_thanh_toan
   - action: action_phuong_thuc_thanh_toan
 
-
-- story: Hỏi về hỗ trợ vay tiền học
-  steps:
-  - intent: ask_ho_tro_vay_tien_hoc
-  - action: action_ho_tro_vay_tien_hoc
 
 
 
@@ -110,7 +101,27 @@ stories:
 - story: hỏi quy trình cấp lại thẻ sinh viên
   steps:
   - intent: ask_cap_lai_the_sinh_vien
-  - action: utter_cap_lai_the_sinh_vien
+  - action: action_cap_lai_the_sv
+
+
+- story: hỏi quy trình cấp lại email sinh viên
+  steps:
+  - intent: ask_cap_lai_email_sinh_vien
+  - action: action_cap_lai_email_sv
+
+
+- story: hỏi quy trình cấp lại thanh phí bảo hiểm tai nạn
+  steps:
+  - intent: ask_cap_lai_bao_hiem_tai_nan
+  - action: action_cap_lai_thanh_phi_bao_hiem_tai_nan
+
+
+- story: hỏi quy trình cấp lại tài khoản quản lý đào tạo
+  steps:
+  - intent: ask_cap_lai_tai_khoan_quan_ly_dao_tao
+  - action: action_cap_lai_tai_khoan_quan_ly_dao_tao
+
+
 
 
 - story: Hỏi các ngành đào tạo sau đại học

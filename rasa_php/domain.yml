@@ -12,6 +12,7 @@ actions:
   - action_hoc_phi_co_tang_khong
   - action_phuong_thuc_thanh_toan
   - action_ho_tro_vay_tien_hoc
+  - ask_hoc_phi_theo_loai_hinh_nganh
 
   - action_hoi_thong_tin_khoa
   - action_hoi_dia_diem_khoa
@@ -22,6 +23,14 @@ actions:
   - action_hoi_dia_diem_phong
   - action_hoi_email_phong
   - action_hoi_sdt_phong
+
+  - action_cap_lai_the_sv
+  - action_cap_lai_email_sv
+  - action_cap_lai_thanh_phi_bao_hiem_tai_nan
+  - action_cap_lai_tai_khoan_quan_ly_dao_tao
+
+
+  
 ################# PHUONG
   - action_yeu_to_xet_hoc_bong
   
@@ -58,8 +67,12 @@ intents:
   - ask_email_cac_phong_ban
   - ask_sdt_cac_phong_ban
 
+  
   - ask_cap_lai_the_sinh_vien
   - ask_cap_lai_email_sinh_vien
+  - ask_cap_lai_bao_hiem_tai_nan
+  - ask_cap_lai_tai_khoan_quan_ly_dao_tao
+
   - ask_nganh_dao_tao_sau_dai_hoc
   - ask_nganh_dao_tao_sau_dai_hoc_moi_nhat
 
@@ -74,6 +87,8 @@ intents:
 entities:
   - hocphi
   - year
+  - loai_hinh_dt
+  
 
   - nganh
   - university
@@ -90,9 +105,10 @@ entities:
  
   - dao_tao_sau_dai_hoc
 
+  - cap_lai_the_sv
   - cap_lai_email_sv
-
-
+  - cap_lai_thanh_phi_bao_hiem_tai_nan
+  - cap_lai_tai_khoan_quan_ly_dao_tao
 # slots:
 #   location:
 #     type: text
@@ -147,8 +163,8 @@ responses:
   - text: "Bye bye"
   - text: "hẹn gặp lại"
 
-  utter_cap_lai_the_sinh_vien:
-  - text: "Bạn vui lòng xem đầy đủ thông tin tại đây http://www.ctump.edu.vn/?tabid=3130&ndid=18047&key=Quy_trinh_cap_lai_the_sinh_vien"
+  # utter_cap_lai_the_sinh_vien:
+  # - text: "Bạn vui lòng xem đầy đủ thông tin tại đây http://www.ctump.edu.vn/?tabid=3130&ndid=18047&key=Quy_trinh_cap_lai_the_sinh_vien"
 
   # utter_thong_tin_lien_he:
   # - text: "Bạn có muốn để lại thông tin liên hệ để admin giải đáp thắc mắc không"
