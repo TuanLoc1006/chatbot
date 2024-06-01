@@ -1,82 +1,81 @@
-Action ctdt: đào tạo Điều dưỡng
-action_dia_diem_khoa: Tìm hiểu ctump
-action_email_phong: Email phòng
-Action học phí: thanks
-action_sdt_khoa: số điện thoại email
-action_sdt_phòng: số điện thoại email Phòng Công tác sinh viên
-Action ctdt: Hộ sinh
-action_dia_diem_khoa: ngành y khoa
-action_dia_diem_phong: phòng này
-action_dia_diem_phong: phòng y tế
-Action học phí: điểm chuẩn
-action_sdt_phòng: số điện thoại
-action_email_phong: Email phòng
-Action học phí: tất cả
-Action ctdt: chương trình đào tạo khoa y
-Action ctdt: chương trình đào tạo ngành y
-Action ctdt: ngành hộ sinh
-action_ctdt: ngành Dược học gì
-action_ctdt: Kỹ thuật hình ảnh y học
-action_ctdt: Kỹ thuật hình ảnh y học
-action_dia_diem_khoa: y khoa
-action_dia_diem_khoa: ngành y khoa
-action_dia_diem_khoa: ngành y khoa
-action_dia_diem_khoa: y khoa
-action_dia_diem_khoa: ngành y khoa
-Action ctdt: y tế công cộng
-Action ctdt: ngành y học
-Action ctdt: Y học cổ truyền
-Action học phí: Dược
-Action ctdt: Ngành dược
-action_dia_diem_khoa: điều dưỡng
-Action ctdt: quy trình ts
-Action học phí: thông tin học boongri=
-Action ctdt: cho tôi hỏi liên hệ của phòng công tác sinh viên
-Action ctdt: cho tôi hỏi liên hệ của Phòng Công tác sinh viên
-action_email_phong: Email
-Action ctdt: điện thoại của phòng công tác sinh vien
-Action ctdt: số điện thoaijphongf đào tạo
-action_sdt_phòng: số điện thoại phòng đào tạo
-Action ctdt: số điện thoại phòng đào tạo đại học
-Action ctdt: địa chỉ phòng đào tạo đại học
-action_sdt_phòng: địa chỉ Phòng Quản trị thiết bị
-action_dia_diem_khoa: địa chỉ phòng hành chánh
-action_dia_diem_khoa: địa chỉ phòng hành chánh
-action_email_phong: email phòng hành chánh
-action_email_phong: email phòng đào tạo
-Action ctdt: các ngành đào tạo
-action_dia_diem_khoa: cac nganh dao tao
-action_dia_diem_khoa: cac nganh dao tao
-Action ctdt: .
-Action ctdt: .
-Action ctdt: .
-Action ctdt: .
+action_sdt_phòng: thông tin phòng công tác sinh viên
+action_email_phong: email trường là gì
+action_email_khoa: email của khoa
+Action học phí: Học phí cơ bản  của 1 ngành là bao nhiêu
+action_dia_diem_khoa: địa chỉ của trường
+action_dia_diem_khoa: cách tính điểm học phần
+Action ctdt: 
+Action học phí: Thông tin phòng ban
+Action học phí: Thông tin các khoa
 Action ctdt: chương trình đào tạo
-Action ctdt: các ngành đào tạo
-action_email_phong: Liên hệ phòng đảm bảo chất lượng
-action_email_phong: Liên hệ phòng thanh tra
-action_email_phong: liên hệ phòng thanh tra
-action_email_phong: Liên hệ phòng thanh tra
-Action ctdt: yêu cầu tuyển sinh
-Action học phí: thông tin trường ctu
-Action học phí: ctump
-Action học phí: ctump
-Action ctdt: thông tin các ngành học
+Action ctdt: chương trình đào tạo
+Action ctdt: chương trình đào tạo
+Action ctdt: ngành y họcAction ctdt: chương trình đào tạo
+Action ctdt: NGÀNH Y
+action_hoi_thong_tin_phong: thông tin phòng ctsv
+action_dia_diem_khoa: y khoa
+action_dia_diem_khoa: y khoa
+action_dia_diem_khoa: y khoa
+action_dia_diem_khoa: y khoa
+action_dia_diem_khoa: y khoa
+action_dia_diem_khoa: y khoa
+action_dia_diem_khoa: y khoa
+action_dia_diem_khoa: y khoa
+action_hoi_thong_tin_phong: thông tin phòng ctsv
+Action học phí: thông tin ctsv
+Action ctdt: Chương trình đào tạo
+Action ctdt: chao
+Action học phí: Thông tin trường ctu
 Action ctdt: ngành y
 Action ctdt: chương trình đào tạo
-Action ctdt: các chương trình đào tạo
-Action học phí: Thông tin đào tạo
-Action ctdt: Chương trình đào tạo
-action_dia_diem_phong: Có bao nhiêu phòng học
-Action học phí: Thông tin về sinh viên
-Action học phí: Thông tin trường
-action_dia_diem_phong: Học bỗng như thế nào
-Action học phí: Thông tin học bỗng
-Action học phí: Thông tin trường
-action_email_phong: Trường có liên kết với các công ty nước ngoài không
 Action ctdt: chương trình đào tạo
-Action ctdt: chương trình đào tạo ngành y
-action_email_phong: Trường có liên kết với các công ty nước ngoài không
+Action học phí: SELECT n.ten_nganh,h.gia_tien,nh.ten_nam_hoc FROM nganh n JOIN hoc_phi h ON n.ma_nganh = h.ma_nganh JOIN nam_hoc nh on h.ma_nam_hoc = nh.ma_nam_hoc
+Action học phí: các ngành học bao nhiêu tiền
+action_hoi_thong_tin_phong: thông tin học ohis
+Action học phí: các ngành học bao nhiêu tiền
+Action học phí: giá tiền học các ngành
+action_hoi_thong_tin_phong: thông tin trường
+action_hoi_thong_tin_phong: mô tả trường
+action_hoi_thong_tin_khoa: giới thiệu trường
+action_hoi_thong_tin_phong: mô tả trường dh ydct
+action_hoi_thong_tin_phong: liệt kê thông tin trường
+action_hoi_thong_tin_khoa: giới thiệu về ctump
+Action ctdt: thông tin đại học y dược
+action_hoi_thong_tin_phong: thông tin truong
+Action học phí: thông tin trường
+Action học phí: giới thiệu ctum
 Action học phí: Thông tin trường
+Action ctdt: Chương trình đào tạo mỗi ngành
 Action học phí: Thông tin trường
-Action học phí: trường này
+action_cap_lai_email_sv: đăng nhập tài khoản sinh viên không được
+action_cap_lai_email_sv: liên hệ ai để lấy lại mật khẩu email
+Action học phí: thông tin trường
+Action học phí: Thông tin trường này
+Action học phí: thông tin trường
+Action học phí: trường đại học ctu
+Action ctdt: Chương trình đào tạo mỗi ngành
+action_dia_diem_phong: địa chỉ phòng đào tạo sau đại học
+action_dia_diem_phong: địa chỉ phòng Đào tạo sau đại học
+action_dia_diem_phong: địa chỉ phòng Đào tạo đại học
+action_cap_lai_the_sv: Cấp lại thẻ sinh viên
+action_cap_lai_the_sv: mất thẻ sinh viên
+action_cap_lai_the_sv: tôi bị mất thẻ sinh viên
+action_cap_lai_the_sv: thẻ sv
+action_cap_lai_the_sv: cấp lại thẻ sinh viên
+action_cap_lai_the_sv: Cấp lại thẻ sinh viên,
+action_cap_lai_the_sv: tôi mất thẻ sinh viên
+action_email_phong: email không đăng nhập được
+Action học phí: 2024
+Action ctdt: Chương trình đào tạo ngành
+Action ctdt: ngành y
+Action ctdt: Chương trình đào tạo ngành
+Action ctdt: ngành y
+action_hoi_thong_tin_khoa: Thông tin các khoa
+action_hoi_thong_tin_khoa: Thông tin các khoa y học
+Action ctdt: ?
+Action ctdt: ?
+Action học phí: 323213
+Action ctdt: !
+Action ctdt: /.,
+Action ctdt: 
+Action ctdt: 

@@ -2,18 +2,35 @@ version: "3.1"
 
 actions:
   - action_chatgpt_fallback
+
   - action_thong_tin_truong
+
   - action_thong_tin_nganh
   - action_chuong_trinh_dao_tao
-  - action_hoc_phi
 
+  - action_hoc_phi
+  - action_hoc_phi_co_tang_khong
+  - action_phuong_thuc_thanh_toan
+  - action_ho_tro_vay_tien_hoc
+  - ask_hoc_phi_theo_loai_hinh_nganh
+
+  - action_hoi_thong_tin_khoa
   - action_hoi_dia_diem_khoa
   - action_hoi_email_khoa
   - action_hoi_sdt_khoa
   
+  - action_hoi_thong_tin_phong
   - action_hoi_dia_diem_phong
   - action_hoi_email_phong
   - action_hoi_sdt_phong
+
+  - action_cap_lai_the_sv
+  - action_cap_lai_email_sv
+  - action_cap_lai_thanh_phi_bao_hiem_tai_nan
+  - action_cap_lai_tai_khoan_quan_ly_dao_tao
+
+
+  
 ################# PHUONG
   - action_yeu_to_xet_hoc_bong
   
@@ -32,44 +49,66 @@ intents:
   - ask_thong_tin_truong
   - ask_thong_tin_nganh
   - ask_chuong_trinh_dao_tao
+
   - ask_hoc_phi
+  - ask_hoc_phi_co_tang_khong
+  - ask_phuong_thuc_thanh_toan
+  - ask_ho_tro_vay_tien_hoc
+
   - ask_chuc_nang_bot_lam_duoc
 
+  - ask_thong_tin_cac_khoa
   - ask_dia_diem_cac_khoa
   - ask_email_cac_khoa
   - ask_sdt_cac_khoa
 
+  - ask_thong_tin_cac_phong_ban
   - ask_dia_diem_cac_phong_ban
   - ask_email_cac_phong_ban
   - ask_sdt_cac_phong_ban
 
+  
   - ask_cap_lai_the_sinh_vien
+  - ask_cap_lai_email_sinh_vien
+  - ask_cap_lai_bao_hiem_tai_nan
+  - ask_cap_lai_tai_khoan_quan_ly_dao_tao
 
   - ask_nganh_dao_tao_sau_dai_hoc
   - ask_nganh_dao_tao_sau_dai_hoc_moi_nhat
 
   - ask_quy_trinh_tuyen_sinh
   - ask_trinh_do_hoc_van_tuyen_sinh
+
+  
 ############################### PHUONG
   - ask_co_hoi_hoc_tap_nghien_cuu
   - ask_yeu_to_xet_hoc_bong
 
 entities:
   - hocphi
+  - year
+  - loai_hinh_dt
+  
+
   - nganh
   - university
 
+  - infor_khoa
   - location_khoa
   - email_khoa
   - sdt_khoa
 
+  - infor_phong
   - location_phong
   - email_phong
   - sdt_phong
  
   - dao_tao_sau_dai_hoc
 
-
+  - cap_lai_the_sv
+  - cap_lai_email_sv
+  - cap_lai_thanh_phi_bao_hiem_tai_nan
+  - cap_lai_tai_khoan_quan_ly_dao_tao
 # slots:
 #   location:
 #     type: text
@@ -112,6 +151,8 @@ responses:
 
   # utter_ask_phone:
   # - text: "vui lòng cung cấp số điện thoại?"
+  # utter_ask_tt_truong:
+  # - text: "</br>Trường Đại học Y Dược Cần Thơ là trường đại học Khoa học Sức khỏe hệ công lập trực thuộc Bộ Y tế duy nhất tại Đồng bằng sông Cửu Long, Việt Nam. </br>Trường Đại học Y Dược Cần Thơ cũng là một trong những trường đào tạo Y Dược tốt nhất Việt Nam nói chung và khu vực Đồng bằng Sông Cửu Long nói riêng."
     
   utter_greet:
   - text: "Chào! bạn tôi có thể giúp gì cho bạn?"
@@ -122,8 +163,8 @@ responses:
   - text: "Bye bye"
   - text: "hẹn gặp lại"
 
-  utter_cap_lai_the_sinh_vien:
-  - text: "Bạn vui lòng xem đầy đủ thông tin tại đây http://www.ctump.edu.vn/?tabid=3130&ndid=18047&key=Quy_trinh_cap_lai_the_sinh_vien"
+  # utter_cap_lai_the_sinh_vien:
+  # - text: "Bạn vui lòng xem đầy đủ thông tin tại đây http://www.ctump.edu.vn/?tabid=3130&ndid=18047&key=Quy_trinh_cap_lai_the_sinh_vien"
 
   # utter_thong_tin_lien_he:
   # - text: "Bạn có muốn để lại thông tin liên hệ để admin giải đáp thắc mắc không"
@@ -136,7 +177,7 @@ responses:
   # - text: "Xin lỗi tôi chỉ cung cấp thông tin về Đại học Y Dược Cần Thơ (ctump)"
   
   utter_iamabot:
-  - text: "Tôi là hệ thống trả lời tự động của trường Đại học Y Dược Cần Thơ"
+  - text: "Tôi là hệ thống trả lời tự động của trường Đại học Y Dược Cần Thơ, bạn vui lòng cung cấp đầy đủ thông tin bạn cần, tôi sẽ tìm giúp bạn"
 
   utter_dao_tao_sau_dai_hoc:
   - text: "Có 86 mã ngành đào tạo sau đại học và 8 ngành đào tạo sau đại học mới, tham khảo thông tin chi tiết về đào tạo sau đại học tại đây: http://www.ctump.edu.vn/default.aspx?tabid=1036"
@@ -148,7 +189,7 @@ responses:
   - text: "Các ngành đào tạo mới sau đại hoc là: Tiến sĩ Nhi Khoa, Tiến sĩ KT Xét nghiệm Y học, Tiến sĩ Dược lý và Dược lâm sàng, Chuyên khoa II Lao và bệnh phổi, Chuyên khoa II PTTT & thẩm mỹ, Bác sĩ nội trú Gây mê hồi sức, Bác sĩ nội trú Tâm Thần, Chuyên khoa I Huyết học..."
   
   utter_quy_trinh_tuyen_sinh_dai_hoc:
-  - text: "Thi tuyển và xét tuyển, tham khảo quy trình tuyển sinh đại học tại đây: http://www.ctump.edu.vn/default.aspx?tabid=1037 \nvà đăng ký hồ sơ tuyển sinh tại đây: https://htql.ctump.edu.vn/ctump/tuyensinh/"
+  - text: "Thi tuyển và xét tuyển, tham khảo quy trình tuyển sinh đại học tại đây: http://www.ctump.edu.vn/default.aspx?tabid=1037 </br> đăng ký hồ sơ tuyển sinh tại đây: https://htql.ctump.edu.vn/ctump/tuyensinh/"
 
   utter_trinh_do_hoc_van_tuyen_sinh:
   - text: "Tốt nghiệp 12/12 và đạt điểm xét tuyển của chuyên ngành như B00 (Toán, Hóa, Sinh), A00(Toán, Lý, Hóa),..."

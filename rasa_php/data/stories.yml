@@ -22,7 +22,24 @@ stories:
   steps:
   - intent: ask_hoc_phi
   - action: action_hoc_phi
-  
+
+
+- story: Hỏi về học phí có tăng không
+  steps:
+  - intent: ask_hoc_phi_co_tang_khong
+  - action: action_hoc_phi_co_tang_khong
+
+- story: Hỏi về phương thức thanh toán học phí
+  steps:
+  - intent: ask_phuong_thuc_thanh_toan
+  - action: action_phuong_thuc_thanh_toan
+
+
+
+
+
+
+
 
 - story: Hỏi các chức năng bot làm được
   steps:
@@ -39,6 +56,12 @@ stories:
   - intent: greet
   - action: utter_greet
 
+
+- story: hỏi về thông tin các khoa
+  steps:
+  - intent: ask_thong_tin_cac_khoa
+  - action: action_hoi_thong_tin_khoa
+
 - story: hỏi về địa điểm các khoa ở đâu
   steps:
   - intent: ask_dia_diem_cac_khoa
@@ -53,6 +76,11 @@ stories:
   steps:
   - intent: ask_sdt_cac_khoa
   - action: action_hoi_sdt_khoa
+
+- story: hỏi về thông tin các phòng ban
+  steps:
+  - intent: ask_thong_tin_cac_phong_ban
+  - action: action_hoi_thong_tin_phong
 
 - story: hỏi về địa điểm các phòng ở đâu
   steps:
@@ -73,7 +101,27 @@ stories:
 - story: hỏi quy trình cấp lại thẻ sinh viên
   steps:
   - intent: ask_cap_lai_the_sinh_vien
-  - action: utter_cap_lai_the_sinh_vien
+  - action: action_cap_lai_the_sv
+
+
+- story: hỏi quy trình cấp lại email sinh viên
+  steps:
+  - intent: ask_cap_lai_email_sinh_vien
+  - action: action_cap_lai_email_sv
+
+
+- story: hỏi quy trình cấp lại thanh phí bảo hiểm tai nạn
+  steps:
+  - intent: ask_cap_lai_bao_hiem_tai_nan
+  - action: action_cap_lai_thanh_phi_bao_hiem_tai_nan
+
+
+- story: hỏi quy trình cấp lại tài khoản quản lý đào tạo
+  steps:
+  - intent: ask_cap_lai_tai_khoan_quan_ly_dao_tao
+  - action: action_cap_lai_tai_khoan_quan_ly_dao_tao
+
+
 
 
 - story: Hỏi các ngành đào tạo sau đại học

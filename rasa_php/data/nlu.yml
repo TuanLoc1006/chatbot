@@ -104,7 +104,7 @@ nlu:
     - mô tả [trường này](university)
     - giải thích về [trường](university)
     - mô tả [địa điểm này](university)
-    - thông tin trường [địa điểm](university)
+    - [Thông tin trường này](university)
     
 - intent: ask_thong_tin_nganh
   examples: |
@@ -131,22 +131,23 @@ nlu:
     - đại học Y Dược Cần Thơ đào tạo bao nhiêu ngành học?
     - Liệt kê các ngành hiện có tại Đại học Y Dược Cần Thơ
 
-
 - intent: ask_chuong_trinh_dao_tao
-  examples:  |
-    - chương trình đào tạo ngành [y khoa](nganh)
-    - các môn của ngành [y khoa](nganh) sẽ học
-    - [y khoa](nganh)
+  examples: |
+    - y [học cổ truyền](nganh)
+    - [Y học cổ truyền](nganh)
+    - y tế [công cộng](nganh)
+    - [Y tế công cộng](nganh)
+    - y [học dự phòng](nganh)
+    - [Y học dự phòng](nganh)
     - y [học cổ truyền](nganh) được học những gì
     - y [tế công cộng](nganh) được học gì
-    - thông tin ngành y [học dự phòng](nganh) 
-    - y [học dự phòng](nganh) 
-    - đào tạo ngành [hộ sinh](nganh) được học gì 
-    - [hộ sinh](nganh) 
+    - thông tin ngành y [học dự phòng](nganh)
+    - đào tạo ngành [hộ sinh](nganh) được học gì
+    - [hộ sinh](nganh)
     - chương trình học của ngành [răng hàm mặt](nganh)
     - [răng hàm mặt](nganh)
     - ngành [dược](nganh) được học gì
-    - [dược](nganh) 
+    - [dược](nganh)
     - sinh viên sẽ được học gì khi học ngành [điều dưỡng](nganh)
     - [điều dưỡng](nganh)
     - đào tạo ngành [kỹ thuật xét nghiệm y học](nganh)
@@ -154,8 +155,41 @@ nlu:
     - ngành [hộ sinh](nganh) học gì?
     - [hộ sinh](nganh)
     - ngành [kỹ thuật hình ảnh y học](nganh) học gì
-    - [kỹ thuật hình ảnh y học](nganh) 
-  
+    - [kỹ thuật hình ảnh y học](nganh)
+    - chương trình đào tạo ngành [y khoa](nganh)
+    - các môn của ngành [y khoa](nganh) sẽ học
+    - [y khoa](nganh)
+    - [Y](nganh)
+    - ngành [dược](nganh) được học gì?
+    - [dược](nganh)
+    - thông tin về chương trình học ngành [điều dưỡng](nganh)
+    - sinh viên ngành [y học cổ truyền](nganh) sẽ học những gì?
+    - đào tạo y [tế công cộng](nganh) gồm những gì?
+    - y [học dự phòng](nganh) được học môn nào?
+    - nội dung chương trình đào tạo ngành [răng hàm mặt](nganh)
+    - học ngành [dược](nganh) sẽ học những gì?
+    - các môn trong chương trình học ngành [hộ sinh](nganh)
+    - ngành [điều dưỡng](nganh) được học môn gì?
+    - sinh viên học ngành [kỹ thuật xét nghiệm y học](nganh) sẽ học gì?
+    - chương trình giảng dạy ngành [kỹ thuật hình ảnh y học](nganh)
+    - các khóa học ngành [y khoa](nganh)
+
+
+- intent: ask_thong_tin_cac_khoa
+  examples: |
+    - thông tin khoa [y học dự phòng](infor_khoa)
+    - liên hệ khoa [y](infor_khoa)
+    - thông tin chi tiết khoa [dược](infor_khoa)
+    - tôi muốn biết khoa [Y tế công cộng](infor_khoa)
+    - khoa [y học dự phòng](infor_khoa) 
+    - mô tả chi tiết khoa [kỹ thuật xét nghiệm y học](infor_khoa)
+    - khoa [điều dưỡng](infor_khoa)
+    - khoa [răng hàm mặt](infor_khoa)
+    - khoa [hộ sinh](infor_khoa) 
+    - khoa [y học cổ truyền](infor_khoa)
+    - khoa [kỹ thuật hình ảnh](infor_khoa)
+    - khoa [Khoa học cơ bản](infor_khoa)
+    - khoa [kỹ thuật hình ảnh y học](infor_khoa)
 
 - intent: ask_dia_diem_cac_khoa
   examples: |
@@ -172,10 +206,10 @@ nlu:
     - tìm [kỹ thuật hình ảnh](location_khoa)
     - Khoa [Khoa học cơ bản](location_khoa)
     - dẫn tao đi qua [kỹ thuật hình ảnh y học](location_khoa)
-
+    - địa chỉ [Y học dự phòng](location_khoa) ở đâu?
 - intent: ask_email_cac_khoa
   examples: |
-    - liên hệ khoa [y](email_khoa)
+    - khoa [y](email_khoa)
     - Email của khoa [y](email_khoa) là gì?
     - cho tôi xin địa chỉ email của khoa [dược](email_khoa)
     - Email khoa [Y tế công cộng](email_khoa) là gì?
@@ -183,7 +217,7 @@ nlu:
     - Email khoa [kỹ thuật xét nghiệm y học](email_khoa) là gì?
     - tôi cần email của khoa [điều dưỡng](email_khoa)
     - Email khoa [răng hàm mặt](email_khoa) là gì?
-    - Làm sao để liên hệ qua email với khoa [hộ sinh](email_khoa)?
+    - Làm sao để qua email với khoa [hộ sinh](email_khoa)?
     - Địa chỉ email của khoa [y học cổ truyền](email_khoa) là gì?
     - tôi muốn biết email của khoa [kỹ thuật hình ảnh](email_khoa)
     - Khoa [Khoa học cơ bản](email_khoa) có email không?
@@ -199,11 +233,40 @@ nlu:
     - số điện thoại khoa [kỹ thuật xét nghiệm y học](sdt_khoa) là gì?
     - tôi cần số điện thoại của khoa [điều dưỡng](sdt_khoa)
     - số điện thoại khoa [răng hàm mặt](sdt_khoa) là gì?
-    - Làm sao để liên hệ qua số điện thoại với khoa [hộ sinh](sdt_khoa)?
-    - số liên hệ của khoa [y học cổ truyền](sdt_khoa) là gì?
+    - Làm sao để qua số điện thoại với khoa [hộ sinh](sdt_khoa)?
+    - số của khoa [y học cổ truyền](sdt_khoa) là gì?
     - tôi muốn biết số điện thoại của khoa [kỹ thuật hình ảnh](sdt_khoa)
     - Khoa [Khoa học cơ bản](sdt_khoa) có số điện thoại không?
     - tôi cần gọi đến khoa [kỹ thuật hình ảnh y học](sdt_khoa) là gì?
+
+
+- intent: ask_thong_tin_cac_phong_ban
+  examples: |
+    - thông tin phòng [Công tác sinh viên](infor_phong)
+    - thông tin phòng [ctsv](infor_phong)
+    - phòng [Đào tạo đại học](infor_phong)
+    - mô tả phòng [Đào tạo sau đại học](infor_phong)
+    - liên hệ [hành chánh tổng hợp](infor_phong)
+    - phòng [NCKH-HTQT](infor_phong) 
+    - mô tả [nghiên cứu khoa học](infor_phong)
+    - thông tin chi tiết phòng [Quản trị thiết bị](infor_phong) 
+    - phòng [Tài chính kế toán](infor_phong) 
+    - tìm hiểu [Tổ chức cán bộ](infor_phong)
+    - phòng [Thông tin và Truyền thông](infor_phong)
+    - phòng [Đảm bảo chất lượng](infor_phong) 
+    - phòng [Khảo thí](infor_phong) 
+    - mô tả phòng [Thanh tra - Pháp chế](infor_phong)
+    - phòng [Quản lý Dự án xây dựng Trường](infor_phong) 
+    - trung tâm [Đào tạo theo nhu cầu xã hội](infor_phong) 
+    - [dịch vụ và hỗ trợ sinh viên](infor_phong) 
+    - tìm chỗ [Thư viện](infor_phong) 
+    - tìm hiểu [Đơn vị HLKN](infor_phong) 
+    - mô tả đơn vị [huấn luyện kĩ năng](infor_phong)
+    - thông tin [Bệnh viện](infor_phong) 
+    - liệt kê thông in phòng [công đoàn](infor_phong)
+    - thông tin cơ bản phòng [Đoàn thanh niên Hội sinh viên](infor_phong)
+    - mô tả sơ vê phòng [Phòng Tài chính kế toán](infor_phong)
+
 
 - intent: ask_dia_diem_cac_phong_ban
   examples: |
@@ -215,8 +278,8 @@ nlu:
     - phòng [NCKH-HTQT](location_phong) đi đường nào
     - vị trí [nghiên cứu khoa học](location_phong)
     - tọa độ [Quản trị thiết bị](location_phong) ở khoa nào
-    - phòng [Tài chính kế toán](location_phong) ở khu vực nào
-    - phòng [Tổ chức cán bộ](location_phong) ở lầu mấy 
+    - địa chỉ phòng [Tài chính kế toán](location_phong) ở khu vực nào
+    - địa điểm phòng [Tổ chức cán bộ](location_phong) ở lầu mấy 
     - phòng [Thông tin và Truyền thông](location_phong) đi đường nào thế
     - phòng [Đảm bảo chất lượng](location_phong) ở tòa nhà nào
     - phòng [Khảo thí](location_phong) ở chổ nào
@@ -231,7 +294,6 @@ nlu:
     - muốn tìm phòng [công đoàn](location_phong)
     - giúp tôi tìm phòng [Đoàn thanh niên Hội sinh viên](location_phong)
     - tôi cần biết phòng [Phòng Tài chính kế toán](location_phong) ở đâu
-
 
 
 - intent: ask_email_cac_phong_ban
@@ -250,7 +312,7 @@ nlu:
     - phòng [Thông tin và Truyền thông](email_phong) có thể liên hệ qua email nào
     - phòng [Đảm bảo chất lượng](email_phong) dùng email gì
     - email của phòng [Khảo thí](email_phong) là gì?
-    - liên hệ [Thanh tra - Pháp chế](email_phong) có email liên hệ không
+    - [Thanh tra - Pháp chế](email_phong) có email liên hệ không
     - phòng [Quản lý Dự án xây dựng Trường](email_phong) có email gì
     - trung tâm [Đào tạo theo nhu cầu xã hội](email_phong) dùng email nào
     - email của Trung tâm [dịch vụ và hỗ trợ sinh viên](email_phong) là gì
@@ -291,23 +353,118 @@ nlu:
 
 - intent: ask_hoc_phi
   examples: |
-    - [học phí](hocphi) bao nhiêu
-    - [học phí](hocphi) của trường đại học y dược là bao nhiêu
-    - [học phí](hocphi) của trường là bao nhiêu
+    - thông tin [học phí](hocphi) [năm nay](year) [sau đại học](loai_hinh_dt) bao nhiêu
+    - [học phí](hocphi) [bây giờ](year) [liên thông](loai_hinh_dt) của trường đại học y dược là bao nhiêu
+    - [học phí](hocphi) [hiện tại](year) [đại học](loai_hinh_dt) của trường là bao nhiêu
     - trường này học khoảng bao nhiêu tiền
-    - học trường này [tốn bao nhiêu tiền](hocphi)
+    - học trường này [tốn bao nhiêu tiền](hocphi) vào [năm sau](year)
     - học trường này có [đắt tiền](hocphi) không
-    - [học phí](hocphi) có đắt không
-    - [học phí](hocphi) trường đại học y dược
-    - [học phí](hocphi) đại học y dược
+    - [học phí](hocphi) năm [2023](year) là bao nhiêu
+    - [học phí](hocphi) năm rồi [2022](year) của trường đại học y dược
+    - [học phí](hocphi) các năm trước [2021](year) đại học y dược
     - các ngành học bao nhiêu tiền
-    - [học phí](hocphi) là bao nhiêu
+    - [học phí](hocphi) [năm sau](year) là bao nhiêu
     - giá [học phí](hocphi)
-    - [học phí](hocphi) trường này tốn bao nhiêu tiền
-    - [giá tiền](hocphi) học bao nhiêu
-    - [chi phí](hocphi) trường này có đắt không
+    - [học phí](hocphi) [năm hiện tại](year) trường này tốn bao nhiêu tiền
+    - [giá tiền](hocphi) [năm rồi](year) học bao nhiêu
+    - liệt kê [chi phí](hocphi) [năm trước](year) các ngành của trường
     - [đóng tiền](hocphi) khoảng bao nhiêu
     - [chi tiêu](hocphi) khoảng bao nhiêu
+    - [Học phí](hocphi) cơ bản của 1 ngành là bao nhiêu 
+    - [giá tiền](hocphi) các ngành
+    - cho mình hỏi [học phí](hocphi) tại trường ạ?
+
+
+# - intent: ask_hoc_phi_theo_loai_hinh_nganh
+#   examples: |
+#     - thông tin [học phí](hocphi) [chính quy](loai_hinh_dt) ngành [điều dưỡng](nganh)
+#     - [học phí](hocphi) [sau đại học](loai_hinh_dt) ngành [dược](nganh)
+#     - học [liên thông](loai_hinh_dt) ngành [y khoa](nganh) một năm bao nhiêu
+
+
+
+
+
+- intent: ask_hoc_phi_co_tang_khong
+  examples: |
+    - Học phí có được tăng theo từng năm không?
+    - Học phí có tăng hàng năm không?
+    - Trường có tăng học phí mỗi năm không?
+    - Học phí có bị thay đổi theo từng năm không?
+    - Học phí có tăng mỗi năm không?
+    - Học phí có thể tăng theo từng năm không?
+    - Học phí có bị tăng hàng năm không?
+    - Mỗi năm học phí có tăng lên không?
+    - Học phí năm sau có tăng so với năm trước không?
+    - Học phí sẽ tăng qua các năm chứ?
+    - Liệu học phí có thay đổi qua từng năm không?
+    - Trường có kế hoạch tăng học phí mỗi năm không?
+    - Học phí có thay đổi mỗi năm không?
+    - Trường có tăng học phí từng năm không?
+    - Trường có tăng giá học phí theo từng năm không?
+    - Học phí có được điều chỉnh hàng năm không?
+    - Học phí có tăng lên hàng năm không?
+    - Trường có tăng mức học phí từng năm không?
+    - Học phí sẽ tăng mỗi năm phải không?
+    - Học phí có thể tăng hàng năm không?
+
+
+- intent: ask_phuong_thuc_thanh_toan
+  examples: |
+    - Có các phương thức thanh toán nào?
+    - chuyển khoản được không
+    - ck được không
+    - đóng tiền mặt ở đâu
+    - dùng tiền mặt được không?
+    - Tôi có thể thanh toán bằng cách nào?
+    - Các phương thức thanh toán là gì?
+    - Tôi có thể dùng phương thức thanh toán nào?
+    - Thanh toán bằng những cách nào?
+    - Có thể thanh toán qua những phương thức nào?
+    - Các cách thanh toán hiện có là gì?
+    - Tôi có những lựa chọn thanh toán nào?
+    - Những phương thức thanh toán nào được chấp nhận?
+    - Tôi có thể thanh toán bằng thẻ tín dụng không?
+    - Thanh toán bằng chuyển khoản ngân hàng có được không?
+    - Tôi có thể dùng PayPal để thanh toán không?
+    - Có thể thanh toán bằng tiền mặt không?
+    - Các phương thức thanh toán online là gì?
+    - Tôi có thể thanh toán qua ví điện tử không?
+    - Phương thức thanh toán nào được hỗ trợ?
+    - Có thể dùng thẻ ghi nợ để thanh toán không?
+    - Tôi có thể thanh toán trực tuyến không?
+    - Cách nào để thanh toán chi phí?
+    - Các phương thức thanh toán nội địa là gì?
+
+- intent: ask_ho_tro_vay_tien_hoc
+  examples: |
+    - tôi cần tìm hiểu về vay vốn sinh viên
+    - Đối tượng nào được hỗ trợ vay vốn sinh viên?
+    - Ai có thể được vay vốn sinh viên?
+    - Đối tượng nào được vay vốn sinh viên?
+    - Ai được phép vay vốn sinh viên?
+    - Những ai được vay vốn sinh viên?
+    - Đối tượng vay vốn sinh viên gồm những ai?
+    - Sinh viên như thế nào được vay vốn?
+    - Có những đối tượng nào được hỗ trợ vay vốn sinh viên?
+    - Sinh viên đủ điều kiện vay vốn là ai?
+    - Đối tượng được vay vốn sinh viên là những ai?
+    - Ai được vay vốn sinh viên?
+    - Sinh viên phải như thế nào mới được vay vốn?
+    - Điều kiện để được vay vốn sinh viên là gì?
+    - Đối tượng nào có thể vay vốn học sinh, sinh viên?
+    - Ai có thể xin vay vốn sinh viên?
+    - Đối tượng nào được hưởng chính sách vay vốn sinh viên?
+    - Đối tượng nào đủ điều kiện vay vốn sinh viên?
+    - Điều kiện để sinh viên được vay vốn là gì?
+    - Sinh viên thuộc diện nào thì được vay vốn?
+    - Đối tượng nào được vay vốn cho sinh viên?
+
+
+
+
+
+
 
 
 - intent: ask_chuc_nang_bot_lam_duoc
@@ -335,11 +492,12 @@ nlu:
 
 - intent: ask_cap_lai_the_sinh_vien
   examples: |
-    - tôi bị mất thẻ sinh viên, làm sao để cấp lại?
-    - thủ tục cấp lại thẻ sinh viên như thế nào?
     - hướng dẫn cấp lại thẻ sinh viên giúp tôi với
+    - tôi bị mất [thẻ sinh viên](cap_lai_the_sv), làm sao để cấp lại?
+    - thủ tục cấp lại [thẻ sv](cap_lai_the_sv) viên như thế nào?
+    - [cấp lại thẻ sinh viên](cap_lai_the_sv)
     - tôi muốn làm lại thẻ sinh viên thì phải làm sao?
-    - làm lại thẻ sinh viên cần những gì?
+    - làm lại [thẻ sinh viên](cap_lai_the_sv) cần những gì?
     - tôi bị mất thẻ sinh viên, xin cấp lại thẻ mới
     - quy trình cấp lại thẻ sinh viên là gì?
     - làm cách nào để được cấp lại thẻ sinh viên?
@@ -350,6 +508,49 @@ nlu:
     - tôi cần cấp lại thẻ sinh viên, hướng dẫn giúp tôi
     - mất thẻ sinh viên, muốn làm lại thì phải làm sao?
     - thủ tục để cấp lại thẻ sinh viên gồm những gì?
+
+
+
+- intent: ask_cap_lai_email_sinh_vien
+  examples: |
+    - tôi quên mật khẩu [email trường](cap_lai_email_sv)
+    - làm thế nào để [đặt lại mật khẩu email sinh viên](cap_lai_email_sv)?
+    - tôi quên mật khẩu [email sinh viên](cap_lai_email_sv), phải làm sao?
+    - hướng dẫn tôi cách [khôi phục mật khẩu email](cap_lai_email_sv) sinh viên.
+    - các bước để khôi phục mật khẩu [mail sinh viên] là gì?
+    - ai có thể giúp tôi lấy lại mật khẩu [email sv] sinh viên?
+    - tôi cần liên hệ với ai để khôi phục mật khẩu email trường?
+    - bộ phận hỗ trợ nào có thể giúp tôi khi tôi quên mật khẩu email sinh viên?
+    - quên mật khẩu email thì làm sao
+    - [gmail] sinh viên không đăng nhập được
+    - tôi cần cấp lại địa chỉ mail sinh viên
+    - đăng nhập [tài khoản sinh viên](cap_lai_email_sv) không được
+    - liên hệ ai để [lấy lại mật khẩu email](cap_lai_email_sv)
+    - cấp lại [mail](cap_lai_email_sv) liên hệ ai?
+    - tôi quên mật khẩu [email](cap_lai_email_sv)
+
+
+- intent: ask_cap_lai_bao_hiem_tai_nan
+  examples: |
+    - yêu cầu cấp lại [bảo hiểm tai nạn](cap_lai_thanh_phi_bao_hiem_tai_nan)
+    - thanh phí [bảo hiểm tn](cap_lai_thanh_phi_bao_hiem_tai_nan) liên hệ ai
+    - quy trình đăng ký [bh tai nạn](cap_lai_thanh_phi_bao_hiem_tai_nan) ra sao
+    - tôi cần hỗ trợ [thanh phí bảo hiểm tai nạn](cap_lai_thanh_phi_bao_hiem_tai_nan)
+    - thanh phí [bhtn](cap_lai_thanh_phi_bao_hiem_tai_nan) ở đâu
+    - thông tin về [bảo hiểm tai nạn](cap_lai_thanh_phi_bao_hiem_tai_nan)
+    - đăng ký [bảo hiểm tai nạn](cap_lai_thanh_phi_bao_hiem_tai_nan)
+
+
+
+- intent: ask_cap_lai_tai_khoan_quan_ly_dao_tao
+  examples: |
+    - yêu cầu cấp lại tài khoản [quản lý đào tạo](cap_lai_tai_khoan_quan_ly_dao_tao)
+    - tài khoản [quản lý đt](cap_lai_tai_khoan_quan_ly_dao_tao) liên hệ ai
+    - quy trình đăng ký [ql đào tạo](cap_lai_tai_khoan_quan_ly_dao_tao) ra sao
+    - tôi cần hỗ trợ [qlđt](cap_lai_tai_khoan_quan_ly_dao_tao)
+    - cấp lại tài khoản [quan ly dao tao](cap_lai_tai_khoan_quan_ly_dao_tao)
+    - liên hệ ai để cấp lại tài khoản [quản lý đào tạo](cap_lai_tai_khoan_quan_ly_dao_tao)
+    - thông tin về tài khoản [quản lý đào tạo](cap_lai_tai_khoan_quan_ly_dao_tao)
 
 - intent: ask_nganh_dao_tao_sau_dai_hoc
   examples: |

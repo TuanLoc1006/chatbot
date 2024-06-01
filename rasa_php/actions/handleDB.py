@@ -1,5 +1,5 @@
 import mysql.connector
-
+import datetime
 #DB Lộc (chạy thì mở ra)
 def connectDB():
     mydb = mysql.connector.connect(
@@ -21,6 +21,9 @@ def connectDB():
 #     port=3306,
 #     )
 #     return mydb
+def get_current_year():
+    now = datetime.datetime.now()
+    return now.year
 
 def nganh():
     db_connection = handleDB().get_connect()
@@ -29,11 +32,16 @@ def nganh():
     result = cursor.fetchall()
     return result
 
-def getHocPhi():
+def getHocPhi(nam=None):
     db_connection = handleDB().get_connect()
     cursor = db_connection.cursor()
-    # cursor.execute("SELECT gia_tien FROM hoc_phi")
-    cursor.execute("SELECT a.ten_nganh, b.gia_tien FROM nganh AS a JOIN hoc_phi AS b ON a.ma_nganh = b.ma_nganh")
+    
+    if nam is None:
+        current_year = get_current_year()
+        cursor.execute("SELECT n.ten_nganh, h.gia_tien, nh.ten_nam_hoc FROM nganh n JOIN hoc_phi h ON n.ma_nganh = h.ma_nganh JOIN nam_hoc nh on h.ma_nam_hoc = nh.ma_nam_hoc WHERE nh.ten_nam_hoc = %s", (current_year,))
+    else:
+        cursor.execute("SELECT n.ten_nganh, h.gia_tien, nh.ten_nam_hoc FROM nganh n JOIN hoc_phi h ON n.ma_nganh = h.ma_nganh JOIN nam_hoc nh on h.ma_nam_hoc = nh.ma_nam_hoc WHERE nh.ten_nam_hoc = %s", (nam,))
+    
     result = cursor.fetchall()
     return result
 
@@ -62,8 +70,9 @@ class handleDB:
         return connectDB()
     def get_nganh(self):
         return nganh()
-    def get_hoc_phi(self):
-        return getHocPhi()
+    
+    def get_hoc_phi(self, nam=None):
+        return getHocPhi(nam)
     
     def get_chuong_trinh_dao_tao(self, entity):
         return getChuongTrinhDaoTao(entity)
