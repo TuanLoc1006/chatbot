@@ -560,7 +560,7 @@ body {
 .popup-box .popup-head {
     background-color: #f0af34;
     padding: 5px;
-    color: white;
+    color: white !important; 
     font-weight: bold;
     font-size: 14px;
     clear: both;
@@ -617,16 +617,21 @@ body {
     margin-left: 30px;
     /* Khoảng cách giữa nội dung chat và điểm trạng thái */
 }
-
-.popup-bottom {
-    display: flex;
-    justify-content: space-between;
-}
-
 .input-chat-admin {
     width: 100%;
 }
 
+button {
+    border: none !important;
+}
+
 .input-group  {
     padding: 10px;
+}
+
+.form-input {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }

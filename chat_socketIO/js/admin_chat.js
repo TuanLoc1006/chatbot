@@ -224,8 +224,8 @@ async function register_popup(userid, username) {
         </div>
     </div>
 
-    <div class="popup-bottom">
-            <form onsubmit="sendMessage(event, '${userid}', '${username}')" action="">
+        <div class="popup-bottom">
+            <form class="form-input" onsubmit="sendMessage(event, '${userid}', '${username}')" action="">
                 <input id="input-${userid}" type="text" class="form-control input-mess">
                 <button><i class="fa-solid fa-paper-plane"></i></button>
             </form>
