@@ -48,12 +48,6 @@ app.get('/api/get_mess_user', async(req, res) =>{
     console.log('GỌI API lấy tin nhắn');
     //userid
     const userid = req.query.userid;
-
-    //tin nhắn của người dùng theo id
-    //const user_mess_data = await Message.find({senderID:userid})
-    //const admin_mess_data = await Message.find({receiverID:userid, type: 'admin'})
-    //console.log(admin_mess_data)
-    
     const user_mess_data = await Message.find({$or: [{senderID:userid}, {receiverID:userid, type:1}]})
     res.status(200).json(user_mess_data);
 })
