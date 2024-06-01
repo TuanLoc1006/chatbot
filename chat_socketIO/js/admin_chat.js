@@ -5,21 +5,24 @@ const adminID = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-
 socket.emit('adminID', adminID);
 // console.log('ADMIN ID LA '+adminID)
 
+
+
+
 //nhận tin nhắn realtime từ người dùng
 socket.on('server_send_to_admin', (msg) => {
 
     //tin nhắn được gửi tới
     console.log(msg)
 
-    ////////////////HIỂN THỊ NGƯỜI DÙNG TRONG LIST KHI VỪA NHẬN TIN NHẮN
+    ////////////////HIỂN THỊ BÊN LIST
     const sender_div = document.querySelector(`[data-user-id="${msg.senderID}"]`);
     //kiểm tra Id của người dùng có trên giao diện hay chưa
     if(!sender_div) {
         //hiển thị tin nhắn lên giao diện list user
         const userList = document.querySelector('.userList');
         userList.innerHTML +=
-            `<div onclick = "register_popup('${msg.senderID}', '${msg.senderName}')" data-user-id="${msg.senderID}" class="sidebar-name">
-            <a >
+            `<div data-user-id="${msg.senderID}" class="sidebar-name">
+                <a href="javascript:register_popup('${msg.senderID}', '${msg.senderName}');">
                     <img width="30" height="30" src="https://t4.ftcdn.net/jpg/02/29/75/83/360_F_229758328_7x8jwCwjtBMmC6rgFzLFhZoEpLobB6L8.jpg" />
                 <div class="chatContent">
                     <span>${msg.senderName}</span>
@@ -29,11 +32,11 @@ socket.on('server_send_to_admin', (msg) => {
                 </a>
             </div>`;
     } else {
-        //người dùng đã có giao diện, chỉ thay đổi lại tin nhắn cuối
+        //người dùng đã có giao diện, chỉ thay đổi lại
         sender_div.querySelector('p').innerHTML = msg.message;
     }
 
-    ///////////////NẾU Ô CHAT ĐANG MỞ, HIỂN THỊ TIN NHẮN TRONG Ô CHAT
+    ///////////////HIỂN THỊ TIN NHẮN TRONG Ô CHAT
     const window_chat = document.getElementsByClassName(`mess-padding-${msg.senderID}`)[0]
     if(window_chat) {
         const newDiv = document.createElement('div')
@@ -43,7 +46,7 @@ socket.on('server_send_to_admin', (msg) => {
                 <p class="small mb-1">${msg.senderName}</p>
                 <p class="small mb-1 text-muted">${msg.timestamp}</p>
             </div>
-            <div class="d-flex flex-row justify-content-start mb-1">
+            <div class="d-flex flex-row justify-content-start">
                 <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava5-bg.webp" alt="avatar 1" style="width: 45px; height: 100%;">
                 <div>
                     <p class="small p-2 ms-3 mb-3 rounded-3" style="background-color: #f5f6f7;">${msg.message}</p>
@@ -52,19 +55,18 @@ socket.on('server_send_to_admin', (msg) => {
         </div>
         `
         window_chat.appendChild(newDiv)
-        scrollToBottom();
     }
 })
 
-// /////////////CALL API LẤY DANH SÁCH NGƯỜI DÙNG KHI LOAD LẠI TRANG
+// /////////////CALL API LẤY DANH SÁCH NGƯỜI DÙNG
 document.addEventListener('DOMContentLoaded', async function (e) {
     const response = await fetch('/api/get_user');
     const users = await response.json();
     const userList = document.querySelector('.userList');
     users.forEach(user => {
         userList.innerHTML +=
-        `<div onclick = "register_popup('${user.userID}', '${user.userName}')" data-user-id="${user.userID}" class="sidebar-name">
-            <a >
+        `<div data-user-id="${user.userID}" class="sidebar-name">
+            <a href="javascript:register_popup('${user.userID}', '${user.userName}');">
                 <img width="30" height="30" src="https://t4.ftcdn.net/jpg/02/29/75/83/360_F_229758328_7x8jwCwjtBMmC6rgFzLFhZoEpLobB6L8.jpg" />
             <div class="chatContent">
                 <span>${user.userName}</span>
@@ -75,6 +77,8 @@ document.addEventListener('DOMContentLoaded', async function (e) {
         </div>`
     })
 });
+
+
 
 //////////// START SCRIPT POPUP CHAT
 
@@ -134,7 +138,7 @@ async function callAPIGetMessage(userid){
             url: '/api/get_mess_user',
             data: {userid : userid},
         });
-        // console.log('CALL API THÀNH CÔNG')
+        console.log('CALL API THÀNH CÔNG')
         return response;
     } catch(err){
         console.log(err);
@@ -142,12 +146,6 @@ async function callAPIGetMessage(userid){
     }
 }
 
-function scrollToBottom() {
-    var messagesContainers = document.querySelectorAll('.popup-messages');
-    messagesContainers.forEach(container => {
-        container.scrollTop = container.scrollHeight;
-    });
-}
 
 // Hàm hiển thị popup tin nhắn
 async function register_popup(userid, username) {
@@ -169,14 +167,42 @@ async function register_popup(userid, username) {
     popupBox.classList.add('popup-box');
     popupBox.id = userid;
     var messageHTML = '';
-    var messageAdmin = '';
     //gọi hàm lấy tất cả message của người dùng theo userid
     const userListMessage = await callAPIGetMessage(userid)
     // console.log(userListMessage);
     userListMessage.forEach(userMessage=>{
-        //tin nhắn của admin 
-        if(userMessage.type==1){
-            messageHTML += `
+        
+        messageHTML +=`
+            <div class="mess-user-${userMessage.senderID}">
+                <div class="d-flex justify-content-between">
+                    <p class="small mb-1">${userMessage.senderName}</p>
+                    <p class="small mb-1 text-muted">${userMessage.timestamp}</p>
+                </div>
+                <div class="d-flex flex-row justify-content-start">
+                    <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava5-bg.webp" alt="avatar 1" style="width: 45px; height: 100%;">
+                    <div>
+                        <p class="small p-2 ms-3 mb-3 rounded-3" style="background-color: #f5f6f7;">${userMessage.message}</p>
+                    </div>
+                </div>
+            </div>
+        `
+    })
+
+
+    popupBox.innerHTML = `
+    <div class="popup-head">
+        <div class="popup-head-left">${username}</div>
+        <div class="popup-head-right"><a href="javascript:close_popup('${userid}');">&#10005;</a></div>
+        <div style="clear: both"></div>
+    </div>
+     
+    <div class="popup-messages">
+        <div class="mess-padding-${userid}" style="padding:14px">
+
+            <!-- người khác gửi đến -->
+            ${messageHTML}
+
+            <!-- của người chat -->
             <div class="mess-admin">
                 <div class="d-flex justify-content-between">
                     <p class="small mb-1 text-muted">23 Jan 2:05 pm</p>
@@ -184,61 +210,30 @@ async function register_popup(userid, username) {
                 </div>
                 <div class="d-flex flex-row justify-content-end mb-4 pt-1">
                 <div>
-                    <p class="small p-2 me-3 mb-1 text-white rounded-3 bg-warning">${userMessage.message}</p>
+                    <p class="small p-2 me-3 mb-3 text-white rounded-3 bg-warning">Thank you for your believe in our supports</p>
                 </div>
                 <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava6-bg.webp" alt="avatar 1" style="width: 45px; height: 100%;">
                 </div>
             </div>
-            `;
-        } else {    //tin nhắn của người dùng
-            messageHTML +=`
-                <div class="mess-user-${userMessage.senderID}">
-                    <div class="d-flex justify-content-between">
-                        <p class="small mb-1">${userMessage.senderName}</p>
-                        <p class="small mb-1 text-muted">${userMessage.timestamp}</p>
-                    </div>
-                    <div class="d-flex flex-row justify-content-start mb-1">
-                        <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava5-bg.webp" alt="avatar 1" style="width: 45px; height: 100%;">
-                        <div>
-                            <p class="small p-2 ms-3 mb-3 rounded-3" style="background-color: #f5f6f7;">${userMessage.message}</p>
-                        </div>
-                    </div>
-                </div>
-            `;
-        }
-    })
-
-    popupBox.innerHTML = `
-    <div class="popup-head">
-        <div class="popup-head-left">${username}</div>
-        <div class="popup-head-right"><button onclick = "close_popup('${userid}');"><i class="fa-solid fa-xmark"></i></button></div>
-        <div style="clear: both"></div>
-    </div>
-     
-    <div class="popup-messages">
-        <div class="mess-padding-${userid}" style="padding:14px">
-
-
-            ${messageHTML}
 
 
         </div>
     </div>
 
     <div class="popup-bottom">
-            <form onsubmit="sendMessage(event, '${userid}', '${username}')" action="">
-                <input id="input-${userid}" type="text" class="form-control input-mess">
-                <button><i class="fa-solid fa-paper-plane"></i></button>
-            </form>
+        <div class="input-group">
+            <input idOfUser="${userid}" type="text" class="form-control input-mess">
+            <span class="input-group-text"><i class="fa-solid fa-paper-plane"></i></span> 
         </div>
-        `;
-        
-        // thêm phần tử mới vào body
-        document.body.appendChild(popupBox);
-        
-        popups.unshift(userid);
-        calculate_popups();
-        scrollToBottom();
+    </div>
+    `;
+
+    // thêm phần tử mới vào body
+    document.body.appendChild(popupBox);
+
+    popups.unshift(userid);
+    calculate_popups();
+
 }
 
 //calculate the total number of popups suitable and then populate the toatal_popups variable.
@@ -254,45 +249,8 @@ function calculate_popups() {
     display_popups();
 
 }
+
 //recalculate when window is loaded and also when window is resized.
 window.addEventListener("resize", calculate_popups);
 window.addEventListener("load", calculate_popups);
 
-
-//admin gửi tin nhắn
-function sendMessage(event, userID, userName) {
-    event.preventDefault()
-    const input = document.getElementById(`input-${userID}`);
-    const message_input = input.value;
-    if (message_input==''){
-        return ;
-    } else {
-        socket.emit('admin_send_to_server', {
-            uID: adminID,
-            uName: 'Admin',
-            receiverID: userID,
-            message: message_input,
-        })
-        
-        input.value = ''
-    }
-    const window_chat = document.getElementsByClassName(`mess-padding-${userID}`)[0];
-    const new_div = document.createElement('div');
-    const vietnamTime = new Date(new Date().getTime() + 7 * 60 * 60 * 1000).toISOString();
-    new_div.innerHTML += `
-    <div class="mess-admin">
-        <div class="d-flex justify-content-between">
-            <p class="small mb-1 text-muted">${vietnamTime}</p>
-            <p class="small mb-1">Admin</p>
-        </div>
-        <div class="d-flex flex-row justify-content-end mb-1 pt-1">
-        <div>
-            <p class="small p-2 me-3 mb-1 text-white rounded-3 bg-warning">${message_input}</p>
-        </div>
-        <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava6-bg.webp" alt="avatar 1" style="width: 45px; height: 100%;">
-        </div>
-    </div>
-    `;
-    window_chat.appendChild(new_div);
-    scrollToBottom();
-}

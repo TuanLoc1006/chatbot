@@ -6,7 +6,6 @@ const massageSchema = new mongoose.Schema({
     receiverID : {type:String, require: true },
     message : {type:String, require: true },
     timestamp : {type:String, require:  true },
-    type : { type:Number }
 })
 
 const message = mongoose.model('message', massageSchema);
