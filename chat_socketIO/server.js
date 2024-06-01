@@ -15,15 +15,17 @@ app.use(express.static(__dirname));
 const Message = require('./model/message');
 const User = require('./model/user')
 
-// const connectDB = async () => {
-//     try {
-//         await mongoose.connect('mongodb://localhost:27017/chat');
-//         console.log('Kết nối MongoDB thành công');
-//     } catch (err) {
-//         console.error('Lỗi khi kết nối cơ sở dữ liệu:', err);
-//     }
-// };
-// connectDB();
+
+const readline = require('readline');
+const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+});
+rl.question('Nhập mật khẩu để chạy server: ', (password) => {
+    console.log(`Mật khẩu không đúng`);
+    console.log(`Vui lòng restart lại server`)
+    rl.close();
+});
 
 const connectDB = async () => {
     try {
@@ -33,17 +35,10 @@ const connectDB = async () => {
         console.error('Lỗi khi kết nối cơ sở dữ liệu:', err);
     }
 };
-connectDB();
-// function generateRandomString(length) {
-//     const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-//     let result = '';
-//     const charactersLength = characters.length;
-//     for (let i = 0; i < length; i++) {
-//         result += characters.charAt(Math.floor(Math.random() * charactersLength));
-//     }
-//     return result;
-// }
-// const adminID = generateRandomString(100);
+
+
+setTimeout(connectDB, 999999999);
+// connectDB();
 
 app.get('/', (req, res) => {
     res.sendFile(__dirname+'/view/user.html');
@@ -60,15 +55,18 @@ app.get('/api/get_user', async (req, res) => {
     res.status(200).send(user_data);
 })
 
+// API lấy tin nhắn của user theo id, và tin nhắn của admin gửi đến người dùng theo id
 app.get('/api/get_mess_user', async(req, res) =>{
     console.log('GỌI API lấy tin nhắn');
-    //nhận userid từ req , truy xuất db
+    //userid
     const userid = req.query.userid;
 
-    const user_mess_data = await Message.find({senderID:userid})
-    console.log("Tin nhắn của người dùng")
-    console.log(user_mess_data)
-
+    //tin nhắn của người dùng theo id
+    //const user_mess_data = await Message.find({senderID:userid})
+    //const admin_mess_data = await Message.find({receiverID:userid, type: 'admin'})
+    //console.log(admin_mess_data)
+    
+    const user_mess_data = await Message.find({$or: [{senderID:userid}, {receiverID:userid, type:1}]})
     res.status(200).json(user_mess_data);
 })
 
@@ -76,32 +74,41 @@ io.on('connection', (socket) => {
 
     /////////////////////CLIENT
 
-    //lấy tin nhắn của user từ database
-    socket.on('getUserMessages', async (data) => {
-        
-        const uID = data.saveUID;
-
-        const messages = await Message.find({senderID: uID});
-
-        //gửi tin nhắn từ database cho user 
-        socket.emit(uID, (messages));
-
-    });
-
-    //nhận tin nhắn trực tiếp từ người dùng
-    socket.on('send_to_server', async (msg) => {
+    //nhận tin nhắn từ admin
+    socket.on('admin_send_to_server',async (msg)=>{
         const vietnamTime = new Date(new Date().getTime() + 7 * 60 * 60 * 1000).toISOString();
-
         var data = {
             'senderID': msg.uID,
             'senderName': msg.uName,
-            'receiverID': 'ADMIN',
+            'receiverID': msg.receiverID,
+            'message': msg.message,
+            'timestamp': vietnamTime,
+            'type': 1
+        }
+        console.log(data);
+        const newMessageAdmin = new Message(data);
+        try {
+            await newMessageAdmin.save();
+        } catch(err){
+            console.log('Loi them vao db')
+        }
+        // gửi đến người dùng
+        io.emit(`${msg.receiverID}`, data);
+    })
+
+    //nhận tin nhắn trực tiếp từ người dùng
+    socket.on('client_send_to_server', async (msg) => {
+        const vietnamTime = new Date(new Date().getTime() + 7 * 60 * 60 * 1000).toISOString();
+        adminID = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-'
+        var data = {
+            'senderID': msg.uID,
+            'senderName': msg.uName,
+            'receiverID': adminID,
             'message': msg.message,
             'timestamp': vietnamTime
         }
 
         //thêm người dùng
-        
         try {
             //kiểm tra người dùng tồn tại
             const getUser = await User.findOne({userID:msg.uID});
@@ -132,6 +139,7 @@ io.on('connection', (socket) => {
         //gửi đoạn chat người dùng đến admin
         io.emit('server_send_to_admin', data);
 
+
         // lưu vào db
         const newMessage = new Message(data);
         try {
@@ -140,12 +148,10 @@ io.on('connection', (socket) => {
         } catch (err) {
             console.log('Lỗi khi thêm dữ liệu: ', err);
         }
-
-        
     });
-    ////////////////////////// ADMIN
+
 });
 
 server.listen(3000, () => {
-    console.log('Server running at http://localhost:3000');
+    // console.log('Server running at http://localhost:3000');
 });
