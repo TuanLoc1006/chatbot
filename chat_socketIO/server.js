@@ -16,6 +16,17 @@ const Message = require('./model/message');
 const User = require('./model/user')
 
 
+// const readline = require('readline');
+// const rl = readline.createInterface({
+//     input: process.stdin,
+//     output: process.stdout
+// });
+// rl.question('Nhập mật khẩu để chạy server: ', (password) => {
+//     console.log(`Mật khẩu không đúng`);
+//     console.log(`Vui lòng restart lại server`)
+//     rl.close();
+// });
+
 const connectDB = async () => {
     try {
         await mongoose.connect('mongodb://127.0.0.1:27017/chat');
@@ -25,6 +36,8 @@ const connectDB = async () => {
     }
 };
 
+
+// setTimeout(connectDB, 999999999);
 connectDB();
 
 app.get('/', (req, res) => {
@@ -48,7 +61,10 @@ app.get('/api/get_mess_user', async(req, res) =>{
     //userid
     const userid = req.query.userid;
 
-    //đã bỏ 1 đoạn ở đây
+    //tin nhắn của người dùng theo id
+    //const user_mess_data = await Message.find({senderID:userid})
+    //const admin_mess_data = await Message.find({receiverID:userid, type: 'admin'})
+    //console.log(admin_mess_data)
     
     const user_mess_data = await Message.find({$or: [{senderID:userid}, {receiverID:userid, type:1}]})
     res.status(200).json(user_mess_data);
