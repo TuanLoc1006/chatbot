@@ -15,18 +15,6 @@ app.use(express.static(__dirname));
 const Message = require('./model/message');
 const User = require('./model/user')
 
-
-// const readline = require('readline');
-// const rl = readline.createInterface({
-//     input: process.stdin,
-//     output: process.stdout
-// });
-// rl.question('Nhập mật khẩu để chạy server: ', (password) => {
-//     console.log(`Mật khẩu không đúng`);
-//     console.log(`Vui lòng restart lại server`)
-//     rl.close();
-// });
-
 const connectDB = async () => {
     try {
         await mongoose.connect('mongodb://127.0.0.1:27017/chat');
@@ -37,7 +25,6 @@ const connectDB = async () => {
 };
 
 
-// setTimeout(connectDB, 999999999);
 connectDB();
 
 app.get('/', (req, res) => {
@@ -60,11 +47,6 @@ app.get('/api/get_mess_user', async(req, res) =>{
     console.log('GỌI API lấy tin nhắn');
     //userid
     const userid = req.query.userid;
-
-    //tin nhắn của người dùng theo id
-    //const user_mess_data = await Message.find({senderID:userid})
-    //const admin_mess_data = await Message.find({receiverID:userid, type: 'admin'})
-    //console.log(admin_mess_data)
     
     const user_mess_data = await Message.find({$or: [{senderID:userid}, {receiverID:userid, type:1}]})
     res.status(200).json(user_mess_data);
@@ -74,7 +56,7 @@ io.on('connection', (socket) => {
 
     /////////////////////CLIENT
 
-    //nhận tin nhắn từ admin
+    //nhận tin nhắn trực tiếp từ admin
     socket.on('admin_send_to_server',async (msg)=>{
         const vietnamTime = new Date(new Date().getTime() + 7 * 60 * 60 * 1000).toISOString();
         var data = {
