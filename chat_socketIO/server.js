@@ -67,7 +67,7 @@ io.on('connection', (socket) => {
             'timestamp': vietnamTime,
             'type': 1
         }
-        console.log(data);
+        // console.log(data);
         const newMessageAdmin = new Message(data);
         try {
             await newMessageAdmin.save();
@@ -76,6 +76,11 @@ io.on('connection', (socket) => {
         }
         // gửi đến người dùng
         io.emit(`${msg.receiverID}`, data);
+    })
+
+    //Nhận thông báo đang gõ tin nhắn
+    socket.on('alert_typing', (alert_typing)=>{
+        console.log(alert_typing)
     })
 
     //nhận tin nhắn trực tiếp từ người dùng

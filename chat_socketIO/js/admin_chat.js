@@ -169,9 +169,9 @@ async function register_popup(userid, username) {
     popupBox.classList.add('popup-box');
     popupBox.id = userid;
     var messageHTML = '';
-    var messageAdmin = '';
     //gọi hàm lấy tất cả message của người dùng theo userid
-    const userListMessage = await callAPIGetMessage(userid)
+    const userListMessage = await callAPIGetMessage(userid);
+
     // console.log(userListMessage);
     userListMessage.forEach(userMessage=>{
         //tin nhắn của admin 
@@ -180,7 +180,7 @@ async function register_popup(userid, username) {
             <div class="mess-admin">
                 <div class="d-flex justify-content-between">
                     <p class="small mb-1 text-muted">23 Jan 2:05 pm</p>
-                    <p class="small mb-1">Johny Bullock</p>
+                    <p class="small mb-1">Bạn</p>
                 </div>
                 <div class="d-flex flex-row justify-content-end mb-4 pt-1">
                 <div>
@@ -226,12 +226,12 @@ async function register_popup(userid, username) {
     </div>
 
     <div class="popup-bottom">
-            <form onsubmit="sendMessage(event, '${userid}', '${username}')" action="">
-                <input id="input-${userid}" type="text" class="form-control input-mess">
-                <button><i class="fa-solid fa-paper-plane"></i></button>
-            </form>
-        </div>
-        `;
+        <form onsubmit="sendMessage(event, '${userid}', '${username}')" action="">
+            <input id="input-${userid}" type="text" class="form-control input-mess">
+            <button><i class="fa-solid fa-paper-plane"></i></button>
+        </form>
+    </div>
+`;
         
         // thêm phần tử mới vào body
         document.body.appendChild(popupBox);
@@ -239,6 +239,17 @@ async function register_popup(userid, username) {
         popups.unshift(userid);
         calculate_popups();
         scrollToBottom();
+
+
+        //KIỂM TRA INPUT ĐANG ĐƯỢC NHẬP
+        $('#username').keyup(function (e) { 
+            console.log('vua nhap');
+            socket.emit('alert_typing', {
+                uID: adminID,
+                uName: 'Admin',
+                receiver : userid
+            });
+        });
 }
 
 //calculate the total number of popups suitable and then populate the toatal_popups variable.
@@ -296,3 +307,15 @@ function sendMessage(event, userID, userName) {
     window_chat.appendChild(new_div);
     scrollToBottom();
 }
+
+
+/////// THÔNG BÁO ĐANG NHẬP
+
+// var typing = false;
+// var timeout = undefined;
+
+// function tineoutFunction(){
+//     typing = false;
+//     socket.emit()
+// }
+
