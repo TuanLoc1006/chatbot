@@ -22,21 +22,29 @@ handledb = handleDB()
 get_connect = handledb.get_connect()
 get_nganh = handledb.get_nganh()
 
+
+
 class actionNganh(Action):
     def name(self):
         return "action_thong_tin_nganh"
+    
     def run(self, dispatcher: CollectingDispatcher,
-                tracker: Tracker,
-                domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-            nganh_database = get_nganh
-            # print(nganh_database)
-            user_input = tracker.latest_message['text']
-            print("người dùng hỏi ngành học: "+user_input)
-            logging.info("{}{}".format('Call action_thong_tin_nganh: ', nganh_database))
-            dispatcher.utter_message(text="Danh sách các ngành có trong chương trình đào tạo của Đại học Y Dược Cần Thơ, tìm hiểu kĩ hơn bạn có thể nhắn tên ngành cho minh:")
-            for item in nganh_database:
-                dispatcher.utter_message(text="- Ngành " + item[0].capitalize())            
-            return []
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        
+        nganh_database = get_nganh
+        user_input = tracker.latest_message['text']
+        print("Người dùng hỏi ngành học: " + user_input)
+        logging.info("Call action_thong_tin_nganh: {}".format(nganh_database))
+        
+        message = "</br>Danh sách các ngành có trong chương trình đào tạo của Đại học Y Dược Cần Thơ, tìm hiểu kĩ hơn bạn có thể nhắn tên ngành cho mình:\n"
+        for item in nganh_database:
+            message += "- Ngành " + item[0].capitalize() + "</br>"
+        
+        dispatcher.utter_message(text=message)
+        
+        return []
+
 
 class actionChuongTrinhDaoTao(Action):
     def name(self):

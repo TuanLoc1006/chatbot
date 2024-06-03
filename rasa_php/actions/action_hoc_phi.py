@@ -56,8 +56,13 @@ class actionHocPhi(Action):
             "liên thông đại học": "liên thông",
             "liên thông cao đẳng": "liên thông",
             "làm bằng liên thông": "liên thông",
+            "lien thong": "liên thông",
+            "lt": "liên thông",
             "sau đại học": "sau đại học",
+            "sau đh": "sau đại học",
+            "sau dh": "sau đại học",
             "sau đại": "sau đại học",
+            "sau": "sau đại học",
             "sau đại học thạc sĩ": "sau đại học",
             "sau đại học tiến sĩ": "sau đại học",
             # Các biến thể khác của liên thông và sau đại học có thể được thêm vào đây

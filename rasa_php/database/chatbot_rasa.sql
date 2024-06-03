@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 31, 2024 at 11:24 AM
+-- Generation Time: Jun 03, 2024 at 05:10 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -59,24 +59,26 @@ CREATE TABLE `chuong_trinh_dao_tao` (
   `id` int(11) NOT NULL,
   `ma_nganh` varchar(45) NOT NULL,
   `ma_nam_hoc` int(11) NOT NULL,
-  `chuong_trinh_dao_tao` varchar(450) DEFAULT NULL
+  `chuong_trinh_dao_tao` varchar(450) DEFAULT NULL,
+  `loai_hinh_dao_tao` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `chuong_trinh_dao_tao`
 --
 
-INSERT INTO `chuong_trinh_dao_tao` (`id`, `ma_nganh`, `ma_nam_hoc`, `chuong_trinh_dao_tao`) VALUES
-(3, 'y-khoa', 1, 'http://www.ctump.edu.vn/DesktopModules/NEWS/DinhKem/9079_Nganh-Y-khoa.pdf'),
-(4, 'rang-ham-mat', 1, 'http://www.ctump.edu.vn/DesktopModules/NEWS/DinhKem/9220_2019.-BAN-MO-TA-CTDT-RHM.pdf'),
-(5, 'y-hoc-co-truyen', 1, 'http://www.ctump.edu.vn/DesktopModules/NEWS/DinhKem/8831_Ban-mo-ta-CTDT-YHCT2019.pdf'),
-(6, 'y-hoc-du-phong', 1, 'http://www.ctump.edu.vn/DesktopModules/NEWS/DinhKem/8819_CTDT-tin-chi-YHDP-2013.pdf'),
-(7, 'dieu-duong', 1, 'http://www.ctump.edu.vn/DesktopModules/NEWS/DinhKem/3618_1.-DDDK-VLVH-24-11-17.pdf'),
-(8, 'ky-thuat-xet-nghiem-y-hoc', 1, 'http://www.ctump.edu.vn/DesktopModules/NEWS/DinhKem/9218_Mota_CTDT_XN-2019.pdf'),
-(9, 'ho-sinh', 1, 'đang cập nhật'),
-(10, 'y-te-cong-cong', 1, 'http://www.ctump.edu.vn/DesktopModules/NEWS/DinhKem/8801_CTDT-tin-chi-YTCC-2013.pdf'),
-(11, 'ky-thuat-hinh-anh-y-hoc', 1, 'đang cập nhật'),
-(12, 'duoc-hoc', 1, 'http://www.ctump.edu.vn/DesktopModules/NEWS/DinhKem/5478_3625_CTDT-tin-chi-Duoc-24-11-17.pdf');
+INSERT INTO `chuong_trinh_dao_tao` (`id`, `ma_nganh`, `ma_nam_hoc`, `chuong_trinh_dao_tao`, `loai_hinh_dao_tao`) VALUES
+(3, 'y-khoa', 3, 'http://www.ctump.edu.vn/DesktopModules/NEWS/DinhKem/9079_Nganh-Y-khoa.pdf', 'đại học'),
+(4, 'rang-ham-mat', 3, 'http://www.ctump.edu.vn/DesktopModules/NEWS/DinhKem/9220_2019.-BAN-MO-TA-CTDT-RHM.pdf', 'đại học'),
+(5, 'y-hoc-co-truyen', 3, 'http://www.ctump.edu.vn/DesktopModules/NEWS/DinhKem/8831_Ban-mo-ta-CTDT-YHCT2019.pdf', 'đại học'),
+(6, 'y-hoc-du-phong', 3, 'http://www.ctump.edu.vn/DesktopModules/NEWS/DinhKem/8819_CTDT-tin-chi-YHDP-2013.pdf', 'đại học'),
+(7, 'dieu-duong', 3, 'http://www.ctump.edu.vn/DesktopModules/NEWS/DinhKem/3618_1.-DDDK-VLVH-24-11-17.pdf', 'đại học'),
+(8, 'ky-thuat-xet-nghiem-y-hoc', 3, 'http://www.ctump.edu.vn/DesktopModules/NEWS/DinhKem/9218_Mota_CTDT_XN-2019.pdf', 'đại học'),
+(9, 'ho-sinh', 3, 'đang cập nhật', 'đại học'),
+(10, 'y-te-cong-cong', 3, 'http://www.ctump.edu.vn/DesktopModules/NEWS/DinhKem/8801_CTDT-tin-chi-YTCC-2013.pdf', 'đại học'),
+(11, 'ky-thuat-hinh-anh-y-hoc', 3, 'đang cập nhật', 'đại học'),
+(12, 'duoc-hoc', 3, 'http://www.ctump.edu.vn/DesktopModules/NEWS/DinhKem/5478_3625_CTDT-tin-chi-Duoc-24-11-17.pdf', 'đại học'),
+(13, 'bac-si', 4, 'http://www.ctump.edu.vn/DesktopModules/NEWS/DinhKem/13345_Chuong-trinh-ke-hoach-dao-tao-CK1,CH,CK2-K-2023-2025_-BSNT-K2023-2026.-(18g30-25.09.23)docx-(1).pdf', 'sau đại học');
 
 -- --------------------------------------------------------
 
@@ -129,7 +131,9 @@ INSERT INTO `hoc_phi` (`id`, `ma_nganh`, `ma_nam_hoc`, `gia_tien`) VALUES
 (19, 'ho-sinh', 4, '24 triệu'),
 (20, 'ky-thuat-hinh-anh-y-hoc', 4, '24 triệu'),
 (21, 'y-te-cong-cong', 4, '24 triệu'),
-(22, 'y-khoa', 4, '24 triệu');
+(22, 'y-khoa', 4, '24 triệu'),
+(23, 'bac-si', 4, '24 triệu'),
+(24, 'bac-si', 3, '23 triệu');
 
 -- --------------------------------------------------------
 
@@ -225,24 +229,26 @@ INSERT INTO `nam_hoc` (`ma_nam_hoc`, `ten_nam_hoc`) VALUES
 
 CREATE TABLE `nganh` (
   `ma_nganh` varchar(45) NOT NULL,
-  `ten_nganh` varchar(450) DEFAULT NULL
+  `ten_nganh` varchar(450) DEFAULT NULL,
+  `loai_hinh_dao_tao` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `nganh`
 --
 
-INSERT INTO `nganh` (`ma_nganh`, `ten_nganh`) VALUES
-('dieu-duong', 'Điều dưỡng'),
-('duoc-hoc', 'Dược học'),
-('ho-sinh', 'Hộ sinh'),
-('ky-thuat-hinh-anh-y-hoc', 'Kỹ thuật hình ảnh y học'),
-('ky-thuat-xet-nghiem-y-hoc', 'Kỹ thuật xét nghiệm y học'),
-('rang-ham-mat', 'Răng hàm mặt'),
-('y-hoc-co-truyen', 'Y học cổ truyền'),
-('y-hoc-du-phong', 'Y học dự phòng'),
-('y-khoa', 'Y Khoa'),
-('y-te-cong-cong', 'Y tế công cộng');
+INSERT INTO `nganh` (`ma_nganh`, `ten_nganh`, `loai_hinh_dao_tao`) VALUES
+('bac-si', 'chuyên khoa 1', 'sau đại học'),
+('dieu-duong', 'Điều dưỡng', 'đại học'),
+('duoc-hoc', 'Dược học', 'đại học'),
+('ho-sinh', 'Hộ sinh', 'đại học'),
+('ky-thuat-hinh-anh-y-hoc', 'Kỹ thuật hình ảnh y học', 'đại học'),
+('ky-thuat-xet-nghiem-y-hoc', 'Kỹ thuật xét nghiệm y học', 'đại học'),
+('rang-ham-mat', 'Răng hàm mặt', 'đại học'),
+('y-hoc-co-truyen', 'Y học cổ truyền', 'đại học'),
+('y-hoc-du-phong', 'Y học dự phòng', 'đại học'),
+('y-khoa', 'Y Khoa', 'đại học'),
+('y-te-cong-cong', 'Y tế công cộng', 'đại học');
 
 --
 -- Indexes for dumped tables
@@ -329,7 +335,7 @@ ALTER TABLE `can_bo_nhan_vien`
 -- AUTO_INCREMENT for table `chuong_trinh_dao_tao`
 --
 ALTER TABLE `chuong_trinh_dao_tao`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `example_intent`
@@ -341,7 +347,7 @@ ALTER TABLE `example_intent`
 -- AUTO_INCREMENT for table `hoc_phi`
 --
 ALTER TABLE `hoc_phi`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
 -- AUTO_INCREMENT for table `intents`
