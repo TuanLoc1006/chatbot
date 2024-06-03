@@ -150,6 +150,7 @@ function scrollToBottom() {
 }
 
 // Hàm hiển thị popup tin nhắn
+
 async function register_popup(userid, username) {
     //hiển thị ID của popup
     // console.log(`ID popup la ${userid}`)

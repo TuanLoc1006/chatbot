@@ -24,7 +24,6 @@ const connectDB = async () => {
     }
 };
 
-
 connectDB();
 
 app.get('/', (req, res) => {
