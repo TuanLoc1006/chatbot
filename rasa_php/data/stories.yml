@@ -18,6 +18,7 @@ stories:
   - intent: ask_chuong_trinh_dao_tao
   - action: action_chuong_trinh_dao_tao
 
+
 - story: Hỏi về học phí đào tạo
   steps:
   - intent: ask_hoc_phi

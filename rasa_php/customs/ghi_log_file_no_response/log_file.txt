@@ -1,22 +1,10 @@
-action_hoi_thong_tin_phong: thông tin đại học ydct
-action_hoi_thong_tin_phong: thông tin đại học ydct
-action_hoi_thong_tin_phong: thông tin ydct
-action_hoi_thong_tin_phong: thông tin ctump
-action_hoi_thong_tin_phong: thông tin trường
-Action học phí: thông tin về trường này
-Action học phí: thông tin về trường này
-Action học phí: tóm tắt thông tin ctump
-action_hoi_thong_tin_phong: mô tả trường này
-Action ctdt: ./.
-Action ctdt: [][[[]
-Action ctdt: ???
-Action học phí: các ngành học bao nhiêu tiền
-Action ctdt: học phí lien thong
-Action ctdt: học phí
-Action học phí: học phí có tăng không vậy
-action_hoi_thong_tin_khoa: thông tin khoa y khoa
-Action học phí: Thông tin trường này
-Action học phí: Thông tin trường này
-Action học phí: thông tin trường
-action_hoi_thong_tin_khoa: thông tin khoa y
-action_hoi_thong_tin_khoa: thông tin khoa y
+
+
+Action học phí: em muốn học chương trình liên thông thì mức học phí hàng năm là bao nhiêu
+
+Action học phí: 
+Action học phí: 
+Action ctdt: học phí ngành y học cổ chuyền trình độ liên thông là bao nhiêu
+Action ctdt:
+
+

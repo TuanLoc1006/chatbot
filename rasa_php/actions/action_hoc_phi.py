@@ -34,29 +34,40 @@ class actionHocPhi(Action):
         hocphi_entity = next(tracker.get_latest_entity_values('hocphi'), None)
         nam_entity = next(tracker.get_latest_entity_values('year'), None)
         loai_hinh_dt_entity = next(tracker.get_latest_entity_values('loai_hinh_dt'), None)
+        nganh_entity = next(tracker.get_latest_entity_values('nganh'), None)
         user_input = tracker.latest_message['text']
-        
+        print(user_input)
         logging.info(f"Call action_hoc_phi: {hocphi_entity}")
         logging.info(f"Call action_hoc_phi_nam: {nam_entity}")
         logging.info(f"Call action_hoc_phi_loai_hinh_dt: {loai_hinh_dt_entity}")
-        
+        logging.info(f"Call action_hoc_phi_nganh: {nganh_entity}")
         current_year = datetime.now().year
+        # print(current_year)
+        
+        if not hocphi_entity:
+            dispatcher.utter_message(text="Bạn vui lòng cung cấp thông tin về học phí mà bạn muốn tìm kiếm.")
+            return []
         nam_yeu_cau = {
             "hiện tại": current_year,
             "bây giờ": current_year,
             "năm hiện tại": current_year,
-            "1": current_year,
             "năm nay": current_year,
             "năm rồi": current_year - 1,
-            "năm trước": current_year - 1,
+            "năm trước": current_year - 1
         }
+        if nam_entity in nam_yeu_cau:
+            nam_entity = nam_yeu_cau[nam_entity]
         
+        elif not nam_entity:
+            nam_entity = current_year
+
         hinh_thuc_dt = {
             "liên thông": "liên thông",
             "liên thông đại học": "liên thông",
             "liên thông cao đẳng": "liên thông",
             "làm bằng liên thông": "liên thông",
             "lien thong": "liên thông",
+            "liên thong": "liên thông",
             "lt": "liên thông",
             "sau đại học": "sau đại học",
             "sau đh": "sau đại học",
@@ -65,39 +76,41 @@ class actionHocPhi(Action):
             "sau": "sau đại học",
             "sau đại học thạc sĩ": "sau đại học",
             "sau đại học tiến sĩ": "sau đại học",
-            # Các biến thể khác của liên thông và sau đại học có thể được thêm vào đây
         }
+        loai_hinh_dt_entity = hinh_thuc_dt.get(loai_hinh_dt_entity.lower(), 'đại học') if loai_hinh_dt_entity else 'đại học'
         
-        if hocphi_entity:
-            if nam_entity :
-                nam = nam_entity
-            else:
-                nam = current_year
-            loai_hinh_dt = hinh_thuc_dt.get(loai_hinh_dt_entity.lower(), 'đại học') if loai_hinh_dt_entity else 'đại học'
-            
-            handledb_instance = handleDB()
-            hoc_phi_database = handledb_instance.get_hoc_phi(nam, loai_hinh_dt)
-
-            if hoc_phi_database:
-                if loai_hinh_dt == "liên thông":
-                    message = f"Mức học phí trình độ liên thông năm {nam} của các ngành học là:<br/>"
-                elif loai_hinh_dt == "sau đại học":
-                    message = f"Mức học phí trình độ sau đại học năm {nam} của các ngành học là:<br/>"
-                else:
-                    message = f"Mức học phí trình độ đại học năm {nam} của các ngành học là:<br/>"
-                    # print(loai_hinh_dt+"  "+str(nam))
-                message += "<br/>".join([f"{value[0]}: {value[1]} VND" for value in hoc_phi_database])
-                dispatcher.utter_message(text=message)
-            else:
-                dispatcher.utter_message(text="Không tìm thấy thông tin học phí cho năm và loại hình đào tạo được yêu cầu.")
+        handledb_instance = handleDB()
+        hoc_phi_database = handledb_instance.get_hoc_phi(nam_entity, loai_hinh_dt_entity, nganh_entity)
+        if hoc_phi_database:
+            loai_hinh_map = {
+                "liên thông": "trình độ liên thông",
+                "sau đại học": "trình độ sau đại học",
+                "đại học": "trình độ đại học chính quy"
+            }
+            loai_hinh_text = loai_hinh_map.get(loai_hinh_dt_entity, "trình độ đại học chính quy")
+            message = f"Mức học phí {loai_hinh_text} năm {nam_entity} của các ngành học là:<br/>"
+            message += "<br/>".join([f"{value[0]}: {value[1]} VND" for value in hoc_phi_database])
+            dispatcher.utter_message(text=message)
         else:
-            # Ghi log lại câu hỏi của người dùng nếu không có entity 'hocphi'
-            file_writer = write_file()
-            file_writer.get_ghi_log_file(f'Action học phí: {user_input}')
-
-
+            dispatcher.utter_message(text="Không tìm thấy thông tin học phí cho năm và loại hình đào tạo được yêu cầu.")
+        
+        # if hoc_phi_database:
+        #     if loai_hinh_dt_entity == "liên thông":
+        #         message = f"Mức học phí trình độ liên thông năm {nam_entity} của các ngành học là:<br/>"
+        #     elif loai_hinh_dt_entity == "sau đại học":
+        #         message = f"Mức học phí trình độ sau đại học năm {nam_entity} của các ngành học là:<br/>"
+        #     else:
+        #         message = f"Mức học phí trình độ đại học chính quy năm {nam_entity} của các ngành học là:<br/>"
+        #     message += "<br/>".join([f"{value[0]}: {value[1]} VND" for value in hoc_phi_database])
+        #     dispatcher.utter_message(text=message)
+        # else:
+        #     dispatcher.utter_message(text="Không tìm thấy thông tin học phí cho năm và loại hình đào tạo được yêu cầu.")
+       
+        
+        
         return []
     
+
 
 
 class actionHocPhiCoTangKhong(Action):
