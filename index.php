@@ -17,10 +17,10 @@
 
 <body>
     <?php
-    include "includes/db_con.php";
+    // include "includes/db_con.php";
     ?>
-    <h3><a href="./admin/views/home.php">Trang admin</a></h3>
-    <h3><a href="./index.php">Trang user</a></h3>
+    <!-- <h3><a href="./admin/views/home.php">Trang admin</a></h3> -->
+    <!-- <h3><a href="./index.php">Trang user</a></h3> -->
     <!-- <div class="container">
         <div class="row">
             <div class="col-md-6">

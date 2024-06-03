@@ -26,9 +26,12 @@ const connectDB = async () => {
 
 
 connectDB();
+// app.engine('php', phpE)
 
 app.get('/', (req, res) => {
+    console.log(__dirname)
     res.sendFile(__dirname+'/view/user.html');
+    // res.sendFile('../index.php');
 });
 
 app.get('/admin-chat', (req, res) => {
