@@ -39,6 +39,7 @@ actions:
   # - action_greet_user
   # - action_nganh
 intents:
+  - how_old
   # - deny
   # - mood_great
   # - mood_unhappy
@@ -153,7 +154,9 @@ responses:
   # - text: "vui lòng cung cấp số điện thoại?"
   # utter_ask_tt_truong:
   # - text: "</br>Trường Đại học Y Dược Cần Thơ là trường đại học Khoa học Sức khỏe hệ công lập trực thuộc Bộ Y tế duy nhất tại Đồng bằng sông Cửu Long, Việt Nam. </br>Trường Đại học Y Dược Cần Thơ cũng là một trong những trường đào tạo Y Dược tốt nhất Việt Nam nói chung và khu vực Đồng bằng Sông Cửu Long nói riêng."
-    
+  utter_old:
+  - text: "i created by loc 3 month "
+
   utter_greet:
   - text: "Chào! bạn tôi có thể giúp gì cho bạn?"
   - text: "Rất vui khi bạn đã hỏi"

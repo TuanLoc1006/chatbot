@@ -23,7 +23,6 @@ stories:
   - intent: ask_hoc_phi
   - action: action_hoc_phi
 
-
 - story: Hỏi về học phí có tăng không
   steps:
   - intent: ask_hoc_phi_co_tang_khong
@@ -139,6 +138,10 @@ stories:
   - action: utter_trinh_do_hoc_van_tuyen_sinh
 
 
+- story: Hỏi tuoi
+  steps:
+  - intent: how_old
+  - action: utter_old
 
 
 ############################################# PHUONG

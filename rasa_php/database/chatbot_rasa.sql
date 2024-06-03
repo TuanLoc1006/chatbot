@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 31, 2024 at 03:43 AM
+-- Generation Time: May 31, 2024 at 11:24 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -109,17 +109,27 @@ CREATE TABLE `hoc_phi` (
 --
 
 INSERT INTO `hoc_phi` (`id`, `ma_nganh`, `ma_nam_hoc`, `gia_tien`) VALUES
-(1, 'y-khoa', 3, '44100000'),
-(2, 'rang-ham-mat', 3, '44100000'),
-(3, 'duoc-hoc', 3, '44100000'),
-(4, 'y-hoc-co-truyen', 3, '39200000'),
-(5, 'y-hoc-du-phong', 3, '39200000'),
-(6, 'dieu-duong', 3, '39200000'),
-(7, 'ky-thuat-xet-nghiem-y-hoc', 3, '39200000'),
-(8, 'ho-sinh', 3, '20400000'),
-(9, 'ky-thuat-hinh-anh-y-hoc', 3, '20400000'),
-(10, 'y-te-cong-cong', 3, '20400000'),
-(11, 'y-khoa', 4, '50000000');
+(1, 'y-khoa', 3, '23 triệu'),
+(2, 'rang-ham-mat', 3, '23 triệu'),
+(3, 'duoc-hoc', 3, '23 triệu'),
+(4, 'y-hoc-co-truyen', 3, '23 triệu'),
+(5, 'y-hoc-du-phong', 3, '23 triệu'),
+(6, 'dieu-duong', 3, '23 triệu'),
+(7, 'ky-thuat-xet-nghiem-y-hoc', 3, '23 triệu'),
+(8, 'ho-sinh', 3, '23 triệu'),
+(9, 'ky-thuat-hinh-anh-y-hoc', 3, '23 triệu'),
+(10, 'y-te-cong-cong', 3, '23 triệu'),
+(12, 'y-khoa', 4, '24 triệu'),
+(13, 'rang-ham-mat', 4, '24 triệu'),
+(14, 'duoc-hoc', 4, '24 triệu'),
+(15, 'y-hoc-co-truyen', 4, '24 triệu'),
+(16, 'y-hoc-du-phong', 4, '24 triệu'),
+(17, 'dieu-duong', 4, '24 triệu'),
+(18, 'ky-thuat-xet-nghiem-y-hoc', 4, '24 triệu'),
+(19, 'ho-sinh', 4, '24 triệu'),
+(20, 'ky-thuat-hinh-anh-y-hoc', 4, '24 triệu'),
+(21, 'y-te-cong-cong', 4, '24 triệu'),
+(22, 'y-khoa', 4, '24 triệu');
 
 -- --------------------------------------------------------
 
@@ -331,7 +341,7 @@ ALTER TABLE `example_intent`
 -- AUTO_INCREMENT for table `hoc_phi`
 --
 ALTER TABLE `hoc_phi`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
 -- AUTO_INCREMENT for table `intents`
