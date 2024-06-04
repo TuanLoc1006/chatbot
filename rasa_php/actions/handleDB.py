@@ -29,22 +29,76 @@ def get_current_year():
 def nganh():
     db_connection = handleDB().get_connect()
     cursor = db_connection.cursor()
-    cursor.execute("SELECT ten_nganh FROM nganh")
+    cursor.execute("SELECT DISTINCT ten_nganh FROM nganh")
     result = cursor.fetchall()
     return result
 
-def getHocPhi(nam=None, loai_hinh_dt=None):
+# def getHocPhi(nam=None, loai_hinh_dt=None,ten_nganh_dt=None):
+#     db_connection = handleDB().get_connect()
+#     cursor = db_connection.cursor()
+    
+#     if nam is None and loai_hinh_dt is None and ten_nganh_dt is None:
+#         current_year = get_current_year()
+#         cursor.execute("""
+#         SELECT DISTINCT n.ten_nganh, h.gia_tien
+#         FROM nganh n
+#         JOIN hoc_phi h ON n.ma_nganh = h.ma_nganh
+#         JOIN chuong_trinh_dao_tao c ON c.ma_nganh = n.ma_nganh
+#         WHERE h.nam_hoc = %s AND c.loai_hinh_dao_tao = %s 
+#         """, (current_year, 'đại học'))
+#     else:
+#        cursor.execute("""
+#         SELECT DISTINCT n.ten_nganh, h.gia_tien
+#         FROM nganh n
+#         JOIN hoc_phi h ON n.ma_nganh = h.ma_nganh
+#         JOIN chuong_trinh_dao_tao c ON c.ma_nganh = n.ma_nganh
+#         WHERE h.nam_hoc = %s AND c.loai_hinh_dao_tao = %s AND n.ten_nganh LIKE %s
+#         """, (nam, loai_hinh_dt, f"%{ten_nganh_dt}%"))
+    
+#     result = cursor.fetchall()
+#     return result
+
+def getHocPhi(nam=None, loai_hinh_dt=None, ten_nganh_dt=None):
     db_connection = handleDB().get_connect()
     cursor = db_connection.cursor()
-    
-    if nam is None or loai_hinh_dt is None:
-        current_year = get_current_year()
-        cursor.execute("SELECT DISTINCT n.ten_nganh, h.gia_tien, nh.ten_nam_hoc , c.loai_hinh_dao_tao FROM nganh n JOIN hoc_phi h ON n.ma_nganh = h.ma_nganh JOIN nam_hoc nh on h.ma_nam_hoc = nh.ma_nam_hoc  JOIN chuong_trinh_dao_tao c on c.loai_hinh_dao_tao = n.loai_hinh_dao_tao WHERE nh.ten_nam_hoc = %s and c.loai_hinh_dao_tao = %s", (current_year,'đại học'))
+
+    # current_year = get_current_year()
+    # default_loai_hinh = 'đại học'
+   
+    # if nam is None:
+    #     nam = current_year
+    # if loai_hinh_dt is None:
+    #     loai_hinh_dt = default_loai_hinh
+
+    if ten_nganh_dt is None:
+        query = """
+            SELECT DISTINCT n.ten_nganh, h.gia_tien
+            FROM nganh n
+            JOIN hoc_phi h ON n.ma_nganh = h.ma_nganh
+            JOIN chuong_trinh_dao_tao c ON c.ma_nganh = n.ma_nganh
+            WHERE h.nam_hoc = %s AND c.loai_hinh_dao_tao = %s
+        """
+        params = (nam, loai_hinh_dt)
     else:
-        cursor.execute("SELECT DISTINCT n.ten_nganh, h.gia_tien, nh.ten_nam_hoc , c.loai_hinh_dao_tao FROM nganh n JOIN hoc_phi h ON n.ma_nganh = h.ma_nganh JOIN nam_hoc nh on h.ma_nam_hoc = nh.ma_nam_hoc  JOIN chuong_trinh_dao_tao c on c.loai_hinh_dao_tao = n.loai_hinh_dao_tao WHERE nh.ten_nam_hoc = %s and c.loai_hinh_dao_tao = %s" , (nam,loai_hinh_dt))
-    
+        query = """
+            SELECT DISTINCT n.ten_nganh, h.gia_tien
+            FROM nganh n
+            JOIN hoc_phi h ON n.ma_nganh = h.ma_nganh
+            JOIN chuong_trinh_dao_tao c ON c.ma_nganh = n.ma_nganh
+            WHERE h.nam_hoc = %s AND c.loai_hinh_dao_tao = %s AND n.ten_nganh LIKE %s
+        """
+        params = (nam, loai_hinh_dt, f"%{ten_nganh_dt}%")
+
+    # Execute the query with the constructed parameters
+    cursor.execute(query, params)
     result = cursor.fetchall()
+    
+    # Close the cursor and connection
+    cursor.close()
+    db_connection.close()
+    
     return result
+
 
 def getChuongTrinhDaoTao(entity):
     db_connection = handleDB().get_connect()
@@ -72,8 +126,8 @@ class handleDB:
     def get_nganh(self):
         return nganh()
     
-    def get_hoc_phi(self, nam=None, loai_hinh_dt=None):
-        return getHocPhi(nam, loai_hinh_dt)
+    def get_hoc_phi(self, nam=None, loai_hinh_dt=None,ten_nganh_dt=None):
+        return getHocPhi(nam, loai_hinh_dt, ten_nganh_dt)
     
     def get_chuong_trinh_dao_tao(self, entity):
         return getChuongTrinhDaoTao(entity)

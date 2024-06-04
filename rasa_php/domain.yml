@@ -107,6 +107,7 @@ entities:
   - cap_lai_the_sv
   - cap_lai_email_sv
   - cap_lai_thanh_phi_bao_hiem_tai_nan
+  # - cap_lai_thanh_phi_bao_hiem_y_te
   - cap_lai_tai_khoan_quan_ly_dao_tao
 # slots:
 #   location:

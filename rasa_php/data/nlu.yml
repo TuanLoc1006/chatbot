@@ -393,19 +393,20 @@ nlu:
 
 - intent: ask_hoc_phi
   examples: |
-    - thông tin [học phí](hocphi) [năm nay](year) [sau đại học](loai_hinh_dt) bao nhiêu
-    - thông tin [học phí](hocphi) [2023](year) [sau đại học](loai_hinh_dt) bao nhiêu
-    - trường này học khoảng [bao nhiêu tiền](hocphi) [bây giờ](year) [sau đại học](loai_hinh_dt)
-    - thông tin [học phí](hocphi) [sau đại học](loai_hinh_dt) [năm nay](year)
-    - [giá](hocphi) [sau dai hoc] năm [2024](year) là bao nhiêu tiền
-    - [học phí](hocphi) [bây giờ](year) [liên thông](loai_hinh_dt) của trường đại học y dược là bao nhiêu
-    - học trường này [tốn bao nhiêu tiền](hocphi) vào [năm sau](year) [lt](loai_hinh_dt)
-    - [học phí](hocphi) [hiện tại](year) [đại học](loai_hinh_dt) của trường là bao nhiêu
-    - học trường này có [đắt tiền](hocphi) không
+    - thông tin [học phí](hocphi) ngành y [học cổ truyền](nganh)
+    - thông tin [học phí](hocphi) [năm nay](year) [sau đại học](loai_hinh_dt) ngành [y khoa](nganh) bao nhiêu
+    - thông tin [học phí](hocphi) [2023](year) [sau đại học](loai_hinh_dt) ngành [răng hàm mặt](nganh) bao nhiêu
+    - trường này học khoảng [bao nhiêu tiền](hocphi) [bây giờ](year) [sau đại học](loai_hinh_dt) [Dược học](nganh)
+    - thông tin [học phí](hocphi) [sau đại học](loai_hinh_dt) [năm nay](year) ngành y [học cổ truyền](nganh)
+    - [giá](hocphi) [sau dai hoc] năm [2024](year) ngành y [học dự phòng](nganh) là bao nhiêu tiền
+    - [học phí](hocphi) [bây giờ](year) [liên thông](loai_hinh_dt) ngành [điều dưỡng]](nganh) của trường đại học y dược là bao nhiêu
+    - học trường này [tốn bao nhiêu tiền](hocphi) vào [năm sau](year) [lt](loai_hinh_dt) ngành [kỹ thuật xét nghiệm y học](nganh)
+    - [học phí](hocphi) [hiện tại](year) [đại học](loai_hinh_dt) của ngành [hộ sinh](nganh) của trường là bao nhiêu
+    - học trường này có [đắt tiền](hocphi) ngành [kỹ thuật hình ảnh y học](nganh) không
     - [học phí](hocphi) năm [2023](year) của [dai hoc](loai_hinh_dt) là bao nhiêu
     - [học phí](hocphi) năm rồi [2022](year) [đh](loai_hinh_dt) của trường đại học y dược
-    - [học phí](hocphi) các năm trước [2021](year) đại học y dược
-    - các ngành học bao nhiêu tiền
+    - [học phí](hocphi) các năm trước [2021](year) ngành y [tế công cộng](nganh) đại học y dược
+    - các ngành học bao nhiêu tiền ngành [y](nganh)
     - [học phí](hocphi) [năm sau](year) cho đào tạo [sau đại học](loai_hinh_dt) là bao nhiêu
     - giá [học phí](hocphi) đào tạo [liên thông](loai_hinh_dt) [năm nay](year)
     - [học phí](hocphi) [năm hiện tại](year) [sau đại học](loai_hinh_dt) trường này tốn bao nhiêu tiền
@@ -416,8 +417,26 @@ nlu:
     - [Học phí](hocphi) [2023](year) [sau đại học](loai_hinh_dt) cơ bản của 1 ngành là bao nhiêu 
     - [giá tiền](hocphi) các ngành đào tạo [sau đại học](loai_hinh_dt)
     - cho mình hỏi [học phí](hocphi) [liên thông](loai_hinh_dt) tại trường ạ
-
-
+    - em muốn học chương trình [liên thông](loai_hinh_dt) thì [mức học phí](hocphi) hàng năm là bao nhiêu
+    - nếu học chương trình [sau đại học](loai_hinh_dt) thì [học phí](hocphi) là bao nhiêu ạ
+    - với chương trình đào tạo [sau đại học](loai_hinh_dt) thì [học phí](hocphi) là bao nhiêu
+    - cho em hỏi khi chọn học [liên thông](loai_hinh_dt) thì [học phí](hocphi) là bao nhiêu
+    - học phí ngành y [học cổ truyền](nganh) trình độ [liên thông](loai_hinh_dt) là bao nhiêu
+    - cho em xin tham khảo thông tin [học phí](hocphi) chương trình đào tạo [sau đại học](loai_hinh_dt)
+    - em muốn tham khảo mức [học phí](hocphi) chương trình đào tạo [sau đại học](loai_hinh_dt) năm [2024](year)
+    - cho em xin thông tin về [học phí](hocphi) [liên thông](loai_hinh_dt) là bao nhiêu ạ
+    - Cho em xin thông tin về [học phí](hocphi) đại học [chính quy](loai_hinh_dt)
+    - em cần xem mức [giá tiền](hocphi) của chương trình đào tạo [chính quy](loai_hinh_dt) ạ
+    - em cần xem [mức học phí](hocphi) của trình độ [chính quy](loai_hinh_dt) ạ
+    - với trình độ [sau đại học](loai_hinh_dt) thì mức [học phí](hocphi) là bao nhiêu
+    - Với chương trình [liên thông](loai_hinh_dt) thì mức [học phí](hocphi) [năm nay](year) là bao nhiêu ạ
+    - thông tin về [học phí](hocphi) [năm 2024](year)
+    - học phí ngành y [học cổ chuyền](nganh) trình độ [liên thông](loai_hinh_dt) là bao nhiêu
+    - Em xin thông tin [học phí](hocphi) [hàng năm](year)
+    - Mức [học phí](hocphi) năm [2023](year) là bao nhiêu
+    - cho em hỏi mức [học phí](hocphi) năm [2024](year) là bao nhiêu ạ
+    - [học phí](hocphi) [hàng năm](year) của chương trình học là bao nhiêu
+    - em muốn học chương trình [liên thông](loai_hinh_dt) thì mức [học phí](hocphi) hàng năm là
 
 - intent: ask_hoc_phi_co_tang_khong
   examples: |
@@ -570,6 +589,17 @@ nlu:
     - đăng ký [bảo hiểm tai nạn](cap_lai_thanh_phi_bao_hiem_tai_nan)
 
 
+
+
+# - intent: ask_cap_lai_bao_hiem_y_te
+#   examples: |
+#     - yêu cầu cấp lại [bảo hiểm y tế](cap_lai_thanh_phi_bao_hiem_y_te)
+#     - tôi muốn cấp lại [bảo hiểm y tế](cap_lai_thanh_phi_bao_hiem_y_te)
+#     - xin cấp lại [bảo hiểm y tế](cap_lai_thanh_phi_bao_hiem_y_te)
+#     - tôi muốn thay đổi thông tin thẻ [bảo hiểm y tế](cap_lai_thanh_phi_bao_hiem_y_te)
+#     - liên hệ ai để sửa thông tin [bảo hiểm y tế](cap_lai_thanh_phi_bao_hiem_y_te)
+#     - điều chỉnh thông tin thẻ [bảo hiểm y tế](cap_lai_thanh_phi_bao_hiem_y_te)
+#     - dữ liệu trên thẻ [bảo hiểm y tế](cap_lai_thanh_phi_bao_hiem_y_te) bị sai
 
 - intent: ask_cap_lai_tai_khoan_quan_ly_dao_tao
   examples: |

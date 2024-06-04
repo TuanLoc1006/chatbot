@@ -76,6 +76,10 @@
   "2023": "2023",
   "bao nhiêu tiền": "bao nhiêu tiền",
   "bây giờ": "bây giờ",
+<<<<<<<< HEAD:rasa_php/.rasa/cache/tmps5gbajhc/synonyms.json
+========
+  "dược học": "Dược học",
+>>>>>>>> 3f2fa0083e2a52d8345706e79cbeb5a1af7b2aa5:rasa_php/.rasa/cache/tmp72tozv4o/synonyms.json
   "giá": "giá",
   "2024": "2024",
   "liên thông": "liên thông",
