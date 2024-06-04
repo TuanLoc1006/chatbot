@@ -1,9 +1,5 @@
 
 
-Action học phí: em muốn học chương trình liên thông thì mức học phí hàng năm là bao nhiêu
-
-Action học phí: 
-Action học phí: 
 Action ctdt: học phí ngành y học cổ chuyền trình độ liên thông là bao nhiêu
 Action ctdt:
 
@@ -11,7 +7,3 @@ Action ctdt:
 Action ctdt: Chương trình đào tạo mỗi ngành
 action_hoi_thong_tin_phong: thông tin học bôngt
 action_cap_lai_email_sv: xác nhận nhập học
-Action ctdt: 
-Action ctdt: 
-Action ctdt: loc
-action_sdt_khoa: sdsadasdsad

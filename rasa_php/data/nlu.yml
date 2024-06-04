@@ -432,6 +432,7 @@ nlu:
     - cho em hỏi mức [học phí](hocphi) năm [2024](year) là bao nhiêu ạ
     - [học phí](hocphi) [hàng năm](year) của chương trình học là bao nhiêu
     - em muốn học chương trình [liên thông](loai_hinh_dt) thì mức [học phí](hocphi) hàng năm là
+    - [học phí](hocphi)  ngành y [học cổ truyền] trình độ [liên thông](loai_hinh_dt) là bao nhiêu
 
 - intent: ask_hoc_phi_co_tang_khong
   examples: |
