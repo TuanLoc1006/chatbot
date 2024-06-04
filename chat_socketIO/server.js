@@ -86,7 +86,8 @@ io.on('connection', (socket) => {
             'senderName': msg.uName,
             'receiverID': adminID,
             'message': msg.message,
-            'timestamp': vietnamTime
+            'timestamp': vietnamTime,
+            'sendto' : 'chatAdmin',
         }
 
         //thêm người dùng

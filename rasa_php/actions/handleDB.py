@@ -28,7 +28,7 @@ def get_current_year():
 def nganh():
     db_connection = handleDB().get_connect()
     cursor = db_connection.cursor()
-    cursor.execute("SELECT ten_nganh FROM nganh")
+    cursor.execute("SELECT DISTINCT ten_nganh FROM nganh")
     result = cursor.fetchall()
     return result
 

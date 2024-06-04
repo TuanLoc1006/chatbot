@@ -68,3 +68,25 @@
     text-decoration: none;
     cursor: pointer;
 }
+
+/* 
+.message-item {
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    max-width: 60%;
+    list-style: none;
+    font-family: Arial, sans-serif;
+}
+
+.message-admin {
+    background-color: #ccc;
+    align-self: flex-start;
+}
+
+.message-user {
+    background-color: #4291e6;
+    color: #fff;
+    align-self: flex-end;
+} */
