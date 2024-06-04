@@ -3,6 +3,9 @@ const {Server} = require('socket.io');
 // const { join }= require('node:path');
 const { createServer } = require('node:http');
 const mongoose = require('mongoose');
+const phpExpress = require('php-express')({
+    binPath: 'php'
+});
 
 const app = express();
 const server = createServer(app)
@@ -13,7 +16,7 @@ const io = new Server(server, {
 app.use(express.static(__dirname));
 
 const Message = require('./model/message');
-const User = require('./model/user')
+const User = require('./model/user');
 
 const connectDB = async () => {
     try {
@@ -24,10 +27,18 @@ const connectDB = async () => {
     }
 };
 
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> 3f2fa0083e2a52d8345706e79cbeb5a1af7b2aa5
 connectDB();
+// app.engine('php', phpE)
 
 app.get('/', (req, res) => {
+    console.log(__dirname)
     res.sendFile(__dirname+'/view/user.html');
+    // res.sendFile('../index.php');
 });
 
 app.get('/admin-chat', (req, res) => {
@@ -66,7 +77,7 @@ io.on('connection', (socket) => {
             'timestamp': vietnamTime,
             'type': 1
         }
-        console.log(data);
+        // console.log(data);
         const newMessageAdmin = new Message(data);
         try {
             await newMessageAdmin.save();
@@ -75,6 +86,11 @@ io.on('connection', (socket) => {
         }
         // gửi đến người dùng
         io.emit(`${msg.receiverID}`, data);
+    })
+
+    //Nhận thông báo đang gõ tin nhắn
+    socket.on('alert_typing', (alert_typing)=>{
+        console.log(alert_typing)
     })
 
     //nhận tin nhắn trực tiếp từ người dùng
@@ -133,6 +149,8 @@ io.on('connection', (socket) => {
     });
 
 });
+
+
 
 server.listen(3000, () => {
     console.log('Server running at http://localhost:3000');

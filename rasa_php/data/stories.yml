@@ -147,12 +147,7 @@ stories:
 
 ############################################# PHUONG
 
-# - story: hỏi về cơ hội học tập và nghiên cứu
-#   steps:
-#   - intent: ask_co_hoi_hoc_tap_nghien_cuu
-#   - action: 
-
-- story:  hỏi về yếu tố được xét học bổng 
+- story: hỏi về giấy xác nhận
   steps:
-  - intent: ask_yeu_to_xet_hoc_bong
-  - action: action_yeu_to_xet_hoc_bong
+    - intent: ask_dang_ky_giay_xac_nhan
+    - action: action_dang_ky_giay_xac_nhan

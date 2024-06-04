@@ -16,12 +16,13 @@
 </head>
 
 <body>
+    <h1>XIN CHÀO</h1>
     <?php
     include "includes/db_con.php";
     ?>
     <h3><a href="./admin/views/home.php">Trang admin</a></h3>
     <h3><a href="./index.php">Trang user</a></h3>
-    <!-- <div class="container">
+    <div class="container">
         <div class="row">
             <div class="col-md-6">
                 <h1 class="nav-user">Trang Người Dùng</h1>
@@ -44,10 +45,14 @@
                 </form>
             </div>
         </div>
-    </div> -->
+    </div>
     <?php
     require_once "bot.php";
     ?>
+<<<<<<< HEAD
+
+
+=======
     <?php
     // require_once "admin.php";
     ?>
@@ -61,6 +66,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script> -->
+>>>>>>> 3f2fa0083e2a52d8345706e79cbeb5a1af7b2aa5
 </body>
 
 </html>

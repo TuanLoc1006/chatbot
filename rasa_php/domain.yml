@@ -29,10 +29,9 @@ actions:
   - action_cap_lai_thanh_phi_bao_hiem_tai_nan
   - action_cap_lai_tai_khoan_quan_ly_dao_tao
 
-
   
-################# PHUONG
-  - action_yeu_to_xet_hoc_bong
+#################  PHUONG
+  - action_dang_ky_giay_xac_nhan
   
   # - validate_simple_form
   # - action_say_data
@@ -79,11 +78,10 @@ intents:
 
   - ask_quy_trinh_tuyen_sinh
   - ask_trinh_do_hoc_van_tuyen_sinh
-
   
 ############################### PHUONG
-  - ask_co_hoi_hoc_tap_nghien_cuu
-  - ask_yeu_to_xet_hoc_bong
+  - ask_dang_ky_giay_xac_nhan
+
 
 entities:
   - hocphi

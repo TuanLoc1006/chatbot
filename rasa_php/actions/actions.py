@@ -9,7 +9,7 @@ from customs.ghi_log_file_no_response.write_file import write_file
 # loc
 from rasa_sdk import Action, Tracker, FormValidationAction
 from rasa_sdk.events import UserUtteranceReverted
-import requests 
+import requests
 import re
 import logging
 from datetime import datetime
@@ -24,9 +24,10 @@ from .action_ctdt_moi_nganh import actionNganh, actionChuongTrinhDaoTao
 
 from .action_khoa_phong_ban import actionHoiThongTinKhoa, actionHoiDiaDiemKhoa, actionHoiEmailKhoa, actionHoiSoDienThoaiKhoa, actionHoiThongTinPhong, actionHoiDiaDiemPhong, actionHoiEmailPhong, actionHoiSoDienThoaiPhong
 
+from .action_dang_ky_giay_xac_nhan import actionDangKyGiayXacNhan
+
 
 # phuong
-
 handledb = handleDB()
 get_connect = handledb.get_connect()
 get_nganh = handledb.get_nganh()
@@ -95,22 +96,7 @@ class actionChuongTrinhDaoTao(actionChuongTrinhDaoTao):
 
 
 
-class action_yeu_to_xet_hoc_bong(Action):
-    def name(self):
-        return "action_yeu_to_xet_hoc_bong"
-    def run(self, dispatcher: CollectingDispatcher,
-            tracker: Tracker,
-            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        
-       
-        
-        user_input = tracker.latest_message['text']
-        print("người dùng hỏi sdt phòng: " + user_input)
-           
-       
-        dispatcher.utter_message(text=f"Các tiêu chí học bổng:</br>1. Đăng ký học và thi tối thiểu 10 tín chỉ mỗi kỳ, hoặc số tín chỉ tối đa mở theo khóa/ngành (không tính Giáo dục Thể chất và Giáo dục quốc phòng - An ninh).</br> 2.Điểm trung bình chung học tập từ 3.0 trở lên. Điểm thi/kiểm tra lần đầu không có điểm dưới 2.0 hoặc kiểm tra hết môn không đạt.</br> 3.Điểm rèn luyện từ loại tốt trở lên. Không bị kỷ luật từ mức khiển trách trở lên. 4.Đóng học phí và kinh phí đào tạo đúng thời hạn trong học kỳ xét học bổng.</br> 4. Bạn cần biết chi tiết thì xem thêm tại mục này")
-           
-        return []
+
     
 
 class actionCapLaiEmailSv(Action):
@@ -305,6 +291,8 @@ class ActionChatGPTFallback(Action):
 #             dispatcher.utter_message(text="Email không hợp lệ!")
 #             return {"email": None}
 
-##########################################################
-#######  PHUONG
-# 5.	Cơ hội thực tập và nghiên cứu.
+
+"""   PHUONG  """
+
+class actionDangKyGiayXacNhan(actionDangKyGiayXacNhan):
+    pass
