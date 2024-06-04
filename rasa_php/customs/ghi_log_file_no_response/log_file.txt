@@ -20,3 +20,5 @@ Action học phí: Thông tin trường này
 Action học phí: thông tin trường
 action_hoi_thong_tin_khoa: thông tin khoa y
 action_hoi_thong_tin_khoa: thông tin khoa y
+action_cap_lai_email_sv: giấy xác nhận
+action_cap_lai_email_sv: xin giấy xác nhận

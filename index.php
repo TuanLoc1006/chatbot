@@ -16,12 +16,13 @@
 </head>
 
 <body>
+    <h1>XIN CHÀO</h1>
     <?php
-    // include "includes/db_con.php";
+    include "includes/db_con.php";
     ?>
-    <!-- <h3><a href="./admin/views/home.php">Trang admin</a></h3> -->
-    <!-- <h3><a href="./index.php">Trang user</a></h3> -->
-    <!-- <div class="container">
+    <h3><a href="./admin/views/home.php">Trang admin</a></h3>
+    <h3><a href="./index.php">Trang user</a></h3>
+    <div class="container">
         <div class="row">
             <div class="col-md-6">
                 <h1 class="nav-user">Trang Người Dùng</h1>
@@ -44,21 +45,12 @@
                 </form>
             </div>
         </div>
-    </div> -->
+    </div>
     <?php
     require_once "bot.php";
     ?>
 
-    <!-- 
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
-        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
-        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script> -->
+
 </body>
 
 </html>

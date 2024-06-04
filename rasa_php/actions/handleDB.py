@@ -1,26 +1,27 @@
 import mysql.connector
 import datetime
 #DB Lộc (chạy thì mở ra)
+# def connectDB():
+#     mydb = mysql.connector.connect(
+#     host="localhost",
+#     user="root",
+#     password="",
+#     database="chatbot_rasa",
+#     port=3306,
+#     )
+#     return mydb
+
+#Phương
 def connectDB():
     mydb = mysql.connector.connect(
     host="localhost",
     user="root",
     password="",
-    database="chatbot_rasa",
-    port=3306,
+    database="rasa_chatbot",
+    port=3308,
     )
     return mydb
 
-#Phương
-# def connectDB():
-#     mydb = mysql.connector.connect(
-#     host="localhost",
-#     user="root",
-#     password="12345",
-#     database="rasa_data",
-#     port=3306,
-#     )
-#     return mydb
 def get_current_year():
     now = datetime.datetime.now()
     return now.year

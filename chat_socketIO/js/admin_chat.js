@@ -125,7 +125,7 @@ function display_popups() {
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////
-
+//lấy tin nhắn của đoạn chat theo id user
 async function callAPIGetMessage(userid){
     try {
         const response = $.ajax({

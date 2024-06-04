@@ -3,6 +3,9 @@ const {Server} = require('socket.io');
 // const { join }= require('node:path');
 const { createServer } = require('node:http');
 const mongoose = require('mongoose');
+const phpExpress = require('php-express')({
+    binPath: 'php'
+});
 
 const app = express();
 const server = createServer(app)
@@ -13,7 +16,7 @@ const io = new Server(server, {
 app.use(express.static(__dirname));
 
 const Message = require('./model/message');
-const User = require('./model/user')
+const User = require('./model/user');
 
 const connectDB = async () => {
     try {
@@ -23,6 +26,7 @@ const connectDB = async () => {
         console.error('Lỗi khi kết nối cơ sở dữ liệu:', err);
     }
 };
+
 
 
 connectDB();
@@ -141,6 +145,8 @@ io.on('connection', (socket) => {
     });
 
 });
+
+
 
 server.listen(3000, () => {
     console.log('Server running at http://localhost:3000');

@@ -5,12 +5,12 @@ nlu:
 - intent: how_old
   examples: |
     - how old are you
-    - What is your age?
+    - What is your age
     - How old are you now?
     - What's your age?
     - How many years old are you?
     - Age please?
-    - Tell me your age.
+    - tell me your age.
     - Your age?
 
 
@@ -154,15 +154,15 @@ nlu:
     - trường đào tạo bao nhiêu ngành
     - cTUMP có mấy ngành
     - cTUMP đào tạo mấy ngành
-    - Liệt kê một số ngành học.
+    - liệt kê một số ngành học.
     - cho tôi biết trường có bao nhiêu ngành.
-    - Liệt kê cho tôi các ngành học
+    - liệt kê cho tôi các ngành học
     - trường Đại học Y Dược Cần Thơ có những ngành gì
     - đại học Y Dược Cần Thơ có những ngành đào tạo nào
     - cho tôi biết các ngành học ở trường Đại học Y Dược Cần Thơ
     - các ngành hiện có tại Đại học Y Dược Cần Thơ
     - đại học Y Dược Cần Thơ đào tạo bao nhiêu ngành học
-    - Liệt kê các ngành hiện có tại Đại học Y Dược Cần Thơ
+    - liệt kê các ngành hiện có tại Đại học Y Dược Cần Thơ
 
 - intent: ask_chuong_trinh_dao_tao
   examples: |
@@ -252,11 +252,11 @@ nlu:
     - Email khoa [kỹ thuật xét nghiệm y học](email_khoa) là gì
     - tôi cần email của khoa [điều dưỡng](email_khoa)
     - Email khoa [răng hàm mặt](email_khoa) là gì
-    - Làm sao để qua email với khoa [hộ sinh](email_khoa)
-    - Địa chỉ email của khoa y [học cổ truyền](email_khoa) là gì
+    - làm sao để qua email với khoa [hộ sinh](email_khoa)
+    - địa chỉ email của khoa y [học cổ truyền](email_khoa) là gì
     - tôi muốn biết email của khoa [kỹ thuật hình ảnh](email_khoa)
     - Khoa [Khoa học cơ bản](email_khoa) có email không
-    - Địa chỉ email của khoa [kỹ thuật hình ảnh y học](email_khoa) là gì
+    - địa chỉ email của khoa [kỹ thuật hình ảnh y học](email_khoa) là gì
 
 - intent: ask_sdt_cac_khoa
   examples: |
@@ -268,7 +268,7 @@ nlu:
     - số điện thoại khoa [kỹ thuật xét nghiệm y học](sdt_khoa) là gì
     - tôi cần số điện thoại của khoa [điều dưỡng](sdt_khoa)
     - số điện thoại khoa [răng hàm mặt](sdt_khoa) là gì
-    - Làm sao để qua số điện thoại với khoa [hộ sinh](sdt_khoa)
+    - làm sao để qua số điện thoại với khoa [hộ sinh](sdt_khoa)
     - số của khoa y [học cổ truyền](sdt_khoa) là gì
     - tôi muốn biết số điện thoại của khoa [kỹ thuật hình ảnh](sdt_khoa)
     - Khoa [Khoa học cơ bản](sdt_khoa) có số điện thoại không
@@ -282,7 +282,7 @@ nlu:
     - phòng [Đào tạo đại học](infor_phong)
     - mô tả phòng [Đào tạo sau đại học](infor_phong)
     - liên hệ [hành chánh tổng hợp](infor_phong)
-    - phòng [NCKH-HTQT](infor_phong) 
+    - phòng [nCKH-HTQT](infor_phong) 
     - mô tả [nghiên cứu khoa học](infor_phong)
     - thông tin chi tiết phòng [Quản trị thiết bị](infor_phong) 
     - phòng [Tài chính kế toán](infor_phong) 
@@ -295,7 +295,7 @@ nlu:
     - trung tâm [Đào tạo theo nhu cầu xã hội](infor_phong) 
     - [dịch vụ và hỗ trợ sinh viên](infor_phong) 
     - tìm chỗ [Thư viện](infor_phong) 
-    - tìm hiểu [Đơn vị HLKN](infor_phong) 
+    - tìm hiểu [Đơn vị HLKn](infor_phong) 
     - mô tả đơn vị [huấn luyện kĩ năng](infor_phong)
     - thông tin [Bệnh viện](infor_phong) 
     - liệt kê thông in phòng [công đoàn](infor_phong)
@@ -303,6 +303,7 @@ nlu:
     - mô tả sơ vê phòng [Phòng Tài chính kế toán](infor_phong)
 
 
+#hỏi trực tiếp
 - intent: ask_dia_diem_cac_phong_ban
   examples: |
     - làm sao đi đến phòng [Công tác sinh viên](location_phong)
@@ -310,7 +311,7 @@ nlu:
     - phòng [Đào tạo đại học](location_phong) ở đâu vậy
     - tôi cần đường đi đến phòng [Đào tạo sau đại học](location_phong)
     - dẫn đường tới phòng [hành chánh tổng hợp](location_phong)
-    - phòng [NCKH-HTQT](location_phong) đi đường nào
+    - phòng [nCKH-HTQT](location_phong) đi đường nào
     - vị trí [nghiên cứu khoa học](location_phong)
     - tọa độ [Quản trị thiết bị](location_phong) ở khoa nào
     - địa chỉ phòng [Tài chính kế toán](location_phong) ở khu vực nào
@@ -323,13 +324,17 @@ nlu:
     - trung tâm [Đào tạo theo nhu cầu xã hội](location_phong) đi đường nào
     - dẫn đường đến Trung tâm [dịch vụ và hỗ trợ sinh viên](location_phong) 
     - tìm chổ [Thư viện](location_phong) đi hướng nào
-    - vị trí [Đơn vị HLKN](location_phong) ở chổ nào
+    - vị trí [Đơn vị HLKn](location_phong) ở chổ nào
     - tìm đơn vị [huấn luyện kĩ năng](location_phong)
     - tọa độ [Bệnh viện](location_phong) đi ra tới đâu
     - muốn tìm phòng [công đoàn](location_phong)
     - giúp tôi tìm phòng [Đoàn thanh niên Hội sinh viên](location_phong)
     - tôi cần biết phòng [Phòng Tài chính kế toán](location_phong) ở đâu
 
+#hỏi gián tiếp
+- intent: ask_dia_diem_gian_tiep
+  examples: |
+    - 
 
 - intent: ask_email_cac_phong_ban
   examples: |
@@ -339,7 +344,7 @@ nlu:
     - phòng [Đào tạo đại học](email_phong) có email là gì vậy
     - tôi cần email của phòng [Đào tạo sau đại học](email_phong)
     - cho tôi biết email phòng [hành chánh tổng hợp](email_phong)
-    - phòng [NCKH-HTQT](email_phong) có email không
+    - phòng [nCKH-HTQT](email_phong) có email không
     - email của phòng [nghiên cứu khoa học](email_phong) là gì
     - làm sao để gửi email đến phòng [Quản trị thiết bị](email_phong)
     - phòng [Tài chính kế toán](email_phong) có email không
@@ -352,7 +357,7 @@ nlu:
     - trung tâm [Đào tạo theo nhu cầu xã hội](email_phong) dùng email nào
     - email của Trung tâm [dịch vụ và hỗ trợ sinh viên](email_phong) là gì
     - làm sao để gửi email cho [Thư viện](email_phong)
-    - email của [Đơn vị HLKN](email_phong) là gì
+    - email của [Đơn vị HLKn](email_phong) là gì
     - email của đơn vị [huấn luyện kĩ năng](email_phong)
     - làm sao để liên hệ với [Bệnh viện](email_phong) qua email
     - muốn biết email của phòng [công đoàn](email_phong)
@@ -366,7 +371,7 @@ nlu:
     - phòng [Đào tạo đại học](sdt_phong) có số điện thoại là gì vậy
     - tôi cần số điện thoại của phòng [Đào tạo sau đại học](sdt_phong)
     - cho tôi biết số điện thoại phòng [hành chánh tổng hợp](sdt_phong)
-    - phòng [NCKH-HTQT](sdt_phong) có số điện thoại không
+    - phòng [nCKH-HTQT](sdt_phong) có số điện thoại không
     - số điện thoại của phòng [nghiên cứu khoa học](sdt_phong) là gì
     - làm sao để gọi đến phòng [Quản trị thiết bị](sdt_phong)
     - phòng [Tài chính kế toán](sdt_phong) có số điện thoại không
@@ -379,7 +384,7 @@ nlu:
     - trung tâm [Đào tạo theo nhu cầu xã hội](sdt_phong) dùng số điện thoại nào
     - số điện thoại của Trung tâm [dịch vụ và hỗ trợ sinh viên](sdt_phong) là gì
     - làm sao để gọi đến [Thư viện](sdt_phong)
-    - số điện thoại của [Đơn vị HLKN](sdt_phong) là gì
+    - số điện thoại của [Đơn vị HLKn](sdt_phong) là gì
     - số điện thoại của đơn vị [huấn luyện kĩ năng](sdt_phong)
     - làm sao để liên hệ với [Bệnh viện](sdt_phong) qua điện thoại
     - muốn biết số điện thoại của phòng [công đoàn](sdt_phong)
@@ -418,7 +423,7 @@ nlu:
   examples: |
     - Học phí có được tăng theo từng năm không
     - Học phí có tăng hàng năm không
-    - Trường có tăng học phí mỗi năm không
+    - trường có tăng học phí mỗi năm không
     - Học phí có bị thay đổi theo từng năm không
     - Học phí có tăng mỗi năm không
     - Học phí có thể tăng theo từng năm không
@@ -426,73 +431,68 @@ nlu:
     - Mỗi năm học phí có tăng lên không
     - Học phí năm sau có tăng so với năm trước không
     - Học phí sẽ tăng qua các năm chứ
-    - Liệu học phí có thay đổi qua từng năm không
-    - Trường có kế hoạch tăng học phí mỗi năm không
+    - liệu học phí có thay đổi qua từng năm không
+    - trường có kế hoạch tăng học phí mỗi năm không
     - Học phí có thay đổi mỗi năm không
-    - Trường có tăng học phí từng năm không
-    - Trường có tăng giá học phí theo từng năm không
+    - trường có tăng học phí từng năm không
+    - trường có tăng giá học phí theo từng năm không
     - Học phí có được điều chỉnh hàng năm không
     - Học phí có tăng lên hàng năm không
-    - Trường có tăng mức học phí từng năm không
+    - trường có tăng mức học phí từng năm không
     - Học phí sẽ tăng mỗi năm phải không
     - Học phí có thể tăng hàng năm không
 
 
 - intent: ask_phuong_thuc_thanh_toan
   examples: |
-    - Có các phương thức thanh toán nào
+    - có các phương thức thanh toán nào
     - chuyển khoản được không
     - ck được không
     - đóng tiền mặt ở đâu
     - dùng tiền mặt được không
-    - Tôi có thể thanh toán bằng cách nào
-    - Các phương thức thanh toán là gì
-    - Tôi có thể dùng phương thức thanh toán nào
-    - Thanh toán bằng những cách nào
-    - Có thể thanh toán qua những phương thức nào
-    - Các cách thanh toán hiện có là gì
-    - Tôi có những lựa chọn thanh toán nào
-    - Những phương thức thanh toán nào được chấp nhận
-    - Tôi có thể thanh toán bằng thẻ tín dụng không
-    - Thanh toán bằng chuyển khoản ngân hàng có được không
-    - Tôi có thể dùng PayPal để thanh toán không
-    - Có thể thanh toán bằng tiền mặt không
-    - Các phương thức thanh toán online là gì
-    - Tôi có thể thanh toán qua ví điện tử không
+    - tôi có thể thanh toán bằng cách nào
+    - các phương thức thanh toán là gì
+    - tôi có thể dùng phương thức thanh toán nào
+    - thanh toán bằng những cách nào
+    - có thể thanh toán qua những phương thức nào
+    - các cách thanh toán hiện có là gì
+    - tôi có những lựa chọn thanh toán nào
+    - những phương thức thanh toán nào được chấp nhận
+    - tôi có thể thanh toán bằng thẻ tín dụng không
+    - thanh toán bằng chuyển khoản ngân hàng có được không
+    - tôi có thể dùng PayPal để thanh toán không
+    - có thể thanh toán bằng tiền mặt không
+    - các phương thức thanh toán online là gì
+    - tôi có thể thanh toán qua ví điện tử không
     - Phương thức thanh toán nào được hỗ trợ
-    - Có thể dùng thẻ ghi nợ để thanh toán không
-    - Tôi có thể thanh toán trực tuyến không
-    - Cách nào để thanh toán chi phí
-    - Các phương thức thanh toán nội địa là gì
+    - có thể dùng thẻ ghi nợ để thanh toán không
+    - tôi có thể thanh toán trực tuyến không
+    - cách nào để thanh toán chi phí
+    - các phương thức thanh toán nội địa là gì
 
 - intent: ask_ho_tro_vay_tien_hoc
   examples: |
     - tôi cần tìm hiểu về vay vốn sinh viên
-    - Đối tượng nào được hỗ trợ vay vốn sinh viên
+    - đối tượng nào được hỗ trợ vay vốn sinh viên
     - Ai có thể được vay vốn sinh viên
-    - Đối tượng nào được vay vốn sinh viên
+    - đối tượng nào được vay vốn sinh viên
     - Ai được phép vay vốn sinh viên
-    - Những ai được vay vốn sinh viên
-    - Đối tượng vay vốn sinh viên gồm những ai
+    - những ai được vay vốn sinh viên
+    - đối tượng vay vốn sinh viên gồm những ai
     - Sinh viên như thế nào được vay vốn
-    - Có những đối tượng nào được hỗ trợ vay vốn sinh viên
+    - có những đối tượng nào được hỗ trợ vay vốn sinh viên
     - Sinh viên đủ điều kiện vay vốn là ai
-    - Đối tượng được vay vốn sinh viên là những ai
+    - đối tượng được vay vốn sinh viên là những ai
     - Ai được vay vốn sinh viên
     - Sinh viên phải như thế nào mới được vay vốn
-    - Điều kiện để được vay vốn sinh viên là gì
-    - Đối tượng nào có thể vay vốn học sinh, sinh viên
+    - điều kiện để được vay vốn sinh viên là gì
+    - đối tượng nào có thể vay vốn học sinh, sinh viên
     - Ai có thể xin vay vốn sinh viên
-    - Đối tượng nào được hưởng chính sách vay vốn sinh viên
-    - Đối tượng nào đủ điều kiện vay vốn sinh viên
-    - Điều kiện để sinh viên được vay vốn là gì
+    - đối tượng nào được hưởng chính sách vay vốn sinh viên
+    - đối tượng nào đủ điều kiện vay vốn sinh viên
+    - điều kiện để sinh viên được vay vốn là gì
     - Sinh viên thuộc diện nào thì được vay vốn
-    - Đối tượng nào được vay vốn cho sinh viên
-
-
-
-
-
+    - đối tượng nào được vay vốn cho sinh viên
 
 
 
@@ -597,16 +597,16 @@ nlu:
 
 - intent: ask_nganh_dao_tao_sau_dai_hoc_moi_nhat
   examples: |
-    - Những ngành đào tạo sau đại học mới là gì
-    - Có ngành học sau đại học mới nào không
-    - Các chương trình sau đại học mới gồm những gì
-    - Trường có thêm ngành sau đại học nào mới không
-    - Các ngành sau đại học mới là gì
-    - Những khóa học sau đại học mới được mở là gì
-    - Có ngành sau đại học mới không
-    - Trường có ngành nào mới cho hệ sau đại học
-    - Ngành học mới cho sau đại học là gì
-    - Chương trình đào tạo sau đại học mới nhất là gì
+    - những ngành đào tạo sau đại học mới là gì
+    - có ngành học sau đại học mới nào không
+    - các chương trình sau đại học mới gồm những gì
+    - trường có thêm ngành sau đại học nào mới không
+    - các ngành sau đại học mới là gì
+    - những khóa học sau đại học mới được mở là gì
+    - có ngành sau đại học mới không
+    - trường có ngành nào mới cho hệ sau đại học
+    - ngành học mới cho sau đại học là gì
+    - chương trình đào tạo sau đại học mới nhất là gì
 
 - intent: ask_quy_trinh_tuyen_sinh
   examples: |
@@ -626,56 +626,30 @@ nlu:
 
 - intent: ask_trinh_do_hoc_van_tuyen_sinh
   examples: |
-    - Trường có yêu cầu học sinh thi tuyển phải đạt trình độ học vấn nào không
+    - trường có yêu cầu học sinh thi tuyển phải đạt trình độ học vấn nào không
     - Yêu cầu học vấn cho học sinh thi tuyển vào trường là gì
-    - Trình độ học vấn cần thiết để thi tuyển vào trường là gì
-    - Để thi tuyển vào trường, học sinh cần đạt trình độ học vấn nào
-    - Trường có yêu cầu cụ thể về học vấn khi thi tuyển không
+    - trình độ học vấn cần thiết để thi tuyển vào trường là gì
+    - để thi tuyển vào trường, học sinh cần đạt trình độ học vấn nào
+    - trường có yêu cầu cụ thể về học vấn khi thi tuyển không
     - Học sinh cần có trình độ học vấn nào để tham gia thi tuyển
-    - Trình độ học vấn của học sinh có ảnh hưởng đến việc thi tuyển không
-    - Thi tuyển vào trường cần phải đạt trình độ học vấn nào
+    - trình độ học vấn của học sinh có ảnh hưởng đến việc thi tuyển không
+    - thi tuyển vào trường cần phải đạt trình độ học vấn nào
     - Học sinh thi tuyển cần phải đạt mức học vấn nào
-    - Trường có quy định gì về học vấn cho học sinh thi tuyển
+    - trường có quy định gì về học vấn cho học sinh thi tuyển
     - yêu cầu tuyển sinh
 
-
-    
 ##########################################
 ######################### PHUONG
-- intent: ask_co_hoi_hoc_tap_nghien_cuu
-  examples: |
-    - trường có hỗ trợ trong việc tìm kiếm và sắp xếp thực tập không
-    - trường có giúp đỡ sinh viên trong việc tìm kiếm và sắp xếp chỗ thực tập không
-    - trường có cung cấp dịch vụ hỗ trợ sinh viên trong việc tìm thực tập không
-    - trường có tổ chức chương trình hỗ trợ tìm kiếm và sắp xếp thực tập cho sinh viên không
-    - trường có hỗ trợ sinh viên trong quá trình tìm kiếm và xin thực tập không
-    - trường có cung cấp các nguồn lực để giúp sinh viên tìm và sắp xếp chỗ thực tập không
-    - trường có chương trình hỗ trợ sinh viên tìm và sắp xếp thực tập không
-    - trường có trợ giúp sinh viên trong việc tìm kiếm và sắp xếp vị trí thực tập không
-    - trường có các dịch vụ tư vấn để hỗ trợ sinh viên tìm kiếm và sắp xếp thực tập không
-    - trường có cung cấp hướng dẫn và hỗ trợ sinh viên trong việc tìm chỗ thực tập không
-    - trường có hỗ trợ sinh viên trong việc liên hệ và sắp xếp các cơ hội thực tập không
 
-- intent: ask_yeu_to_xet_hoc_bong
+- intent: ask_dang_ky_giay_xac_nhan
   examples: |
-    - điều kiện nào cần thiết để được xét học bổng
-    - những tiêu chí để xét học bổng là gì
-    - để được xét học bổng, tôi cần đạt những yêu cầu nào
-    - những yếu tố nào quan trọng để được nhận học bổng
-    - để xin học bổng, tôi cần đáp ứng các điều kiện gì
-    - các tiêu chuẩn để được cấp học bổng là gì
-    - học bổng yêu cầu những điều kiện nào
-    - cần những tiêu chí gì để đủ điều kiện nhận học bổng
-    - điều kiện cần thiết để nhận được học bổng là gì
-    - muốn được xét học bổng, tôi phải đạt những tiêu chí nào
-    - những yêu cầu nào cần đạt để có thể xin học bổng
-    - để đủ điều kiện nhận học bổng, tôi cần đạt những gì
-    - học bổng xét dựa trên những yếu tố nào
-    - những gì cần thiết để được cấp học bổng
-    - tiêu chí để được xét duyệt học bổng là gì
-    - tôi cần đáp ứng những điều kiện nào để được xét học bổng
-    - yêu cầu nào phải đạt để xin học bổng
-    - các yếu tố nào được xem xét khi cấp học bổng
-    - muốn nhận học bổng, cần đáp ứng các tiêu chuẩn nào
-    - cần đạt những yêu cầu gì để đủ điều kiện được xét học bổng
-
+    - nơi nào cấp [giấy tạm hoãn nghĩa vụ quân sự](giaynghiavu)
+    - tôi cần xin [giấy tạm hoãn nghĩa vụ quân sự](giaynghiavu) ở đâu
+    - địa điểm để làm thủ tục [xin hoãn nghĩa vụ quân sự](giaynghiavu)là ở đâu
+    - làm thế nào để xin [giấy tạm hoãn nghĩa vụ quân sự](giaynghiavu)
+    - để xin hoãn nghĩa vụ quân sự, tôi cần đến đâu
+    - xin [giấy tạm hoãn nghĩa vụ quân sự](giaynghiavu) tại đâu
+    - cơ quan nào cấp [giấy tạm hoãn nghĩa vụ quân sự](giaynghiavu)
+    - tôi cần đến đâu để xin [giấy tạm hoãn nghĩa vụ quân sự](giaynghiavu)
+    - thủ tục xin [giấy tạm hoãn nghĩa vụ quân sự](giaynghiavu) cần làm ở đâu
+    - đi đâu để xin [giấy tạm hoãn nghĩa vụ quân sự](giaynghiavu)
