@@ -25,5 +25,3 @@ chay action.py
 rasa run actions
 
 php -S localhost:8000
-
-loc
