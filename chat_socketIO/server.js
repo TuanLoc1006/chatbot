@@ -27,11 +27,7 @@ const connectDB = async () => {
     }
 };
 
-<<<<<<< HEAD
 
-
-=======
->>>>>>> 3f2fa0083e2a52d8345706e79cbeb5a1af7b2aa5
 connectDB();
 // app.engine('php', phpE)
 
