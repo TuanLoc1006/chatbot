@@ -113,7 +113,7 @@ io.on('connection', (socket) => {
         }
         
         isbot = JSON.stringify(data.option_chat);
-        console.log(typeof (isbot));
+        // console.log(typeof (isbot));
         if (isbot === '\"bot_ctump\"') {
 
             const postData = JSON.stringify({ message: msg.message });
@@ -137,7 +137,6 @@ io.on('connection', (socket) => {
                     //tin nhắn phản hồi từ chatbot
                     const dataBot = {
                         "message": responseData[0].text,
-                        "isBotRasa": 1,
                     }
                     // console.log(`BODY: ${text}`);
                     console.log(dataBot);
