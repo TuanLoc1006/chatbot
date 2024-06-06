@@ -3,8 +3,8 @@
     $servername = "localhost";
     $username = "root";
     $password = "";
-    $dbname = "rasa_chatbot";
-    $port = 3308;
+    $dbname = "chatbot_rasa";
+    $port = 3306;
     $conn = new mysqli($servername, $username, $password, $dbname, $port);
   
     if ($conn->connect_error) {
