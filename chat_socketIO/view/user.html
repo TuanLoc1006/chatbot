@@ -16,9 +16,10 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- boostrap -->
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
-   
+
 </head>
 
 
@@ -192,14 +193,16 @@
         const btn_chat_bot = document.getElementById('chat-bot');
         const title_chat = document.getElementById('title-chatbot');
         option_chat = "bot_ctump"
-        console.log(option_chat)
-        btn_chat_admin.addEventListener('click',function(e) {
+        if (option_chat === "bot_ctump") {
+            title_chat.innerText = "CTUMP"
+        }
+        btn_chat_admin.addEventListener('click', function (e) {
             option_chat = "admin_ctump"
             title_chat.innerText = "Admin"
         })
-        btn_chat_bot.addEventListener('click',function(e) {
+        btn_chat_bot.addEventListener('click', function (e) {
             option_chat = "bot_ctump"
-            title_chat.innerText = "Bot"
+            title_chat.innerText = "CTUMP"
         })
         //Hiển thị tin nhắn từ db
         async function callAPIGetMessage(userid) {
@@ -231,13 +234,16 @@
                 userMessage.forEach(msg => {
                     if (msg.type == 1) {
                         const item = document.createElement('li');
-                        item.style.color = "red";
+                        // item.style.color = "red";
                         item.textContent = 'Admin: ' + msg.message;
+                        item.classList.add('admin-custom-class');
                         messages_content.appendChild(item);
+                      
                     } else {
 
                         const item = document.createElement('li');
                         item.textContent = 'Bạn: ' + msg.message;
+                        item.classList.add('user-custom-class');
                         messages_content.appendChild(item);
                     }
                 })
@@ -275,11 +281,11 @@
         socket.on(`${localStorage.getItem('uID')}`, (messages) => {
             console.log(messages)
             const item = document.createElement('li');
-            item.style.color = "red"
-
             item.textContent = 'ADMIN: ' + messages.message;
+            item.classList.add('admin-custom-class');
             messages_content.appendChild(item);
-            window.scrollTo(0, document.body.scrollHeight);
+          
+            scrollChatToBottom();
         })
 
         //Disconnect
@@ -312,10 +318,13 @@
                 });
                 const item = document.createElement('li');
                 item.textContent = 'Bạn: ' + input.value;
+                item.classList.add('user-custom-class');
                 messages_content.appendChild(item);
                 input.value = '';
 
+
             }
+            scrollChatToBottom();
         });
 
 
@@ -325,9 +334,14 @@
             console.log(msg);
             const item = document.createElement('li');
             item.textContent = 'CTUMP: ' + msg.message;
+            item.classList.add('ctump-custom-class');
             messages_content.appendChild(item);
-            window.scrollTo(0, document.body.scrollHeight);
+            scrollChatToBottom()
         });
+        function scrollChatToBottom() {
+            var chatMessages = document.getElementById('chat-widget-messages');
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        }
     </script>
 
 

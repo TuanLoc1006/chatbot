@@ -69,6 +69,26 @@
     cursor: pointer;
 }
 
+
+.user-custom-class{
+    background-color: #f7f8f6; padding: 10px; border-radius: 12px; margin-bottom: 10px; color: black;
+}
+.admin-custom-class{
+    background-color: #ccc; padding: 10px; border-radius: 12px; margin-bottom: 10px; color: black;
+}
+
+.ctump-custom-class{
+    background-color: #4291e6; padding: 10px; border-radius: 12px; margin-bottom: 10px; color: white;
+}
+
+
+
+
+
+
+
+
+
 /* 
 .message-item {
     padding: 10px;
@@ -80,7 +100,7 @@
     font-family: Arial, sans-serif;
 }
 
-<<<<<<< HEAD
+
 #messages>li:nth-child(odd) {
     background: #efefef;
 }
@@ -441,7 +461,7 @@ strong {
     display: block;
     margin-bottom: 20px;
 } */
-=======
+/* 
 .message-admin {
     background-color: #ccc;
     align-self: flex-start;
@@ -451,5 +471,4 @@ strong {
     background-color: #4291e6;
     color: #fff;
     align-self: flex-end;
-} */
->>>>>>> 3f2fa0083e2a52d8345706e79cbeb5a1af7b2aa5
+}  */
