@@ -111,7 +111,7 @@ io.on('connection', (socket) => {
             'timestamp': vietnamTime,
             'option_chat': msg.option_chat
         }
-        
+
         isbot = JSON.stringify(data.option_chat);
         // console.log(typeof (isbot));
         if (isbot === '\"bot_ctump\"') {
@@ -128,35 +128,35 @@ io.on('connection', (socket) => {
                     'Content-Length': Buffer.byteLength(postData)
                 }
             };
-            
+
             const req = http.request(options, (res) => {
                 res.setEncoding('utf8');
                 res.on('data', (chunk) => {
-                  try {
-                    const responseData = JSON.parse(chunk);
-                    // Tin nhắn phản hồi từ chatbot
-                    const dataBot = {
-                      message: responseData[0].text,
-                    };
-                    console.log(dataBot);
-                    socket.emit('server_send_to_client', dataBot);
-                  } catch (e) {
-                    console.error('Error parsing JSON response:', e);
-                    const dataBot = {
-                      message: 'server lỗi',
-                    };
-                    socket.emit('server_send_to_client', dataBot);
-                  }
+                    try {
+                        const responseData = JSON.parse(chunk);
+                        // Tin nhắn phản hồi từ chatbot
+                        const dataBot = {
+                            message: responseData[0].text,
+                        };
+                        console.log(dataBot);
+                        socket.emit('server_send_to_client', dataBot);
+                    } catch (e) {
+                        console.error('Error parsing JSON response:', e);
+                        const dataBot = {
+                            message: 'server lỗi',
+                        };
+                        socket.emit('server_send_to_client', dataBot);
+                    }
                 });
-              });
-              
-              req.on('error', (e) => {
+            });
+
+            req.on('error', (e) => {
                 console.error(`Problem with request: ${e.message}`);
                 const dataBot = {
-                  message: 'server đang cập nhật, vui lòng thử lại sau',
+                    message: 'server đang cập nhật, vui lòng thử lại sau',
                 };
                 socket.emit('server_send_to_client', dataBot);
-              });
+            });
             req.write(postData);
             req.end();
         } else {

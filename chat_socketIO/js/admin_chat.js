@@ -1,3 +1,5 @@
+
+
 const socket = io();
 
 ////////////Khởi tạo adminID
@@ -14,19 +16,22 @@ socket.on('server_send_to_admin', (msg) => {
     ////////////////HIỂN THỊ NGƯỜI DÙNG TRONG LIST KHI VỪA NHẬN TIN NHẮN
     const sender_div = document.querySelector(`[data-user-id="${msg.senderID}"]`);
     //kiểm tra Id của người dùng có trên giao diện hay chưa
-    if(!sender_div) {
+    if (!sender_div) {
         //hiển thị tin nhắn lên giao diện list user
         const userList = document.querySelector('.userList');
         userList.innerHTML +=
-            `<div onclick = "register_popup('${msg.senderID}', '${msg.senderName}')" data-user-id="${msg.senderID}" class="sidebar-name">
-            <a >
-                    <img width="30" height="30" src="https://t4.ftcdn.net/jpg/02/29/75/83/360_F_229758328_7x8jwCwjtBMmC6rgFzLFhZoEpLobB6L8.jpg" />
-                <div class="chatContent">
-                    <span>${msg.senderName}</span>
-                    <p style="font-size: 16px;">${msg.message}</p>
+            `<div  data-user-id="${msg.senderID}" >
+                <div onclick = "register_popup('${msg.senderID}', '${msg.senderName}')" data-user-id="${msg.senderID}" class="sidebar-name">
+                    <a>
+                        <img width="30" height="30" src="https://t4.ftcdn.net/jpg/02/29/75/83/360_F_229758328_7x8jwCwjtBMmC6rgFzLFhZoEpLobB6L8.jpg" />
+                    <div class="chatContent">
+                        <span>${msg.senderName}</span>
+                        <p style="font-size: 16px;">${msg.message}</p>
+                    </div>
+                    <div class="status-dot '. $offline .'"><i class="fas fa-circle"></i></div>
+                    </a>
+                    <button id="btn-delete" class="btn btn-danger" onclick="deleteItem(event,'${msg.userID}'); ">Xóa</button>
                 </div>
-                <div class="status-dot '. $offline .'"><i class="fas fa-circle"></i></div>
-                </a>
             </div>`;
     } else {
         //người dùng đã có giao diện, chỉ thay đổi lại tin nhắn cuối
@@ -35,7 +40,7 @@ socket.on('server_send_to_admin', (msg) => {
 
     ///////////////NẾU Ô CHAT ĐANG MỞ, HIỂN THỊ TIN NHẮN TRONG Ô CHAT
     const window_chat = document.getElementsByClassName(`mess-padding-${msg.senderID}`)[0]
-    if(window_chat) {
+    if (window_chat) {
         const newDiv = document.createElement('div')
         newDiv.innerHTML += `
         <div class="mess-user-${msg.senderID}">
@@ -56,6 +61,8 @@ socket.on('server_send_to_admin', (msg) => {
     }
 })
 
+
+
 // /////////////CALL API LẤY DANH SÁCH NGƯỜI DÙNG KHI LOAD LẠI TRANG
 document.addEventListener('DOMContentLoaded', async function (e) {
     const response = await fetch('/api/get_user');
@@ -63,18 +70,135 @@ document.addEventListener('DOMContentLoaded', async function (e) {
     const userList = document.querySelector('.userList');
     users.forEach(user => {
         userList.innerHTML +=
-        `<div onclick = "register_popup('${user.userID}', '${user.userName}')" data-user-id="${user.userID}" class="sidebar-name">
-            <a >
-                <img width="30" height="30" src="https://t4.ftcdn.net/jpg/02/29/75/83/360_F_229758328_7x8jwCwjtBMmC6rgFzLFhZoEpLobB6L8.jpg" />
-            <div class="chatContent">
-                <span>${user.userName}</span>
-                <p style="font-size: 16px; margin-bottom:0">${user.lastMessage}</p>
+        `<div  data-user-id="${user.userID}" >
+            <div onclick = "register_popup('${user.userID}', '${user.userName}')"class="sidebar-name">
+                <a >
+                    <img width="30" height="30" src="https://t4.ftcdn.net/jpg/02/29/75/83/360_F_229758328_7x8jwCwjtBMmC6rgFzLFhZoEpLobB6L8.jpg" />
+                <div class="chatContent">
+                    <span>${user.userName}</span>
+                    <p style="font-size: 16px; margin-bottom:0">${user.lastMessage}</p>
+                </div>
+                <div class="status-dot '. $offline .'"><i class="fas fa-circle"></i></div>
+                </a>
+                <button id="btn-delete" class="btn btn-danger" onclick="deleteItem(event,'${user.userID}'); ">Xóa</button>
             </div>
-            <div class="status-dot '. $offline .'"><i class="fas fa-circle"></i></div>
-            </a>
         </div>`
     })
 });
+
+function deleteItem(event,userID) {
+    // Ngăn chặn sự kiện click lan ra các phần tử cha
+    
+    event.stopPropagation();
+    // Truy cập phần tử cần xóa bằng ID
+    var itemToRemove = document.querySelector(`[data-user-id="${userID}"]`);
+
+    // Kiểm tra xem phần tử có tồn tại không
+    if (itemToRemove) {
+        // Xóa phần tử khỏi DOM
+        itemToRemove.remove();
+        close_popup(userID)
+    } else {
+        console.error(`Không tìm thấy phần tử với ID: ${userID}`);
+    }
+}
+
+// export async function get_user_id(userID) {
+//     const response = await fetch('/api/get_user');
+//     const users = await response.json();
+//     data = users.find((user) => user.userID === userID)
+//     del_userid = data.userID
+// }
+// async function deleteUserFromDB(userID) {
+//     try {
+//         const response = await fetch(`/api/delete-user?userid=${userID}`, {
+//             method: 'DELETE',
+//         });
+//         return response.json();
+//     } catch (error) {
+//         console.error('Lỗi khi xóa người dùng từ cơ sở dữ liệu:', error);
+//         return { success: false, error: error.message };
+//     }
+// }
+
+// async function deleteItem(event, userID) {
+//     // Ngăn chặn sự kiện click lan ra các phần tử cha
+//     event.stopPropagation();
+
+//     // Truy cập phần tử cần xóa bằng ID
+//     var itemToRemove = document.querySelector(`[data-user-id="${userID}"]`);
+
+//     // Kiểm tra xem phần tử có tồn tại không
+//     if (itemToRemove) {
+//         // Gửi yêu cầu xóa đến server
+//         const response = await deleteUserFromDB(userID);
+
+//         if (response.success) {
+//             // Xóa phần tử khỏi DOM nếu xóa thành công trên server
+//             itemToRemove.remove();
+//             close_popup(userID);
+//             console.log(`Đã xóa người dùng với ID: ${userID}`);
+//         } else {
+//             console.error(`Lỗi khi xóa người dùng: ${response.error}`);
+//         }
+//     } else {
+//         console.error(`Không tìm thấy phần tử với ID: ${userID}`);
+//     }
+// }
+
+
+// function deleteItem(event, userID) {
+//     // Ngăn chặn sự kiện click lan ra các phần tử cha
+//     event.stopPropagation();
+    
+//     // Truy cập phần tử cần xóa bằng ID
+//     var itemToRemove = document.querySelector(`[data-user-id="${userID}"]`);
+//     console.log(itemToRemove);
+//     // Kiểm tra xem phần tử có tồn tại không
+//     if (itemToRemove) {
+//         // Gửi yêu cầu xóa đến server
+//         deleteUserFromDB(userID)
+//             .then(response => {
+//                 if (response.success) {
+//                     // Xóa phần tử khỏi DOM nếu xóa thành công trên server
+//                     itemToRemove.remove();
+//                     close_popup(userID);
+//                 } else {
+//                     console.error(`Lỗi khi xóa người dùng: ${response.error}`);
+//                 }
+//             })
+//             .catch(error => {
+//                 console.error('Lỗi khi gửi yêu cầu:', error);
+//             });
+//     } else {
+//         console.error(`Không tìm thấy phần tử với ID: ${userID}`);
+//     }
+// }
+
+// async function deleteUserFromDB(userID) {
+//     try {
+//         const response = await fetch(`/api/delete-user?userid=${userID}`, {
+//             method: 'DELETE',
+//         });
+//         console.log(response)
+//         return response.json();
+//     } catch (error) {
+//         console.error('Lỗi khi xóa người dùng từ cơ sở dữ liệu:', error);
+//         return { success: false, error: error.message };
+//     }
+// }
+
+// async function deleteUserFromDB(userID) {
+//     try {
+        
+
+
+//         return response.json();
+//     } catch (error) {
+//         console.error('Lỗi khi xóa người dùng từ cơ sở dữ liệu:', error);
+//         return { success: false, error: error.message };
+//     }
+// }
 
 //////////// START SCRIPT POPUP CHAT
 
@@ -126,17 +250,17 @@ function display_popups() {
 
 ////////////////////////////////////////////////////////////////////////////////////////////////
 //lấy tin nhắn của đoạn chat theo id user
-async function callAPIGetMessage(userid){
+async function callAPIGetMessage(userid) {
     try {
         const response = $.ajax({
             type: 'GET',
-            dataType: 'json', 
+            dataType: 'json',
             url: '/api/get_mess_user',
-            data: {userid : userid},
+            data: { userid: userid },
         });
         // console.log('CALL API THÀNH CÔNG')
         return response;
-    } catch(err){
+    } catch (err) {
         console.log(err);
         return null;
     }
@@ -158,7 +282,7 @@ async function register_popup(userid, username) {
     // Kiểm tra nếu popup đã tồn tại trong mảng
     const existingIndex = popups.indexOf(userid);
     if (existingIndex !== -1) {
-        
+
         popups.splice(existingIndex, 1);
         popups.unshift(userid);
         calculate_popups();
@@ -174,9 +298,9 @@ async function register_popup(userid, username) {
     const userListMessage = await callAPIGetMessage(userid);
 
     // console.log(userListMessage);
-    userListMessage.forEach(userMessage=>{
+    userListMessage.forEach(userMessage => {
         //tin nhắn của admin 
-        if(userMessage.type==1){
+        if (userMessage.type == 1) {
             messageHTML += `
             <div class="mess-admin">
                 <div class="d-flex justify-content-between">
@@ -192,7 +316,7 @@ async function register_popup(userid, username) {
             </div>
             `;
         } else {    //tin nhắn của người dùng
-            messageHTML +=`
+            messageHTML += `
                 <div class="mess-user-${userMessage.senderID}">
                     <div class="d-flex justify-content-between">
                         <p class="small mb-1">${userMessage.senderName}</p>
@@ -233,24 +357,24 @@ async function register_popup(userid, username) {
         </form>
     </div>
 `;
-        
-        // thêm phần tử mới vào body
-        document.body.appendChild(popupBox);
-        
-        popups.unshift(userid);
-        calculate_popups();
-        scrollToBottom();
+
+    // thêm phần tử mới vào body
+    document.body.appendChild(popupBox);
+
+    popups.unshift(userid);
+    calculate_popups();
+    scrollToBottom();
 
 
-        //KIỂM TRA INPUT ĐANG ĐƯỢC NHẬP
-        $('#username').keyup(function (e) { 
-            console.log('vua nhap');
-            socket.emit('alert_typing', {
-                uID: adminID,
-                uName: 'Admin',
-                receiver : userid
-            });
+    //KIỂM TRA INPUT ĐANG ĐƯỢC NHẬP
+    $('#username').keyup(function (e) {
+        console.log('vua nhap');
+        socket.emit('alert_typing', {
+            uID: adminID,
+            uName: 'Admin',
+            receiver: userid
         });
+    });
 }
 
 //calculate the total number of popups suitable and then populate the toatal_popups variable.
@@ -276,8 +400,8 @@ function sendMessage(event, userID, userName) {
     event.preventDefault()
     const input = document.getElementById(`input-${userID}`);
     const message_input = input.value;
-    if (message_input==''){
-        return ;
+    if (message_input == '') {
+        return;
     } else {
         socket.emit('admin_send_to_server', {
             uID: adminID,
@@ -285,7 +409,7 @@ function sendMessage(event, userID, userName) {
             receiverID: userID,
             message: message_input,
         })
-        
+
         input.value = ''
     }
     const window_chat = document.getElementsByClassName(`mess-padding-${userID}`)[0];
