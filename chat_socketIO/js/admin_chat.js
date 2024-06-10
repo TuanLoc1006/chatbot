@@ -86,119 +86,57 @@ document.addEventListener('DOMContentLoaded', async function (e) {
     })
 });
 
-function deleteItem(event,userID) {
-    // Ngăn chặn sự kiện click lan ra các phần tử cha
+// function deleteItem(event,userID) {
+//     // Ngăn chặn sự kiện click lan ra các phần tử cha
     
+//     event.stopPropagation();
+//     // Truy cập phần tử cần xóa bằng ID
+//     var itemToRemove = document.querySelector(`[data-user-id="${userID}"]`);
+
+//     // Kiểm tra xem phần tử có tồn tại không
+//     if (itemToRemove) {
+//         // Xóa phần tử khỏi DOM
+//         itemToRemove.remove();
+//         close_popup(userID)
+//     } else {
+//         console.error(`Không tìm thấy phần tử với ID: ${userID}`);
+//     }
+// }
+function deleteItem(event, userID) {
+    // Ngăn chặn sự kiện click lan ra các phần tử cha
     event.stopPropagation();
+
     // Truy cập phần tử cần xóa bằng ID
     var itemToRemove = document.querySelector(`[data-user-id="${userID}"]`);
 
     // Kiểm tra xem phần tử có tồn tại không
     if (itemToRemove) {
-        // Xóa phần tử khỏi DOM
-        itemToRemove.remove();
-        close_popup(userID)
+        // Gọi API để cập nhật thuộc tính 'deleted'
+        fetch(`http://localhost:3000/api/delete-user?userid=${userID}`, {
+            method: 'DELETE',
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                // Xóa phần tử khỏi DOM nếu API trả về thành công
+                itemToRemove.remove();
+                close_popup(userID);
+                console.log(data.message);
+            } else {
+                console.error(data.message);
+            }
+        })
+        .catch(error => {
+            console.error('Lỗi:', error);
+        });
     } else {
         console.error(`Không tìm thấy phần tử với ID: ${userID}`);
     }
 }
 
-// export async function get_user_id(userID) {
-//     const response = await fetch('/api/get_user');
-//     const users = await response.json();
-//     data = users.find((user) => user.userID === userID)
-//     del_userid = data.userID
-// }
-// async function deleteUserFromDB(userID) {
-//     try {
-//         const response = await fetch(`/api/delete-user?userid=${userID}`, {
-//             method: 'DELETE',
-//         });
-//         return response.json();
-//     } catch (error) {
-//         console.error('Lỗi khi xóa người dùng từ cơ sở dữ liệu:', error);
-//         return { success: false, error: error.message };
-//     }
-// }
-
-// async function deleteItem(event, userID) {
-//     // Ngăn chặn sự kiện click lan ra các phần tử cha
-//     event.stopPropagation();
-
-//     // Truy cập phần tử cần xóa bằng ID
-//     var itemToRemove = document.querySelector(`[data-user-id="${userID}"]`);
-
-//     // Kiểm tra xem phần tử có tồn tại không
-//     if (itemToRemove) {
-//         // Gửi yêu cầu xóa đến server
-//         const response = await deleteUserFromDB(userID);
-
-//         if (response.success) {
-//             // Xóa phần tử khỏi DOM nếu xóa thành công trên server
-//             itemToRemove.remove();
-//             close_popup(userID);
-//             console.log(`Đã xóa người dùng với ID: ${userID}`);
-//         } else {
-//             console.error(`Lỗi khi xóa người dùng: ${response.error}`);
-//         }
-//     } else {
-//         console.error(`Không tìm thấy phần tử với ID: ${userID}`);
-//     }
-// }
-
-
-// function deleteItem(event, userID) {
-//     // Ngăn chặn sự kiện click lan ra các phần tử cha
-//     event.stopPropagation();
-    
-//     // Truy cập phần tử cần xóa bằng ID
-//     var itemToRemove = document.querySelector(`[data-user-id="${userID}"]`);
-//     console.log(itemToRemove);
-//     // Kiểm tra xem phần tử có tồn tại không
-//     if (itemToRemove) {
-//         // Gửi yêu cầu xóa đến server
-//         deleteUserFromDB(userID)
-//             .then(response => {
-//                 if (response.success) {
-//                     // Xóa phần tử khỏi DOM nếu xóa thành công trên server
-//                     itemToRemove.remove();
-//                     close_popup(userID);
-//                 } else {
-//                     console.error(`Lỗi khi xóa người dùng: ${response.error}`);
-//                 }
-//             })
-//             .catch(error => {
-//                 console.error('Lỗi khi gửi yêu cầu:', error);
-//             });
-//     } else {
-//         console.error(`Không tìm thấy phần tử với ID: ${userID}`);
-//     }
-// }
-
-// async function deleteUserFromDB(userID) {
-//     try {
-//         const response = await fetch(`/api/delete-user?userid=${userID}`, {
-//             method: 'DELETE',
-//         });
-//         console.log(response)
-//         return response.json();
-//     } catch (error) {
-//         console.error('Lỗi khi xóa người dùng từ cơ sở dữ liệu:', error);
-//         return { success: false, error: error.message };
-//     }
-// }
-
-// async function deleteUserFromDB(userID) {
-//     try {
-        
-
-
-//         return response.json();
-//     } catch (error) {
-//         console.error('Lỗi khi xóa người dùng từ cơ sở dữ liệu:', error);
-//         return { success: false, error: error.message };
-//     }
-// }
 
 //////////// START SCRIPT POPUP CHAT
 

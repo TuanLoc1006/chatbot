@@ -45,10 +45,22 @@ app.get('/admin-chat', (req, res) => {
 
 //API lấy user
 app.get('/api/get_user', async (req, res) => {
-    //lấy người dùng gửi về admin
-    const user_data = await User.find();
-    res.status(200).send(user_data);
-})
+    try {
+        // Lấy người dùng có thuộc tính 'deleted' là false
+        const user_data = await User.find({ deleted: false });
+        res.status(200).json(user_data);
+    } catch (error) {
+        // Xử lý lỗi nếu có
+        console.error('Lỗi:', error);
+        res.status(500).json({ success: false, error: error.message });
+    }
+});
+
+// app.get('/api/get_user', async (req, res) => {
+//     //lấy người dùng gửi về admin
+//     const user_data = await User.find();
+//     res.status(200).send(user_data);
+// })
 
 // API lấy tin nhắn của user theo id, và tin nhắn của admin gửi đến người dùng theo id
 app.get('/api/get_mess_user', async (req, res) => {
@@ -66,6 +78,53 @@ app.get('/api/get_mess_user', async (req, res) => {
     })
     res.status(200).json(user_mess_data);
 })
+
+app.delete('/api/delete-user', async (req, res) => {
+    try {
+        const userId = req.query.userid;
+        if (!userId) {
+            return res.status(400).json({ success: false, message: 'Cần có userID' });
+        }
+
+        // Cập nhật thuộc tính 'deleted' của người dùng thành false
+        const result = await User.updateOne({ userID: userId }, { deleted: true });
+
+        if (result.nModified === 0) {
+            return res.status(404).json({ success: false, message: 'Không tìm thấy người dùng' });
+        }
+
+        // Phản hồi với thông báo cập nhật thành công
+        res.json({ success: true, message: `Đã cập nhật ${result.nModified} người dùng` });
+    } catch (error) {
+        // Xử lý lỗi nếu có
+        console.error('Lỗi:', error);
+        res.status(500).json({ success: false, error: error.message });
+    }
+});
+
+// app.post('/api/delete-user', async (req, res) => {
+//     try {
+//         const userId = req.query.userid;
+//         if (!userId) {
+//             return res.status(400).json({ success: false, message: 'Cần có userID' });
+//         }
+
+//         // Xóa người dùng từ cơ sở dữ liệu dựa trên userID
+//         const result = await User.deleteOne({ userID: userId });
+
+//         if (result.deletedCount === 0) {
+//             return res.status(404).json({ success: false, message: 'Không tìm thấy người dùng' });
+//         }
+
+//         // Phản hồi với thông báo xóa thành công
+//         res.json({ success: true, message: `Đã xóa ${result.deletedCount} người dùng` });
+//     } catch (error) {
+//         // Xử lý lỗi nếu có
+//         console.error('Lỗi:', error);
+//         res.status(500).json({ success: false, error: error.message });
+//     }
+// });
+
 
 io.on('connection', (socket) => {
     /////////////////////CLIENT
@@ -172,6 +231,7 @@ io.on('connection', (socket) => {
                         'userName': msg.uName,
                         'lastMessage': msg.message,
                         'status': 'on',
+                        'deleted': false
                     }
                     const userModel = new User(user);
                     await userModel.save();

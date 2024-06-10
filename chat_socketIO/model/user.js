@@ -5,6 +5,7 @@ const userSchema = new mongoose.Schema({
     userName : {type:String, require: true },
     lastMessage: { type:String, require },
     status : {type:String, require: true },
+    deleted : {type:Boolean}
 })
 
 const user = mongoose.model('user', userSchema);

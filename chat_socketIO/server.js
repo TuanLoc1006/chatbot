@@ -62,33 +62,35 @@ app.get('/api/get_mess_user', async(req, res) =>{
     res.status(200).json(user_mess_data);
 })
 
+
+
 // app.get('/:userId', ({ params: { userId } }, res) => {
 //     const user = get_user_id(userId, params)
 //     res.json(user)
 //   })
 
-// app.delete('/api/delete-user', async (req, res) => {
-//     try {
-//         const userId = req.query.userid;
-//         if (!userId) {
-//             return res.status(400).json({ success: false, message: 'Cần có userID' });
-//         }
+app.post('/api/delete-user', async (req, res) => {
+    try {
+        const userId = req.query.userid;
+        if (!userId) {
+            return res.status(400).json({ success: false, message: 'Cần có userID' });
+        }
 
-//         // Xóa người dùng từ cơ sở dữ liệu dựa trên userID
-//         const result = await User.deleteOne({ userID: userId });
+        // Xóa người dùng từ cơ sở dữ liệu dựa trên userID
+        const result = await User.deleteOne({ userID: userId });
 
-//         if (result.deletedCount === 0) {
-//             return res.status(404).json({ success: false, message: 'Không tìm thấy người dùng' });
-//         }
+        if (result.deletedCount === 0) {
+            return res.status(404).json({ success: false, message: 'Không tìm thấy người dùng' });
+        }
 
-//         // Phản hồi với thông báo xóa thành công
-//         res.json({ success: true, message: `Đã xóa ${result.deletedCount} người dùng` });
-//     } catch (error) {
-//         // Xử lý lỗi nếu có
-//         console.error('Lỗi:', error);
-//         res.status(500).json({ success: false, error: error.message });
-//     }
-// });
+        // Phản hồi với thông báo xóa thành công
+        res.json({ success: true, message: `Đã xóa ${result.deletedCount} người dùng` });
+    } catch (error) {
+        // Xử lý lỗi nếu có
+        console.error('Lỗi:', error);
+        res.status(500).json({ success: false, error: error.message });
+    }
+});
 
 io.on('connection', (socket) => {
 
