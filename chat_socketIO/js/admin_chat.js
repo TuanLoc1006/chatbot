@@ -86,22 +86,7 @@ document.addEventListener('DOMContentLoaded', async function (e) {
     })
 });
 
-// function deleteItem(event,userID) {
-//     // Ngăn chặn sự kiện click lan ra các phần tử cha
-    
-//     event.stopPropagation();
-//     // Truy cập phần tử cần xóa bằng ID
-//     var itemToRemove = document.querySelector(`[data-user-id="${userID}"]`);
 
-//     // Kiểm tra xem phần tử có tồn tại không
-//     if (itemToRemove) {
-//         // Xóa phần tử khỏi DOM
-//         itemToRemove.remove();
-//         close_popup(userID)
-//     } else {
-//         console.error(`Không tìm thấy phần tử với ID: ${userID}`);
-//     }
-// }
 function deleteItem(event, userID) {
     // Ngăn chặn sự kiện click lan ra các phần tử cha
     event.stopPropagation();
@@ -112,7 +97,7 @@ function deleteItem(event, userID) {
     // Kiểm tra xem phần tử có tồn tại không
     if (itemToRemove) {
         // Gọi API để cập nhật thuộc tính 'deleted'
-        fetch(`http://localhost:3000/api/delete-user?userid=${userID}`, {
+        fetch(`http://localhost:3000/api/delete_mess?userid=${userID}`, {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json'
