@@ -99,7 +99,7 @@ app.delete('/api/delete_mess', async (req, res) => {
         }
 
         // Phản hồi với thông báo cập nhật thành công
-        res.json({ success: true, message: `Đã cập xóa tin nhắn người dùng` });
+        res.status(200).json({ success: true, message: `Đã xóa tin nhắn người dùng` });
     } catch (error) {
         // Xử lý lỗi nếu có
         console.error('Lỗi:', error);

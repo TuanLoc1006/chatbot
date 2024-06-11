@@ -9,10 +9,6 @@ socket.emit('adminID', adminID);
 
 //nhận tin nhắn realtime từ người dùng
 socket.on('server_send_to_admin', (msg) => {
-
-    //tin nhắn được gửi tới
-    // console.log(msg)
-
     ////////////////HIỂN THỊ NGƯỜI DÙNG TRONG LIST KHI VỪA NHẬN TIN NHẮN
     const sender_div = document.querySelector(`[data-user-id="${msg.senderID}"]`);
     //kiểm tra Id của người dùng có trên giao diện hay chưa
@@ -37,6 +33,8 @@ socket.on('server_send_to_admin', (msg) => {
         //người dùng đã có giao diện, chỉ thay đổi lại tin nhắn cuối
         sender_div.querySelector('p').innerHTML = msg.message;
     }
+
+  
 
     ///////////////NẾU Ô CHAT ĐANG MỞ, HIỂN THỊ TIN NHẮN TRONG Ô CHAT
     const window_chat = document.getElementsByClassName(`mess-padding-${msg.senderID}`)[0]
@@ -66,70 +64,71 @@ socket.on('server_send_to_admin', (msg) => {
 
     
  ///////////CALL API LẤY DANH SÁCH NGƯỜI DÙNG KHI LOAD LẠI TRANG
+
+// document.addEventListener('DOMContentLoaded', async function () {
+//     try {
+//         const response = await fetch('/api/get_user');
+//         const users = await response.json();
+//         const userList = document.querySelector('.userList');
+//         console.log(users)
+//         for (const user of users) {
+//             // const latestMessageResponse = await fetch(`/api/latest_message?userId1=${adminID}&userId2=${user.userID}`);
+//             // const latestMessage = await latestMessageResponse.json();
+            
+//             userList.innerHTML +=
+//             `<div  data-user-id="${user.userID}" >
+//                 <div onclick = "register_popup('${user.userID}', '${user.userName}')"class="sidebar-name">
+//                     <a >
+//                         <img width="30" height="30" src="https://t4.ftcdn.net/jpg/02/29/75/83/360_F_229758328_7x8jwCwjtBMmC6rgFzLFhZoEpLobB6L8.jpg" />
+//                     <div class="chatContent">
+//                         <span>${user.userName}</span>
+//                         <p style="font-size: 16px; margin-bottom:0"></p>
+//                     </div>
+//                     <div class="status-dot '. $offline .'"><i class="fas fa-circle"></i></div>
+//                     </a>
+//                     <button id="btn-delete" class="btn btn-danger" onclick="deleteItem(event,'${user.userID}'); ">Xóa</button>
+//                 </div>
+//             </div>`
+//         }
+        
+//     } catch (error) {
+//         console.log('không thấy tin nhắn mới nhất vì list user rỗng', error);
+//     }
+// });
+
 document.addEventListener('DOMContentLoaded', async function () {
     try {
         const response = await fetch('/api/get_user');
         const users = await response.json();
         const userList = document.querySelector('.userList');
-        
-        for (const user of users) {
-            const latestMessageResponse = await fetch(`/api/latest_message?userId1=${adminID}&userId2=${user.userID}`);
-            const latestMessage = await latestMessageResponse.json();
-            // a = JSON.stringify(latestMessage)
-          
+        console.log(users);
+
+        // Duyệt qua mảng users từ cuối lên đầu
+        for (let i = users.length - 1; i >= 0; i--) {
+            const user = users[i];
+
+            // const latestMessageResponse = await fetch(`/api/latest_message?userId1=${adminID}&userId2=${user.userID}`);
+            // const latestMessage = await latestMessageResponse.json();
 
             userList.innerHTML +=
-            `<div  data-user-id="${user.userID}" >
-                <div onclick = "register_popup('${user.userID}', '${user.userName}')"class="sidebar-name">
-                    <a >
+            `<div data-user-id="${user.userID}">
+                <div onclick="register_popup('${user.userID}', '${user.userName}')" class="sidebar-name">
+                    <a>
                         <img width="30" height="30" src="https://t4.ftcdn.net/jpg/02/29/75/83/360_F_229758328_7x8jwCwjtBMmC6rgFzLFhZoEpLobB6L8.jpg" />
                     <div class="chatContent">
                         <span>${user.userName}</span>
-                        <p style="font-size: 16px; margin-bottom:0">${latestMessage[0].message}</p>
+                        <p style="font-size: 16px; margin-bottom:0"></p>
                     </div>
                     <div class="status-dot '. $offline .'"><i class="fas fa-circle"></i></div>
                     </a>
-                    <button id="btn-delete" class="btn btn-danger" onclick="deleteItem(event,'${user.userID}'); ">Xóa</button>
+                    <button id="btn-delete" class="btn btn-danger" onclick="deleteItem(event,'${user.userID}');">Xóa</button>
                 </div>
-            </div>`
+            </div>`;
         }
-        
     } catch (error) {
         console.log('không thấy tin nhắn mới nhất vì list user rỗng', error);
     }
 });
-
-// // /////////////CALL API LẤY DANH SÁCH NGƯỜI DÙNG KHI LOAD LẠI TRANG
-// document.addEventListener('DOMContentLoaded', async function () {
-//     try {
-//         const response = await fetch('/api/get_user');
-        
-//         if (!response.ok) {
-//             throw new Error(`HTTP error! Status: ${response.status}`);
-//         }
-        
-//         const users = await response.json();
-//         const userList = document.querySelector('.userList');
-           
-//         users.forEach(user => {
-//             $.ajax({
-//                 type: "GET",
-//                 url: `/api/latest_message?userId1=${adminID}&userId2=${user.userID}`,
-//                 success: function (latestMessage) {
-                    
-//                     console.log(latestMessage)
-//                 },
-//                 error: function(error) {
-//                     console.error(`Error fetching latest message for user ${user.userID}:`, error);
-//                 }
-//             });
-//         });
-//     } catch (error) {
-//         console.error('Error fetching users:', error);
-//     }
-// });
-
-
 
 function deleteItem(event, userID) {
     // Ngăn chặn sự kiện click lan ra các phần tử cha
@@ -137,7 +136,7 @@ function deleteItem(event, userID) {
 
     // Truy cập phần tử cần xóa bằng ID
     var itemToRemove = document.querySelector(`[data-user-id="${userID}"]`);
-
+    itemToRemove.style.display = 'none';
     // Kiểm tra xem phần tử có tồn tại không
     if (itemToRemove) {
         // Gọi API để cập nhật thuộc tính 'deleted'
@@ -153,6 +152,8 @@ function deleteItem(event, userID) {
                 // Xóa phần tử khỏi DOM nếu API trả về thành công
                 itemToRemove.remove();
                 close_popup(userID);
+               
+                
                 console.log(data.message);
             } else {
                 console.error(data.message);
@@ -161,7 +162,7 @@ function deleteItem(event, userID) {
         .catch(error => {
             console.error('Lỗi:', error);
         });
-        location.reload();
+        // location.reload();
     } else {
         console.error(`Không tìm thấy phần tử với ID: ${userID}`);
     }
@@ -410,7 +411,7 @@ function sendMessage(event, userID, userName) {
 async function updateLatestMessage(userID, message) {
     const userDiv = document.querySelector(`div[data-user-id="${userID}"] .chatContent p`);
     if (userDiv) {
-        userDiv.textContent = message;
+        userDiv.innerHTML = message;
     }
 }
 
