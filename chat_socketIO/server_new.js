@@ -56,11 +56,7 @@ app.get('/api/get_user', async (req, res) => {
     }
 });
 
-// app.get('/api/get_user', async (req, res) => {
-//     //lấy người dùng gửi về admin
-//     const user_data = await User.find();
-//     res.status(200).send(user_data);
-// })
+
 
 // API lấy tin nhắn của user theo id, và tin nhắn của admin gửi đến người dùng theo id
 app.get('/api/get_mess_user', async (req, res) => {

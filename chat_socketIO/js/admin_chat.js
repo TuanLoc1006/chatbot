@@ -5,60 +5,7 @@ const socket = io();
 ////////////Khởi tạo adminID
 const adminID = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-';
 socket.emit('adminID', adminID);
-// // console.log('ADMIN ID LA '+adminID)
 
-// //nhận tin nhắn realtime từ người dùng
-// socket.on('server_send_to_admin', (msg) => {
-//     ////////////////HIỂN THỊ NGƯỜI DÙNG TRONG LIST KHI VỪA NHẬN TIN NHẮN
-//     const sender_div = document.querySelector(`[data-user-id="${msg.senderID}"]`);
-//     //kiểm tra Id của người dùng có trên giao diện hay chưa
-//     if (!sender_div) {
-//         //hiển thị tin nhắn lên giao diện list user
-//         const userList = document.querySelector('.userList');
-//         userList.innerHTML +=
-//             `<div  data-user-id="${msg.senderID}" >
-//                 <div onclick = "register_popup('${msg.senderID}', '${msg.senderName}')" data-user-id="${msg.senderID}" class="sidebar-name">
-//                     <a>
-//                         <img width="30" height="30" src="https://t4.ftcdn.net/jpg/02/29/75/83/360_F_229758328_7x8jwCwjtBMmC6rgFzLFhZoEpLobB6L8.jpg" />
-//                     <div class="chatContent">
-//                         <span>${msg.senderName}</span>
-//                         <p style="font-size: 16px;">${msg.message}</p>
-//                     </div>
-//                     <div class="status-dot '. $offline .'"><i class="fas fa-circle"></i></div>
-//                     </a>
-//                     <button id="btn-delete" class="btn btn-danger" onclick="deleteItem(event,'${msg.senderID}'); ">Xóa</button>
-//                 </div>
-//             </div>`;
-//     } else {
-//         //người dùng đã có giao diện, chỉ thay đổi lại tin nhắn cuối
-//         sender_div.querySelector('p').innerHTML = msg.message;
-//     }
-
-//     ///////////////NẾU Ô CHAT ĐANG MỞ, HIỂN THỊ TIN NHẮN TRONG Ô CHAT
-//     const window_chat = document.getElementsByClassName(`mess-padding-${msg.senderID}`)[0]
-//     if (window_chat) {
-//         const newDiv = document.createElement('div')
-//         newDiv.innerHTML += `
-//         <div class="mess-user-${msg.senderID}">
-//             <div class="d-flex justify-content-between">
-//                 <p class="small mb-1">${msg.senderName}</p>
-//                 <p class="small mb-1 text-muted">${msg.timestamp}</p>
-//             </div>
-//             <div class="d-flex flex-row justify-content-start mb-1">
-//                 <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava5-bg.webp" alt="avatar 1" style="width: 45px; height: 100%;">
-//                 <div>
-//                     <p class="small p-2 ms-3 mb-3 rounded-3" style="background-color: #f5f6f7;">${msg.message}</p>
-//                 </div>
-//             </div>
-//         </div>
-//         `
-//         window_chat.appendChild(newDiv)
-//         scrollToBottom();
-//     }
-// })
-
-
-// nhận tin nhắn realtime từ người dùng
 socket.on('server_send_to_admin', (msg) => {
     //////////////// HIỂN THỊ NGƯỜI DÙNG TRONG LIST KHI VỪA NHẬN TIN NHẮN
     const sender_div = document.querySelector(`[data-user-id="${msg.senderID}"]`);
@@ -162,12 +109,14 @@ socket.on('server_send_to_admin', (msg) => {
 //     }
 // });
 
+
+
 document.addEventListener('DOMContentLoaded', async function () {
     try {
         const response = await fetch('/api/get_user');
         const users = await response.json();
         const userList = document.querySelector('.userList');
-        console.log(users);
+        // console.log(users);
 
         // Duyệt qua mảng users từ cuối lên đầu
         for (let i = users.length - 1; i >= 0; i--) {
@@ -175,7 +124,6 @@ document.addEventListener('DOMContentLoaded', async function () {
 
             // const latestMessageResponse = await fetch(`/api/latest_message?userId1=${adminID}&userId2=${user.userID}`);
             // const latestMessage = await latestMessageResponse.json();
-
             userList.innerHTML +=
             `<div data-user-id="${user.userID}">
                 <div onclick="register_popup('${user.userID}', '${user.userName}')" class="sidebar-name">
@@ -379,11 +327,7 @@ async function register_popup(userid, username) {
      
     <div class="popup-messages">
         <div class="mess-padding-${userid}" style="padding:14px">
-
-
             ${messageHTML}
-
-
         </div>
     </div>
 
@@ -475,11 +419,18 @@ function sendMessage(event, userID, userName) {
 
 //cap nhat tin nhan mới nhất vào listuser
 async function updateLatestMessage(userID, message) {
-    const userDiv = document.querySelector(`div[data-user-id="${userID}"] .chatContent p`);
+    const userDivLatestMessage = document.querySelector(`div[data-user-id="${userID}"] .chatContent p`);
+    if (userDivLatestMessage) {
+        userDivLatestMessage.innerHTML = message;
+    }
+    const userDiv = document.querySelector(`div[data-user-id="${userID}"]`);
     if (userDiv) {
-        userDiv.innerHTML = message;
+        const userList = document.querySelector('.userList');
+        //chên phan tu con vào đâu phần tu cha
+        userList.prepend(userDiv);
     }
 }
+
 
 /////// THÔNG BÁO ĐANG NHẬP
 
