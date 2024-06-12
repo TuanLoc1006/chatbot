@@ -28,6 +28,22 @@ socket.on('server_send_to_admin', (msg) => {
                 </div>
             </div>`
         );
+        try {
+        $.ajax({
+            type: 'GET',
+            dataType: 'json',
+            url: '/api/update_deleted_user_false',
+            data: { userid: msg.senderID },
+            success: function(response) {
+                console.log(response);
+            },
+            error: function(err) {
+                console.log(err);
+            }
+        });
+    } catch (err) {
+        console.log('Lỗi ngoài:', err);
+    }
     } else {
         // người dùng đã có giao diện, chỉ thay đổi lại tin nhắn cuối
         sender_div.querySelector('p').innerHTML = msg.message;
@@ -174,7 +190,7 @@ function deleteItem(event, userID) {
         .catch(error => {
             console.error('Lỗi:', error);
         });
-        // location.reload();
+        location.reload();
     } else {
         console.error(`Không tìm thấy phần tử với ID: ${userID}`);
     }
@@ -186,11 +202,9 @@ function deleteItem(event, userID) {
             url: '/api/update_deleted_user',
             data: { userid: userID },
             success: function(response) {
-                console.log('CALL API THÀNH CÔNG');
                 console.log(response);
             },
             error: function(err) {
-                console.log('CALL API THẤT BẠI');
                 console.log(err);
             }
         });

@@ -67,7 +67,25 @@ app.get('/api/update_deleted_user', async (req, res) => {
             return res.status(404).json({ success: false, message: 'User not found' });
         }
 
-        return res.status(200).json({ success: true, data: updatedUser });
+        return res.status(200).json({ success: true, message: 'Đã xóa user' });
+    } catch (error) {
+        console.error('Error:', error);
+        return res.status(500).json({ success: false, error: error.message });
+    }
+})
+app.get('/api/update_deleted_user_false', async (req, res) => {
+    const userid = req.query.userid;
+    try {
+        const updatedUser =  await User.updateOne(
+            { $or: { userID: userid}},
+            { $set: { deleted: false } } 
+        );
+
+        if (!updatedUser) {
+            return res.status(404).json({ success: false, message: 'User not found' });
+        }
+
+        return res.status(200).json({ success: true, message: 'Cập nhật lại trạng thái deleted user false' });
     } catch (error) {
         console.error('Error:', error);
         return res.status(500).json({ success: false, error: error.message });
