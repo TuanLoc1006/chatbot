@@ -154,7 +154,7 @@ function deleteItem(event, userID) {
     // Kiểm tra xem phần tử có tồn tại không
     if (itemToRemove) {
         // Gọi API để cập nhật thuộc tính 'deleted'
-        fetch(`http://localhost:3000/api/delete_mess?userid=${userID}`, {
+        fetch(`/api/delete_mess?userid=${userID}`, {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json'

@@ -57,7 +57,6 @@ app.get('/api/get_user', async (req, res) => {
 });
 
 
-
 // API lấy tin nhắn của user theo id, và tin nhắn của admin gửi đến người dùng theo id
 app.get('/api/get_mess_user', async (req, res) => {
     console.log('GỌI API lấy tin nhắn');
