@@ -1,13 +1,12 @@
 
 
 const socket = io();
-
-////////////Khởi tạo adminID
+//Khởi tạo adminID
 const adminID = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-';
 socket.emit('adminID', adminID);
 
 socket.on('server_send_to_admin', (msg) => {
-    //////////////// HIỂN THỊ NGƯỜI DÙNG TRONG LIST KHI VỪA NHẬN TIN NHẮN
+    // HIỂN THỊ NGƯỜI DÙNG TRONG LIST KHI VỪA NHẬN TIN NHẮN
     const sender_div = document.querySelector(`[data-user-id="${msg.senderID}"]`);
     const userList = document.querySelector('.userList');
 
@@ -51,7 +50,7 @@ socket.on('server_send_to_admin', (msg) => {
             </div>`
         );
     }
-
+    
     // NẾU Ô CHAT ĐANG MỞ, HIỂN THỊ TIN NHẮN TRONG Ô CHAT
     const window_chat = document.getElementsByClassName(`mess-padding-${msg.senderID}`)[0];
     if (window_chat) {
@@ -145,10 +144,10 @@ document.addEventListener('DOMContentLoaded', async function () {
 });
 
 function deleteItem(event, userID) {
+    
     // Ngăn chặn sự kiện click lan ra các phần tử cha
     event.stopPropagation();
-
-    // Truy cập phần tử cần xóa bằng ID
+    // Truy cập phần tử cần xóa bằng ID va an het cac tin nhan
     var itemToRemove = document.querySelector(`[data-user-id="${userID}"]`);
     itemToRemove.style.display = 'none';
     // Kiểm tra xem phần tử có tồn tại không
@@ -166,9 +165,8 @@ function deleteItem(event, userID) {
                 // Xóa phần tử khỏi DOM nếu API trả về thành công
                 itemToRemove.remove();
                 close_popup(userID);
-               
-                
-                console.log(data.message);
+                // console.log(data.message);
+
             } else {
                 console.error(data.message);
             }
@@ -179,6 +177,25 @@ function deleteItem(event, userID) {
         // location.reload();
     } else {
         console.error(`Không tìm thấy phần tử với ID: ${userID}`);
+    }
+    //an user khoi list user
+    try {
+        $.ajax({
+            type: 'GET',
+            dataType: 'json',
+            url: '/api/update_deleted_user',
+            data: { userid: userID },
+            success: function(response) {
+                console.log('CALL API THÀNH CÔNG');
+                console.log(response);
+            },
+            error: function(err) {
+                console.log('CALL API THẤT BẠI');
+                console.log(err);
+            }
+        });
+    } catch (err) {
+        console.log('Lỗi ngoài:', err);
     }
 }
 
@@ -353,7 +370,7 @@ async function register_popup(userid, username) {
         socket.emit('alert_typing', {
             uID: adminID,
             uName: 'Admin',
-            receiver: userid
+            receiver: userid,
         });
     });
 }

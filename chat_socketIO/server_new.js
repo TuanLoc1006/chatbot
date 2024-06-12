@@ -46,8 +46,7 @@ app.get('/admin-chat', (req, res) => {
 //API lấy user
 app.get('/api/get_user', async (req, res) => {
     try {
-        
-        const user_data = await User.find();
+        const user_data = await User.find({ deleted: false });
         res.status(200).json(user_data);
     } catch (error) {
         // Xử lý lỗi nếu có
@@ -56,6 +55,24 @@ app.get('/api/get_user', async (req, res) => {
     }
 });
 
+app.get('/api/update_deleted_user', async (req, res) => {
+    const userid = req.query.userid;
+    try {
+        const updatedUser =  await User.updateOne(
+            { $or: { userID: userid}},
+            { $set: { deleted: true } } 
+        );
+
+        if (!updatedUser) {
+            return res.status(404).json({ success: false, message: 'User not found' });
+        }
+
+        return res.status(200).json({ success: true, data: updatedUser });
+    } catch (error) {
+        console.error('Error:', error);
+        return res.status(500).json({ success: false, error: error.message });
+    }
+})
 
 // API lấy tin nhắn của user theo id, và tin nhắn của admin gửi đến người dùng theo id
 app.get('/api/get_mess_user', async (req, res) => {
@@ -103,9 +120,9 @@ app.delete('/api/delete_mess', async (req, res) => {
 });
 
 
-io.on('connection', (socket) => {
-    /////////////////////CLIENT
 
+io.on('connection', (socket) => {
+    //CLIENT
     //nhận tin nhắn trực tiếp từ admin
     socket.on('admin_send_to_server', async (msg) => {
         const vietnamTime = new Date(new Date().getTime() + 7 * 60 * 60 * 1000).toISOString();
@@ -211,6 +228,7 @@ io.on('connection', (socket) => {
                         'userName': msg.uName,
                         'lastMessage': msg.message,
                         'status': 'on',
+                        'deleted': false
                     }
                     const userModel = new User(user);
                     await userModel.save();
