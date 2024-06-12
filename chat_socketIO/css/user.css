@@ -25,12 +25,21 @@
     display: flex;
 }
 #form {
-    display: flex;
+    padding: 8px;
     width: 100%;
 }
-#form input, #form button {
-    margin-right: 5px;
+
+#div-send{
+    display: inline;
 }
+/* #user-name{
+    width: 50%;
+    display: inline;
+}
+
+} */
+
+
 #messages {
     list-style-type: none;
     padding: 0;
@@ -71,10 +80,10 @@
 
 
 .user-custom-class{
-    background-color: #f7f8f6; padding: 10px; border-radius: 12px; margin-bottom: 10px; color: black;
+    background-color: #e1edd5; padding: 10px; border-radius: 12px; margin-bottom: 10px; color: black;
 }
 .admin-custom-class{
-    background-color: #ccc; padding: 10px; border-radius: 12px; margin-bottom: 10px; color: black;
+    background-color: #4da6ff; padding: 10px; border-radius: 12px; margin-bottom: 10px; color: black;
 }
 
 .ctump-custom-class{
@@ -84,10 +93,29 @@
 
 
 
+#input{
+    margin-bottom: 8px;
+}
+#btn-send{
+    width: 35%;
+    background-color: #4291e6;
+    border: none;
+    border-radius: 6px;
+    display: inline;
+    margin-left: 12px;
+    color: rgb(255, 255, 255);
+    
+}
+#btn-send:hover{
+    background-color: rgb(20, 102, 195);
+    
+}
 
-
-
-
+#chat-widget-button {
+    background-image: url('../img/logo_ctump.png');
+    background-size: cover; /* Đảm bảo hình ảnh bao phủ toàn bộ phần tử */
+  
+}
 
 /* 
 .message-item {

@@ -25,11 +25,12 @@
 
 <body>
 
+<!-- <img src="../img/logo_ctump.png" alt="Girl in a jacket" width="50" height="50"> -->
     <div class="container">
         <button id="chat-widget-button" type="button"
             class="btn btn-primary rounded-circle chat-sign-button position-fixed"
-            style="bottom: 20px; right: 20px;">💬</button>
-
+            style="bottom: 20px; right: 20px; width: 62px; height: 62px;">💬</button>
+      
         <div id="chat-widget" class="card position-fixed shadow d-none"
             style="bottom: 100px; right:20px; width: 360px; height: 500px;">
             <div class="card-header bg-primary text-white">
@@ -45,10 +46,16 @@
 
             <div class="card-footer">
                 <form id="form" action="">
-                    <input maxlength="20" id="user-name" required type="text" placeholder="Nhập tên để chat"
-                        class="form-control">
-                    <input id="input" autocomplete="off" class="form-control" />
-                    <button type="submit" class="btn btn-primary" style="margin-left: 15px; ">Send</button>
+                    <input id="input" autocomplete="off" class="form-control" placeholder="Nhắn tin tại đây" />
+                    <!-- <div id="div-send">
+                        <input maxlength="20" id="user-name" required type="text" placeholder="Nhập tên để chat" >
+                        <button type="submit" id="btn-send" class="btn btn-primary" >Send</button>
+
+                    </div> -->
+                    <div class="input-group mb-1">
+                        <input  type="text" id="user-name" class="form-control" required placeholder="Nhập tên để chat" aria-label="Nhập tên để chat">
+                        <button class="" type="submit" id="btn-send">Gửi</button>
+                      </div>
                 </form>
             </div>
 
@@ -58,6 +65,7 @@
             </div>
         </div>
     </div>
+    
     <script>
         $(document).ready(function () {
             let welcomeMessageShown = false; // Variable to check if the welcome message has been displayed
