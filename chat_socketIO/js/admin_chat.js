@@ -92,47 +92,14 @@ socket.on('server_send_to_admin', (msg) => {
 
     
  ///////////CALL API LẤY DANH SÁCH NGƯỜI DÙNG KHI LOAD LẠI TRANG
-
-// document.addEventListener('DOMContentLoaded', async function () {
-//     try {
-//         const response = await fetch('/api/get_user');
-//         const users = await response.json();
-//         const userList = document.querySelector('.userList');
-//         console.log(users)
-//         for (const user of users) {
-//             // const latestMessageResponse = await fetch(`/api/latest_message?userId1=${adminID}&userId2=${user.userID}`);
-//             // const latestMessage = await latestMessageResponse.json();
-            
-//             userList.innerHTML +=
-//             `<div  data-user-id="${user.userID}" >
-//                 <div onclick = "register_popup('${user.userID}', '${user.userName}')"class="sidebar-name">
-//                     <a >
-//                         <img width="30" height="30" src="https://t4.ftcdn.net/jpg/02/29/75/83/360_F_229758328_7x8jwCwjtBMmC6rgFzLFhZoEpLobB6L8.jpg" />
-//                     <div class="chatContent">
-//                         <span>${user.userName}</span>
-//                         <p style="font-size: 16px; margin-bottom:0"></p>
-//                     </div>
-//                     <div class="status-dot '. $offline .'"><i class="fas fa-circle"></i></div>
-//                     </a>
-//                     <button id="btn-delete" class="btn btn-danger" onclick="deleteItem(event,'${user.userID}'); ">Xóa</button>
-//                 </div>
-//             </div>`
-//         }
-        
-//     } catch (error) {
-//         console.log('không thấy tin nhắn mới nhất vì list user rỗng', error);
-//     }
-// });
-
-
-
 document.addEventListener('DOMContentLoaded', async function () {
     try {
         const response = await fetch('/api/get_user');
         const users = await response.json();
+        // console.log(users)
         const userList = document.querySelector('.userList');
-        // console.log(users);
-
+        console.log(users);
+        
         // Duyệt qua mảng users từ cuối lên đầu
         for (let i = users.length - 1; i >= 0; i--) {
             const user = users[i];

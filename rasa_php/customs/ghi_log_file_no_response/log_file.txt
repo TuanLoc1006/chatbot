@@ -36,3 +36,9 @@ Action ctdt:
 Action ctdt: loc
 action_sdt_khoa: sdsadasdsad
 
+Action ctdt: chương trình đào tạo
+action_cap_lai_email_sv: quên password
+action_cap_lai_email_sv: quên mật khẩu
+action_hoi_thong_tin_phong: thông tin
+Action ctdt: học bao lâu ra trường
+Action ctdt: Chào tên tôi đi

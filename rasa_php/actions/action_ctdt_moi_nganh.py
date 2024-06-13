@@ -37,7 +37,7 @@ class actionNganh(Action):
         print("Người dùng hỏi ngành học: " + user_input)
         logging.info("Call action_thong_tin_nganh: {}".format(nganh_database))
         
-        message = "</br>Danh sách các ngành có trong chương trình đào tạo của Đại học Y Dược Cần Thơ, tìm hiểu kĩ hơn bạn có thể nhắn tên ngành cho mình:\n"
+        message = f"</br>Danh sách các ngành có trong chương trình đào tạo của Đại học Y Dược Cần Thơ, tìm hiểu kĩ hơn bạn có thể nhắn tên ngành cho mình:</br>"
         for item in nganh_database:
             message += "- Ngành " + item[0].capitalize() + "</br>"
         

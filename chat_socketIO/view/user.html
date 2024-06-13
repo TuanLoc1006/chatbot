@@ -341,7 +341,7 @@
         socket.on('server_send_to_client', (msg) => {
             console.log(msg);
             const item = document.createElement('li');
-            item.textContent = 'CTUMP: ' + msg.message;
+            item.innerHTML = 'CTUMP: ' + msg.message;
             item.classList.add('ctump-custom-class');
             messages_content.appendChild(item);
             scrollChatToBottom()
