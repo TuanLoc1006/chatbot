@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 action_hoi_thong_tin_phong: thông tin đại học ydct
 action_hoi_thong_tin_phong: thông tin đại học ydct
 action_hoi_thong_tin_phong: thông tin ydct
@@ -8,9 +8,7 @@ Action học phí: thông tin về trường này
 Action học phí: thông tin về trường này
 Action học phí: tóm tắt thông tin ctump
 action_hoi_thong_tin_phong: mô tả trường này
-Action ctdt: ./.
-Action ctdt: [][[[]
-Action ctdt: ???
+
 Action học phí: các ngành học bao nhiêu tiền
 Action ctdt: học phí lien thong
 Action ctdt: học phí
@@ -23,13 +21,8 @@ action_hoi_thong_tin_khoa: thông tin khoa y
 action_hoi_thong_tin_khoa: thông tin khoa y
 action_cap_lai_email_sv: giấy xác nhận
 action_cap_lai_email_sv: xin giấy xác nhận
-=======
 
 
-Action học phí: em muốn học chương trình liên thông thì mức học phí hàng năm là bao nhiêu
-
-Action học phí: 
-Action học phí: 
 Action ctdt: học phí ngành y học cổ chuyền trình độ liên thông là bao nhiêu
 Action ctdt:
 
@@ -37,8 +30,19 @@ Action ctdt:
 Action ctdt: Chương trình đào tạo mỗi ngành
 action_hoi_thong_tin_phong: thông tin học bôngt
 action_cap_lai_email_sv: xác nhận nhập học
+
 Action ctdt: 
 Action ctdt: 
 Action ctdt: loc
 action_sdt_khoa: sdsadasdsad
->>>>>>> 3f2fa0083e2a52d8345706e79cbeb5a1af7b2aa5
+
+Action ctdt: chương trình đào tạo
+action_cap_lai_email_sv: quên password
+action_cap_lai_email_sv: quên mật khẩu
+action_hoi_thong_tin_phong: thông tin
+Action ctdt: học bao lâu ra trường
+Action ctdt: Chào tên tôi đi
+Action ctdt: Chương trình đào tạo mỗi ngành
+action_email_khoa: Thông tin các khoa, phòng ban (địa điểm, email, số điện thoại)
+action_email_khoa: y đa khoa
+action_email_khoa: y đa khoa

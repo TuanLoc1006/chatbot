@@ -195,10 +195,37 @@ class ActionChatGPTFallback(Action):
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-
-        dispatcher.utter_message(text=f"Xin lỗi tôi không biết")
         
-        return []
+        user_message = tracker.latest_message.get('text')
+
+        print("user_ask: "+user_message)
+        # logging.info("{}{}".format('Call action_fall_back: ', user_message))
+        try:
+            response = requests.post(
+                'https://api.openai.com/v1/engines/davinci-codex/completions',
+                headers={
+                    'Authorization': f'Bearer YOUR_OPENAI_API_KEY',
+                    'Content-Type': 'application/json'
+                },
+                json={
+                    'prompt': user_message,
+                    'max_tokens': 150
+                }
+            )
+            response_data = response.json()
+
+            if 'choices' in response_data and len(response_data['choices']) > 0:
+                chatgpt_reply = response_data['choices'][0]['text'].strip()
+            else:
+                chatgpt_reply = "action fallback: Xin lỗi tôi chưa hiểu ý bạn, bạn vui lòng mô tả chi tiết hơn được không?"
+
+        except Exception as e:
+            chatgpt_reply = f"action fallback: Đã xảy ra lỗi: {str(e)}"
+        
+        dispatcher.utter_message(text=chatgpt_reply)
+        
+        # Ngăn vòng lặp bằng cách hoàn nguyên trạng thái người dùng
+        return [UserUtteranceReverted()]
 
 
 # class acction_tuyen_sinh(Action):

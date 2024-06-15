@@ -1,18 +1,4 @@
-<<<<<<< HEAD
-phuong
-ctdt cac ngành
-học phí các ngành
 
-
-lộc
-=======
-- phuong
-hoi ve so nganh
-chuong trinh dao tao
-hoc phi
->>>>>>> 3a47bde590ce08fad31795f4de9576bab475a540
-
-các phòng , khoa ctump
 http://www.ctump.edu.vn/Default.aspx?tabid=2036
 
 hoc y mat bao nhieu nam

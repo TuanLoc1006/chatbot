@@ -515,15 +515,23 @@ body {
     padding-bottom: 10px;
     border: 1px solid rgba(29, 49, 91, .3);
 }
+.chat-sidebar {
+    height: 100vh; /* Điều chỉnh chiều cao tối đa của chat-sidebar */
+    overflow-y: auto; /* Thêm thanh cuộn khi nội dung quá dài */
+}
 
 .sidebar-name {
     padding-left: 20px;
     padding-right: 20px;
-    margin-bottom: 10px;
     font-size: 20px;
     min-height: 100px;
+    display: flex;
+    justify-content: space-between;
 }
 
+#btn-delete{
+    height: 10%;
+}
 
 
 .sidebar-name a {
