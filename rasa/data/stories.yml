@@ -1,0 +1,40 @@
+version: "3.1"
+
+stories:
+- story: hỏi "where" giấy tạm hoãn nghĩa vụ
+  steps:
+    - intent: ask_dang_ky_giay_xac_nhan
+    - slot_was_set:
+        - giayxacnhan: "GiayTamHoanNghiaVu"
+        - ask: "where"
+    - action: action_giay_xac_nhan
+- story: Hỏi "HOW" giấy tạm hoãn nghĩa vụ
+  steps:
+    - intent: ask_dang_ky_giay_xac_nhan
+    - slot_was_set:
+        - giayxacnhan: "GiayTamHoanNghiaVu"
+        - ask: "how"
+    - action: action_giay_xac_nhan
+- story: Hỏi "WHERE" giấy vay vốn
+  steps:
+    - intent: ask_dang_ky_giay_xac_nhan
+    - slot_was_set:
+        - giayxacnhan: "GiayVayVon"
+        - ask: "where"
+    - action: action_giay_xac_nhan
+- story: Hỏi "HOW" giấy vay vốn
+  steps:
+    - intent: ask_dang_ky_giay_xac_nhan
+    - slot_was_set:
+        - giayxacnhan: "GiayVayVon"
+        - ask: "how"
+    - action: action_giay_xac_nhan
+
+
+- story: Hỏi thông tin, email , sdt , dia diem khoa
+  steps:
+    - intent: ask_thongtin_khoa_phong_ban
+    - slot_was_set:
+        - ask : "email"
+        - khoa_phong: 
+    - action: action_thong_tin_khoa

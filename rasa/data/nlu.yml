@@ -1,0 +1,125 @@
+version: "3.1"
+
+nlu:
+
+- synonym: phone
+  examples: |
+    - sdt -> số điện thoại
+    - sđt -> số điện thoại
+    - số máy -> số điện thoại
+    - số máy bàn -> số điện thoại
+    - số máy liên hệ -> số điện thoại
+    - số máy di động -> số điện thoại
+    - số điện thoại liên hệ -> số điện thoại
+    - số liên hệ -> số điện thoại
+    - số liên lạc -> số điện thoại
+    - số máy liên lạc -> số điện thoại
+    - số đt -> số điện thoại
+    - so dien thoai -> số điện thoại
+    - so dt -> số điện thoại
+    - số di dộng -> số điện thoại
+    - số điện thoại di động -> số điện thoại
+    - số dt di dong -> số điện thoại
+    - so dt -> số điện thoại
+    - so may -> số điện thoại
+    - số dthoai -> số điện thoại
+    - so dthoai -> số điện thoại
+    - dien thoai lien he -> số điện thoại
+    - điện thoại -> số điện thoại
+    - dt -> số điện thoại
+    - dien thoai -> số điện thoại
+
+- synonym: khoa_phong
+  examples: |
+    - rhm -> răng hàm mặt
+    - răng hm -> răng hàm mặt
+    - rang ham mat -> răng hàm mặt
+    - rang hm -> răng hàm mặt
+    - HLKN -> huấn luyện kỹ năng
+    - hlkn -> huấn luyện kỹ năng
+    - huan luyen ky nang -> huấn luyện kỹ năng
+    - huan luyen kn -> huấn luyện kỹ năng
+    - huan luyen knang -> huấn luyện kỹ năng
+    - hl ky nang -> huấn luyện kỹ năng
+    - hluyen kn -> huấn luyện kỹ năng
+    - ctsv -> công tác sinh viên
+    - cong tac sinh vien -> công tác sinh viên
+    - ctac svien -> công tác sinh viên
+    - cong tac sv -> công tác sinh viên
+    - cong tac svien -> công tác sinh viên
+    - ctac sinh vien -> công tác sinh viên
+
+- intent: ask_dang_ky_giay_xac_nhan
+  examples: |
+    - [đăng ký]{"entity":"ask", "role":"how"} giấy vay vốn
+    - [chỗ nào]{"entity":"ask", "role":"where"} [đăng ký]{"entity":"ask", "role":"how"} giấy [tạm hoãn nghĩa vụ]{"entity":"giayxacnhan", "role":"GiayTamHoanNghiaVu"}
+    - [nơi nào]{"entity":"ask", "role":"where"} cấp [giấy tạm hoãn nghĩa vụ quân sự]{"entity":"giayxacnhan", "role":"GiayTamHoanNghiaVu"}
+    - tôi cần xin [giấy tạm hoãn nghĩa vụ quân sự]{"entity":"giayxacnhan", "role":"GiayTamHoanNghiaVu"} [ở đâu]{"entity":"ask", "role":"where"}
+    - [địa điểm]{"entity":"ask", "role":"where"} để làm thủ tục [xin hoãn nghĩa vụ quân sự]{"entity":"giayxacnhan", "role":"GiayTamHoanNghiaVu"} là [ở đâu]{"entity":"ask", "role":"where"}
+    - xin [giấy tạm hoãn nghĩa vụ quân sự]{"entity":"giayxacnhan", "role":"GiayTamHoanNghiaVu"} [ở đâu]{"entity":"ask", "role":"where"}
+    - để xin [hoãn nghĩa vụ quân sự]{"entity":"giayxacnhan", "role":"GiayTamHoanNghiaVu"}, tôi cần [đến đâu]{"entity":"ask", "role":"where"}
+    - xin [giấy tạm hoãn nghĩa vụ quân sự]{"entity":"giayxacnhan", "role":"GiayTamHoanNghiaVu"} [tại đâu]{"entity":"ask", "role":"where"}
+    - [cơ quan nào cấp]{"entity":"ask", "role":"where"} [giấy tạm hoãn nghĩa vụ quân sự]{"entity":"giayxacnhan", "role":"GiayTamHoanNghiaVu"}
+    - tôi cần [đến đâu]{"entity":"ask", "role":"where"} để xin [giấy tạm hoãn nghĩa vụ quân sự]{"entity":"giayxacnhan", "role":"GiayTamHoanNghiaVu"}
+    - [đi đâu]{"entity":"ask", "role":"where"} để xin [giấy tạm hoãn nghĩa vụ quân sự]{"entity":"giayxacnhan", "role":"GiayTamHoanNghiaVu"}
+    - [làm thế nào]{"entity":"ask", "role":"how"} để xin [giấy tạm hoãn nghĩa vụ quân sự]{"entity":"giayxacnhan", "role":"GiayTamHoanNghiaVu"}
+    - [thủ tục]{"entity":"ask", "role":"how"} xin [giấy tạm hoãn nghĩa vụ quân sự]{"entity":"giayxacnhan", "role":"GiayTamHoanNghiaVu"}
+    - [làm sao]{"entity":"ask", "role":"how"} để xin [giấy tạm hoãn tham gia nghĩa vụ quân sự]{"entity":"giayxacnhan", "role":"GiayTamHoanNghiaVu"}
+    - [thủ tục]{"entity":"ask", "role":"how"} để xin giấy tạm hoãn nghĩa vụ quân sự là gì
+    - [làm cách nào]{"entity":"ask", "role":"how"} để nộp đơn xin tạm hoãn nghĩa vụ quân sự
+    - xin [giấy tạm hoãn nghĩa vụ quân sự]{"entity":"giayxacnhan", "role":"GiayTamHoanNghiaVu"} [như thế nào]{"entity":"ask", "role":"how"}
+    - xin [giấy tạm hoãn nghĩa vụ]{"entity":"giayxacnhan", "role":"GiayTamHoanNghiaVu"} [thế nào]{"entity":"ask", "role":"how"}
+    - [chỉ tôi cách]{"entity":"ask", "role":"how"} xin [giấy tạm hoãn nghĩa vụ]{"entity":"giayxacnhan", "role":"GiayTamHoanNghiaVu"}
+    - [làm thế nào]{"entity":"ask", "role":"how"} để xin [giấy xác nhận vay vốn]{"entity":"giayxacnhan", "role":"GiayVayVon"}
+    - tôi muốn xin [giấy xác nhận vay vốn]{"entity":"giayxacnhan", "role":"GiayVayVon"}, xin hỏi thủ tục như thế nào
+    - vui lòng [hướng dẫn]{"entity":"ask", "role":"how"} tôi [cách xin]{"entity":"ask", "role":"how"} [giấy xác nhận vay vốn]{"entity":"giayxacnhan", "role":"GiayVayVon"}.
+    - cho tôi biết [địa chỉ]{"entity":"ask", "role":"where"} để xin [giấy xác nhận vay vốn]{"entity":"giayxacnhan", "role":"GiayVayVon"}.
+    - ai có thể cung cấp [giấy xác nhận vay vốn]{"entity":"giayxacnhan", "role":"GiayVayVon"} cho tôi
+    - tôi cần xin [giấy xác nhận vay vốn]{"entity":"giayxacnhan", "role":"GiayVayVon"} để làm [thủ tục vay vốn]{"entity":"giayxacnhan","role":"GiayVayVon"}, xin hỏi [ở đâu]{"entity":"ask", "role":"where"} có thể làm
+    - có ai biết [nơi nào]{"entity":"ask", "role":"where"} cấp [giấy xác nhận vay vốn]{"entity":"giayxacnhan", "role":"GiayVayVon"} không
+    - vui lòng cho tôi thông tin về [nơi]{"entity":"ask", "role":"where"} xin [giấy xác nhận vay vốn]{"entity":"giayxacnhan", "role":"GiayVayVon"}.
+    - tôi muốn hỏi về [quy trình xin]{"entity":"ask", "role":"how"} [giấy xác nhận vay vốn]{"entity":"giayxacnhan", "role":"GiayVayVon"}.
+    - xin [giấy xác nhận vay vốn]{"entity":"giayxacnhan", "role":"GiayVayVon"} [tại đâu]{"entity":"ask", "role":"where"}
+
+#Hỏi thông tin chung khoa phòng ban
+- intent: ask_thongtin_khoa_phong_ban
+  examples: |
+    - tôi cần [thông tin liên hệ]{"entity":"ask", "role":"info"} của [khoa y]{"entity":"khoa_phong"}
+    - cho tôi xin [thông tin liên lạc]{"entity":"ask", "role":"info"} của khoa [răng hàm mặt]{"entity":"khoa_phong"}
+    - tôi muốn xin [thông tin]{"entity":"ask", "role":"info"} về phòng [công tác sinh viên]{"entity":"khoa_phong"}
+    - cho tôi cách [liên hệ]{"entity":"ask", "role":"info"} phòng [đào tạo đại học]{"entity":"khoa_phong"}
+    - cách [liên lạc]{"entity":"ask", "role":"info"} với phòng [đào tạo sau đại học]{"entity":"khoa_phong"}
+    - làm sao để [liên hệ]{"entity":"ask", "role":"info"} với [phòng hành chánh tổng hợp]{"entity":"khoa_phong"}
+    - cách [liên lạc]{"entity":"ask", "role":"info"} với phòng [NCKH-HTQT]{"entity":"khoa_phong"}
+    - [làm sao đến]{"entity":"ask", "role":"where"} phòng [quản trị thiết bị]{"entity":"khoa_phong"}
+    - tôi [cần tìm phòng]{"entity":"ask", "role":"where"} [tài chính kế toán]{"entity":"khoa_phong"}
+    - [vị trí]{"entity":"ask", "role":"where"} của phòng [tổ chức cán bộ]{"entity":"khoa_phong"}
+    - tôi cần biết vài [thông tin]{"entity":"ask", "role":"info"} về phòng [quản lý dự án xây dựng trường]
+    - làm sao [liên lạc]{"entity":"ask", "role":"info"} được với phòng [thông tin và truyền thông]
+    - tôi muốn [đến]{"entity":"ask", "role":"where"} phòng [đảm bảo chất lượng]{"entity":"khoa_phong"}
+    - phòng [khảo thí]{"entity":"khoa_phong"} ở [vị trí nào]{"entity":"ask", "role":"where"}
+    - phòng [thanh tra pháp chế]{"entity":"khoa_phong"} [liên hệ]{"entity":"ask", "role":"info"} [thế nào]{"entity":"ask", "role":"how"}
+    - làm sao để [liên hệ]{"entity":"ask", "role":"info"} với [trung tâm đào tạo theo nhu cầu xã hội]{"entity":"khoa_phong"}
+    - làm sao để [liên lạc]{"entity":"ask", "role":"info"} với [trung tâm dịch vụ và hỗ trợ sinh viên]{"entity":"khoa_phong"}
+    - [trung tâm dịch vụ và hỗ trợ sinh viên]{"entity":"khoa_phong"}
+    - đơn vị [huấn luyện kỹ năng]{"entity":"khoa_phong"}
+    - [thông tin]{"entity":"ask", "role":"info"} [bệnh viện]{"entity":"khoa_phong"}
+    - [đảng bộ cơ sở]{"entity":"khoa_phong"}
+    - [công đoàn]{"entity":"khoa_phong"}
+    - [đoàn thanh niên - hội sinh viên]{"entity":"khoa_phong"}
+    - [địa chỉ email]{"entity":"ask", "role":"email"} [khoa y]{"entity":"khoa_phong"} là gì
+    - [email]{"entity":"ask", "role":"email"} của khoa [răng hàm mặt]{"entity":"khoa_phong"}  là gì
+    - cho tôi xin [email]{"entity":"ask", "role":"email"} [khoa dược]{"entity":"khoa_phong"} 
+    - địa chỉ [email]{"entity":"ask", "role":"email"} của [khoa điều dưỡng - kỹ thuật y học]{"entity":"khoa_phong"} 
+    - tôi cần biết [hộp thư điện tử]{"entity":"ask", "role":"email"} của khoa [y tế công cộng]{"entity":"khoa_phong"} 
+    - cho tôi [địa chỉ email]{"entity":"ask", "role":"email"} của khoa [khoa học cơ bản]{"entity":"khoa_phong"} 
+    - tôi muốn biết [thư điện tử]{"entity":"ask", "role":"email"} của khoa [y học cổ truyền]{"entity":"khoa_phong"}
+    - tôi muốn biết [số điện thoại]{"entity":"ask", "role":"phone"} của [khoa y]{"entity":"khoa_phong"}
+    - cho tôi [số liên lạc]{"entity":"ask", "role":"phone"} của khoa [răng hàm mặt]{"entity":"khoa_phong"}
+    - tôi cần [số máy liên lạc]{"entity":"ask", "role":"phone"} của [khoa dược]{"entity":"khoa_phong"}
+    - khoa [điều dưỡng - kỹ thuật y học]{"entity":"khoa_phong"}  có [số máy]{"entity":"ask", "role":"phone"} là gì
+    - khoa [y tế công cộng]{"entity":"khoa_phong"} có [sdt]{"entity":"ask", "role":"phone"} là gì
+    - tôi muốn biết [số máy liên hệ]{"entity":"ask", "role":"phone"} của khoa [khoa học cơ bản]{"entity":"khoa_phong"} 
+    - [sdt]{"entity":"ask", "role":"phone"} của khoa [y học cổ truyền]{"entity":"khoa_phong"} 
+    - đường đi tới khoa y 
+    - cách nào đi đến khoa răng hàm mặt

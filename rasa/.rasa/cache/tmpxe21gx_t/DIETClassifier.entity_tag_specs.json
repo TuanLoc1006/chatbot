@@ -1,0 +1,62 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-ask_diadiem",
+      "2": "I-ask_diadiem",
+      "3": "L-ask_diadiem",
+      "4": "U-ask_diadiem",
+      "5": "B-diadiem",
+      "6": "I-diadiem",
+      "7": "L-diadiem",
+      "8": "U-diadiem",
+      "9": "B-giayxacnhan",
+      "10": "I-giayxacnhan",
+      "11": "L-giayxacnhan",
+      "12": "U-giayxacnhan",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-ask_diadiem": 1,
+      "I-ask_diadiem": 2,
+      "L-ask_diadiem": 3,
+      "U-ask_diadiem": 4,
+      "B-diadiem": 5,
+      "I-diadiem": 6,
+      "L-diadiem": 7,
+      "U-diadiem": 8,
+      "B-giayxacnhan": 9,
+      "I-giayxacnhan": 10,
+      "L-giayxacnhan": 11,
+      "U-giayxacnhan": 12,
+      "O": 0
+    },
+    "num_tags": 13
+  },
+  {
+    "tag_name": "role",
+    "ids_to_tags": {
+      "1": "B-giaytamhoannghiavu",
+      "2": "I-giaytamhoannghiavu",
+      "3": "L-giaytamhoannghiavu",
+      "4": "U-giaytamhoannghiavu",
+      "5": "B-giayvayvon",
+      "6": "I-giayvayvon",
+      "7": "L-giayvayvon",
+      "8": "U-giayvayvon",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-giaytamhoannghiavu": 1,
+      "I-giaytamhoannghiavu": 2,
+      "L-giaytamhoannghiavu": 3,
+      "U-giaytamhoannghiavu": 4,
+      "B-giayvayvon": 5,
+      "I-giayvayvon": 6,
+      "L-giayvayvon": 7,
+      "U-giayvayvon": 8,
+      "O": 0
+    },
+    "num_tags": 9
+  }
+]

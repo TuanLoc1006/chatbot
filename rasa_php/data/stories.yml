@@ -1,7 +1,6 @@
 version: "3.1"
 
 stories:
-
 - story: hỏi về thông tin trường
   steps:
   - intent: ask_thong_tin_truong
@@ -35,26 +34,6 @@ stories:
   - action: action_phuong_thuc_thanh_toan
 
 
-
-
-
-
-
-
-- story: Hỏi các chức năng bot làm được
-  steps:
-  - intent: ask_chuc_nang_bot_lam_duoc
-  - action: utter_cac_chuc_nang
-
-- story: Hỏi là đang chat với ai
-  steps:
-  - intent: bot_challenge
-  - action: utter_iamabot
-
-- story: xin chao ctump
-  steps:
-  - intent: greet
-  - action: utter_greet
 
 
 - story: hỏi về thông tin các khoa
@@ -120,29 +99,6 @@ stories:
   steps:
   - intent: ask_cap_lai_tai_khoan_quan_ly_dao_tao
   - action: action_cap_lai_tai_khoan_quan_ly_dao_tao
-
-
-
-
-- story: Hỏi các ngành đào tạo sau đại học
-  steps:
-  - intent: ask_nganh_dao_tao_sau_dai_hoc
-  - action: utter_dao_tao_sau_dai_hoc
-  - intent: ask_nganh_dao_tao_sau_dai_hoc_moi_nhat
-  - action: utter_ask_nganh_dao_tao_sau_dai_hoc_moi_nhat
-
-- story: Hỏi sinh quy trình tuyển sinh 
-  steps:
-  - intent: ask_quy_trinh_tuyen_sinh
-  - action: utter_quy_trinh_tuyen_sinh_dai_hoc
-  - intent: ask_trinh_do_hoc_van_tuyen_sinh
-  - action: utter_trinh_do_hoc_van_tuyen_sinh
-
-
-- story: Hỏi tuoi
-  steps:
-  - intent: how_old
-  - action: utter_old
 
 
 ############################################# PHUONG

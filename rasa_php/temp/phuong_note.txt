@@ -1,0 +1,6 @@
+hỏi về giấy xác nhận :
+    + hỏi quy trình xin giấy xác nhận
+    + hỏi địa điểm
+    + hỏi thời gian 
+    + nơi nhận giấy
+    + thời gian nhận giấy

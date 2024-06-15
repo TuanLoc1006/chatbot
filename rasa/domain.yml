@@ -1,0 +1,60 @@
+version: "3.1"
+
+intents:
+  - ask_dang_ky_giay_xac_nhan
+  - ask_thongtin_khoa_phong_ban
+
+entities:
+  - ask:
+      roles:
+      - how
+      - where
+      - email
+      - phone
+      - info
+  - giayxacnhan:
+      roles:
+      - GiayVayVon
+      - GiayTamHoanNghiaVu
+  - khoa_phong
+actions:
+  - action_giay_xac_nhan
+  - action_thong_tin_khoa
+
+slots:
+  giayxacnhan:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: giayxacnhan
+        role: GiayVayVon
+      - type: from_entity
+        entity: giayxacnhan
+        role: GiayTamHoanNghiaVu
+  khoa_phong:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: khoa_phong
+  ask:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: ask
+        role: how
+      - type: from_entity
+        entity: ask
+        role: where
+      - type: from_entity
+        entity: ask
+        role: email_khoa
+      - type: from_entity
+        entity: ask
+        role: phone
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

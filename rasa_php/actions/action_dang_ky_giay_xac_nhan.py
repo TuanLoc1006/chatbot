@@ -29,7 +29,13 @@ class actionDangKyGiayXacNhan(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         user_input = tracker.latest_message['text']
+        conffident = tracker.latest_message['intent'].get('confidence')
+        print('INTENT')
+        conffident = tracker.latest_message['intent']
         print(user_input)
-        dispatcher.utter_message(text=f"Xin giấy tạm hoãn nghĩa vụ")
+        print(conffident)
+        
+        #tất cả các giấy xác nhận
+        dispatcher.utter_message(text=f"SV điền thông tin và PHIẾU ĐĂNG KÝ ở phòng Công tác sinh viên.")
 
         return []
