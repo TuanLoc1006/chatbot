@@ -216,7 +216,7 @@ class ActionChatGPTFallback(Action):
             if 'choices' in response_data and len(response_data['choices']) > 0:
                 chatgpt_reply = response_data['choices'][0]['text'].strip()
             else:
-                chatgpt_reply = "action fallback: Xin lỗi tôi chưa hiểu ý bạn, bạn vui lòng mô tả chi tiết hơn được không?"
+                chatgpt_reply = "Xin lỗi tôi chưa hiểu ý bạn, bạn vui lòng mô tả chi tiết hơn được không hoặc bạn có thể bấm vào chat Admin để được tư vấn"
 
         except Exception as e:
             chatgpt_reply = f"action fallback: Đã xảy ra lỗi: {str(e)}"

@@ -42,3 +42,7 @@ action_cap_lai_email_sv: quên mật khẩu
 action_hoi_thong_tin_phong: thông tin
 Action ctdt: học bao lâu ra trường
 Action ctdt: Chào tên tôi đi
+Action ctdt: Chương trình đào tạo mỗi ngành
+action_email_khoa: Thông tin các khoa, phòng ban (địa điểm, email, số điện thoại)
+action_email_khoa: y đa khoa
+action_email_khoa: y đa khoa

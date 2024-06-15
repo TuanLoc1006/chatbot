@@ -138,6 +138,33 @@ app.delete('/api/delete_mess', async (req, res) => {
 });
 
 
+app.get('/api/latest_user_mess', async function (req, res) {
+    try {
+        const idAdmin ='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-';
+        
+        const user_data = await Message.find({
+            deleted: false,
+            senderID: { $ne: idAdmin }
+        }).sort({ timestamp: -1 });
+
+        const uniqueSenderIDs = new Set();
+
+        user_data.forEach(message => {
+            
+            if (!uniqueSenderIDs.has(message.senderID)) {
+                uniqueSenderIDs.add(message);
+            }
+            
+        });
+        res.status(200).json(Array.from(uniqueSenderIDs));
+    } catch (error) {
+        console.error('Lỗi:', error);
+        res.status(500).json({ success: false, error: error.message });
+    }
+});
+
+
+
 
 io.on('connection', (socket) => {
     //CLIENT
