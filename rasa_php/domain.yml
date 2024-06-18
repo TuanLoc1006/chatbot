@@ -29,7 +29,9 @@ actions:
   - action_cap_lai_thanh_phi_bao_hiem_tai_nan
   - action_cap_lai_tai_khoan_quan_ly_dao_tao
 
-  
+  - action_dang_bo
+  - action_dang_uy
+
 #################  PHUONG
   - action_dang_ky_giay_xac_nhan
   
@@ -79,8 +81,12 @@ intents:
   - ask_quy_trinh_tuyen_sinh
   - ask_trinh_do_hoc_van_tuyen_sinh
   
+  - ask_dang_uy_truong_ctump
+  - ask_dang_bo_truong_ctump
+
+  - ask_hoi_dong_truong
 ############################### PHUONG
-  - ask_dang_ky_giay_xac_nhan
+  # - ask_dang_ky_giay_xac_nhan
 
 
 entities:
@@ -109,6 +115,26 @@ entities:
   - cap_lai_thanh_phi_bao_hiem_tai_nan
   # - cap_lai_thanh_phi_bao_hiem_y_te
   - cap_lai_tai_khoan_quan_ly_dao_tao
+
+  - dang_bo:
+    roles:
+    - thông tin
+    - lịch sử
+    - ban chấp hành đảng bộ
+  - dang_uy:
+    roles:
+    - thông tin
+    - cơ cấu tổ chức
+    - bí thư
+    - ban thường vụ
+    - vị trí
+    - chức năng
+    - nhiện vụ
+  - hoi_dong_truong:
+    roles:
+    - chủ tịch
+    - thành viên
+
 # slots:
 #   location:
 #     type: text
@@ -146,13 +172,7 @@ entities:
 #       - phone
 
 responses: 
-  # utter_ask_email:
-  # - text: "vui lòng cung cấp email?"
-
-  # utter_ask_phone:
-  # - text: "vui lòng cung cấp số điện thoại?"
-  # utter_ask_tt_truong:
-  # - text: "</br>Trường Đại học Y Dược Cần Thơ là trường đại học Khoa học Sức khỏe hệ công lập trực thuộc Bộ Y tế duy nhất tại Đồng bằng sông Cửu Long, Việt Nam. </br>Trường Đại học Y Dược Cần Thơ cũng là một trong những trường đào tạo Y Dược tốt nhất Việt Nam nói chung và khu vực Đồng bằng Sông Cửu Long nói riêng."
+ 
   utter_old:
   - text: "i created by loc 3 month "
 
@@ -165,8 +185,6 @@ responses:
   - text: "Bye bye"
   - text: "hẹn gặp lại"
 
-  # utter_cap_lai_the_sinh_vien:
-  # - text: "Bạn vui lòng xem đầy đủ thông tin tại đây http://www.ctump.edu.vn/?tabid=3130&ndid=18047&key=Quy_trinh_cap_lai_the_sinh_vien"
 
   # utter_thong_tin_lien_he:
   # - text: "Bạn có muốn để lại thông tin liên hệ để admin giải đáp thắc mắc không"

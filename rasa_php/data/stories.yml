@@ -139,6 +139,16 @@ stories:
   - action: utter_trinh_do_hoc_van_tuyen_sinh
 
 
+- story: Hỏi về đảng bộ ctump
+  steps:
+  - intent: ask_dang_bo_truong_ctump
+  - action: action_dang_bo
+
+- story: Hỏi về đảng ủy ctump
+  steps:
+  - intent: ask_dang_uy_truong_ctump
+  - action: action_dang_uy
+  
 - story: Hỏi tuoi
   steps:
   - intent: how_old
@@ -147,7 +157,7 @@ stories:
 
 ############################################# PHUONG
 
-- story: hỏi về giấy xác nhận
-  steps:
-    - intent: ask_dang_ky_giay_xac_nhan
-    - action: action_dang_ky_giay_xac_nhan
+# - story: hỏi về giấy xác nhận
+#   steps:
+#     - intent: ask_dang_ky_giay_xac_nhan
+#     - action: action_dang_ky_giay_xac_nhan

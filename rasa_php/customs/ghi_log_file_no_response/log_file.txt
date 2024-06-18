@@ -46,3 +46,16 @@ Action ctdt: Chương trình đào tạo mỗi ngành
 action_email_khoa: Thông tin các khoa, phòng ban (địa điểm, email, số điện thoại)
 action_email_khoa: y đa khoa
 action_email_khoa: y đa khoa
+Action ctdt: thông tin đảng bộ
+Action học phí: lích sử
+action_email_phong: email
+action_hoi_thong_tin_phong: thông tin
+action_sdt_phòng: sdt phòng thong tin
+action_email_phong: dst phòng email
+action_sdt_phòng: số điện thoại phòng email là gì
+action_email_phong: còn email
+action_cap_lai_email_sv: ctsv ở đâu
+action_email_khoa: email đảng bộ là gì
+action_cap_lai_email_sv: email đảng ủy
+action_cap_lai_email_sv: cấp lại email sinh viên
+action_email_phong: cấp lại email

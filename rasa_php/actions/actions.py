@@ -16,81 +16,81 @@ from datetime import datetime
 logging.basicConfig(format='%(asctime)s - %(message)s',
                     datefmt='%d-%b-%y %H:%M:%S')
 
-from .action_thong_tin_truong import actionThongTinTruong
+# from .action_thong_tin_truong import actionThongTinTruong
 
-from .action_hoc_phi import actionHocPhi, actionHocPhiCoTangKhong, actionCacPhuongThucThanhToan, actionHoTroVayTienHoc
+# from .action_hoc_phi import actionHocPhi, actionHocPhiCoTangKhong, actionCacPhuongThucThanhToan, actionHoTroVayTienHoc
 
-from .action_ctdt_moi_nganh import actionNganh, actionChuongTrinhDaoTao
+# from .action_ctdt_moi_nganh import actionNganh, actionChuongTrinhDaoTao
 
-from .action_khoa_phong_ban import actionHoiThongTinKhoa, actionHoiDiaDiemKhoa, actionHoiEmailKhoa, actionHoiSoDienThoaiKhoa, actionHoiThongTinPhong, actionHoiDiaDiemPhong, actionHoiEmailPhong, actionHoiSoDienThoaiPhong
+# from .action_khoa_phong_ban import actionHoiThongTinKhoa, actionHoiDiaDiemKhoa, actionHoiEmailKhoa, actionHoiSoDienThoaiKhoa, actionHoiThongTinPhong, actionHoiDiaDiemPhong, actionHoiEmailPhong, actionHoiSoDienThoaiPhong
 
-from .action_dang_ky_giay_xac_nhan import actionDangKyGiayXacNhan
-
-
-# phuong
-handledb = handleDB()
-get_connect = handledb.get_connect()
-get_nganh = handledb.get_nganh()
+# from .action_dang_ky_giay_xac_nhan import actionDangKyGiayXacNhan
 
 
-"""  liên quan học phí    """
-
-class ActionHocPhi(actionHocPhi):
-    pass
-
-class ActionHocPhiCoTangKhong(actionHocPhiCoTangKhong):
-    pass
-
-class ActionCacPhuongThucThanhToan(actionCacPhuongThucThanhToan):
-    pass
-
-class ActionHoTroVayTienHoc(actionHoTroVayTienHoc):
-    pass
-
-"""  liên quan thông tin khoa   """
-
-class ActionHoiThongTinKhoa(actionHoiThongTinKhoa):
-    pass
-
-class ActionHoiDiaDiemKhoa(actionHoiDiaDiemKhoa):
-    pass
-
-class ActionHoiEmailKhoa(actionHoiEmailKhoa):
-    pass
-
-class ActionHoiSoDienThoaiKhoa(actionHoiSoDienThoaiKhoa):
-    pass
+# # phuong
+# handledb = handleDB()
+# get_connect = handledb.get_connect()
+# get_nganh = handledb.get_nganh()
 
 
-"""  liên quan thông tin phòng ban   """
+# """  liên quan học phí    """
 
-class ActionHoiThongTinPhong(actionHoiThongTinPhong):
-    pass
+# class ActionHocPhi(actionHocPhi):
+#     pass
 
-class ActionHoiDiaDiemPhong(actionHoiDiaDiemPhong):
-    pass
+# class ActionHocPhiCoTangKhong(actionHocPhiCoTangKhong):
+#     pass
 
-class ActionHoiEmailPhong(actionHoiEmailPhong):
-    pass
+# class ActionCacPhuongThucThanhToan(actionCacPhuongThucThanhToan):
+#     pass
 
-class ActionHoiSoDienThoaiPhong(actionHoiSoDienThoaiPhong):
-    pass
+# class ActionHoTroVayTienHoc(actionHoTroVayTienHoc):
+#     pass
+
+# """  liên quan thông tin khoa   """
+
+# class ActionHoiThongTinKhoa(actionHoiThongTinKhoa):
+#     pass
+
+# class ActionHoiDiaDiemKhoa(actionHoiDiaDiemKhoa):
+#     pass
+
+# class ActionHoiEmailKhoa(actionHoiEmailKhoa):
+#     pass
+
+# class ActionHoiSoDienThoaiKhoa(actionHoiSoDienThoaiKhoa):
+#     pass
 
 
+# """  liên quan thông tin phòng ban   """
 
-""" liên quan trường"""
+# class ActionHoiThongTinPhong(actionHoiThongTinPhong):
+#     pass
 
-class ActionThongTinTruong(actionThongTinTruong):
-    pass
+# class ActionHoiDiaDiemPhong(actionHoiDiaDiemPhong):
+#     pass
+
+# class ActionHoiEmailPhong(actionHoiEmailPhong):
+#     pass
+
+# class ActionHoiSoDienThoaiPhong(actionHoiSoDienThoaiPhong):
+#     pass
 
 
 
-"""  ngành và chương trình đào tạo  """
-class actionNganh(actionNganh):
-    pass
+# """ liên quan trường"""
 
-class actionChuongTrinhDaoTao(actionChuongTrinhDaoTao):
-    pass
+# class ActionThongTinTruong(actionThongTinTruong):
+#     pass
+
+
+
+# """  ngành và chương trình đào tạo  """
+# class actionNganh(actionNganh):
+#     pass
+
+# class actionChuongTrinhDaoTao(actionChuongTrinhDaoTao):
+#     pass
 
 
 
@@ -292,7 +292,7 @@ class ActionChatGPTFallback(Action):
 #             return {"email": None}
 
 
-"""   PHUONG  """
+# """   PHUONG  """
 
-class actionDangKyGiayXacNhan(actionDangKyGiayXacNhan):
-    pass
+# class actionDangKyGiayXacNhan(actionDangKyGiayXacNhan):
+#     pass

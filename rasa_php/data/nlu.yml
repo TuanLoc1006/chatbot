@@ -669,18 +669,61 @@ nlu:
     - trường có quy định gì về học vấn cho học sinh thi tuyển
     - yêu cầu tuyển sinh
 
+- intent: ask_dang_bo_truong_ctump
+  examples: |
+    - [đảng bộ]{"entity":"dang_bo", "role":"thông tin"} 
+    - thông tin cơ bản về [đảng bộ]{"entity":"dang_bo", "role":"thông tin"} 
+    - khái quát về [đảng bộ]{"entity":"dang_bo", "role":"thông tin"} 
+    - giới thiệu về [đảng bộ]{"entity":"dang_bo", "role":"thông tin"} 
+    - lịch sử hình thành và phát triển [đảng bộ]{"entity":"dang_bo", "role":"lịch sử"} 
+    - lịch sử về [đảng bộ]{"entity":"dang_bo", "role":"lịch sử"} 
+    - [ban chấp hành đảng bộ]{"entity":"dang_bo", "role":"ban chấp hành đảng bộ"} 
+    - dánh sách [ban chấp hành đảng bộ]{"entity":"dang_bo", "role":"ban chấp hành đảng bộ"} 
+    - các thành viên [ban chấp hành đảng bộ]{"entity":"dang_bo", "role":"ban chấp hành đảng bộ"} 
+
+
+
+- intent: ask_dang_uy_truong_ctump
+  examples: |
+    - thông tin [đảng ủy]{"entity":"dang_uy", "role":"thông tin"}
+    - mô tả [đảng ủy]{"entity":"dang_uy", "role":"thông tin"}
+    - giới thiệu [đảng ủy]{"entity":"dang_uy", "role":"thông tin"}
+    - [cơ cấu tổ chức]{"entity":"dang_uy", "role":"cơ cấu tổ chức"} của đảng ủy
+    - [cơ cấu tổ chức]{"entity":"dang_uy", "role":"cơ cấu tổ chức"} như thế nào
+    - các [bí thư]{"entity":"dang_uy", "role":"bí thư"} đảng ủy qua các thời kì
+    - liệt kê các [bí thư]{"entity":"dang_uy", "role":"bí thư"} của trường
+    - [ban thường vụ]{"entity":"dang_uy", "role":"ban thường vụ"} 
+    - danh sách [ban thường vụ]{"entity":"dang_uy", "role":"ban thường vụ"} 
+    - [vị trí]{"entity":"dang_uy", "role":"vị trí"} của đảng ủy ở đâu
+    - [địa điểm]{"entity":"dang_uy", "role":"vị trí"} của đảng ủy ở đâu
+    - [chức năng]{"entity":"dang_uy", "role":"chức năng"} của đảng ủy
+    - [Vai trò]{"entity":"dang_uy", "role":"chức năng"} của đảng ủy
+    - [trách nhiệm]{"entity":"dang_uy", "role":"nhiệm vụ"} của đảng ủy là gì
+    - [nhiệm vụ]{"entity":"dang_uy", "role":"nhiệm vụ"} của đảng ủy là gì
+
+
+
+
+- intent: ask_hoi_dong_truong
+  examples: |
+    - [chủ tịch]{"entity":"hoi_dong_truong", "role":"chủ tịch"} hội đồng trường là ai
+    - thông tin về [chủ tịch]{"entity":"hoi_dong_truong", "role":"chủ tịch"} hội đồng trường
+    - danh sách [thành viên]{"entity":"hoi_dong_truong", "role":"thành viên"} hội đồng trường là ai
+    - liệt kê các [thành viên]{"entity":"hoi_dong_truong", "role":"thành viên"} hội đồng trường
+    - danh sách các [thành viên]{"entity":"hoi_dong_truong", "role":"thành viên"} là ai
 ##########################################
 ######################### PHUONG
 
-- intent: ask_dang_ky_giay_xac_nhan
-  examples: |
-    - nơi nào cấp [giấy tạm hoãn nghĩa vụ quân sự](giaynghiavu)
-    - tôi cần xin [giấy tạm hoãn nghĩa vụ quân sự](giaynghiavu) ở đâu
-    - địa điểm để làm thủ tục [xin hoãn nghĩa vụ quân sự](giaynghiavu)là ở đâu
-    - làm thế nào để xin [giấy tạm hoãn nghĩa vụ quân sự](giaynghiavu)
-    - để xin hoãn nghĩa vụ quân sự, tôi cần đến đâu
-    - xin [giấy tạm hoãn nghĩa vụ quân sự](giaynghiavu) tại đâu
-    - cơ quan nào cấp [giấy tạm hoãn nghĩa vụ quân sự](giaynghiavu)
-    - tôi cần đến đâu để xin [giấy tạm hoãn nghĩa vụ quân sự](giaynghiavu)
-    - thủ tục xin [giấy tạm hoãn nghĩa vụ quân sự](giaynghiavu) cần làm ở đâu
-    - đi đâu để xin [giấy tạm hoãn nghĩa vụ quân sự](giaynghiavu)
+# - intent: ask_dang_ky_giay_xac_nhan
+#   examples: |
+#     - nơi nào cấp [giấy tạm hoãn nghĩa vụ quân sự](giaynghiavu)
+#     - tôi cần xin [giấy tạm hoãn nghĩa vụ quân sự](giaynghiavu) ở đâu
+#     - địa điểm để làm thủ tục [xin hoãn nghĩa vụ quân sự](giaynghiavu)là ở đâu
+#     - làm thế nào để xin [giấy tạm hoãn nghĩa vụ quân sự](giaynghiavu)
+#     - để xin hoãn nghĩa vụ quân sự, tôi cần đến đâu
+#     - xin [giấy tạm hoãn nghĩa vụ quân sự](giaynghiavu) tại đâu
+#     - cơ quan nào cấp [giấy tạm hoãn nghĩa vụ quân sự](giaynghiavu)
+#     - tôi cần đến đâu để xin [giấy tạm hoãn nghĩa vụ quân sự](giaynghiavu)
+#     - thủ tục xin [giấy tạm hoãn nghĩa vụ quân sự](giaynghiavu) cần làm ở đâu
+#     - đi đâu để xin [giấy tạm hoãn nghĩa vụ quân sự](giaynghiavu)
+
