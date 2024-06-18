@@ -1,29 +1,22 @@
-version: "3.1"
-
+version: '3.1'
 actions:
   - action_chatgpt_fallback
-
   - action_thong_tin_truong
-
   - action_thong_tin_nganh
   - action_chuong_trinh_dao_tao
-
   - action_hoc_phi
   - action_hoc_phi_co_tang_khong
   - action_phuong_thuc_thanh_toan
   - action_ho_tro_vay_tien_hoc
   - ask_hoc_phi_theo_loai_hinh_nganh
-
   - action_hoi_thong_tin_khoa
   - action_hoi_dia_diem_khoa
   - action_hoi_email_khoa
   - action_hoi_sdt_khoa
-  
   - action_hoi_thong_tin_phong
   - action_hoi_dia_diem_phong
   - action_hoi_email_phong
   - action_hoi_sdt_phong
-
   - action_cap_lai_the_sv
   - action_cap_lai_email_sv
   - action_cap_lai_thanh_phi_bao_hiem_tai_nan
@@ -34,51 +27,30 @@ actions:
 
 #################  PHUONG
   - action_dang_ky_giay_xac_nhan
-  
-  # - validate_simple_form
-  # - action_say_data
-  # - action_greet_user
-  # - action_nganh
 intents:
-  - how_old
-  # - deny
-  # - mood_great
-  # - mood_unhappy
-  # - inform
-  - greet
-  - goodbye
-  - bot_challenge
-  - ask_thong_tin_truong
-  - ask_thong_tin_nganh
+  - ask_cap_lai_bao_hiem_tai_nan
+  - ask_cap_lai_email_sinh_vien
+  - ask_cap_lai_tai_khoan_quan_ly_dao_tao
+  - ask_cap_lai_the_sinh_vien
+  - ask_chuc_nang_bot_lam_duoc
   - ask_chuong_trinh_dao_tao
-
+  - ask_dia_diem_cac_khoa
+  - ask_dia_diem_cac_phong_ban
+  - ask_email_cac_khoa
+  - ask_email_cac_phong_ban
+  - ask_ho_tro_vay_tien_hoc
   - ask_hoc_phi
   - ask_hoc_phi_co_tang_khong
-  - ask_phuong_thuc_thanh_toan
-  - ask_ho_tro_vay_tien_hoc
-
-  - ask_chuc_nang_bot_lam_duoc
-
-  - ask_thong_tin_cac_khoa
-  - ask_dia_diem_cac_khoa
-  - ask_email_cac_khoa
-  - ask_sdt_cac_khoa
-
-  - ask_thong_tin_cac_phong_ban
-  - ask_dia_diem_cac_phong_ban
-  - ask_email_cac_phong_ban
-  - ask_sdt_cac_phong_ban
-
-  
-  - ask_cap_lai_the_sinh_vien
-  - ask_cap_lai_email_sinh_vien
-  - ask_cap_lai_bao_hiem_tai_nan
-  - ask_cap_lai_tai_khoan_quan_ly_dao_tao
-
   - ask_nganh_dao_tao_sau_dai_hoc
   - ask_nganh_dao_tao_sau_dai_hoc_moi_nhat
-
+  - ask_phuong_thuc_thanh_toan
   - ask_quy_trinh_tuyen_sinh
+  - ask_sdt_cac_khoa
+  - ask_sdt_cac_phong_ban
+  - ask_thong_tin_cac_khoa
+  - ask_thong_tin_cac_phong_ban
+  - ask_thong_tin_nganh
+  - ask_thong_tin_truong
   - ask_trinh_do_hoc_van_tuyen_sinh
   
   - ask_dang_uy_truong_ctump
@@ -90,30 +62,24 @@ intents:
 
 
 entities:
+
   - hocphi
   - year
   - loai_hinh_dt
-  
-
   - nganh
   - university
-
   - infor_khoa
   - location_khoa
   - email_khoa
   - sdt_khoa
-
   - infor_phong
   - location_phong
   - email_phong
   - sdt_phong
- 
   - dao_tao_sau_dai_hoc
-
   - cap_lai_the_sv
   - cap_lai_email_sv
   - cap_lai_thanh_phi_bao_hiem_tai_nan
-  # - cap_lai_thanh_phi_bao_hiem_y_te
   - cap_lai_tai_khoan_quan_ly_dao_tao
 
   - dang_bo:
@@ -214,6 +180,11 @@ responses:
   utter_trinh_do_hoc_van_tuyen_sinh:
   - text: "Tốt nghiệp 12/12 và đạt điểm xét tuyển của chuyên ngành như B00 (Toán, Hóa, Sinh), A00(Toán, Lý, Hóa),..."
 
+  - diadiem
+  - giayxacnhan:
+      roles: 
+      - giayvayvon
+      - giaytamhoannghiavu
 
 session_config:
   session_expiration_time: 60

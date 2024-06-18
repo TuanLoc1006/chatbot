@@ -1,7 +1,6 @@
 version: "3.1"
 
 stories:
-
 - story: hỏi về thông tin trường
   steps:
   - intent: ask_thong_tin_truong
@@ -35,26 +34,6 @@ stories:
   - action: action_phuong_thuc_thanh_toan
 
 
-
-
-
-
-
-
-- story: Hỏi các chức năng bot làm được
-  steps:
-  - intent: ask_chuc_nang_bot_lam_duoc
-  - action: utter_cac_chuc_nang
-
-- story: Hỏi là đang chat với ai
-  steps:
-  - intent: bot_challenge
-  - action: utter_iamabot
-
-- story: xin chao ctump
-  steps:
-  - intent: greet
-  - action: utter_greet
 
 
 - story: hỏi về thông tin các khoa
@@ -157,7 +136,7 @@ stories:
 
 ############################################# PHUONG
 
-# - story: hỏi về giấy xác nhận
-#   steps:
-#     - intent: ask_dang_ky_giay_xac_nhan
-#     - action: action_dang_ky_giay_xac_nhan
+- story: hỏi về giấy xác nhận
+  steps:
+    - intent: ask_dang_ky_giay_xac_nhan
+    - action: action_dang_ky_giay_xac_nhan

@@ -129,6 +129,7 @@ class actionCapLaiBaohiemTaiNan(Action):
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         
         bhtn_entity = next(tracker.get_latest_entity_values('cap_lai_thanh_phi_bao_hiem_tai_nan'), None)
+        
         user_input = tracker.latest_message['text']
         print("người dùng hỏi về bảo hiểm tai nạn: " + user_input)
         logging.info("{}{}".format('Call action_cap_lai_thanh_phi_bao_hiem_tai_nan: ', bhtn_entity))
@@ -216,7 +217,7 @@ class ActionChatGPTFallback(Action):
             if 'choices' in response_data and len(response_data['choices']) > 0:
                 chatgpt_reply = response_data['choices'][0]['text'].strip()
             else:
-                chatgpt_reply = "Xin lỗi tôi chưa hiểu ý bạn, bạn vui lòng mô tả chi tiết hơn được không hoặc bạn có thể bấm vào chat Admin để được tư vấn"
+                chatgpt_reply = "action fallback: Xin lỗi tôi chưa hiểu ý bạn, bạn vui lòng mô tả chi tiết hơn được không?"
 
         except Exception as e:
             chatgpt_reply = f"action fallback: Đã xảy ra lỗi: {str(e)}"

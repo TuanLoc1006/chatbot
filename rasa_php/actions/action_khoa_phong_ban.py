@@ -33,7 +33,6 @@ class actionHoiThongTinKhoa(Action):
         infor_khoa = next(tracker.get_latest_entity_values('infor_khoa'), None)
         user_input = tracker.latest_message['text']
         print("người dùng hỏi info khoa: " + user_input)
-        logging.info("{}{}".format('Call action_hoi_thong_tin_khoa: ', infor_khoa))
 
         if infor_khoa: 
             try:
@@ -324,4 +323,3 @@ class actionHoiSoDienThoaiPhong(Action):
             file_writer = write_file()
             file_writer.get_ghi_log_file('action_sdt_phòng: '+user_input)
         return []
-    

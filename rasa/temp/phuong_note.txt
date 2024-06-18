@@ -1,0 +1,73 @@
+1 y khoa
+2 y học dự phòng 
+3 y học cổ truyền
+4 dược học
+5 điều dưỡng
+6 hộ sinh
+7 răng hàm mặt
+8 kỹ thuật xét nghiệm hình ảnh y học
+9 kỹ thuật hình ảnh y học
+10 y tế công cộng
+
+
+hỏi về giấy xác nhận : 
+    + cach xin giay
+    + hỏi quy trình xin giấy xác nhận
+    + hỏi địa điểm
+    + hỏi thời gian 
+    + nơi nhận giấy
+    + thời gian nhận giấy
+
+
+hỏi về các phòng ban: thông tin khoa
+    + sdt
+    + email lien hệ
+    + địa chỉ
+
+
+
+
+
+
+
+
+
+
+
+    - [email]{"entity":"ask", "role":"email_khoa"} [khoa y]{"entity":"khoa"}
+    - [email]{"entity":"ask", "role":"email_khoa"} của [khoa y]{"entity":"khoa"} là gì
+    - cho tôi xin địa chỉ [email]{"entity":"ask", "role":"email_khoa"} của [khoa dược]{"entity":"khoa"}
+    - [email]{"entity":"ask", "role":"email_khoa"} khoa [y tế công cộng]{"entity":"khoa"} là gì
+    - [khoa y học dự phòng]{"entity":"khoa"} có [email]{"entity":"ask", "role":"email_khoa"} không
+    - [email]{"entity":"ask", "role":"email_khoa"} khoa [kỹ thuật xét nghiệm hình ảnh y học](email_khoa) là gì
+    - tôi cần [email]{"entity":"ask", "role":"email_khoa"} của [khoa điều dưỡng](email_khoa)
+    - [email]{"entity":"ask", "role":"email_khoa"} [khoa răng hàm mặt]{"entity":"khoa"} là gì
+    - địa chỉ [email]{"entity":"ask", "role":"email_khoa"} của khoa [y học cổ truyền]{"entity":"khoa"} là gì
+    - tôi muốn biết [email]{"entity":"ask", "role":"email_khoa"} của [khoa kỹ thuật hình ảnh]{"entity":"khoa"}
+    - [khoa khoa học cơ bản]{"entity":"khoa"} có [email]{"entity":"ask", "role":"email_khoa"} không
+    - địa chỉ [email]{"entity":"ask", "role":"email_khoa"} của [khoa kỹ thuật hình ảnh y học]{"entity":"khoa"} là gì
+    - [địa điểm]{"entity":"ask", "role":"where"} của khoa [y khoa]{"entity":"khoa"} [ở đâu]{"entity":"ask", "role":"where"}
+    - khoa [y học dự phòng]{"entity":"khoa"} của trường nằm [chỗ nào]{"entity":"ask", "role":"where"}
+    - tôi muốn biết [đường nào]{"entity":"ask", "role":"where"} tới khoa [y học cổ truyền]{"entity":"khoa"}
+    - tôi cần [tìm]{"entity":"ask", "role":"where"} [đường đi]{"entity":"ask", "role":"where"} đến khoa [dược học]{"entity":"khoa"}
+    - cho tôi [địa chỉ]{"entity":"ask", "role":"where"} khoa [kỹ thuật xét nghiệm hình ảnh y học]{"entity":"khoa"}
+    - khoa [kỹ thuật hình ảnh y học]{"entity":"khoa"} ở [nơi nào]{"entity":"ask", "role":"where"}
+    - khoa [y tế công cộng]{"entity":"khoa"} ở [tòa nhà nào]{"entity":"ask", "role":"where"}
+    - khoa [răng hàm mặt]{"entity":"khoa"} ở [khu vực nào]{"entity":"ask", "role":"where"}
+    - vị trí [khoa dược]{"entity":"khoa"} [ở đâu]{"entity":"ask", "role":"where"}
+    - khoa [răng hàm mặt]{"entity":"khoa"} ở [chỗ nào]{"entity":"ask", "role":"where"}
+    - khoa [y học cổ truyền]{"entity":"khoa"} [ở đâu]{"entity":"ask", "role":"where"} vậy
+    - chỉ tôi [đường đến]{"entity":"ask", "role":"where"} khoa [khoa học cơ bản]{"entity":"khoa"}
+    - tôi cần biết [vị trí]{"entity":"ask", "role":"where"} của khoa [kỹ thuật hình ảnh y học]{"entity":"khoa"}
+    - tôi cần biết [địa chỉ]{"entity":"ask", "role":"where"} của khoa [điều dưỡng]{"entity":"khoa"}
+    - khoa [y tế công cộng]{"entity":"khoa"} ở [tòa nhà nào]{"entity":"ask", "role":"where"}
+    - cho tôi xin [địa chỉ]{"entity":"ask", "role":"where"} của khoa [y học dự phòng]{"entity":"khoa"}
+    - chỉ tôi [đường tới]{"entity":"ask", "role":"where"} khoa y [kỹ thuật hình ảnh y học]{"entity":"khoa"}
+    - [hướng nào]{"entity":"ask", "role":"where"} đi tới khoa [y khoa]{"entity":"khoa"}
+    - [số điện thoại]{"entity":"ask", "role":"phone"} của khoa [y khoa]{"entity":"khoa"}
+    - [sdt]{"entity":"ask", "role":"phone"} của khoa [y học dự phòng]{"entity":"khoa"} là gì
+    - [thông tin liên lạc]{"entity":"ask", "role":"phone"} của khoa [dược học]{"entity":"khoa"}
+    - cho tôi xin [số liên hệ]{"entity":"ask", "role":"phone"} của khoa [điều dưỡng]{"entity":"khoa"}
+    - [số di động]{"entity":"ask", "role":"phone"} của khoa [răng hàm mặt]{"entity":"khoa"}
+    - [số máy]{"entity":"ask", "role":"phone"} của khoa [kỹ thuật hình ảnh y học]{"entity":"khoa"}
+    - [số máy bàn]{"entity":"ask", "role":"phone"} của [y tế công cộng]{"entity":"khoa"} là gì

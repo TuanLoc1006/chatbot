@@ -1,0 +1,54 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-diadiem",
+      "2": "I-diadiem",
+      "3": "L-diadiem",
+      "4": "U-diadiem",
+      "5": "B-giayxacnhan",
+      "6": "I-giayxacnhan",
+      "7": "L-giayxacnhan",
+      "8": "U-giayxacnhan",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-diadiem": 1,
+      "I-diadiem": 2,
+      "L-diadiem": 3,
+      "U-diadiem": 4,
+      "B-giayxacnhan": 5,
+      "I-giayxacnhan": 6,
+      "L-giayxacnhan": 7,
+      "U-giayxacnhan": 8,
+      "O": 0
+    },
+    "num_tags": 9
+  },
+  {
+    "tag_name": "role",
+    "ids_to_tags": {
+      "1": "B-giaytamhoannghiavu",
+      "2": "I-giaytamhoannghiavu",
+      "3": "L-giaytamhoannghiavu",
+      "4": "U-giaytamhoannghiavu",
+      "5": "B-giayvayvon",
+      "6": "I-giayvayvon",
+      "7": "L-giayvayvon",
+      "8": "U-giayvayvon",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-giaytamhoannghiavu": 1,
+      "I-giaytamhoannghiavu": 2,
+      "L-giaytamhoannghiavu": 3,
+      "U-giaytamhoannghiavu": 4,
+      "B-giayvayvon": 5,
+      "I-giayvayvon": 6,
+      "L-giayvayvon": 7,
+      "U-giayvayvon": 8,
+      "O": 0
+    },
+    "num_tags": 9
+  }
+]
