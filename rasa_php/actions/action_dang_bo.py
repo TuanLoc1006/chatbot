@@ -92,11 +92,32 @@ class ActionDangUy(Action):
 
 
 
-# Đ/c Trần Viết An
-# Đ/c Trần Trương Ngọc Bích
-# Đ/c Trần Thanh Hùng
-# Đ/c Trần T. Thanh Hương
-# Đ/c Lê Minh Hữu
-# Đ/c Phạm Hoàng Khánh
-# Đ/c Trương Nhật Khuê
-# Đ/c Lê Văn Minh
+class ActionLanhDaoDangDoanThe(Action):
+    def name(self):
+        return "action_lanh_dao_dang_doan_the"
+    
+    def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        # Lấy entities từ câu chat của người dùng
+        entities = tracker.latest_message.get('entities', [])
+        print(f"Entities từ input: {entities}")
+        
+        # Tạo dictionary ánh xạ các role với thông điệp tương ứng
+        role_messages = {
+            'lãnh đạo': "</br>PGS.TS. BS. Nguyễn Minh Phương, Bí thư Đảng ủy, Email: nmphuong@ctump.edu.vn</br>TS. BS. Trần Thanh Hùng, Chủ tịch công đoàn Trường, Email: tthung@ctump.edu.vn</br>TS. BS. Phạm Hoàng Khánh, Bí thư Đoàn TNCSHCM Trường, Email: phkhanh@ctump.edu.vn</br>PGS.TS. BS. Lê Thành Tài, Chủ tịch Hội cựu chiến binh, Email: lttai@ctump.edu.vn</br>",
+            
+        }
+        
+        message = ""
+        
+        # Phân loại các role từ entities và thêm thông điệp tương ứng
+        for entity in entities:
+            role = entity.get('role')
+            if role in role_messages:
+                message += role_messages[role]
+        
+        if message:
+            dispatcher.utter_message(text=message)
+        else:
+            dispatcher.utter_message(text="Không tìm thấy thông tin phù hợp.")
+        
+        return []

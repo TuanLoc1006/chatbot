@@ -645,7 +645,6 @@ nlu:
     - [GS.TS Nguyễn Trung Kiên]{"entity":"ban_giam_hieu", "role":"hiệu trưởng"} của trường là ai
     - [hiệu trưởng]{"entity":"ban_giam_hieu", "role":"hiệu trưởng"} của trường là ai
     - thông tin về [hiệu trưởng]{"entity":"ban_giam_hieu", "role":"hiệu trưởng"} của trường
-
     - [ban giám hiệu trường]{"entity":"ban_giam_hieu", "role":"các thành viên"} của trường là ai
     - danh sách [ban giám hiệu trường]{"entity":"ban_giam_hieu", "role":"các thành viên"} 
     - danh sách các [phó hiệu trưởng]{"entity":"ban_giam_hieu", "role":"phó hiệu trưởng"} hội đồng trường là ai
@@ -656,7 +655,14 @@ nlu:
     - [PGS.TS Nguyễn Thành Tấn]{"entity":"ban_giam_hieu", "role":"phó hiệu trưởng"} 
 
 
-
+- intent: ask_lanh_dao_dang_doan_the_dvi_dao_tao
+  examples: |
+    - [lãnh đạo]{"entity":"department", "role":"lãnh đạo"} đảng và các đoàn thể
+    - ai [lãnh đạo]{"entity":"department", "role":"lãnh đạo"}  
+    - danh sách [lãnh đạo]{"entity":"department", "role":"lãnh đạo"}  
+    - các [lãnh đạo]{"entity":"department", "role":"lãnh đạo"} đoàn thể của  trường
+    - thông tin về [lãnh đạo]{"entity":"department", "role":"lãnh đạo"} đoàn thể của  trường
+    
 - synonym: info_type
   examples: |
     - tọa độ -> địa điểm
@@ -733,3 +739,4 @@ nlu:
     - tôi muốn biết [số máy liên hệ]{"entity":"info_type"} của khoa [khoa học cơ bản]{"entity":"department"} 
     - [số điện thoại]{"entity":"info_type"} của khoa [y học cổ truyền]{"entity":"department"} 
     - đường đi tới khoa y 
+

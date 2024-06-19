@@ -150,8 +150,10 @@ stories:
   - action: action_ban_giam_hieu
 
 
-
-
+- story: Hỏi về lãnh đạo đảng đoàn thể
+  steps:
+  - intent: ask_lanh_dao_dang_doan_the_dvi_dao_tao
+  - action: action_lanh_dao_dang_doan_the
 
 
 ############################################# PHUONG

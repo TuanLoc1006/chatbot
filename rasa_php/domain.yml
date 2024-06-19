@@ -27,6 +27,8 @@ actions:
   - action_dang_uy
   - action_hoi_dong_truong
   - action_ban_giam_hieu
+
+  - action_lanh_dao_dang_doan_the
 #################  PHUONG
   # - action_dang_ky_giay_xac_nhan
 intents:
@@ -64,6 +66,8 @@ intents:
 
   - ask_hoi_dong_truong
   - ask_ban_giam_hieu
+
+  - ask_lanh_dao_dang_doan_the_dvi_dao_tao
 ############################### PHUONG
   # - ask_dang_ky_giay_xac_nhan
 
@@ -88,7 +92,7 @@ entities:
   # - cap_lai_email_sv
   # - cap_lai_thanh_phi_bao_hiem_tai_nan
   # - cap_lai_tai_khoan_quan_ly_dao_tao
-
+  
   - dang_bo:
       roles:
       - thông tin
@@ -112,7 +116,9 @@ entities:
       - hiệu trưởng
       - phó hiệu trưởng
       - các thành viên
-  - department
+  - department:
+      roles:
+      - lãnh đạo
   - info_type
 slots:
   department:
