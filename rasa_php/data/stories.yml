@@ -1,122 +1,132 @@
 version: "3.1"
 
 stories:
-- story: hỏi về thông tin trường
+
+- story: chào hỏi
   steps:
-  - intent: ask_thong_tin_truong
-  - action: action_thong_tin_truong
+  - intent: greet
+  - action: utter_greet
+
+# - story: hỏi về thông tin trường
+#   steps:
+#   - intent: ask_thong_tin_truong
+#   - action: action_thong_tin_truong
   
-- story: hỏi về các ngành đào tạo
-  steps:
-  - intent: ask_thong_tin_nganh
-  - action: action_thong_tin_nganh
+# - story: hỏi về các ngành đào tạo
+#   steps:
+#   - intent: ask_thong_tin_nganh
+#   - action: action_thong_tin_nganh
   
 
-- story: Hỏi chương trình đào tạo mỗi ngành
+# - story: Hỏi chương trình đào tạo mỗi ngành
+#   steps:
+#   - intent: ask_chuong_trinh_dao_tao
+#   - action: action_chuong_trinh_dao_tao
+
+
+# - story: Hỏi về học phí đào tạo
+#   steps:
+#   - intent: ask_hoc_phi
+#   - action: action_hoc_phi
+
+# - story: Hỏi về học phí có tăng không
+#   steps:
+#   - intent: ask_hoc_phi_co_tang_khong
+#   - action: action_hoc_phi_co_tang_khong
+
+# - story: Hỏi về phương thức thanh toán học phí
+#   steps:
+#   - intent: ask_phuong_thuc_thanh_toan
+#   - action: action_phuong_thuc_thanh_toan
+
+
+
+
+# - story: hỏi về thông tin các khoa
+#   steps:
+#   - intent: ask_thong_tin_cac_khoa
+#   - action: action_hoi_thong_tin_khoa
+
+# - story: hỏi về địa điểm các khoa ở đâu
+#   steps:
+#   - intent: ask_dia_diem_cac_khoa
+#   - action: action_hoi_dia_diem_khoa
+
+# - story: hỏi về email các khoa 
+#   steps:
+#   - intent: ask_email_cac_khoa
+#   - action: action_hoi_email_khoa
+
+# - story: hỏi về số điện thoại các khoa 
+#   steps:
+#   - intent: ask_sdt_cac_khoa
+#   - action: action_hoi_sdt_khoa
+
+# - story: hỏi về thông tin các phòng ban
+#   steps:
+#   - intent: ask_thong_tin_cac_phong_ban
+#   - action: action_hoi_thong_tin_phong
+
+# - story: hỏi về địa điểm các phòng ở đâu
+#   steps:
+#   - intent: ask_dia_diem_cac_phong_ban
+#   - action: action_hoi_dia_diem_phong
+
+# - story: hỏi về email các phòng ban
+#   steps:
+#   - intent: ask_email_cac_phong_ban
+#   - action: action_hoi_email_phong
+
+# - story: hỏi về số điện thoại các phòng ban 
+#   steps:
+#   - intent: ask_sdt_cac_phong_ban
+#   - action: action_hoi_sdt_phong
+
+
+# - story: hỏi quy trình cấp lại thẻ sinh viên
+#   steps:
+#   - intent: ask_cap_lai_the_sinh_vien
+#   - action: action_cap_lai_the_sv
+
+
+# - story: hỏi quy trình cấp lại email sinh viên
+#   steps:
+#   - intent: ask_cap_lai_email_sinh_vien
+#   - action: action_cap_lai_email_sv
+
+
+# - story: hỏi quy trình cấp lại thanh phí bảo hiểm tai nạn
+#   steps:
+#   - intent: ask_cap_lai_bao_hiem_tai_nan
+#   - action: action_cap_lai_thanh_phi_bao_hiem_tai_nan
+
+
+# - story: hỏi quy trình cấp lại tài khoản quản lý đào tạo
+#   steps:
+#   - intent: ask_cap_lai_tai_khoan_quan_ly_dao_tao
+#   - action: action_cap_lai_tai_khoan_quan_ly_dao_tao
+
+
+
+
+# - story: Hỏi các ngành đào tạo sau đại học
+#   steps:
+#   - intent: ask_nganh_dao_tao_sau_dai_hoc
+#   - action: utter_dao_tao_sau_dai_hoc
+#   - intent: ask_nganh_dao_tao_sau_dai_hoc_moi_nhat
+#   - action: utter_ask_nganh_dao_tao_sau_dai_hoc_moi_nhat
+
+# - story: Hỏi sinh quy trình tuyển sinh 
+#   steps:
+#   - intent: ask_quy_trinh_tuyen_sinh
+#   - action: utter_quy_trinh_tuyen_sinh_dai_hoc
+#   - intent: ask_trinh_do_hoc_van_tuyen_sinh
+#   - action: utter_trinh_do_hoc_van_tuyen_sinh
+
+- story: Hỏi về thông tin khoa phòng ban
   steps:
-  - intent: ask_chuong_trinh_dao_tao
-  - action: action_chuong_trinh_dao_tao
-
-
-- story: Hỏi về học phí đào tạo
-  steps:
-  - intent: ask_hoc_phi
-  - action: action_hoc_phi
-
-- story: Hỏi về học phí có tăng không
-  steps:
-  - intent: ask_hoc_phi_co_tang_khong
-  - action: action_hoc_phi_co_tang_khong
-
-- story: Hỏi về phương thức thanh toán học phí
-  steps:
-  - intent: ask_phuong_thuc_thanh_toan
-  - action: action_phuong_thuc_thanh_toan
-
-
-
-
-- story: hỏi về thông tin các khoa
-  steps:
-  - intent: ask_thong_tin_cac_khoa
-  - action: action_hoi_thong_tin_khoa
-
-- story: hỏi về địa điểm các khoa ở đâu
-  steps:
-  - intent: ask_dia_diem_cac_khoa
-  - action: action_hoi_dia_diem_khoa
-
-- story: hỏi về email các khoa 
-  steps:
-  - intent: ask_email_cac_khoa
-  - action: action_hoi_email_khoa
-
-- story: hỏi về số điện thoại các khoa 
-  steps:
-  - intent: ask_sdt_cac_khoa
-  - action: action_hoi_sdt_khoa
-
-- story: hỏi về thông tin các phòng ban
-  steps:
-  - intent: ask_thong_tin_cac_phong_ban
-  - action: action_hoi_thong_tin_phong
-
-- story: hỏi về địa điểm các phòng ở đâu
-  steps:
-  - intent: ask_dia_diem_cac_phong_ban
-  - action: action_hoi_dia_diem_phong
-
-- story: hỏi về email các phòng ban
-  steps:
-  - intent: ask_email_cac_phong_ban
-  - action: action_hoi_email_phong
-
-- story: hỏi về số điện thoại các phòng ban 
-  steps:
-  - intent: ask_sdt_cac_phong_ban
-  - action: action_hoi_sdt_phong
-
-
-- story: hỏi quy trình cấp lại thẻ sinh viên
-  steps:
-  - intent: ask_cap_lai_the_sinh_vien
-  - action: action_cap_lai_the_sv
-
-
-- story: hỏi quy trình cấp lại email sinh viên
-  steps:
-  - intent: ask_cap_lai_email_sinh_vien
-  - action: action_cap_lai_email_sv
-
-
-- story: hỏi quy trình cấp lại thanh phí bảo hiểm tai nạn
-  steps:
-  - intent: ask_cap_lai_bao_hiem_tai_nan
-  - action: action_cap_lai_thanh_phi_bao_hiem_tai_nan
-
-
-- story: hỏi quy trình cấp lại tài khoản quản lý đào tạo
-  steps:
-  - intent: ask_cap_lai_tai_khoan_quan_ly_dao_tao
-  - action: action_cap_lai_tai_khoan_quan_ly_dao_tao
-
-
-
-
-- story: Hỏi các ngành đào tạo sau đại học
-  steps:
-  - intent: ask_nganh_dao_tao_sau_dai_hoc
-  - action: utter_dao_tao_sau_dai_hoc
-  - intent: ask_nganh_dao_tao_sau_dai_hoc_moi_nhat
-  - action: utter_ask_nganh_dao_tao_sau_dai_hoc_moi_nhat
-
-- story: Hỏi sinh quy trình tuyển sinh 
-  steps:
-  - intent: ask_quy_trinh_tuyen_sinh
-  - action: utter_quy_trinh_tuyen_sinh_dai_hoc
-  - intent: ask_trinh_do_hoc_van_tuyen_sinh
-  - action: utter_trinh_do_hoc_van_tuyen_sinh
-
+  - intent: ask_thong_tin_khoa_phong
+  - action: action_thong_tin_phong
 
 - story: Hỏi về đảng bộ ctump
   steps:
@@ -127,16 +137,26 @@ stories:
   steps:
   - intent: ask_dang_uy_truong_ctump
   - action: action_dang_uy
-  
-- story: Hỏi tuoi
+
+
+- story: Hỏi về hội đồng trường
   steps:
-  - intent: how_old
-  - action: utter_old
+  - intent: ask_hoi_dong_truong
+  - action: action_hoi_dong_truong
+
+- story: Hỏi về ban giám hiệu
+  steps:
+  - intent: ask_ban_giam_hieu
+  - action: action_ban_giam_hieu
+
+
+
+
 
 
 ############################################# PHUONG
 
-- story: hỏi về giấy xác nhận
-  steps:
-    - intent: ask_dang_ky_giay_xac_nhan
-    - action: action_dang_ky_giay_xac_nhan
+# - story: hỏi về giấy xác nhận
+#   steps:
+#     - intent: ask_dang_ky_giay_xac_nhan
+#     - action: action_dang_ky_giay_xac_nhan

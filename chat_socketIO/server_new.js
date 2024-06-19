@@ -207,14 +207,10 @@ io.on('connection', (socket) => {
             'senderName': msg.uName,
             'receiverID': adminID,
             'message': msg.message,
-<<<<<<< HEAD
-            'timestamp': vietnamTime
-=======
             'timestamp': vietnamTime,
             'deleted': false,
             'option_chat': msg.option_chat,
->>>>>>> 3093e3ac0b9d94afe47adcb22e0deb66903a5fbd
-            
+        
         }
 
         isbot = JSON.stringify(data.option_chat);

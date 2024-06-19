@@ -41,7 +41,7 @@ class ActionDangBo(Action):
         for entity in entities:
             role = entity.get('role')
             if role in role_messages:
-                message += role_messages[role]
+                message = role_messages[role]
         
         if message:
             dispatcher.utter_message(text=message)
