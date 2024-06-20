@@ -25,3 +25,8 @@ chay action.py
 rasa run actions
 
 php -S localhost:8000
+
+```````````````
+node server_new.js
+rasa shell
+rasa run actions
