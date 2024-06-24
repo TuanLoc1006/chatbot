@@ -117,6 +117,7 @@ entities:
       - sơ đồ tổ chức
   - ban_giam_hieu:
       roles:
+      - thông tin
       - hiệu trưởng
       - phó hiệu trưởng
       - các thành viên

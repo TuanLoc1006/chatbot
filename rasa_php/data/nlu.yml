@@ -602,16 +602,16 @@ nlu:
 - intent: ask_dang_bo_truong_ctump
   examples: |
     - [đảng bộ]{"entity":"dang_bo", "role":"thông tin"} [trường đại học y dược cần thơ]{"entity":"university"}
-    - thông tin cơ bản về [đảng bộ]{"entity":"dang_bo", "role":"thông tin"} 
-    - khái quát về [đảng bộ]{"entity":"dang_bo", "role":"thông tin"} 
-    - giới thiệu về [đảng bộ]{"entity":"dang_bo", "role":"thông tin"} 
+    - [thông tin cơ bản]{"entity":"dang_bo", "role":"thông tin"} về [đảng bộ]{"entity":"dang_bo"} 
+    - [khái quát]{"entity":"dang_bo", "role":"thông tin"} về [đảng bộ]{"entity":"dang_bo", "role":"thông tin"} 
+    - [giới thiệu]{"entity":"dang_bo", "role":"thông tin"} về [đảng bộ]{"entity":"dang_bo", "role":"thông tin"} 
     - [quá trình phát triển]{"entity":"dang_bo", "role":"lịch sử"} về [đảng bộ]{"entity":"dang_bo"} 
     - [lịch sử hình thành và phát triển]{"entity":"dang_bo", "role":"lịch sử"} [đảng bộ]{"entity":"dang_bo"} 
     - [lịch sử]{"entity":"dang_bo", "role":"lịch sử"}  về [đảng bộ]{"entity":"dang_bo"} 
     - [ban chấp hành đảng bộ]{"entity":"dang_bo", "role":"ban chấp hành đảng bộ"} 
     - dánh sách [ban chấp hành đảng bộ]{"entity":"dang_bo", "role":"ban chấp hành đảng bộ"} 
     - các thành viên [ban chấp hành đảng bộ]{"entity":"dang_bo", "role":"ban chấp hành đảng bộ"} 
-
+    
 
 - intent: ask_dang_uy_truong_ctump
   examples: |
@@ -647,6 +647,9 @@ nlu:
     - cho tôi xem [sơ đồ tổ chức]{"entity":"hoi_dong_truong", "role":"sơ đồ tổ chức"} của trường
 - intent: ask_ban_giam_hieu
   examples: |
+    - [thông tin lãnh đạo trường]{"entity":"ban_giam_hieu", "role":"thông tin"} 
+    - [lãnh đạo trường]{"entity":"ban_giam_hieu", "role":"thông tin"} là ai
+    - [ban giám hiệu]{"entity":"ban_giam_hieu", "role":"thông tin"} là ai 
     - [GS.TS Nguyễn Trung Kiên]{"entity":"ban_giam_hieu", "role":"hiệu trưởng"} của trường là ai
     - [hiệu trưởng]{"entity":"ban_giam_hieu", "role":"hiệu trưởng"} của trường là ai
     - thông tin về [hiệu trưởng]{"entity":"ban_giam_hieu", "role":"hiệu trưởng"} của trường

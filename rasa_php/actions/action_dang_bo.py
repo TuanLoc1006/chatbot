@@ -25,7 +25,7 @@ class ActionDangBo(Action):
     def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         # Lấy entities từ câu chat của người dùng
         entities = tracker.latest_message.get('entities', [])
-        print(f"Entities từ input: {entities}")
+        print(f"\nEntities từ input:\n {entities}")
         
         # Tạo dictionary ánh xạ các role với thông điệp tương ứng
         role_messages = {
@@ -58,7 +58,8 @@ class ActionDangUy(Action):
     def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         # Lấy entities từ câu chat của người dùng
         entities = tracker.latest_message.get('entities', [])
-        print(f"Entities từ input: {entities}")
+        print(f"\nEntities từ input:\n {entities}")
+        
         
         # Tạo dictionary ánh xạ các role với thông điệp tương ứng
         role_messages = {
@@ -101,7 +102,8 @@ class ActionLanhDaoDangDoanThe(Action):
         print("người dùng hỏi về lãnh đạo: " + user_input)
         # Lấy entities từ câu chat của người dùng
         entities = tracker.latest_message.get('entities', [])
-        print(f"Entities từ input: {entities}")
+        print(f"\nEntities từ input:\n {entities}")
+        
         
         # Tạo dictionary ánh xạ các role với thông điệp tương ứng
         role_messages = {
