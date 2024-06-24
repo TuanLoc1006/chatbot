@@ -1,0 +1,19 @@
+{
+  "lookup": {
+    "eJyLrq6NBQAEOAGx": "action_listen",
+    "eJyLrq7VUaguKEoti09MLsnMz7NSqIYw4vMSc1OtFKCcnMziktQ8oNrS4tQioJrMPCC3xEohvSg1taS2NhYA6dwbhQ==": "utter_greet",
+    "eJyLrq7VUaguKEoti09MLsnMz7NSqIYw4vMSc1OtFKCcnMziktQ8oNrS4tQioJrMPCC3xEohvSg1taSWgBmlJSWpRfEQpbhMiAUAQvc0lw==": "action_listen",
+    "eJyLrq7VUaguKEoti09MLsnMz7NSqIYw4vMSc1OtFKCcnMziktQ8oNrS4tQioJrMPCC3BChdnB1fkpGflx5fkpkXn52RnxhfAOLW1sYCAEC4I1M=": "action_thong_tin_phong",
+    "eJyLrq7VUaguKEoti09MLsnMz7NSqIYw4vMSc1OtFKCcnMziktQ8oNrS4tQioJrMPCC3BChdnB1fkpGflx5fkpkXn52RnxhfAOLWEmcsQitEFwnmxwIAdGxIqw==": "action_listen",
+    "eJwtitEJgDAMRFfpAE7gKiIh2GCDNZE29qd0d4P6cXDv7i19TKFfhRrgZqwyh/4VEDxpDj9krkbi7l2puMPiaH7XAzJKgojqkR2iooAlgtj4XQ11jPUBT3cotA==": "action_lanh_dao_dang_doan_the",
+    "eJydTVsKgCAQvIoH6AReJWJZcknJ1tDNH/HuLdVnH9HHwLyYGVsfTNszVcBZQmJr2k2AcSNrHhFDEWLtHoWydgKrFI3LChHZg8Ok4AVcQgbxBK6GyxVM/ePJ69D/0+kEMUFV+A==": "action_listen",
+    "eJyLrq7VUaguKEoti09MLsnMz7NSqIYw4vMSc1OtFKCcnMziktQ8oNrS4tQioJrMPCC3BChdnB2flJgXn56ZmBufkZlaWlsbCwBQMiBE": "action_ban_giam_hieu",
+    "eJyLrq7VUaguKEoti09MLsnMz7NSqIYw4vMSc1OtFKCcnMziktQ8oNrS4tQioJrMPCC3BChdnB2flJgXn56ZmBufkZlaWkuceah6iDE2FgDrp0GA": "action_listen",
+    "eJwtisEJgDAMAFfpAE7QVURCrEGCNi1t6qdkdwP6u+NunbaEWRs9gEm5SAzzAxDMFMMvN3cl8Xd0av6wuKrnfsGBcsJeQNsoTklHrmbbCz9QI1w=": "action_dang_bo",
+    "eJyLrq7VUaguKEoti09MLsnMz7NSqIYw4vMSc1OtFKCcnMziktQ8oNrS4tQioJrMPCC3BChdnB2fkpiXHp+UH19SVJoPZCWXlOYW1BJnLFQrKebGAgApoUVC": "action_listen",
+    "eJyLrq7VUaguKEoti09MLsnMz7NSqIYw4vMSc1OtFKCcnMziktQ8oNrS4tQioJrMPCC3BChdnB2fkZ8Zn5Kflx5fUlQKpGprYwGUViFR": "action_hoi_dong_truong",
+    "eJyLrq7VUaguKEoti09MLsnMz7NSqIYw4vMSc1OtFKCcnMziktQ8oNrS4tQioJrMPCC3BChdnB2fkZ8Zn5Kflx5fUlQKpGqJMxFdF3FGxwIAqWNEpw==": "action_listen",
+    "eJwtisEJgDAMAFfJAE7QVURCqEGKNi1tIkjp7gb0d8fdOuYCoza+kaKmIgHGByiUOcAvV+rK4q91bv4kcVXP/cSd5EB7UJsVp6iW65zbC0FQI3k=": "action_dang_uy",
+    "eJyLrq7VUaguKEoti09MLsnMz7NSqIYw4vMSc1OtFKCcnMziktQ8oNrS4tQioJrMPCC3BChdnB2fkpiXHl9aGV9SVJoPZCWXlOYW1BJnLFQrKebGAgA84kWZ": "action_listen"
+  }
+}

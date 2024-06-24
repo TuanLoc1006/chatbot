@@ -7,10 +7,6 @@ stories:
   - intent: greet
   - action: utter_greet
 
-# - story: hỏi về thông tin trường
-#   steps:
-#   - intent: ask_thong_tin_truong
-#   - action: action_thong_tin_truong
   
 # - story: hỏi về các ngành đào tạo
 #   steps:
@@ -156,6 +152,17 @@ stories:
   - action: action_lanh_dao_dang_doan_the
 
 
+- story: hỏi về thông tin trường
+  steps:
+  - intent: ask_thong_tin_truong
+  - action: action_thong_tin_truong
+
+- story: hỏi về thông tin trường
+  steps:
+  - intent: ask_sm_tn_gtcl_tlgd
+  - action: action_sm_tn_gtcl_tlgd
+  
+  
 ############################################# PHUONG
 
 # - story: hỏi về giấy xác nhận

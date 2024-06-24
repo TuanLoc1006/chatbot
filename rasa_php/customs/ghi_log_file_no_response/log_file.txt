@@ -62,3 +62,7 @@ action_email_phong: cấp lại email
 action_email_phong: email của hiệu trưởng
 action_email_phong: email của đảng là gì
 action_email_phong: email hiệu trưởng
+action_cap_lai_thanh_phi_bao_hiem_tai_nan: lãnh đạo trường
+action_cap_lai_thanh_phi_bao_hiem_tai_nan: lãnh đạo ctump
+action_cap_lai_thanh_phi_bao_hiem_tai_nan: lãnh đạo
+action_cap_lai_thanh_phi_bao_hiem_tai_nan: thông tin lãnh đạo trường

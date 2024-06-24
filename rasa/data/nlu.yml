@@ -81,7 +81,6 @@ nlu:
     - tôi muốn hỏi về [quy trình xin]{"entity":"ask", "role":"how"} [giấy xác nhận vay vốn]{"entity":"giayxacnhan", "role":"GiayVayVon"}.
     - xin [giấy xác nhận vay vốn]{"entity":"giayxacnhan", "role":"GiayVayVon"} [tại đâu]{"entity":"ask", "role":"where"}
 
-#Hỏi thông tin chung khoa phòng ban
 - intent: ask_thongtin_khoa_phong_ban
   examples: |
     - tôi cần [thông tin liên hệ]{"entity":"ask", "role":"info"} của [khoa y]{"entity":"khoa_phong"}
