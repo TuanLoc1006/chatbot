@@ -119,10 +119,13 @@ stories:
 #   - intent: ask_trinh_do_hoc_van_tuyen_sinh
 #   - action: utter_trinh_do_hoc_van_tuyen_sinh
 
-- story: Hỏi về thông tin khoa phòng ban
-  steps:
-  - intent: ask_thong_tin_khoa_phong
-  - action: action_thong_tin_phong
+
+
+
+# - story: Hỏi về thông tin khoa phòng ban
+#   steps:
+#   - intent: ask_thong_tin_khoa_phong
+#   - action: action_thong_tin_phong
 
 - story: Hỏi về đảng bộ ctump
   steps:
@@ -152,15 +155,15 @@ stories:
   - action: action_lanh_dao_dang_doan_the
 
 
-- story: hỏi về thông tin trường
-  steps:
-  - intent: ask_thong_tin_truong
-  - action: action_thong_tin_truong
+# - story: hỏi về thông tin trường
+#   steps:
+#   - intent: ask_thong_tin_truong
+#   - action: action_thong_tin_truong
 
-- story: hỏi về thông tin trường
-  steps:
-  - intent: ask_sm_tn_gtcl_tlgd
-  - action: action_sm_tn_gtcl_tlgd
+# - story: hỏi về thông tin trường
+#   steps:
+#   - intent: ask_sm_tn_gtcl_tlgd
+#   - action: action_sm_tn_gtcl_tlgd
   
   
 ############################################# PHUONG

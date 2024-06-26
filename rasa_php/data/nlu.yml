@@ -601,257 +601,333 @@ nlu:
 
 - intent: ask_dang_bo_truong_ctump
   examples: |
-    - [đảng bộ]{"entity":"dang_bo", "role":"thông tin"} [trường đại học y dược cần thơ]{"entity":"university"}
-    - [thông tin cơ bản]{"entity":"dang_bo", "role":"thông tin"} về [đảng bộ]{"entity":"dang_bo"} 
-    - [khái quát]{"entity":"dang_bo", "role":"thông tin"} về [đảng bộ]{"entity":"dang_bo", "role":"thông tin"} 
-    - [giới thiệu]{"entity":"dang_bo", "role":"thông tin"} về [đảng bộ]{"entity":"dang_bo", "role":"thông tin"} 
-    - [quá trình phát triển]{"entity":"dang_bo", "role":"lịch sử"} về [đảng bộ]{"entity":"dang_bo"} 
-    - [lịch sử hình thành và phát triển]{"entity":"dang_bo", "role":"lịch sử"} [đảng bộ]{"entity":"dang_bo"} 
-    - [lịch sử]{"entity":"dang_bo", "role":"lịch sử"}  về [đảng bộ]{"entity":"dang_bo"} 
-    - [ban chấp hành đảng bộ]{"entity":"dang_bo", "role":"ban chấp hành đảng bộ"} 
-    - dánh sách [ban chấp hành đảng bộ]{"entity":"dang_bo", "role":"ban chấp hành đảng bộ"} 
-    - các thành viên [ban chấp hành đảng bộ]{"entity":"dang_bo", "role":"ban chấp hành đảng bộ"} 
-    
-
+    - [đảng bộ trường]{"entity":"dang_bo", "value":"thông tin"} 
+    - sơ lược về [đảng bộ trường]{"entity":"dang_bo", "value":"thông tin"} 
+    - [dang bo]{"entity":"dang_bo", "value":"thông tin"} 
+    - thong tin ve [dang bo]{"entity":"dang_bo", "value":"thông tin"} 
+    - liên hệ [đảng bộ]{"entity":"dang_bo", "value":"thông tin"} 
+    - làm sao lien he [đảng bộ]{"entity":"dang_bo", "value":"thông tin"} 
+    - thông tin cơ bản [đảng bộ]{"entity":"dang_bo", "value":"thông tin"} 
+    - khái quát [đảng bộ]{"entity":"dang_bo", "value":"thông tin"} 
+    - giới thiệu [dang bo]{"entity":"dang_bo", "value":"thông tin"} 
+    - [quá trình phát triển]{"entity":"dang_bo","value":"lịch sử"} của đảng
+    - [qtpt]{"entity":"dang_bo","value":"lịch sử"} của đảng
+    - [lịch sử]{"entity":"dang_bo", "value":"lịch sử"} đảng bộ
+    - [lich su]{"entity":"dang_bo", "value":"lịch sử"} đảng bộ
+    - [lich su dang]{"entity":"dang_bo", "value":"lịch sử"} 
+    - [lịch sử phát triển]{"entity":"dang_bo", "value":"lịch sử"} đảng bộ
+    - [lịch sử pt]{"entity":"dang_bo","value":"lịch sử"}  đảng bộ
+    - [lịch sử hình thành]{"entity":"dang_bo", "value":"lịch sử"}  đảng bộ
+    - đảng bộ [thành lập]{"entity":"dang_bo", "value":"lịch sử"} ngày nào
+    - [ban chấp hành đảng bộ]{"entity":"dang_bo", "value":"ban chấp hành đảng bộ"} 
+    - [ban chấp hành]{"entity":"dang_bo", "value":"ban chấp hành đảng bộ"} 
+    - dánh sách [ban chấp hành đảng bộ]{"entity":"dang_bo", "value":"ban chấp hành đảng bộ"} 
+    - các thành viên [ban chấp hành đảng bộ]{"entity":"dang_bo", "value":"ban chấp hành đảng bộ"} 
+    - [thành viên ban chấp hành]{"entity":"dang_bo", "value":"ban chấp hành đảng bộ"} 
+    - [tv bch]{"entity":"dang_bo", "value":"ban chấp hành đảng bộ"} 
+    - [ban chap hanh dang bo]{"entity":"dang_bo", "value":"ban chấp hành đảng bộ"} 
+    - [ban chap hanh]{"entity":"dang_bo", "value":"ban chấp hành đảng bộ"} 
+    - [ban chấp hành]{"entity":"dang_bo", "value":"ban chấp hành đảng bộ"} 
 - intent: ask_dang_uy_truong_ctump
   examples: |
-    - thông tin [đảng ủy]{"entity":"dang_uy", "role":"thông tin"}
-    - mô tả [đảng ủy]{"entity":"dang_uy", "role":"thông tin"}
-    - giới thiệu [đảng ủy]{"entity":"dang_uy", "role":"thông tin"}
-    - [cơ cấu tổ chức]{"entity":"dang_uy", "role":"cơ cấu tổ chức"} của đảng ủy
-    - [cơ cấu tổ chức]{"entity":"dang_uy", "role":"cơ cấu tổ chức"} như thế nào
-    - các [bí thư]{"entity":"dang_uy", "role":"bí thư"} đảng ủy qua các thời kì
-    - liệt kê các [bí thư]{"entity":"dang_uy", "role":"bí thư"} của trường
-    - [ban thường vụ]{"entity":"dang_uy", "role":"ban thường vụ"} 
-    - [ban thường vụ đảng ủy]{"entity":"dang_uy", "role":"ban thường vụ"} 
-    - danh sách [ban thường vụ]{"entity":"dang_uy", "role":"ban thường vụ"} 
-    - [vị trí]{"entity":"dang_uy", "role":"vị trí"} của đảng ủy ở đâu
-    - [địa điểm]{"entity":"dang_uy", "role":"vị trí"} của đảng ủy ở đâu
-    - [chức năng]{"entity":"dang_uy", "role":"chức năng"} của đảng ủy
-    - [Vai trò]{"entity":"dang_uy", "role":"chức năng"} của đảng ủy
-    - [trách nhiệm]{"entity":"dang_uy", "role":"nhiệm vụ"} của đảng ủy là gì
-    - [nhiệm vụ]{"entity":"dang_uy", "role":"nhiệm vụ"} của đảng ủy là gì
-
+    - mô tả [dang uy]{"entity":"dang_uy", "value":"thông tin"}
+    - thong tin [đảng ủy]{"entity":"dang_uy", "value":"thông tin"}
+    - [đảng ủy trường]{"entity":"dang_uy", "value":"thông tin"}
+    - thông tin [đảng ủy]{"entity":"dang_uy", "value":"thông tin"}
+    - mô tả [dang uy]{"entity":"dang_uy", "value":"thông tin"}
+    - sơ lược [dang uy]{"entity":"dang_uy", "value":"thông tin"} về
+    - giới thiệu [dang uy]{"entity":"dang_uy", "value":"thông tin"}
+    - [cơ cấu tổ chức]{"entity":"dang_uy", "value":"cơ cấu tổ chức"} của đảng
+    - [cctc dang]{"entity":"dang_uy", "value":"cơ cấu tổ chức"} của đảng ủy
+    - [co cau to chuc]{"entity":"dang_uy", "value":"cơ cấu tổ chức"} của đảng ủy
+    - [cơ cấu tc]{"entity":"dang_uy", "value":"cơ cấu tổ chức"} của đảng ủy
+    - [hình thức tổ chức]{"entity":"dang_uy", "value":"cơ cấu tổ chức"}  như thế nào
+    - [chi bộ cơ sở]{"entity":"dang_uy", "value":"chi bộ cơ sở"} của 
+    - [chi bộ cs]{"entity":"dang_uy", "value":"chi bộ cơ sở"} của đảng
+    - [cbcs]{"entity":"dang_uy", "value":"chi bộ cơ sở"} của đảng
+    - [chi bo co so]{"entity":"dang_uy", "value":"chi bộ cơ sở"} của đảng
+    - [đảng bộ cơ sở]{"entity":"dang_uy", "value":"đảng bộ cơ sở"} của đảng
+    - [đảng bộ cs]{"entity":"dang_uy", "value":"đảng bộ cơ sở"} của đảng
+    - [dbcs]{"entity":"dang_uy", "value":"đảng bộ cơ sở"} của đảng
+    - [dang bo co so]{"entity":"dang_uy", "value":"đảng bộ cơ sở"} của đảng
+    - các [bí thư]{"entity":"dang_uy", "value":"bí thư"}  qua các thời kì
+    - các [bi thư]{"entity":"dang_uy", "value":"bí thư"} của nhà trường
+    - danh sach [bi thu]{"entity":"dang_uy", "value":"bí thư"} la ai
+    - liệt kê các [bí thư]{"entity":"dang_uy", "value":"bí thư"} của trường
+    - những ai [bi thu]{"entity":"dang_uy", "value":"bí thư"} của trường
+    - đồng chí [Lê Thế Thự]{"entity":"dang_uy", "value":"bí thư"} của trường
+    - đồng chí [Phạm Văn Đại]{"entity":"dang_uy", "value":"bí thư"} của trường
+    - đồng chí [Phạm Văn Linh]{"entity":"dang_uy", "value":"bí thư"} của trường
+    - đồng chí [Nguyễn Trung Kiên]{"entity":"dang_uy", "value":"bí thư"} của trường
+    - đồng chí [Nguyễn Minh Phương]{"entity":"dang_uy", "value":"bí thư"} của trường
+    - [ban thường vụ]{"entity":"dang_uy", "value":"ban thường vụ"} 
+    - [ban tv]{"entity":"dang_uy", "value":"ban thường vụ"} 
+    - [ban thường vụ đảng ủy]{"entity":"dang_uy", "value":"ban thường vụ"} 
+    - [ban thuong vu]{"entity":"dang_uy", "value":"ban thường vụ"} đảng
+    - [btv]{"entity":"dang_uy", "value":"ban thường vụ"} 
+    - [btv đảng]{"entity":"dang_uy", "value":"ban thường vụ"} 
+    - [btv đảng ủy]{"entity":"dang_uy", "value":"ban thường vụ"} 
+    - danh sách [ban tv]{"entity":"dang_uy", "value":"ban thường vụ"} 
+    - [vị trí]{"entity":"dang_uy", "value":"vị trí"} của ở đâu
+    - [vi tri]{"entity":"dang_uy", "value":"vị trí"} của đảng ủy ở đâu
+    - [địa điểm]{"entity":"dang_uy", "value":"vị trí"} của đảng ủy ở đâu
+    - [dia diem]{"entity":"dang_uy", "value":"vị trí"} của đảng ủy ở đâu
+    - [chức năng]{"entity":"dang_uy", "value":"chức năng"} của đảng ủy
+    - [vai trò]{"entity":"dang_uy", "value":"chức năng"} của đảng ủy là gì
+    - [vai tro]{"entity":"dang_uy", "value":"chức năng"} của đảng ủy là gì
+    - [trách nhiệm]{"entity":"dang_uy", "value":"nhiệm vụ"} của đảng ủy là gì
+    - [nhiệm vụ]{"entity":"dang_uy", "value":"nhiệm vụ"} của đảng ủy là gì
+    - [nhiem vu]{"entity":"dang_uy", "value":"nhiệm vụ"} của đảng ủy là gì
+    - [nhiệm vụ đảng]{"entity":"dang_uy", "value":"nhiệm vụ"} là gì
+    - [nhiệm vụ]{"entity":"dang_uy", "value":"nhiệm vụ"} của đảng là gì
 
 - intent: ask_hoi_dong_truong
   examples: |
-    - [hội đồng trường]{"entity":"hoi_dong_truong", "role":"thông tin"}
-    - [thông tin]{"entity":"hoi_dong_truong", "role":"thông tin"} về [hội đồng trường]{"entity":"hoi_dong_truong"}
-    - [giới thiệu]{"entity":"hoi_dong_truong", "role":"thông tin"} về [hội đồng trường]{"entity":"hoi_dong_truong"}
-    - [chủ tịch]{"entity":"hoi_dong_truong", "role":"chủ tịch"} hội đồng trường là ai
-    - thông tin về [chủ tịch]{"entity":"hoi_dong_truong", "role":"chủ tịch"} hội đồng trường
-    - danh sách các [thành viên]{"entity":"hoi_dong_truong", "role":"thành viên"} hội đồng trường là ai
-    - liệt kê các [thành viên]{"entity":"hoi_dong_truong", "role":"thành viên"} hội đồng trường
-    - ai thuộc [thành viên]{"entity":"hoi_dong_truong", "role":"thành viên"} 
-    - [sơ đồ tổ chức]{"entity":"hoi_dong_truong", "role":"sơ đồ tổ chức"} của trường
-    - cho tôi xem [sơ đồ tổ chức]{"entity":"hoi_dong_truong", "role":"sơ đồ tổ chức"} của trường
+    - [hội đồng trường]{"entity":"hoi_dong_truong", "value":"thông tin"}
+    - thông tin [hoi dong truong]{"entity":"hoi_dong_truong", "value":"thông tin"} 
+    - giới thiệu về [hội đồng trường]{"entity":"hoi_dong_truong", "value":"thông tin"} 
+    - [chủ tịch]{"entity":"hoi_dong_truong", "value":"chủ tịch"} hội đồng trường là ai
+    - [chu tich]{"entity":"hoi_dong_truong", "value":"chủ tịch"} hội đồng trường là ai
+    - [chủ tich]{"entity":"hoi_dong_truong", "value":"chủ tịch"} hội đồng trường là ai
+    - thông tin về [chủ tịch]{"entity":"hoi_dong_truong", "value":"chủ tịch"} hội đồng trường
+    - danh sách các [thành viên]{"entity":"hoi_dong_truong", "value":"thành viên"} hội đồng trường là ai
+    - liệt kê các [thành viên]{"entity":"hoi_dong_truong", "value":"thành viên"} hội đồng trường
+    - liệt kê các [thanh vien]{"entity":"hoi_dong_truong", "value":"thành viên"} hội đồng trường
+    - liệt kê các [tv]{"entity":"hoi_dong_truong", "value":"thành viên"} hội đồng trường
+    - ai thuộc [thành viên]{"entity":"hoi_dong_truong", "value":"thành viên"} 
+    - [sơ đồ tổ chức]{"entity":"hoi_dong_truong", "value":"sơ đồ tổ chức"} của trường
+    - [so do to chuc]{"entity":"hoi_dong_truong", "value":"sơ đồ tổ chức"} của trường
+    - [sơ đồ tc]{"entity":"hoi_dong_truong", "value":"sơ đồ tổ chức"} của trường
+    - cho tôi xem [sơ đồ tổ chức]{"entity":"hoi_dong_truong", "value":"sơ đồ tổ chức"} của trường
+    - [thư ký hội đồng trường]{"entity":"hoi_dong_truong", "value":"thư ký"} của trường
+    - [thư ký trường]{"entity":"hoi_dong_truong", "value":"thư ký"} của trường
+    - [thu ky]{"entity":"hoi_dong_truong", "value":"thư ký"} của trường
+    - [thư ký]{"entity":"hoi_dong_truong", "value":"thư ký"} của trường
+    - [thư kí]{"entity":"hoi_dong_truong", "value":"thư ký"} của trường
+    - [TS. Võ Phạm Minh Thư]{"entity":"hoi_dong_truong", "value":"thư ký"} của trường
+    - [nhiệm vụ hội đồng trường]{"entity":"hoi_dong_truong", "value":"nhiệm vụ trường"} của trường
+    - [nhiem vu của hội đồng trường]{"entity":"hoi_dong_truong", "value":"nhiệm vụ"} của trường
+    - [nhiệm vụ]{"entity":"hoi_dong_truong", "value":"nhiệm vụ trường"} của trường
+    - [quyền hạn hội đồng trường]{"entity":"hoi_dong_truong", "value":"nhiệm vụ trường"} của trường
+    - [quyen han hội đồng trường]{"entity":"hoi_dong_truong", "value":"nhiệm vụ trường"} của trường
 - intent: ask_ban_giam_hieu
   examples: |
-    - [thông tin lãnh đạo trường]{"entity":"ban_giam_hieu", "role":"thông tin"} 
-    - [lãnh đạo trường]{"entity":"ban_giam_hieu", "role":"thông tin"} là ai
-    - [ban giám hiệu]{"entity":"ban_giam_hieu", "role":"thông tin"} là ai 
-    - [GS.TS Nguyễn Trung Kiên]{"entity":"ban_giam_hieu", "role":"hiệu trưởng"} của trường là ai
-    - [hiệu trưởng]{"entity":"ban_giam_hieu", "role":"hiệu trưởng"} của trường là ai
-    - thông tin về [hiệu trưởng]{"entity":"ban_giam_hieu", "role":"hiệu trưởng"} của trường
-    - [ban giám hiệu trường]{"entity":"ban_giam_hieu", "role":"các thành viên"} của trường là ai
-    - danh sách [ban giám hiệu trường]{"entity":"ban_giam_hieu", "role":"các thành viên"} 
-    - danh sách các [phó hiệu trưởng]{"entity":"ban_giam_hieu", "role":"phó hiệu trưởng"} hội đồng trường là ai
-    - liệt kê các [phó hiệu trưởng]{"entity":"ban_giam_hieu", "role":"phó hiệu trưởng"} hội đồng trường
-    - ai là [phó hiệu trưởng]{"entity":"ban_giam_hieu", "role":"phó hiệu trưởng"} 
-    - [PGS.TS Nguyễn Văn Lâm]{"entity":"ban_giam_hieu", "role":"phó hiệu trưởng"} 
-    - [PGS.TS Trần Viết An]{"entity":"ban_giam_hieu", "role":"phó hiệu trưởng"} 
-    - [PGS.TS Nguyễn Thành Tấn]{"entity":"ban_giam_hieu", "role":"phó hiệu trưởng"} 
+    - thông tin [lãnh đạo trường]{"entity":"ban_giam_hieu", "value":"thông tin"} 
+    - [lãnh đạo trường]{"entity":"ban_giam_hieu", "value":"thông tin"} là ai
+    - [lanh dao]{"entity":"ban_giam_hieu", "value":"thông tin"} là ai
+    - [lanh dao truong]{"entity":"ban_giam_hieu", "value":"thông tin"} là ai
+    - [ban giám hiệu]{"entity":"ban_giam_hieu", "value":"thông tin"} là ai
+    - [ban giam hieu]{"entity":"ban_giam_hieu", "value":"thông tin"} là ai 
+    - [bgh]{"entity":"ban_giam_hieu", "value":"thông tin"} là ai  
+    - [GS.TS Nguyễn Trung Kiên]{"entity":"ban_giam_hieu", "value":"hiệu trưởng"} của trường là ai
+    - [Nguyễn Trung Kiên]{"entity":"ban_giam_hieu", "value":"hiệu trưởng"} của trường là ai
+    - [hiệu trưởng]{"entity":"ban_giam_hieu", "value":"hiệu trưởng"} của trường là ai
+    - [hiệu trưởng trường]{"entity":"ban_giam_hieu", "value":"hiệu trưởng"} của trường là ai
+    - thông tin về [hiệu trưởng]{"entity":"ban_giam_hieu", "value":"hiệu trưởng"} của trường
+    - thông tin về [hieu truong]{"entity":"ban_giam_hieu", "value":"hiệu trưởng"} của trường
+    - [ban giám hiệu trường]{"entity":"ban_giam_hieu", "value":"các thành viên"} của trường là ai
+    - danh sách [ban giám hiệu trường]{"entity":"ban_giam_hieu", "value":"các thành viên"} 
+    - danh sách các [phó hiệu trưởng]{"entity":"ban_giam_hieu", "value":"phó hiệu trưởng"} hội đồng trường là ai
+    - liệt kê các [phó hiệu trưởng]{"entity":"ban_giam_hieu", "value":"phó hiệu trưởng"} hội đồng trường
+    - ai là [phó hiệu trưởng]{"entity":"ban_giam_hieu", "value":"phó hiệu trưởng"} 
+    - liệt kê các [pho hieu truong]{"entity":"ban_giam_hieu", "value":"phó hiệu trưởng"} hội đồng trường
+    - [PGS.TS Nguyễn Văn Lâm]{"entity":"ban_giam_hieu", "value":"phó hiệu trưởng"} 
+    - [PGS.TS Trần Viết An]{"entity":"ban_giam_hieu", "value":"phó hiệu trưởng"} 
+    - [PGS.TS Nguyễn Thành Tấn]{"entity":"ban_giam_hieu", "value":"phó hiệu trưởng"} 
+    - [Nguyễn Văn Lâm]{"entity":"ban_giam_hieu", "value":"phó hiệu trưởng"} 
+    - [Trần Viết An]{"entity":"ban_giam_hieu", "value":"phó hiệu trưởng"} 
+    - [Nguyễn Thành Tấn]{"entity":"ban_giam_hieu", "value":"phó hiệu trưởng"} 
 
 
 - intent: ask_lanh_dao_dang_doan_the_dvi_dao_tao
   examples: |
-    - [lanh dao]{"entity":"department", "role":"lãnh đạo"} [hội đồng trường]{"entity":"department", "role":"đảng và các đoàn thể"}
-    - [lãnh đạo]{"entity":"department", "role":"lãnh đạo"} [đảng và các đoàn thể]{"entity":"department", "role":"đảng và các đoàn thể"}
-    - ai là [lãnh đạo]{"entity":"department", "role":"lãnh đạo"} [đảng và các đoàn thể]{"entity":"department", "role":"đảng và các đoàn thể"} của trường
-    - danh sách [người đứng đầu]{"entity":"department", "role":"lãnh đạo"} [đảng và các đoàn thể]{"entity":"department", "role":"đảng và các đoàn thể"} của trường
-    - các [lãnh đạo]{"entity":"department", "role":"lãnh đạo"} của [khoa y]{"entity":"department","role":"khoa y"}
-    - các [lãnh đạo]{"entity":"department", "role":"lãnh đạo"} của [y khoa]{"entity":"department","role":"khoa y"}
-    - các [lãnh đạo]{"entity":"department", "role":"lãnh đạo"} của [khoa dược]{"entity":"department","role":"khoa dược"}
-    - các [lãnh đạo]{"entity":"department", "role":"lãnh đạo"} của [khoa duoc]{"entity":"department","role":"khoa dược"}
-    - các [lãnh đạo]{"entity":"department", "role":"lãnh đạo"} của [khoa răng hàm mặt]{"entity":"department","role":"khoa răng hàm mặt"}
-    - các [lãnh đạo]{"entity":"department", "role":"lãnh đạo"} của [khoa rhm]{"entity":"department","role":"khoa răng hàm mặt"}
-    - các [lãnh đạo]{"entity":"department", "role":"lãnh đạo"} của [khoa y tế công cộng]{"entity":"department","role":"khoa y tế công cộng"}
-    - các [lãnh đạo]{"entity":"department", "role":"lãnh đạo"} của [khoa ytcc]{"entity":"department","role":"khoa y tế công cộng"}
-    - các [lãnh đạo]{"entity":"department", "role":"lãnh đạo"} của [khoa điều dưỡng]{"entity":"department","role":"khoa điều dưỡng"}
-    - các [lãnh đạo]{"entity":"department", "role":"lãnh đạo"} của [khoa dieu duong]{"entity":"department","role":"khoa điều dưỡng"}
-    - các [lãnh đạo]{"entity":"department", "role":"lãnh đạo"} của [khoa kỹ thuật y học]{"entity":"department","role":"khoa kỹ thuật y học"}
-    - [khoa ktyh]{"entity":"department","role":"khoa kỹ thuật y học"} có những [ai quản lý]{"entity":"department", "role":"lãnh đạo"} của
-    - ai là [người chịu trách nhiệm]{"entity":"department", "role":"lãnh đạo"} của khoa [khoa học cơ bản]{"entity":"department","role":"khoa học cơ bản"}
-    - ai là [người chịu trách nhiệm]{"entity":"department", "role":"lãnh đạo"} của khoa [khcb]{"entity":"department","role":"khoa học cơ bản"}
-    - các [người đứng đầu]{"entity":"department", "role":"lãnh đạo"} của [khoa y học cổ truyền]{"entity":"department","role":"khoa y học cổ truyền"}
-    - các [người đứng đầu]{"entity":"department", "role":"lãnh đạo"} của [khoa yhct]{"entity":"department","role":"khoa y học cổ truyền"}
-    - thông tin [người phụ trách]{"entity":"department", "role":"lãnh đạo"} [phòng thông tin và truyền thông]{"entity":"department", "role":"phòng thông tin và truyền thông"} của trường
-    - thông tin [người phụ trách]{"entity":"department", "role":"lãnh đạo"} [phòng tttt]{"entity":"department", "role":"phòng thông tin và truyền thông"} của trường
-    - thông tin [người quản lý]{"entity":"department", "role":"lãnh đạo"} [phòng công tác sinh viên]{"entity":"department", "role":"phòng công tác sinh viên"} của trường
-    - thông tin [người chịu trách nhiệm]{"entity":"department", "role":"lãnh đạo"} [phòng ctsv]{"entity":"department", "role":"phòng công tác sinh viên"} của trường
-    - thông tin [người đứng đầu]{"entity":"department", "role":"lãnh đạo"} [phòng đảm bảo chất lượng]{"entity":"department", "role":"phòng đảm bảo chất lượng"} của trường
-    - thông tin [người đứng đầu]{"entity":"department", "role":"lãnh đạo"} [phòng đảm bảo cl]{"entity":"department", "role":"phòng đảm bảo chất lượng"} của trường
-    - thông tin [người đứng đầu]{"entity":"department", "role":"lãnh đạo"} [phòng đào tạo đại học]{"entity":"department", "role":"phòng đào tạo đại học"} của trường
-    - thông tin [người phụ trách]{"entity":"department", "role":"lãnh đạo"} [phòng đào tạo đh]{"entity":"department", "role":"phòng đào tạo đại học"} của trường
-    - thông tin [người phụ trách]{"entity":"department", "role":"lãnh đạo"} [phòng đào tạo sau đại học]{"entity":"department", "role":"phòng đào tạo sau đại học"} của trường
-    - thông tin [người chịu trách nhiệm]{"entity":"department", "role":"lãnh đạo"} [phòng đào tạo sđh]{"entity":"department", "role":"phòng đào tạo sau đại học"} của trường
-    - thông tin ai là [quản lý]{"entity":"department", "role":"lãnh đạo"} [phòng hành chính tổng hợp]{"entity":"department", "role":"phòng hành chính tổng hợp"} của trường
-    - thông tin [người quản lý]{"entity":"department", "role":"lãnh đạo"} [phòng hành chánh tổng hợp]{"entity":"department", "role":"phòng hành chính tổng hợp"} của trường
-    - các [cán bộ lãnh đạo]{"entity":"department", "role":"lãnh đạo"} [phòng khảo thí]{"entity":"department", "role":"phòng khảo thí"} của trường
-    - thông tin [lãnh đạo]{"entity":"department", "role":"lãnh đạo"} [phòng khảo thí]{"entity":"department", "role":"phòng khảo thí"} của trường
-    - thông tin [người đảm nhiệm]{"entity":"department", "role":"lãnh đạo"} [phòng khảo thí]{"entity":"department", "role":"phòng khảo thí"} của trường
-    - thông tin [người phụ trách]{"entity":"department", "role":"lãnh đạo"} [phòng khoa học công nghệ và quan hệ đối ngoại]{"entity":"department", "role":"phòng khoa học công nghệ và quan hệ đối ngoại"} của trường
-    - thông tin [người đứng đầu]{"entity":"department", "role":"lãnh đạo"} [phòng khcn và quan hệ đối ngoại]{"entity":"department", "role":"phòng khoa học công nghệ và quan hệ đối ngoại"} của trường
-    - thông tin [người đứng đầu]{"entity":"department", "role":"lãnh đạo"} [phòng quản trị thiết bị]{"entity":"department", "role":"phòng quản trị thiết bị"} của trường
-    - thông tin [người đứng đầu]{"entity":"department", "role":"lãnh đạo"} [phòng qttb]{"entity":"department", "role":"phòng quản trị thiết bị"} của trường
-    - thông tin [người đứng đầu]{"entity":"department", "role":"lãnh đạo"} [phòng tài chánh kế toán]{"entity":"department", "role":"phòng tài chính kế toán"} của trường
-    - thông tin [người đứng đầu]{"entity":"department", "role":"lãnh đạo"} [phòng tài chính kế toán]{"entity":"department", "role":"phòng tài chính kế toán"} của trường
-    - thông tin [người đứng đầu]{"entity":"department", "role":"lãnh đạo"} [phòng tổ chức cán bộ]{"entity":"department", "role":"phòng tổ chức cán bộ"} của trường
-    - thông tin [người đứng đầu]{"entity":"department", "role":"lãnh đạo"} [phòng tccb]{"entity":"department", "role":"phòng tổ chức cán bộ"} của trường
-    - thông tin [người đứng đầu]{"entity":"department", "role":"lãnh đạo"} [phòng thanh tra pháp chế]{"entity":"department", "role":"phòng thanh tra pháp chế"} của trường
-    - thông tin [người đảm nhiệm]{"entity":"department", "role":"lãnh đạo"} [phòng tt phap che]{"entity":"department", "role":"phòng thanh tra pháp chế"} của trường
-    - thông tin ai [đảm nhiệm]{"entity":"department", "role":"lãnh đạo"} [ban quản lý dự án]{"entity":"department", "role":"ban quản lý dự án"} của trường
-    - thông tin [cán bộ]{"entity":"department", "role":"lãnh đạo"} [ban qlda]{"entity":"department", "role":"ban quản lý dự án"} của trường
-    - [cán bộ]{"entity":"department", "role":"lãnh đạo"} [trung tâm dịch vụ và đào tạo theo nhu cầu xã hội]{"entity":"department", "role":"trung tâm dịch vụ và đào tạo theo nhu cầu xã hội"} của trường
-    - thông tin [người đứng đầu]{"entity":"department", "role":"lãnh đạo"} [trung tâm dv và đt theo nhu cầu xã hội]{"entity":"department", "role":"trung tâm dịch vụ và đào tạo theo nhu cầu xã hội"} của trường
-    - thông tin [người đứng đầu]{"entity":"department", "role":"lãnh đạo"} [trung tâm giáo dục y học và huấn luyện kỹ năng y khoa]{"entity":"department", "role":"trung tâm giáo dục y học và huấn luyện kỹ năng y khoa"} của trường
-    - [cán bộ chịu trách nhiệm]{"entity":"department", "role":"lãnh đạo"} [trung tâm giáo dục y học và hlkn y khoa]{"entity":"department", "role":"trung tâm giáo dục y học và huấn luyện kỹ năng y khoa"} của trường
-    - thông tin [cán bộ]{"entity":"department", "role":"lãnh đạo"} [thư viện]{"entity":"department", "role":"thư viện"} của trường
-    - [cán bộ]{"entity":"department", "role":"lãnh đạo"} [thu vien]{"entity":"department", "role":"thư viện"} của trường
-    - thông tin [cán bộ đứng đầu]{"entity":"department", "role":"lãnh đạo"} [bệnh viện]{"entity":"department", "role":"bệnh viện"} của trường
-    - thông tin [cán bộ đứng đầu]{"entity":"department", "role":"lãnh đạo"} [bc]{"entity":"department", "role":"bệnh viện"} là ai
-     
+    - [lanh dao]{"entity":"department", "value":"lãnh đạo"} [hội đồng trường]{"entity":"department", "value":"đảng và các đoàn thể"}
+    - [lãnh đạo]{"entity":"department", "value":"lãnh đạo"} [đảng và các đoàn thể]{"entity":"department", "value":"đảng và các đoàn thể"}
+    - ai là [lãnh đạo]{"entity":"department", "value":"lãnh đạo"} [đảng và các đoàn thể]{"entity":"department", "value":"đảng và các đoàn thể"} của trường
+    - danh sách [người đứng đầu]{"entity":"department", "value":"lãnh đạo"} [đảng và các đoàn thể]{"entity":"department", "value":"đảng và các đoàn thể"} của trường
+    - các [lãnh đạo]{"entity":"department", "value":"lãnh đạo"} của [khoa y]{"entity":"department","value":"khoa y"}
+    - các [lãnh đạo]{"entity":"department", "value":"lãnh đạo"} của [y khoa]{"entity":"department","value":"khoa y"}
+    - các [lãnh đạo]{"entity":"department", "value":"lãnh đạo"} của [khoa dược]{"entity":"department","value":"khoa dược"}
+    - các [lãnh đạo]{"entity":"department", "value":"lãnh đạo"} của [khoa duoc]{"entity":"department","value":"khoa dược"}
+    - các [lãnh đạo]{"entity":"department", "value":"lãnh đạo"} của [khoa răng hàm mặt]{"entity":"department","value":"khoa răng hàm mặt"}
+    - các [lãnh đạo]{"entity":"department", "value":"lãnh đạo"} của [khoa rhm]{"entity":"department","value":"khoa răng hàm mặt"}
+    - các [lãnh đạo]{"entity":"department", "value":"lãnh đạo"} của [khoa y tế công cộng]{"entity":"department","value":"khoa y tế công cộng"}
+    - các [lãnh đạo]{"entity":"department", "value":"lãnh đạo"} của [khoa ytcc]{"entity":"department","value":"khoa y tế công cộng"}
+    - các [lãnh đạo]{"entity":"department", "value":"lãnh đạo"} của [khoa điều dưỡng]{"entity":"department","value":"khoa điều dưỡng"}
+    - các [lãnh đạo]{"entity":"department", "value":"lãnh đạo"} của [khoa dieu duong]{"entity":"department","value":"khoa điều dưỡng"}
+    - các [lãnh đạo]{"entity":"department", "value":"lãnh đạo"} của [khoa kỹ thuật y học]{"entity":"department","value":"khoa kỹ thuật y học"}
+    - [khoa ktyh]{"entity":"department","value":"khoa kỹ thuật y học"} có những [ai quản lý]{"entity":"department", "value":"lãnh đạo"} của
+    - ai là [người chịu trách nhiệm]{"entity":"department", "value":"lãnh đạo"} của khoa [khoa học cơ bản]{"entity":"department","value":"khoa học cơ bản"}
+    - ai là [người chịu trách nhiệm]{"entity":"department", "value":"lãnh đạo"} của khoa [khcb]{"entity":"department","value":"khoa học cơ bản"}
+    - các [người đứng đầu]{"entity":"department", "value":"lãnh đạo"} của [khoa y học cổ truyền]{"entity":"department","value":"khoa y học cổ truyền"}
+    - các [người đứng đầu]{"entity":"department", "value":"lãnh đạo"} của [khoa yhct]{"entity":"department","value":"khoa y học cổ truyền"}
+    - thông tin [người phụ trách]{"entity":"department", "value":"lãnh đạo"} [phòng thông tin và truyền thông]{"entity":"department", "value":"phòng thông tin và truyền thông"} của trường
+    - thông tin [người phụ trách]{"entity":"department", "value":"lãnh đạo"} [phòng tttt]{"entity":"department", "value":"phòng thông tin và truyền thông"} của trường
+    - thông tin [người quản lý]{"entity":"department", "value":"lãnh đạo"} [phòng công tác sinh viên]{"entity":"department", "value":"phòng công tác sinh viên"} của trường
+    - thông tin [người chịu trách nhiệm]{"entity":"department", "value":"lãnh đạo"} [phòng ctsv]{"entity":"department", "value":"phòng công tác sinh viên"} của trường
+    - thông tin [người đứng đầu]{"entity":"department", "value":"lãnh đạo"} [phòng đảm bảo chất lượng]{"entity":"department", "value":"phòng đảm bảo chất lượng"} của trường
+    - thông tin [người đứng đầu]{"entity":"department", "value":"lãnh đạo"} [phòng đảm bảo cl]{"entity":"department", "value":"phòng đảm bảo chất lượng"} của trường
+    - thông tin [người đứng đầu]{"entity":"department", "value":"lãnh đạo"} [phòng đào tạo đại học]{"entity":"department", "value":"phòng đào tạo đại học"} của trường
+    - thông tin [người phụ trách]{"entity":"department", "value":"lãnh đạo"} [phòng đào tạo đh]{"entity":"department", "value":"phòng đào tạo đại học"} của trường
+    - thông tin [người phụ trách]{"entity":"department", "value":"lãnh đạo"} [phòng đào tạo sau đại học]{"entity":"department", "value":"phòng đào tạo sau đại học"} của trường
+    - thông tin [người chịu trách nhiệm]{"entity":"department", "value":"lãnh đạo"} [phòng đào tạo sđh]{"entity":"department", "value":"phòng đào tạo sau đại học"} của trường
+    - thông tin ai là [quản lý]{"entity":"department", "value":"lãnh đạo"} [phòng hành chính tổng hợp]{"entity":"department", "value":"phòng hành chính tổng hợp"} của trường
+    - thông tin [người quản lý]{"entity":"department", "value":"lãnh đạo"} [phòng hành chánh tổng hợp]{"entity":"department", "value":"phòng hành chính tổng hợp"} của trường
+    - các [cán bộ lãnh đạo]{"entity":"department", "value":"lãnh đạo"} [phòng khảo thí]{"entity":"department", "value":"phòng khảo thí"} của trường
+    - thông tin [lãnh đạo]{"entity":"department", "value":"lãnh đạo"} [phòng khảo thí]{"entity":"department", "value":"phòng khảo thí"} của trường
+    - thông tin [người đảm nhiệm]{"entity":"department", "value":"lãnh đạo"} [phòng khảo thí]{"entity":"department", "value":"phòng khảo thí"} của trường
+    - thông tin [người phụ trách]{"entity":"department", "value":"lãnh đạo"} [phòng khoa học công nghệ và quan hệ đối ngoại]{"entity":"department", "value":"phòng khoa học công nghệ và quan hệ đối ngoại"} của trường
+    - thông tin [người đứng đầu]{"entity":"department", "value":"lãnh đạo"} [phòng khcn và quan hệ đối ngoại]{"entity":"department", "value":"phòng khoa học công nghệ và quan hệ đối ngoại"} của trường
+    - thông tin [người đứng đầu]{"entity":"department", "value":"lãnh đạo"} [phòng quản trị thiết bị]{"entity":"department", "value":"phòng quản trị thiết bị"} của trường
+    - thông tin [người đứng đầu]{"entity":"department", "value":"lãnh đạo"} [phòng qttb]{"entity":"department", "value":"phòng quản trị thiết bị"} của trường
+    - thông tin [người đứng đầu]{"entity":"department", "value":"lãnh đạo"} [phòng tài chánh kế toán]{"entity":"department", "value":"phòng tài chính kế toán"} của trường
+    - thông tin [người đứng đầu]{"entity":"department", "value":"lãnh đạo"} [phòng tài chính kế toán]{"entity":"department", "value":"phòng tài chính kế toán"} của trường
+    - thông tin [người đứng đầu]{"entity":"department", "value":"lãnh đạo"} [phòng tổ chức cán bộ]{"entity":"department", "value":"phòng tổ chức cán bộ"} của trường
+    - thông tin [người đứng đầu]{"entity":"department", "value":"lãnh đạo"} [phòng tccb]{"entity":"department", "value":"phòng tổ chức cán bộ"} của trường
+    - thông tin [người đứng đầu]{"entity":"department", "value":"lãnh đạo"} [phòng thanh tra pháp chế]{"entity":"department", "value":"phòng thanh tra pháp chế"} của trường
+    - thông tin [người đảm nhiệm]{"entity":"department", "value":"lãnh đạo"} [phòng tt phap che]{"entity":"department", "value":"phòng thanh tra pháp chế"} của trường
+    - thông tin ai [đảm nhiệm]{"entity":"department", "value":"lãnh đạo"} [ban quản lý dự án]{"entity":"department", "value":"ban quản lý dự án"} của trường
+    - thông tin [cán bộ]{"entity":"department", "value":"lãnh đạo"} [ban qlda]{"entity":"department", "value":"ban quản lý dự án"} của trường
+    - [cán bộ]{"entity":"department", "value":"lãnh đạo"} [trung tâm dịch vụ và đào tạo theo nhu cầu xã hội]{"entity":"department", "value":"trung tâm dịch vụ và đào tạo theo nhu cầu xã hội"} của trường
+    - thông tin [người đứng đầu]{"entity":"department", "value":"lãnh đạo"} [trung tâm dv và đt theo nhu cầu xã hội]{"entity":"department", "value":"trung tâm dịch vụ và đào tạo theo nhu cầu xã hội"} của trường
+    - thông tin [người đứng đầu]{"entity":"department", "value":"lãnh đạo"} [trung tâm giáo dục y học và huấn luyện kỹ năng y khoa]{"entity":"department", "value":"trung tâm giáo dục y học và huấn luyện kỹ năng y khoa"} của trường
+    - [cán bộ chịu trách nhiệm]{"entity":"department", "value":"lãnh đạo"} [trung tâm giáo dục y học và hlkn y khoa]{"entity":"department", "value":"trung tâm giáo dục y học và huấn luyện kỹ năng y khoa"} của trường
+    - thông tin [cán bộ]{"entity":"department", "value":"lãnh đạo"} [thư viện]{"entity":"department", "value":"thư viện"} của trường
+    - [cán bộ]{"entity":"department", "value":"lãnh đạo"} [thu vien]{"entity":"department", "value":"thư viện"} của trường
+    - thông tin [cán bộ đứng đầu]{"entity":"department", "value":"lãnh đạo"} [bệnh viện]{"entity":"department", "value":"bệnh viện"} của trường
+    - thông tin [cán bộ đứng đầu]{"entity":"department", "value":"lãnh đạo"} [bc]{"entity":"department", "value":"bệnh viện"} là ai
+    
 
 
-- synonym: info_type
-  examples: |
-    - tọa độ -> địa điểm
-    - vị trí -> địa điểm
-    - nơi nào -> địa điểm
-    - số điện thoại -> số điện thoại
-    - so dien thoai -> số điện thoại
-    - sđt -> số điện thoại
-    - sdt -> số điện thoại
-    - số dt -> số điện thoại
-    - số đt -> số điện thoại
-    - số điện thoai -> số điện thoại
-    - số dien thoại -> số điện thoại
+# - synonym: info_type
+#   examples: |
+#     - tọa độ -> địa điểm
+#     - vị trí -> địa điểm
+#     - nơi nào -> địa điểm
+#     - số điện thoại -> số điện thoại
+#     - so dien thoai -> số điện thoại
+#     - sđt -> số điện thoại
+#     - sdt -> số điện thoại
+#     - số dt -> số điện thoại
+#     - số đt -> số điện thoại
+#     - số điện thoai -> số điện thoại
+#     - số dien thoại -> số điện thoại
 
 
 
-- intent: ask_thong_tin_khoa_phong
-  examples: |
-    - [địa điểm]{"entity":"info_type"} của khoa [Y]{"entity":"department"} ở đâu
-    - Email của khoa [điều dưỡng]{"entity":"department"} là gì
-    - [số điện thoại]{"entity":"info_type"} của khoa [Dược]{"entity":"department"} là gì
-    - Địa chỉ khoa [Dược]{"entity":"department"}?
-    - Email khoa [Y]{"entity":"department"} 
-    - Làm thế nào để liên hệ với khoa [điều dưỡng]{"entity":"department"}?
-    - [địa điểm]{"entity":"info_type"} của khoa [Y]{"entity":"department"}
-    - [email]{"entity":"info_type"} của khoa [Dược]{"entity":"department"}
-    - [số điện thoại]{"entity":"info_type"} của khoa [điều dưỡng]{"entity":"department"}
-    - thông tin khoa [Y]{"entity":"department"}
-    - liên hệ khoa [khoa học cơ bản]{"entity":"department"}
-    - thông tin khoa [răng hàm mặt]{"entity":"department"}
-    - thông tin khoa [kỹ thuật y học]{"entity":"department"}
-    - mô tả khoa [y tế công cộng]{"entity":"department"}
-    - [email]{"entity":"info_type"} của khoa [khoa học cơ bản]{"entity":"department"}
-    - [số điện thoại]{"entity":"info_type"} của khoa [khoa học cơ bản]{"entity":"department"}
-    - [địa điểm]{"entity":"info_type"} của khoa [dược]{"entity":"department"}
-    - thông tin khoa [khoa học cơ bản]{"entity":"department"}
-    - [địa điểm]{"entity":"info_type"} của khoa [kỹ thuật y học]{"entity":"department"}
-    - [địa điểm]{"entity":"info_type"} của khoa [răng hàm mặt]{"entity":"department"}  là gì
-    - tôi cần [thông tin liên hệ]{"entity":"info_type" } của khoa [y]{"entity":"department"}
-    - cho tôi xin [thông tin liên lạc]{"entity":"info_type"} của khoa [răng hàm mặt]{"entity":"department"}
-    - tôi muốn xin [thông tin]{"entity":"info_type" } về phòng [công tác sinh viên]{"entity":"department"}
-    - cho tôi cách [liên hệ]{"entity":"info_type" } phòng [đào tạo đại học]{"entity":"department"}
-    - cách [liên lạc]{"entity":"info_type" } với phòng [đào tạo sau đại học]{"entity":"department"}
-    - làm sao để [liên hệ]{"entity":"info_type" } với [phòng hành chánh tổng hợp]{"entity":"department"}
-    - cách [liên lạc]{"entity":"info_type" } với phòng [NCKH-HTQT]{"entity":"department"}
-    - [làm sao đến]{"entity":"info_type"} phòng [quản trị thiết bị]{"entity":"department"}
-    - tôi [cần tìm phòng]{"entity":"info_type"} [tài chính kế toán]{"entity":"department"}
-    - [vị trí]{"entity":"info_type"} của phòng [tổ chức cán bộ]{"entity":"department"}
-    - tôi cần biết vài [thông tin]{"entity":"info_type" } về phòng [quản lý dự án xây dựng trường]
-    - làm sao [liên lạc]{"entity":"info_type" } được với phòng [thông tin và truyền thông]
-    - tôi muốn [đến]{"entity":"info_type"} phòng [đảm bảo chất lượng]{"entity":"department"}
-    - phòng [khảo thí]{"entity":"department"} ở [vị trí nào]{"entity":"info_type"}
-    - phòng [thanh tra pháp chế]{"entity":"department"} [liên hệ]{"entity":"info_type" } [thế nào]{"entity":"info_type"}
-    - làm sao để [liên hệ]{"entity":"info_type" } với [trung tâm đào tạo theo nhu cầu xã hội]{"entity":"department"}
-    - làm sao để [liên lạc]{"entity":"info_type" } với [trung tâm dịch vụ và hỗ trợ sinh viên]{"entity":"department"}
-    - [trung tâm dịch vụ và hỗ trợ sinh viên]{"entity":"department"}
-    - đơn vị [huấn luyện kỹ năng]{"entity":"department"}
-    - [thông tin]{"entity":"info_type" } [bệnh viện]{"entity":"department"}
-    - [đảng bộ cơ sở]{"entity":"department"}
-    - [công đoàn]{"entity":"department"}
-    - [đoàn thanh niên - hội sinh viên]{"entity":"department"}
-    - [địa chỉ email]{"entity":"info_type"} khoa [y]{"entity":"department"} là gì
-    - [email]{"entity":"info_type"} của khoa [răng hàm mặt]{"entity":"department"}  là gì
-    - cho tôi xin [email]{"entity":"info_type"} [khoa dược]{"entity":"department"} 
-    - địa chỉ [email]{"entity":"info_type"} của [khoa điều dưỡng - kỹ thuật y học]{"entity":"department"} 
-    - tôi cần biết [hộp thư điện tử]{"entity":"info_type"} của khoa [y tế công cộng]{"entity":"department"} 
-    - cho tôi [địa chỉ email]{"entity":"info_type"} của khoa [khoa học cơ bản]{"entity":"department"} 
-    - tôi muốn biết [thư điện tử]{"entity":"info_type"} của khoa [y học cổ truyền]{"entity":"department"} 
-    - tôi muốn biết [số điện thoại]{"entity":"info_type"} của khoa [y]{"entity":"department"}
-    - cho tôi [số liên lạc]{"entity":"info_type"} của khoa [răng hàm mặt]{"entity":"department"}
-    - tôi cần [số máy liên lạc]{"entity":"info_type"} của [khoa dược]{"entity":"department"}
-    - khoa [điều dưỡng - kỹ thuật y học]{"entity":"department"}  có [số máy]{"entity":"info_type"} là gì
-    - khoa [y tế công cộng]{"entity":"department"} có [số điện thoại]{"entity":"info_type" } là gì
-    - tôi muốn biết [số máy liên hệ]{"entity":"info_type"} của khoa [khoa học cơ bản]{"entity":"department"} 
-    - [số điện thoại]{"entity":"info_type"} của khoa [y học cổ truyền]{"entity":"department"} 
-    - đường đi tới khoa y 
+# - intent: ask_thong_tin_khoa_phong
+#   examples: |
+#     - [địa điểm]{"entity":"info_type"} của khoa [Y]{"entity":"department"} ở đâu
+#     - Email của khoa [điều dưỡng]{"entity":"department"} là gì
+#     - [số điện thoại]{"entity":"info_type"} của khoa [Dược]{"entity":"department"} là gì
+#     - Địa chỉ khoa [Dược]{"entity":"department"}?
+#     - Email khoa [Y]{"entity":"department"} 
+#     - Làm thế nào để liên hệ với khoa [điều dưỡng]{"entity":"department"}?
+#     - [địa điểm]{"entity":"info_type"} của khoa [Y]{"entity":"department"}
+#     - [email]{"entity":"info_type"} của khoa [Dược]{"entity":"department"}
+#     - [số điện thoại]{"entity":"info_type"} của khoa [điều dưỡng]{"entity":"department"}
+#     - thông tin khoa [Y]{"entity":"department"}
+#     - liên hệ khoa [khoa học cơ bản]{"entity":"department"}
+#     - thông tin khoa [răng hàm mặt]{"entity":"department"}
+#     - thông tin khoa [kỹ thuật y học]{"entity":"department"}
+#     - mô tả khoa [y tế công cộng]{"entity":"department"}
+#     - [email]{"entity":"info_type"} của khoa [khoa học cơ bản]{"entity":"department"}
+#     - [số điện thoại]{"entity":"info_type"} của khoa [khoa học cơ bản]{"entity":"department"}
+#     - [địa điểm]{"entity":"info_type"} của khoa [dược]{"entity":"department"}
+#     - thông tin khoa [khoa học cơ bản]{"entity":"department"}
+#     - [địa điểm]{"entity":"info_type"} của khoa [kỹ thuật y học]{"entity":"department"}
+#     - [địa điểm]{"entity":"info_type"} của khoa [răng hàm mặt]{"entity":"department"}  là gì
+#     - tôi cần [thông tin liên hệ]{"entity":"info_type" } của khoa [y]{"entity":"department"}
+#     - cho tôi xin [thông tin liên lạc]{"entity":"info_type"} của khoa [răng hàm mặt]{"entity":"department"}
+#     - tôi muốn xin [thông tin]{"entity":"info_type" } về phòng [công tác sinh viên]{"entity":"department"}
+#     - cho tôi cách [liên hệ]{"entity":"info_type" } phòng [đào tạo đại học]{"entity":"department"}
+#     - cách [liên lạc]{"entity":"info_type" } với phòng [đào tạo sau đại học]{"entity":"department"}
+#     - làm sao để [liên hệ]{"entity":"info_type" } với [phòng hành chánh tổng hợp]{"entity":"department"}
+#     - cách [liên lạc]{"entity":"info_type" } với phòng [NCKH-HTQT]{"entity":"department"}
+#     - [làm sao đến]{"entity":"info_type"} phòng [quản trị thiết bị]{"entity":"department"}
+#     - tôi [cần tìm phòng]{"entity":"info_type"} [tài chính kế toán]{"entity":"department"}
+#     - [vị trí]{"entity":"info_type"} của phòng [tổ chức cán bộ]{"entity":"department"}
+#     - tôi cần biết vài [thông tin]{"entity":"info_type" } về phòng [quản lý dự án xây dựng trường]
+#     - làm sao [liên lạc]{"entity":"info_type" } được với phòng [thông tin và truyền thông]
+#     - tôi muốn [đến]{"entity":"info_type"} phòng [đảm bảo chất lượng]{"entity":"department"}
+#     - phòng [khảo thí]{"entity":"department"} ở [vị trí nào]{"entity":"info_type"}
+#     - phòng [thanh tra pháp chế]{"entity":"department"} [liên hệ]{"entity":"info_type" } [thế nào]{"entity":"info_type"}
+#     - làm sao để [liên hệ]{"entity":"info_type" } với [trung tâm đào tạo theo nhu cầu xã hội]{"entity":"department"}
+#     - làm sao để [liên lạc]{"entity":"info_type" } với [trung tâm dịch vụ và hỗ trợ sinh viên]{"entity":"department"}
+#     - [trung tâm dịch vụ và hỗ trợ sinh viên]{"entity":"department"}
+#     - đơn vị [huấn luyện kỹ năng]{"entity":"department"}
+#     - [thông tin]{"entity":"info_type" } [bệnh viện]{"entity":"department"}
+#     - [đảng bộ cơ sở]{"entity":"department"}
+#     - [công đoàn]{"entity":"department"}
+#     - [đoàn thanh niên - hội sinh viên]{"entity":"department"}
+#     - [địa chỉ email]{"entity":"info_type"} khoa [y]{"entity":"department"} là gì
+#     - [email]{"entity":"info_type"} của khoa [răng hàm mặt]{"entity":"department"}  là gì
+#     - cho tôi xin [email]{"entity":"info_type"} [khoa dược]{"entity":"department"} 
+#     - địa chỉ [email]{"entity":"info_type"} của [khoa điều dưỡng - kỹ thuật y học]{"entity":"department"} 
+#     - tôi cần biết [hộp thư điện tử]{"entity":"info_type"} của khoa [y tế công cộng]{"entity":"department"} 
+#     - cho tôi [địa chỉ email]{"entity":"info_type"} của khoa [khoa học cơ bản]{"entity":"department"} 
+#     - tôi muốn biết [thư điện tử]{"entity":"info_type"} của khoa [y học cổ truyền]{"entity":"department"} 
+#     - tôi muốn biết [số điện thoại]{"entity":"info_type"} của khoa [y]{"entity":"department"}
+#     - cho tôi [số liên lạc]{"entity":"info_type"} của khoa [răng hàm mặt]{"entity":"department"}
+#     - tôi cần [số máy liên lạc]{"entity":"info_type"} của [khoa dược]{"entity":"department"}
+#     - khoa [điều dưỡng - kỹ thuật y học]{"entity":"department"}  có [số máy]{"entity":"info_type"} là gì
+#     - khoa [y tế công cộng]{"entity":"department"} có [số điện thoại]{"entity":"info_type" } là gì
+#     - tôi muốn biết [số máy liên hệ]{"entity":"info_type"} của khoa [khoa học cơ bản]{"entity":"department"} 
+#     - [số điện thoại]{"entity":"info_type"} của khoa [y học cổ truyền]{"entity":"department"} 
+#     - đường đi tới khoa y 
 
 
-- intent: ask_thong_tin_truong
-  examples: |
-    - [ctump]{"entity":"university","role":"thông tin"}
-    - [thông tin]{"entity":"university", "role":"thông tin"} về trường [đại học y dược cần thơ]{"entity":"university"}
-    - tóm tắt [thông tin]{"entity":"university", "role":"thông tin"} về [dai hoc y duoc can tho]{"entity":"university"}
-    - [thông tin]{"entity":"university", "role":"thông tin"} [ydct]{"entity":"university"}
-    - [giới thiệu]{"entity":"university", "role":"thông tin"} về [đại học y]{"entity":"university"}
-    - cho tôi xin [thông tin]{"entity":"university", "role":"thông tin"} về [yd cần thơ]{"entity":"university"}
-    - tìm [thông tin]{"entity":"university", "role":"thông tin"} về [y dược cần thơ]{"entity":"university"}
-    - hỏi [thông tin]{"entity":"university", "role":"thông tin"} về [đh y dược ct]{"entity":"university"}
-    - [lịch sử]{"entity":"university", "role":"lịch sử"} của [ctu medical and pharmaceutical universit]{"entity":"university"}
-    - [lịch sử hình thành]{"entity":"university", "role":"lịch sử"} của [dhydct]{"entity":"university"}
-    - [quá trình phát triển]{"entity":"university", "role":"lịch sử"} của [dh y duoc can tho]{"entity":"university"}
-    - trường [can tho y duoc]{"entity":"university"} [có từ bao giờ]{"entity":"university", "role":"lịch sử"}
-    - [y can tho duoc university]{"entity":"university"} được [thành lập khi nào]{"entity":"university", "role":"lịch sử"}
-  # - [lịch sử] thành lập của [đại học y dược cần thơ]{"entity":"university"}
+# - intent: ask_thong_tin_truong
+#   examples: |
+#     - [ctump]{"entity":"university","role":"thông tin"}
+#     - [thông tin]{"entity":"university", "role":"thông tin"} về trường [đại học y dược cần thơ]{"entity":"university"}
+#     - tóm tắt [thông tin]{"entity":"university", "role":"thông tin"} về [dai hoc y duoc can tho]{"entity":"university"}
+#     - [thông tin]{"entity":"university", "role":"thông tin"} [ydct]{"entity":"university"}
+#     - [giới thiệu]{"entity":"university", "role":"thông tin"} về [đại học y]{"entity":"university"}
+#     - cho tôi xin [thông tin]{"entity":"university", "role":"thông tin"} về [yd cần thơ]{"entity":"university"}
+#     - tìm [thông tin]{"entity":"university", "role":"thông tin"} về [y dược cần thơ]{"entity":"university"}
+#     - hỏi [thông tin]{"entity":"university", "role":"thông tin"} về [đh y dược ct]{"entity":"university"}
+#     - [lịch sử]{"entity":"university", "role":"lịch sử"} của [ctu medical and pharmaceutical universit]{"entity":"university"}
+#     - [lịch sử hình thành]{"entity":"university", "role":"lịch sử"} của [dhydct]{"entity":"university"}
+#     - [quá trình phát triển]{"entity":"university", "role":"lịch sử"} của [dh y duoc can tho]{"entity":"university"}
+#     - trường [can tho y duoc]{"entity":"university"} [có từ bao giờ]{"entity":"university", "role":"lịch sử"}
+#     - [y can tho duoc university]{"entity":"university"} được [thành lập khi nào]{"entity":"university", "role":"lịch sử"}
+#   # - [lịch sử] thành lập của [đại học y dược cần thơ]{"entity":"university"}
 
 
-  # - thông tin tổng quan về [đại học y dược cần thơ]{"entity":"university", "role":"thông tin"}
-  # - thông tin cơ bản về [đại học y dược cần thơ]{"entity":"university", "role":"thông tin"}
-  # - thông tin liên quan đến [đại học y dược cần thơ]{"entity":"university", "role":"thông tin"}
-  # - mô tả về [đại học y dược cần thơ]{"entity":"university", "role":"thông tin"}
+#   # - thông tin tổng quan về [đại học y dược cần thơ]{"entity":"university", "role":"thông tin"}
+#   # - thông tin cơ bản về [đại học y dược cần thơ]{"entity":"university", "role":"thông tin"}
+#   # - thông tin liên quan đến [đại học y dược cần thơ]{"entity":"university", "role":"thông tin"}
+#   # - mô tả về [đại học y dược cần thơ]{"entity":"university", "role":"thông tin"}
 
-  # - thông tin về [ctu medical and pharmaceutical university], "role":"thông tin"{"entity":"university", "role":"thông tin"}
-  # - thông tin về [can tho university , "role":"thông tin"of medicine and pharmacy]{"entity":"university", "role":"thông tin"}
-  # - thông tin về [dhydct]{"entity":"university", "role":"thông tin"}
-  # - thông tin về [dh y duoc can tho]{"entity":"university", "role":"thông tin"}
-  # - thông tin về [can tho y duoc]{"entity":"university", "role":"thông tin"}
-  # - thông tin về [can tho y duoc university], "role":"thông tin"{"entity":"university", "role":"thông tin"}
-  # - thông tin về [trường đại học y dược]{"entity":"university", "role":"thông tin"}
-  # - thông tin về [đại học y dược ct]{"entity":"university", "role":"thông tin"}
-  # - thông tin về [y dược ct]{"entity":"university", "role":"thông tin"}
-  # - tất tần tật về [đại học y]{"entity":"university", "role":"thông tin"}
+#   # - thông tin về [ctu medical and pharmaceutical university], "role":"thông tin"{"entity":"university", "role":"thông tin"}
+#   # - thông tin về [can tho university , "role":"thông tin"of medicine and pharmacy]{"entity":"university", "role":"thông tin"}
+#   # - thông tin về [dhydct]{"entity":"university", "role":"thông tin"}
+#   # - thông tin về [dh y duoc can tho]{"entity":"university", "role":"thông tin"}
+#   # - thông tin về [can tho y duoc]{"entity":"university", "role":"thông tin"}
+#   # - thông tin về [can tho y duoc university], "role":"thông tin"{"entity":"university", "role":"thông tin"}
+#   # - thông tin về [trường đại học y dược]{"entity":"university", "role":"thông tin"}
+#   # - thông tin về [đại học y dược ct]{"entity":"university", "role":"thông tin"}
+#   # - thông tin về [y dược ct]{"entity":"university", "role":"thông tin"}
+#   # - tất tần tật về [đại học y]{"entity":"university", "role":"thông tin"}
 
 
-- intent: ask_sm_tn_gtcl_tlgd
-  examples: |
-    - [sứ mạng]{"entity":"sm_tn_gtcl_tlgd","role":"sứ mạng"} của trường
-    - [su mang]{"entity":"sm_tn_gtcl_tlgd","role":"sứ mạng"} của trường
-    - [sm]{"entity":"sm_tn_gtcl_tlgd","role":"sứ mạng"} của trường
-    - [tầm nhìn]{"entity":"sm_tn_gtcl_tlgd","role":"tầm nhìn"} của trường
-    - [tam nhin]{"entity":"sm_tn_gtcl_tlgd","role":"tầm nhìn"} của trường
-    - [tn]{"entity":"sm_tn_gtcl_tlgd","role":"tầm nhìn"} của trường
-    - [giá trị cốt lỗi]{"entity":"sm_tn_gtcl_tlgd","role":"giá trị cốt lỗi"} của trường
-    - [gia tri cot loi]{"entity":"sm_tn_gtcl_tlgd","role":"giá trị cốt lỗi"} của trường
-    - [gtcl]{"entity":"sm_tn_gtcl_tlgd","role":"giá trị cốt lỗi"} của trường
-    - [triết lý giáo dục]{"entity":"sm_tn_gtcl_tlgd","role":"triết lý giáo dục"} của trường
-    - [triet ly giao duc]{"entity":"sm_tn_gtcl_tlgd","role":"triết lý giáo dục"} của trường
-    - [tlgd]{"entity":"sm_tn_gtcl_tlgd","role":"triết lý giáo dục"} của trường
-    - [mục tiêu chung]{"entity":"sm_tn_gtcl_tlgd","role":"mục tiêu"} của trường
-    - [mục tiêu]{"entity":"sm_tn_gtcl_tlgd","role":"mục tiêu"} của trường
-    - [slogan]{"entity":"sm_tn_gtcl_tlgd","role":"slogan"} của trường
-    - [khẩu hiệu]{"entity":"sm_tn_gtcl_tlgd","role":"mục tiêu"} của trường
+# - intent: ask_sm_tn_gtcl_tlgd
+#   examples: |
+#     - [sứ mạng]{"entity":"sm_tn_gtcl_tlgd","role":"sứ mạng"} của trường
+#     - [su mang]{"entity":"sm_tn_gtcl_tlgd","role":"sứ mạng"} của trường
+#     - [sm]{"entity":"sm_tn_gtcl_tlgd","role":"sứ mạng"} của trường
+#     - [tầm nhìn]{"entity":"sm_tn_gtcl_tlgd","role":"tầm nhìn"} của trường
+#     - [tam nhin]{"entity":"sm_tn_gtcl_tlgd","role":"tầm nhìn"} của trường
+#     - [tn]{"entity":"sm_tn_gtcl_tlgd","role":"tầm nhìn"} của trường
+#     - [giá trị cốt lỗi]{"entity":"sm_tn_gtcl_tlgd","role":"giá trị cốt lỗi"} của trường
+#     - [gia tri cot loi]{"entity":"sm_tn_gtcl_tlgd","role":"giá trị cốt lỗi"} của trường
+#     - [gtcl]{"entity":"sm_tn_gtcl_tlgd","role":"giá trị cốt lỗi"} của trường
+#     - [triết lý giáo dục]{"entity":"sm_tn_gtcl_tlgd","role":"triết lý giáo dục"} của trường
+#     - [triet ly giao duc]{"entity":"sm_tn_gtcl_tlgd","role":"triết lý giáo dục"} của trường
+#     - [tlgd]{"entity":"sm_tn_gtcl_tlgd","role":"triết lý giáo dục"} của trường
+#     - [mục tiêu chung]{"entity":"sm_tn_gtcl_tlgd","role":"mục tiêu"} của trường
+#     - [mục tiêu]{"entity":"sm_tn_gtcl_tlgd","role":"mục tiêu"} của trường
+#     - [slogan]{"entity":"sm_tn_gtcl_tlgd","role":"slogan"} của trường
+#     - [khẩu hiệu]{"entity":"sm_tn_gtcl_tlgd","role":"mục tiêu"} của trường
 

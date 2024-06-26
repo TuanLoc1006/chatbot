@@ -1,0 +1,28 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-dang_bo",
+      "2": "I-dang_bo",
+      "3": "L-dang_bo",
+      "4": "U-dang_bo",
+      "5": "B-dang_uy",
+      "6": "I-dang_uy",
+      "7": "L-dang_uy",
+      "8": "U-dang_uy",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-dang_bo": 1,
+      "I-dang_bo": 2,
+      "L-dang_bo": 3,
+      "U-dang_bo": 4,
+      "B-dang_uy": 5,
+      "I-dang_uy": 6,
+      "L-dang_uy": 7,
+      "U-dang_uy": 8,
+      "O": 0
+    },
+    "num_tags": 9
+  }
+]

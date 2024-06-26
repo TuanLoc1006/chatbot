@@ -67,3 +67,8 @@ action_cap_lai_thanh_phi_bao_hiem_tai_nan: lãnh đạo ctump
 action_cap_lai_thanh_phi_bao_hiem_tai_nan: lãnh đạo
 action_cap_lai_thanh_phi_bao_hiem_tai_nan: thông tin lãnh đạo trường
 action_cap_lai_thanh_phi_bao_hiem_tai_nan: thông tin lãnh đạo trường
+action_cap_lai_thanh_phi_bao_hiem_tai_nan: lích sử của đang bộ
+action_cap_lai_thanh_phi_bao_hiem_tai_nan: thang nao la hieu truong
+action_cap_lai_thanh_phi_bao_hiem_tai_nan: lãnh đạo khoa dược
+action_cap_lai_thanh_phi_bao_hiem_tai_nan: cán bộ khoa y
+action_cap_lai_thanh_phi_bao_hiem_tai_nan: lãnh đạo khoa y

@@ -20,7 +20,7 @@ actions:
   # - action_cap_lai_email_sv
   # - action_cap_lai_thanh_phi_bao_hiem_tai_nan
   # - action_cap_lai_tai_khoan_quan_ly_dao_tao
-  - action_thong_tin_truong
+  # - action_thong_tin_truong
   
   - action_thong_tin_phong
 
@@ -59,9 +59,10 @@ intents:
   # - ask_thong_tin_cac_khoa
   # - ask_thong_tin_cac_phong_ban
   # - ask_thong_tin_nganh
-  - ask_thong_tin_truong
   # - ask_trinh_do_hoc_van_tuyen_sinh
-  - ask_thong_tin_khoa_phong
+
+  # - ask_thong_tin_truong
+  # - ask_thong_tin_khoa_phong
 
   - ask_dang_uy_truong_ctump
   - ask_dang_bo_truong_ctump
@@ -70,7 +71,7 @@ intents:
   - ask_ban_giam_hieu
 
   - ask_lanh_dao_dang_doan_the_dvi_dao_tao
-  - ask_sm_tn_gtcl_tlgd
+  # - ask_sm_tn_gtcl_tlgd
 ############################### PHUONG
   # - ask_dang_ky_giay_xac_nhan
 
@@ -95,87 +96,90 @@ entities:
   # - cap_lai_tai_khoan_quan_ly_dao_tao
 
   
-  - dang_bo:
-      roles:
-      - thông tin
-      - lịch sử
-      - ban chấp hành đảng bộ
-  - dang_uy:
-      roles:
-      - thông tin
-      - cơ cấu tổ chức
-      - bí thư
-      - ban thường vụ
-      - vị trí
-      - chức năng
-      - nhiện vụ
-  - hoi_dong_truong:
-      roles:
-      - chủ tịch
-      - thành viên
-      - thông tin
-      - sơ đồ tổ chức
-  - ban_giam_hieu:
-      roles:
-      - thông tin
-      - hiệu trưởng
-      - phó hiệu trưởng
-      - các thành viên
-  - department:
-      roles:
-      - lãnh đạo
-      - đảng và các đoàn thể
-      - khoa y
-      - khoa dược
-      - khoa răng hàm mặt
-      - khoa y tế công cộng
-      - khoa điều dưỡng
-      - khoa kỹ thuật y học
-      - khoa khoa học cơ bản
-      - khoa y học cổ truyền
-      - phòng thông tin và truyền thông
-      - phòng công tác sinh viên
-      - phòng đảm bảo chất lượng
-      - phòng đào tạo đại học
-      - phòng đào tạo sau đại học
-      - phòng hành chính tổng hợp
-      - phòng khảo thí
-      - phòng khoa học công nghệ và quan hệ đối ngoại
-      - phòng quản trị thiết bị
-      - phòng tài chính kế toán
-      - phòng tổ chức cán bộ
-      - phòng thanh tra pháp chế
-      - ban quản lý dự án
-      - trung tâm dịch vụ và đào tạo theo nhu cầu xã hội
-      - trung tâm giáo dục y học và huấn luyện kỹ năng y khoa
-      - thư viện
-      - bệnh viện
-  - university:
-      roles:
-      - thông tin
-      - lịch sử
-  - sm_tn_gtcl_tlgd:
-      roles:
-      - sứ mạng
-      - tầm nhìn
-      - giá trị cốt lỗi
-      - triết lý giáo dục
-      - mục tiêu
-      - slogan
-  - info_type
-slots:
-  department:
-    type: text
-    mappings:
-      - type: from_entity
-        entity: department
+  - dang_bo
+      # roles:
+      # - thông tin
+      # - lịch sử
+      # - ban chấp hành đảng bộ
+  - dang_uy
+      # roles:
+      # - thông tin
+      # - cơ cấu tổ chức
+      # - chi bộ cơ sở
+      # - đảng bộ cơ sở
+      # - bí thư
+      # - ban thường vụ
+      # - vị trí
+      # - chức năng
+      # - nhiện vụ
+  - hoi_dong_truong
+      # roles:
+      # - chủ tịch
+      # - thành viên
+      # - thông tin
+      # - sơ đồ tổ chức
+      # - thư ký
+  - ban_giam_hieu
+      # roles:
+      # - thông tin
+      # - hiệu trưởng
+      # - phó hiệu trưởng
+      # - các thành viên
+  - department
+      # roles:
+      # - lãnh đạo
+      # - đảng và các đoàn thể
+      # - khoa y
+      # - khoa dược
+      # - khoa răng hàm mặt
+      # - khoa y tế công cộng
+      # - khoa điều dưỡng
+      # - khoa kỹ thuật y học
+      # - khoa khoa học cơ bản
+      # - khoa y học cổ truyền
+      # - phòng thông tin và truyền thông
+      # - phòng công tác sinh viên
+      # - phòng đảm bảo chất lượng
+      # - phòng đào tạo đại học
+      # - phòng đào tạo sau đại học
+      # - phòng hành chính tổng hợp
+      # - phòng khảo thí
+      # - phòng khoa học công nghệ và quan hệ đối ngoại
+      # - phòng quản trị thiết bị
+      # - phòng tài chính kế toán
+      # - phòng tổ chức cán bộ
+      # - phòng thanh tra pháp chế
+      # - ban quản lý dự án
+      # - trung tâm dịch vụ và đào tạo theo nhu cầu xã hội
+      # - trung tâm giáo dục y học và huấn luyện kỹ năng y khoa
+      # - thư viện
+      # - bệnh viện
+  - university
+      # roles:
+      # - thông tin
+      # - lịch sử
+  - sm_tn_gtcl_tlgd
+  #     roles:
+  #     - sứ mạng
+  #     - tầm nhìn
+  #     - giá trị cốt lỗi
+  #     - triết lý giáo dục
+  #     - mục tiêu
+  #     - slogan
+  # - info_type
+# slots:
+#   department:
+#     type: text
+#     mappings:
+#       - type: from_entity
+#         entity: department
 
-  info_type:
-    type: text
-    influence_conversation: true
-    mappings:
-      - type: from_entity
-        entity: info_type
+#   info_type:
+#     type: text
+#     influence_conversation: true
+#     mappings:
+#       - type: from_entity
+#         entity: info_type
 
 # slots:
 #   location:

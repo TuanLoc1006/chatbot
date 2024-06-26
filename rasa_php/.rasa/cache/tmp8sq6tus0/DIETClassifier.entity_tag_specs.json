@@ -1,0 +1,44 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-ban_giam_hieu",
+      "2": "I-ban_giam_hieu",
+      "3": "L-ban_giam_hieu",
+      "4": "U-ban_giam_hieu",
+      "5": "B-dang_bo",
+      "6": "I-dang_bo",
+      "7": "L-dang_bo",
+      "8": "U-dang_bo",
+      "9": "B-dang_uy",
+      "10": "I-dang_uy",
+      "11": "L-dang_uy",
+      "12": "U-dang_uy",
+      "13": "B-hoi_dong_truong",
+      "14": "I-hoi_dong_truong",
+      "15": "L-hoi_dong_truong",
+      "16": "U-hoi_dong_truong",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-ban_giam_hieu": 1,
+      "I-ban_giam_hieu": 2,
+      "L-ban_giam_hieu": 3,
+      "U-ban_giam_hieu": 4,
+      "B-dang_bo": 5,
+      "I-dang_bo": 6,
+      "L-dang_bo": 7,
+      "U-dang_bo": 8,
+      "B-dang_uy": 9,
+      "I-dang_uy": 10,
+      "L-dang_uy": 11,
+      "U-dang_uy": 12,
+      "B-hoi_dong_truong": 13,
+      "I-hoi_dong_truong": 14,
+      "L-hoi_dong_truong": 15,
+      "U-hoi_dong_truong": 16,
+      "O": 0
+    },
+    "num_tags": 17
+  }
+]

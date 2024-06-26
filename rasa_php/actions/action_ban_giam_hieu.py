@@ -25,10 +25,10 @@ class ActionBanGiamHieu(Action):
     def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         # Lấy entities từ câu chat của người dùng
         entities = tracker.latest_message.get('entities', [])
-        print(f"Entities từ input: {entities}")
+        print(f"\nEntities từ input:\n {entities}")
         
         # Tạo dictionary ánh xạ các role với thông điệp tương ứng
-        role_messages = {
+        info_ban_giam_hieu = {
             'thông tin':"</br>GS.TS Nguyễn Trung Kiên - Hiệu Trưởng</br>Email: ntkien@ctump.edu.vn</br>PGS.TS Nguyễn Văn Lâm - Phó Hiệu Trưởng</br>Email: nvlam@ctump.edu.vn</br>PGS.TS Trần Viết An - Phó Hiệu Trưởng</br>Email: tvan@ctump.edu.vn</br>PGS.TS Nguyễn Thành Tấn - Phó Hiệu Trưởng</br>Email: nttan@ctump.edu.vn</br>",
             'hiệu trưởng': "</br>GS.TS Nguyễn Trung Kiên - Hiệu Trưởng</br>Email: ntkien@ctump.edu.vn</br>Phụ trách các lĩnh vực:</br>Phụ trách chung, lãnh đạo toàn diện mọi mặt hoạt động và công tác của Trường; quản lý trường, phó các đơn vị thuộc và trực thuộc.</br>Trực tiếp chỉ đạo các lĩnh vực:</br>- Công tác quy hoạch; xây dựng chiến lược, kế hoạch phát triển dài hạn, trung hạn, ngắn hạn trong các mặt công tác.</br>- Công tác chính trị tư tưởng và bảo vệ chính trị nội bộ.</br> - Công tác tổ chức cán bộ, thi đua khen thưởng, chế độ chính sách, đảm bảo chất lượng, thanh tra pháp chế.",
         
@@ -36,18 +36,15 @@ class ActionBanGiamHieu(Action):
             "các thành viên":"</br>GS. TS. BS. Nguyễn Trung Kiên , Hiệu trưởng, Email: ntkien@ctump.edu.vn</br>PGS.TS. BS. Nguyễn Văn Lâm, Phó Hiệu Trưởng, Email: nvlam@ctump.edu.vn</br>PGS. TS. BS. Trần Viết An, Phó Hiệu Trưởng, Email: tvan@ctump.edu.vn</br>PGS.TS. BS. Nguyễn Thành Tấn, Phó Hiệu Trưởng, Email: nttan@ctump.edu.vn</br>"
         }
         
-        message = ""
+        input_value = None
         
-        # Phân loại các role từ entities và thêm thông điệp tương ứng
         for entity in entities:
-            role = entity.get('role')
-            if role in role_messages:
-                message = role_messages[role]
-        
-        if message:
-            dispatcher.utter_message(text=message)
+            if entity.get('entity') == "ban_giam_hieu":
+                input_value = entity.get('value')
+                print("----"+input_value)
+        if input_value in info_ban_giam_hieu:
+            response = info_ban_giam_hieu[input_value]
         else:
-            dispatcher.utter_message(text="Không tìm thấy thông tin phù hợp.")
-        
+            response= "Xin lỗi, tôi không có thông tin về câu hỏi của bạn."
+        dispatcher.utter_message(text=response)
         return []
-
